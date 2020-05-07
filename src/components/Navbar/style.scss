@@ -1,5 +1,27 @@
 @import '../../assets/styles/index.scss';
 
+@mixin btn($background, $padding, $flag, $borderColor) {
+  
+  @if $flag == 'gradient' {
+    background: linear-gradient(90deg, $background);
+  } 
+  @else {
+    background: $background;
+  }
+
+  padding: $padding;
+  width: 120px;
+  border: solid 1.4px $borderColor;
+  color: $white;
+  border-radius: 5px;
+  font-family: $muli;
+  font-size: 0.8rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 ._nav {
   background-color: $black;
 }
@@ -7,18 +29,38 @@
 ._item {
   padding: 0 1rem;
   transition: all 0.6s;
+  font-family: $muli;
+  font-size: 0.8rem;
+
   & a {
-    color: $white;
     border-bottom: 2px solid $black;
     transition: all 0.6s;
   }
 
-  & a:hover {
-    // color: red;
+  & a:hover { 
     color: $white;
     border-bottom: 2px solid $appleGreen;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     transition: all 0.6s;
-
   }
 }
+
+._logo {
+  width: 5em;
+}
+
+._registerBtn { 
+  @include btn($black, 0.5rem, 'not', $white);
+
+}
+
+._loginBtn { 
+  @include btn($blueGreenGradient, 0.6rem, 'gradient', $black);
+}
+
+._toggle {
+  &:focus {
+    outline: none;
+  }
+}
+

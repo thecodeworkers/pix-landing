@@ -10,11 +10,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 const Navigation = () => {
@@ -23,31 +18,38 @@ const Navigation = () => {
 
   return (
     <div>
-        <Navbar className='_nav' expand="md">
+      <Navbar className='_nav' fixed='top' dark expand="md">
         <div className='container'>
           <NavbarBrand href="/">
-          
-             <PixLogo />
-          
+            <div className='_logo'>
+              <PixLogo />
+            </div>
+
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <NavbarToggler onClick={toggle} className='_toggle'/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto ml-auto" navbar>
-              <NavItem className='_item'>
-                <NavLink href="/components/" >ABOUT</NavLink>
+              <NavItem className='_item' >
+                <NavLink href="/components/" className='text-white'>ABOUT</NavLink>
               </NavItem>
               <NavItem className='_item'>
-                <NavLink href="https://github.com/reactstrap/reactstrap">PRODUCTS</NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>PRODUCTS</NavLink>
               </NavItem>
               <NavItem className='_item'>
-                <NavLink href="https://github.com/reactstrap/reactstrap">PRODUCTS</NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>BENEFITS </NavLink>
               </NavItem>
-            
             </Nav>
-            <NavbarText>Simple Text</NavbarText>
+
+            <NavItem >
+              <button className='_registerBtn'>REGISTER</button>
+            </NavItem>
+
+            <NavItem>
+              <button className='_loginBtn'>LOG IN</button>
+            </NavItem>
           </Collapse>
-          </div>
-        </Navbar>
+        </div>
+      </Navbar>
     </div>
   )
 }
