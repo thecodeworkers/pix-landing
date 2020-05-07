@@ -1,16 +1,14 @@
 import React from 'react'
 import { SEO } from '../components';
-import { Navbar } from '../components';
 import './styles/home.scss';
-const Home = () => {
+const Test = () => {
 
   return (
     <div>
        <SEO title='Home' />
-       {/* <h1>Pix landing</h1> */}
-        <Navbar />
+       <h1>Pix landing Typescript</h1>
     </div>
   )
 }
 
-export default Home
+export default Test;
