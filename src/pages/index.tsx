@@ -3,7 +3,7 @@ import Home from './home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = () => (
-      <Home/>
+      <Home />
 )
 
 export default IndexPage

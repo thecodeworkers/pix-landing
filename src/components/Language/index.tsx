@@ -8,7 +8,7 @@ const Language = (props) => {
   const { t, i18n } = useTranslation()
   const [lang, setLang ] = useState('en');
 
-  const pickLanguage = (value) => {
+  const pickLanguage = (value: any): void => {
     const lang = value.target.id;
     i18n.changeLanguage(lang)
     lang == 'es' ? setLang('en') : setLang('es');

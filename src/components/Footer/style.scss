@@ -1,0 +1,18 @@
+ @import '../../assets/styles/index.scss';
+
+ ._main {
+   background-color: $black;
+ }
+
+ ._links {
+   display: flex;
+   flex-direction: row;
+   color: $white;
+   justify-content: space-evenly;
+
+   p {
+    font-family: $muli;
+    font-weight: lighter;
+   }
+
+ }
