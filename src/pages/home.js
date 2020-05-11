@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from '../components';
-import { Navbar } from '../components';
+import { Navbar, Lang } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
@@ -23,13 +23,15 @@ const Home = (props) => {
        <SEO title='Home' />
         <Navbar />
         <br></br><br></br><br></br>
-       <h1> {t('helloWorld')}</h1>
 
-       <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+         <Lang />
+        <h1> {t('helloWorld')}</h1> 
+
+       {/* <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
           <Input type="select" name="selectMulti" id="exampleSelectMulti" className='w-200' onChange={(value) => changeValue(value)}>
             <option value='es'>ES </option>
             <option value='en'>EN </option>
-          </Input>
+          </Input>  */}
     </div>
   )
 }
