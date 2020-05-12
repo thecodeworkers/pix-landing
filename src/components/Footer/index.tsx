@@ -47,7 +47,7 @@ const Footer = (props) => {
             <p className='_emailText'> Enter your email address to be added to our mailing list for future updates.</p>
             <input placeholder='e-mail' className='_newsletter'></input>
             <div className='_divIcon'>
-            <span className="material-icons _arrow">arrow_forward</span>
+              <span className="material-icons _arrow">arrow_forward</span>
             </div>
 
           </div>

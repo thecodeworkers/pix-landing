@@ -6,12 +6,8 @@
  }
 
  ._leftSide {
-   width: 0%;  
+   width: 80%;  
    
-   @include responsive(medium) {
-    width: 100%;
-
-  }
  }
 
  ._links {
@@ -23,10 +19,6 @@
    width: 90%;
    cursor: pointer;
 
-  @include responsive(medium) {
-    justify-content: space-evenly;
-    width: 100%;
-  }
    p {
     font-family: $muli;
     font-weight: lighter;
@@ -47,9 +39,9 @@
 
    & p {
      font-family: $muli;
-     margin-top: 10px;
      font-size: 0.8rem;
      color: $gray;
+     align-self: flex-end;
    } 
  }
 
@@ -81,6 +73,7 @@
    border: none;
    font-family: $muli;
    font-size: 0.8rem;
+   outline: none;
  }
 
  ._divIcon { 
@@ -102,4 +95,29 @@
    font-size: 1.2rem;
    color:$gray;
    cursor: pointer;
+ }
+
+ //RESPONSIVE 
+
+ @include responsive(medium) {
+  ._leftSide {
+    width: 100%;
+  }
+
+  ._links {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  ._icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  ._suscribe, ._emailText {
+    text-align: center;
+    width: 100%;
+  }
+
  }
