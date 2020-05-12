@@ -2,17 +2,104 @@
 
  ._main {
    background-color: $black;
+   padding: 6rem 0;
+ }
+
+ ._leftSide {
+   width: 0%;  
+   
+   @include responsive(medium) {
+    width: 100%;
+
+  }
  }
 
  ._links {
    display: flex;
    flex-direction: row;
    color: $white;
-   justify-content: space-evenly;
+   justify-content: space-between;
+   margin-bottom: 1.6rem;
+   width: 90%;
+   cursor: pointer;
 
+  @include responsive(medium) {
+    justify-content: space-evenly;
+    width: 100%;
+  }
    p {
     font-family: $muli;
     font-weight: lighter;
    }
+ }
 
+ ._icons {
+   width: 40%;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ ._content {
+   display: flex;
+   flex-direction: row;
+   margin-top: 2.2rem;
+   align-content: center;
+
+   & p {
+     font-family: $muli;
+     margin-top: 10px;
+     font-size: 0.8rem;
+     color: $gray;
+   } 
+ }
+
+ ._divLogo {
+  width: 70px;
+ }
+
+ ._suscribe {
+   color: $appleGreen;
+   font-size: 1.2rem;
+   font-family: $muli;
+ }
+
+ ._rightSide {
+  width: 50%;
+ }
+
+ ._emailText {
+   color: $gray;
+   font-family: $muli;
+   font-size: 0.9rem;
+   width: 60%;
+ }
+
+ ._newsletter {
+   padding: 0.8rem;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   font-family: $muli;
+   font-size: 0.8rem;
+ }
+
+ ._divIcon { 
+   position: relative;
+ }
+
+ ._separator {
+   width: 0.2px;
+   height: 38px;
+   background-color: $gray;
+   margin-left: 12px;
+   margin-right: 10px;
+ }
+
+ ._arrow {
+   position: absolute;
+   right: 15px;
+   top: -30px;
+   font-size: 1.2rem;
+   color:$gray;
+   cursor: pointer;
  }

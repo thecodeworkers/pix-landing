@@ -1,7 +1,9 @@
 import i18next from 'i18next';
 
-i18next.init({
+i18next
+.init({
     fallbackLng: 'es',
+    lng: 'es-ES',
     resources: {
         es: {
             translations: require('../assets/i18n/es.json')
@@ -13,9 +15,9 @@ i18next.init({
     ns: ['translations'],
     defaultNS: 'translations',
     returnObjects: true,
-    debug: process.env.NODE_ENV === 'development',
+    // debug: process.env.NODE_ENV === 'development',
     interpolation: {
-        escapeValue: false, // not needed for react!!
+        escapeValue: false, 
     },
     react: {
         wait: true,

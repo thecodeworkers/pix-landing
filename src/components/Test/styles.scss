@@ -1,0 +1,8 @@
+@import '../../assets/styles/index.scss';
+
+._title {
+  @include responsive(medium) {
+    color: green;
+  }
+}
+

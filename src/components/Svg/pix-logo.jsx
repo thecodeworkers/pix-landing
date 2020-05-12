@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PixLogo = () => (
+const PixLogo = () => (
 <svg id="Grupo_3" data-name="Grupo 3" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 146.791 47.409">
   <defs>
     <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
@@ -18,3 +18,5 @@ export const PixLogo = () => (
 </svg>
 
 )
+
+export default PixLogo;

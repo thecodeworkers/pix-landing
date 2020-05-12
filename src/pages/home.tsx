@@ -1,16 +1,21 @@
 import React from 'react'
 import { SEO } from '../components';
-import { Navbar, Lang, Footer } from '../components';
+import { Navbar, Lang, Footer, Test} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
 
 const Home = (props) => {
-  
+
   const { t, i18n } = useTranslation()
 
+  const sayHello = () => {
+    console.log('hello world!');
+  }
+
   return (
-    <div>
+
+    <div> 
        <SEO title='Home' />
         <Navbar />
         <br></br><br></br><br></br>
@@ -18,7 +23,9 @@ const Home = (props) => {
          <Lang />
         <h1> {t('helloWorld')}</h1> 
 
-        <Footer />
+        <Footer /> 
+        <br></br><br></br><br></br><br></br><br></br><br></br>
+        {/* <Test name='giber' anotherProp={sayHello} /> */}
     </div>
   )
 }
