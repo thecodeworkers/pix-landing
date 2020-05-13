@@ -10,7 +10,7 @@ export default ({ children }) => {
     let count = 0;
 
     const interval = setInterval(() => {      
-      if(!count) setColor('#33A3DC');
+      if(!count) setColor('#2699FB');
       if(count == 1) setColor('#45B649');
       if(count == 2) setClassName('_hide');
 
