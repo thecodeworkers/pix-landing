@@ -1,6 +1,6 @@
 @import '../../assets/styles/index.scss';
 
-@mixin btn($background, $padding, $flag, $borderColor) {
+@mixin btn($background, $padding, $flag, $borderColor, $color) {
   
   @if $flag == 'gradient' {
     background: linear-gradient(90deg, $background);
@@ -12,7 +12,7 @@
   padding: $padding;
   width: 120px;
   border: solid 1.4px $borderColor;
-  color: $white;
+  color: $color;
   border-radius: 5px;
   font-family: $muli;
   font-size: 0.8rem;
@@ -50,12 +50,25 @@
 }
 
 ._registerBtn { 
-  @include btn($black, 0.5rem, 'not', $white);
+  @include btn($black, 0.5rem, 'not', $white, $white);
+  transition: all 0.6s;
+
+  &:hover {
+    @include btn($white, 0.5rem, 'not', $white, $black);
+    transition: all 0.6s;
+  }
 
 }
 
 ._loginBtn { 
-  @include btn($blueGreenGradient, 0.6rem, 'gradient', $black);
+  @include btn($blueGreenGradient, 0.6rem, 'gradient', $black, $white);
+  transition: all 0.6s;
+
+  &:hover {
+    @include btn($white, 0.6rem, 'not', $black, $black);
+    transition: all 0.6s;
+  }
+
 }
 
 ._toggle {
