@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { SEO } from '../';
 import './style.scss';
-import { PixLogo } from '../../components/Svg/pix-logo';
+import { PixLogo } from '../../components/Svg';
 import {
   Collapse,
   Navbar,

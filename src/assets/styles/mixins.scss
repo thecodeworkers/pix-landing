@@ -1,0 +1,20 @@
+@mixin responsive($size) {
+
+  @if $size == large {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $size == medium {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $size == small {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+}
+
