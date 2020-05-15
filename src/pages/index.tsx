@@ -1,9 +1,13 @@
 import React from "react";
 import Home from './home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Banner } from "../components";
 
 const IndexPage = () => (
-      <Home />
+      <Banner>
+
+            <Home />
+      </Banner>
 )
 
 export default IndexPage
