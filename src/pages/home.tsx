@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
@@ -19,40 +19,6 @@ const Home = (props) => {
     <div>
       <SEO title='Home' />
       <Navbar />
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-     
-      {/* <h1> {t('helloWorld')}</h1> */}
-
     </div>
   )
 }
