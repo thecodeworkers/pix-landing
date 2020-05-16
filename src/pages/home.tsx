@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import { SEO } from '../components';
 import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs} from '../components';
 import { withTrans } from '../i18n/withTrans';
@@ -10,8 +10,10 @@ import axios from 'axios';
 const Home = (props) => {
   const { t, i18n } = useTranslation();
 
-  const scrolling = (id: string): void => {
-      const target = document.getElementById(id);
+  const div = React.useRef();
+
+  const scrolling = (ref: any): void => {
+      const target = ref.current;
       window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
   }
 
@@ -19,7 +21,42 @@ const Home = (props) => {
     <div>
       <SEO title='Home' />
       <Navbar />
+
+  
+      <button onClick={ () => scrolling(div.current)} >hey </button>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+       {/* <AboutUs reference={div} scroll={scrolling}/> */}
+      {/* <div ref={div}>
+
+        <h1>hello world</h1> 
+      </div> */}
+
+    <div className='bb'>
+      <p>sdsdsa</p>
     </div>
+
+    </div>
+
   )
 }
 

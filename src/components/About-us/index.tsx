@@ -2,7 +2,13 @@ import React from 'react';
 import './style.scss';
 import { Square } from '../Svg';
 import { ScrollDown } from '../../components';
-const AboutUs = () => {
+const AboutUs = (props) => {
+
+  const { scroll, reference } = props;
+
+  console.log(props);
+  
+
   return (
     <div className='_aboutUsParent'>
       <div className='_titles'>
@@ -50,7 +56,7 @@ const AboutUs = () => {
       </div>
 
       <div className='_parentScroll'>
-        <ScrollDown scrollTo={null} landing='target_div' color='#FF8008' />
+        <ScrollDown scrollTo={scroll}  color='#FF8008' reference={reference}/>
       </div>
 
     </div>
