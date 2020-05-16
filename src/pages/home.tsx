@@ -51,9 +51,22 @@ const Home = (props) => {
         <h1>hello world</h1> 
       </div> */}
 
-    <div className='bb'>
-      <p>sdsdsa</p>
-    </div>
+{/* 
+    <div className=' bb'>
+      <div>
+        <p>ETH</p>
+      </div>
+    </div> */}
+
+{/* 
+<div className="rainbow">
+  <div className='square'>
+    <p>sadasdas</p>
+  </div>
+	Rainbow border
+</div> */}
+
+
 
     </div>
 
