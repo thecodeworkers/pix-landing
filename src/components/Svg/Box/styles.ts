@@ -1,17 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 
+export const opacity = (value = null) => ({ opacity: value });
+
 const increse = (y1, y2) => keyframes`
-0% {
-  transform: translateY(${y1});
-}
+  0% {
+    transform: translateY(${y1});
+  }
 
-50% {
-  transform: translateY(${y2});
-}
+  50% {
+    transform: translateY(${y2});
+  }
 
-100% {
-  transform: translateY(${y1});
-}
+  100% {
+    transform: translateY(${y1});
+  }
 `;
 
 export const PixelBox = styled.div`

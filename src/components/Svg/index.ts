@@ -6,3 +6,4 @@ export { default as Instagram } from './instagram-logo';
 export { default as Apple } from './apple-logo';
 export { default as PixLogo } from './pix-logo';
 export { default as Box } from './Box';
+export { default as Diamond } from './Diamond';

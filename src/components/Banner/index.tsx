@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { toggleDarkTheme } from '../../store/actions';
+import { Box, Diamond } from '../Svg';
+import { BoxA, BoxB, BoxC, BoxD, BoxE, BoxF, BoxG, BoxH, BoxI, BoxJ, BoxK, BoxL, DiamondA, DiamondPink, DiamondTurquese, DiamondYellow } from './components';
 import './styles.scss';
-import { Box } from '../Svg';
-import {
-  gradient1One, gradient1Two, gradient1Three, gradient1Four, gradient1Five, gradient1Six, linearGradientBox1, polygon1,
-  linearGradientBox2, polygon2
-} from './functions';
 
-export default ({ children = null }) => {
+export const Banner = ({ children = null, theme, action }) => {
+  const { darkTheme } = theme;
+
   return (
-    <div className="_banner">
+    <div className="_banner" style={{ backgroundColor: darkTheme ? '#00001F' : '#fff' }}>
+      <div>
+        <button onClick={() => action.toggleDarkTheme(!darkTheme)}>Toogle</button>
+      </div>
       {/* Left */}
       {/* box 1 */}
       <div className="_box" style={{ width: 290, height: 340, bottom: 0, left: 10 }}>
         <div className="_box1">
           <Box
-            viewWidth={383.3}
-            viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            linearGradient={linearGradientBox1}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxA(darkTheme).linearGradient}
+            polygons={BoxA(darkTheme).polygon}
           />
         </div>
       </div>
@@ -34,18 +31,10 @@ export default ({ children = null }) => {
       <div className="_box" style={{ width: 110, height: 160, bottom: 290, left: -41 }}>
         <div>
           <Box
-            viewWidth={383.3}
-            viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
-            opacityBox={0.71}
-            linearGradient={linearGradientBox2}
-            polygons={polygon2}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxB(darkTheme).linearGradient}
+            polygons={BoxB(darkTheme).polygon}
           />
         </div>
       </div>
@@ -57,14 +46,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxC(darkTheme).linearGradient}
+            polygons={BoxC(darkTheme).polygon}
           />
         </div>
       </div>
@@ -76,14 +60,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxD(darkTheme).linearGradient}
+            polygons={BoxD(darkTheme).polygon}
           />
         </div>
       </div>
@@ -95,14 +74,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxE(darkTheme).linearGradient}
+            polygons={BoxE(darkTheme).polygon}
           />
         </div>
       </div>
@@ -114,14 +88,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxF(darkTheme).linearGradient}
+            polygons={BoxF(darkTheme).polygon}
           />
         </div>
       </div>
@@ -136,14 +105,9 @@ export default ({ children = null }) => {
                 viewWidth={383.3}
                 viewHeight={453.69}
                 animation={{ entryPoint: '0px', middlePoint: '10px' }}
-                opacityBox={0.71}
-                polygons={polygon1}
-                gradientOne={gradient1One}
-                gradientTwo={gradient1Two}
-                gradientThree={gradient1Three}
-                gradientFour={gradient1Four}
-                gradientFive={gradient1Five}
-                gradientSix={gradient1Six}
+                opacityBox={darkTheme ? null : 0.71}
+                linearGradients={BoxG(darkTheme).linearGradient}
+                polygons={BoxG(darkTheme).polygon}
               />
             </div>
           </div>
@@ -159,14 +123,9 @@ export default ({ children = null }) => {
                 viewWidth={383.3}
                 viewHeight={453.69}
                 animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-                opacityBox={0.71}
-                polygons={polygon1}
-                gradientOne={gradient1One}
-                gradientTwo={gradient1Two}
-                gradientThree={gradient1Three}
-                gradientFour={gradient1Four}
-                gradientFive={gradient1Five}
-                gradientSix={gradient1Six}
+                opacityBox={darkTheme ? null : 0.71}
+                linearGradients={BoxH(darkTheme).linearGradient}
+                polygons={BoxH(darkTheme).polygon}
               />
             </div>
           </div>
@@ -180,14 +139,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxI(darkTheme).linearGradient}
+            polygons={BoxI(darkTheme).polygon}
           />
         </div>
       </div>
@@ -199,14 +153,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxJ(darkTheme).linearGradient}
+            polygons={BoxJ(darkTheme).polygon}
           />
         </div>
       </div>
@@ -218,14 +167,9 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxK(darkTheme).linearGradient}
+            polygons={BoxK(darkTheme).polygon}
           />
         </div>
       </div>
@@ -237,17 +181,54 @@ export default ({ children = null }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={0.71}
-            polygons={polygon1}
-            gradientOne={gradient1One}
-            gradientTwo={gradient1Two}
-            gradientThree={gradient1Three}
-            gradientFour={gradient1Four}
-            gradientFive={gradient1Five}
-            gradientSix={gradient1Six}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxL(darkTheme).linearGradient}
+            polygons={BoxL(darkTheme).polygon}
           />
         </div>
+      </div>
+
+      {/* diamond */}
+      {/* diamond 1 */}
+      <div className="_diamond" style={{ width: 100, height: 150, top: 50, right: 160 }}>
+        <Diamond 
+          animation={{ entryPoint: '0px', middlePoint: '10px' }}
+          linearGradients={DiamondA(darkTheme).linearGradient}
+          linearGradientsColor={DiamondPink}
+        />
+      </div>
+
+      {/* diamond 2 */}
+      <div className="_diamond" style={{ width: 90, height: 140, bottom: 310, right: 70 }}>
+        <Diamond
+          animation={{ entryPoint: '0px', middlePoint: '-10px' }}
+          linearGradients={DiamondA(darkTheme).linearGradient}
+          linearGradientsColor={DiamondTurquese}
+        />
+      </div>
+
+      {/* diamond 3 */}
+      <div className="_diamond" style={{ width: 70, height: 130, bottom: 140, right: 294 }}>
+        <Diamond
+          animation={{ entryPoint: '0px', middlePoint: '10px' }}
+          linearGradients={DiamondA(darkTheme).linearGradient}
+          linearGradientsColor={DiamondYellow}
+        />
       </div>
     </div>
   );
 }
+
+const mapStateToProps = ({ theme }) => ({ theme });
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    toggleDarkTheme
+  };
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Banner);

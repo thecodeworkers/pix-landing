@@ -1,5 +1,1 @@
-import { toggleDarkTheme } from './theme/action';
-
-export {
-  toggleDarkTheme
-}
+export * from './theme/action';

@@ -1,8 +1,7 @@
 ._banner {
   height: 100vh;
-  // background-image: url('../../../sin\ color-18.png');
-  // width: 100%;
-  // background-size: 100% 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 ._box {
@@ -28,5 +27,9 @@
 
 ._box12 {
   margin-top: 83px;
+}
+
+._diamond {
+  position: absolute;
 }
 

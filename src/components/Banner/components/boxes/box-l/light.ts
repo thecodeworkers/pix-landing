@@ -1,4 +1,4 @@
-import { linearStopValues, linearCoordinatesValues, polygonValues } from './common';
+import { linearStopValues, linearCoordinatesValues, polygonValues, polygonStyles } from '../../common';
 
 const stopOneColors: Array<any> = [
   linearStopValues('0', '#e2e3e4'),
@@ -19,13 +19,13 @@ const stopTwoColors: Array<any> = [
   linearStopValues('0.78', '#fff')
 ];
 
-const stopThreeColors = [
+const stopThreeColors: Array<any> = [
   linearStopValues('0', '#fff'),
   linearStopValues('1', '#d5d7d8')
 ];
 
-const stopFourColors = [
-  linearStopValues('0', '0099cd'),
+const stopFourColors: Array<any> = [
+  linearStopValues('0', '#0099cd'),
   linearStopValues('0.03', '#18a3d2', '0.91'),
   linearStopValues('0.11', '#4eb8dc', '0.69'),
   linearStopValues('0.19', '#7ecbe6', '0.51'),
@@ -37,7 +37,7 @@ const stopFourColors = [
   linearStopValues('0.97', '#fff', '0')
 ];
 
-const stopFiveColors = [
+const stopFiveColors: Array<any> = [
   linearStopValues('0', '#e6e6e6'),
   linearStopValues('1', '#d5d7d8')
 ];
@@ -56,48 +56,54 @@ const stopSixColors: Array<any> = [
   linearStopValues('0.83', '#0099cd')
 ];
 
-const linearOneId = 'linear-one-box2';
-const linearTwoId = 'linear-two-box2';
-const linearThreeId = 'linear-three-box2';
-const linearFourId = 'linear-four-box2';
-const linearFiveId = 'linear-five-box2';
-const linearSixId = 'linear-six-box2';
+const linearOneId = 'linear-one-box12';
+const linearTwoId = 'linear-two-box12';
+const linearThreeId = 'linear-three-box12';
+const linearFourId = 'linear-four-box12';
+const linearFiveId = 'linear-five-box12';
+const linearSixId = 'linear-six-box12';
 
-export const linearGradientBox2 = [
+export const boxLight: Array<any> = [
   {
     linearId: linearOneId,
     coordinates: linearCoordinatesValues('191.13', '284.33', '357.6', '284.33'),
-    stop: stopOneColors
+    stops: stopOneColors,
+    showStop: true
   },
   {
     linearId: linearTwoId,
     coordinates: linearCoordinatesValues('190.87', '284.33', '357.85', '284.33'),
-    stop: stopTwoColors
+    stops: stopTwoColors,
+    showStop: false
   },
   {
     linearId: linearThreeId,
     coordinates: linearCoordinatesValues('25.7', '142.83', '357.6', '142.83'),
-    stop: stopThreeColors
+    stops: stopThreeColors,
+    showStop: true
   },
   {
     linearId: linearFourId,
     coordinates: linearCoordinatesValues('191.65', '258.11', '191.65', '27.55'),
-    stop: stopFourColors
+    stops: stopFourColors,
+    showStop: false
   },
   {
     linearId: linearFiveId,
     coordinates: linearCoordinatesValues('25.7', '284.59', '191.65', '284.59'),
-    stop: stopFiveColors
+    stops: stopFiveColors,
+    showStop: true
   },
   {
     linearId: linearSixId,
     coordinates: linearCoordinatesValues('25.44', '284.59', '191.9', '284.59'),
-    stop: stopSixColors
+    stops: stopSixColors,
+    showStop: false
   },
-]
+];
 
-export const polygon2 = [
-  polygonValues({ opacity: 0.88, fill: `url(#${linearOneId})`, stroke: `url(#${linearTwoId})` }, 'cls2', '191.13 257.8 191.65 425.82 357.6 307.74 357.6 142.83 191.13 257.8'),
-  polygonValues({ opacity: 0.88, fill: `url(#${linearThreeId})`, stroke: `url(#${linearFourId})` }, 'cls3', '191.13 27.86 25.7 143.35 191.13 257.8 357.6 142.83 191.13 27.86'),
-  polygonValues({ opacity: 0.88, fill: `url(#${linearFiveId})`, stroke: `url(#${linearSixId})` }, 'cls4', '25.7 143.35 28.34 305.31 191.65 425.82 191.13 257.8 25.7 143.35'),
+export const polygonLight: Array<any> = [
+  polygonValues(polygonStyles(0.88, `url(#${linearOneId})`, `url(#${linearTwoId})`, 0.51, 10), 'cls2', '191.13 257.8 191.65 425.82 357.6 307.74 357.6 142.83 191.13 257.8'),
+  polygonValues(polygonStyles(0.88, `url(#${linearThreeId})`, `url(#${linearFourId})`, 0.51, 10), 'cls3', '191.13 27.86 25.7 143.35 191.13 257.8 357.6 142.83 191.13 27.86'),
+  polygonValues(polygonStyles(0.88, `url(#${linearFiveId})`,  `url(#${linearSixId})`, 0.5, 10), 'cls4', '25.7 143.35 28.34 305.31 191.65 425.82 191.13 257.8 25.7 143.35'),
 ];
