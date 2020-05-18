@@ -29,8 +29,7 @@ const Home = (props) => {
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <div id='target_div'>
-        <h1>hello</h1>
-        <h1>prueba Ender</h1>        
+        <h1>hello</h1>       
       </div>
 
     </div>

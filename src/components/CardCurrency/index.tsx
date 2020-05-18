@@ -10,33 +10,34 @@ export default function Cards() {
       <div className="_card"> 
         <div className="container">
             <div className="row">
-                <div className='col-md-3'>
-                    <div className="card_P">
-                        <div className="card_H"><UsdtLogo /></div>
+                <div className="_contentCard">
+                    <div className=''>
+                        <div className="_cardPadre">
+                            <div className="_cardHijo"><UsdtLogo /></div>
+                        </div>
+                        <div className="_price"><h6>$1.230.03</h6></div>  
                     </div>
-                    <div className="price"><h6>$1.230.03</h6></div>  
-                </div>
-                <div className='col-md-3'>
-                    <div className="card_P">
-                        <div className="card_H"><UsdcLogo /></div>
+                    <div className=''>
+                        <div className="_cardPadre">
+                            <div className="_cardHijo"><UsdcLogo /></div>
+                        </div>
+                        <div className="_price"><h6>$1.230.03</h6></div>  
                     </div>
-                    <div className="price"><h6>$1.230.03</h6></div>  
-                </div>
-                <div className='col-md-3'>
-                    <div className="card_P">
-                        <div className="card_H"><EthLogo /></div>
+                    <div className=''>
+                        <div className="_cardPadre">
+                            <div className="_cardHijo"><EthLogo /></div>
+                        </div>
+                        <div className="_price"><h6>$1.230.03</h6></div>  
                     </div>
-                    <div className="price"><h6>$1.230.03</h6></div>  
-                </div>
-                <div className='col-md-3'>
-                    <div className="card_P">
-                        <div className="card_H"><BtcLogo /></div>
+                    <div className=''>
+                        <div className="_cardPadre">
+                            <div className="_cardHijo"><BtcLogo /></div>
+                        </div>
+                        <div className="_price"><h6>$1.230.03</h6></div>  
                     </div>
-                    <div className="price"><h6>$1.230.03</h6></div>  
                 </div>
             </div>
         </div>
-        <h1 className="prueba">Ender Cards</h1>
       </div>
     )
   }
