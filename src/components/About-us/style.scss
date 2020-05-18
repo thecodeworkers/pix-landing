@@ -1,0 +1,124 @@
+@import '../../assets/styles/index.scss';
+
+._aboutUsParent {
+  background-image: url('../../assets/img/about-us.svg');
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+}
+
+._titles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+  color: $lightBLue;
+}
+
+._titles-child {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+._aboutText {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: $muli;
+}
+
+._number {
+  position: absolute;
+  right: -18px;
+  top: -20px;
+}
+
+._textContent {
+ width: 42%;
+ display: block;
+ text-align: center;
+
+ & h5 {
+    margin: 1rem 0;
+    font-family: $muli;
+    font-weight: 800;
+    font-size: 1.1rem;
+ }
+}
+
+._halfContent {
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+._pixTitle {
+  color: $appleGreen;
+  text-align: left;
+  font-family: $muli;
+  margin: 0px 0px 0px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+._paragraph {
+  margin: 0px 0px 10px;
+  text-align: left;
+  font-family: $muli;
+  font-size: 0.9rem;
+}
+
+._divBlock {
+  margin-top: 7.5rem;
+  display: block;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+._parentScroll {
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+@include responsive(large) {
+
+  ._divBlock {
+    margin-top: 5rem;
+  }
+
+  ._textContent {
+    width: 100%;
+  }
+
+  ._titles-child {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ._halfContent {
+    width: 80%;
+  }
+
+  ._aboutText {
+    font-size: 1.5rem;
+  }
+
+  ._number {
+    position: relative;
+    text-align: center;
+  }
+
+  ._parentScroll {
+    padding-top: 8rem;
+  }
+  
+
+}

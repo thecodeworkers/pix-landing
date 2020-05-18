@@ -18,7 +18,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <Navbar className='_nav' fixed='top' dark expand="md">
+      <Navbar className='_nav' fixed='top' dark expand="lg">
         <div className='container'>
           <NavbarBrand href="/">
             <div className='_logo'>
@@ -26,14 +26,14 @@ const Navigation = () => {
             </div>
 
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} className='_toggle'/>
+          <NavbarToggler onClick={toggle} className='_toggle border w-3'/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto ml-auto" navbar>
               <NavItem className='_item' >
                 <NavLink href="/components/" className='text-white'>ABOUT</NavLink>
               </NavItem>
               <NavItem className='_item'>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>PRODUCTS</NavLink>
+                <NavLink className='text-white '>PRODUCTS</NavLink>
               </NavItem>
               <NavItem className='_item'>
                 <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>BENEFITS </NavLink>
