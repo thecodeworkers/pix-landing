@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { toggleDarkTheme } from '../../store/actions';
 import { Box, Diamond } from '../Svg';
-import { BoxA, BoxB, BoxC, BoxD, BoxE, BoxF, BoxG, BoxH, BoxI, BoxJ, BoxK, BoxL, DiamondA, DiamondPink, DiamondTurquese, DiamondYellow } from './components';
+import { BoxA, BoxB, BoxC, BoxD, BoxE, BoxF, BoxG, BoxH, BoxI, BoxJ, BoxK, BoxL, DiamondA, DiamondPink, DiamondTurquese, DiamondYellow, DiamondPurple } from './components';
 import './styles.scss';
 
 export const Banner = ({ children = null, theme, action }) => {
@@ -194,7 +194,7 @@ export const Banner = ({ children = null, theme, action }) => {
         <Diamond 
           animation={{ entryPoint: '0px', middlePoint: '10px' }}
           linearGradients={DiamondA(darkTheme).linearGradient}
-          linearGradientsColor={DiamondPink}
+          linearGradientsColor={darkTheme ? DiamondPink : DiamondPurple}
         />
       </div>
 
@@ -212,7 +212,7 @@ export const Banner = ({ children = null, theme, action }) => {
         <Diamond
           animation={{ entryPoint: '0px', middlePoint: '10px' }}
           linearGradients={DiamondA(darkTheme).linearGradient}
-          linearGradientsColor={DiamondYellow}
+          linearGradientsColor={darkTheme ? DiamondYellow : DiamondPink}
         />
       </div>
     </div>

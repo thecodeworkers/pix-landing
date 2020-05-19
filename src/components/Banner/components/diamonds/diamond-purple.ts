@@ -1,31 +1,31 @@
 import { linearCoordinatesValues, polygonValues, polygonStyles, linearStopValues } from "../common";
 
 const stopOneColors: Array<any> = [
-  linearStopValues('0', '#BB842E'),
-  linearStopValues('0.9508', '#BB842E')
+  linearStopValues('0', '#000021'),
+  linearStopValues('0.9508', '#161639')
 ];
 
 const stopTwoColors: Array<any> = [
-  linearStopValues('4.922280e-02', '#BB842E'),
-  linearStopValues('1', '#BB842E')
+  linearStopValues('4.922280e-02', '#161639'),
+  linearStopValues('1', '#000021')
 ];
 
 const stopThreeColors: Array<any> = [
-  linearStopValues('0', '#BB842E'),
-  linearStopValues('0.9508', '#BB842E')
+  linearStopValues('0', '#000021'),
+  linearStopValues('0.9508', '#161639')
 ];
 
 const stopFourColors: Array<any> = [
-  linearStopValues('4.922280e-02', '#BB842E'),
-  linearStopValues('1', '#BB842E')
+  linearStopValues('4.922280e-02', '#161639'),
+  linearStopValues('1', '#000021')
 ];
 
-const linearOneId = 'SVGID_ONE_YELLOW';
-const linearTwoId = 'SVGID_TWO_YELLOW';
-const linearThreeId = 'SVGID_THREE_YELLOW';
-const linearFourId = 'SVGID_FOUR_YELLOW';
+const linearOneId = 'SVGID_ONE_PURPLE';
+const linearTwoId = 'SVGID_TWO_PURPLE';
+const linearThreeId = 'SVGID_THREE_PURPLE';
+const linearFourId = 'SVGID_FOUR_PURPLE';
 
-const diamondYellow: Array<any> = [
+const diamondPurple: Array<any> = [
   {
     linearId: linearOneId,
     coordinates: linearCoordinatesValues('64.69', '57.255', '122.33', '57.255'),
@@ -56,4 +56,4 @@ const diamondYellow: Array<any> = [
   },
 ];
 
-export default diamondYellow;
+export default diamondPurple;
