@@ -19,6 +19,17 @@ const Home = (props) => {
     <div>
       <SEO title='Home' />
       <Navbar />
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <CardCurrency />
     </div>
   )
