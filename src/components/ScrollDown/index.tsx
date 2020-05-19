@@ -2,10 +2,11 @@ import React from 'react';
 import { PixelLogo } from '../Svg';
 import './style.scss';
 
-const ScrollDown = ({scrollTo, landing, color}) => {
+const ScrollDown = ({scrollTo, reference, color}) => {
+  
    return (
      <div>
-       <div className='_scrollDown' onClick={() => scrollTo(landing)}>  
+       <div className='_scrollDown' onClick={() => scrollTo(reference)}>  
          <PixelLogo color={color} />
        </div>
 

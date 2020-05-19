@@ -1,0 +1,106 @@
+@import '../../assets/styles/index.scss';
+
+@mixin parent {
+  // background-color: #212121;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin phone {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  // background-color: green;
+}
+
+._productParent {
+  @include parent;
+  padding-top: 5rem;
+}
+._productGeneral {
+  // background-color: blue;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+._productLeft {
+  // background-color: purple;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+._productRight {
+  // background-color: orange;
+  width: 50%;
+}
+
+._phoneContainer {
+  @include phone;
+}
+
+._phoneContainerTwo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  // background-color: green;
+  margin-top: -240px;
+}
+
+._centerSquare {
+  display: flex;
+  justify-content: center;
+}
+
+._wallPix {
+  color: $appleGreen;
+  text-align: left;
+  font-family: $muli;
+  margin: 0px 0px 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+._pixLeftDescription {
+  // background-color:red;
+  width: 55%;
+  margin-top: 9rem;
+
+    & h5 {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      font-family: $muli;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-align: center;
+   }
+}
+
+
+._productParentTwo {
+  @include parent;
+}
+
+._phoneContainerTwo {
+  @include phone;
+  margin-top: -14rem;
+}
+
+._pixelCenter {
+  // background-color: blue;
+  position: absolute;
+  transform: translate(-50%, 200%);
+  right: 45%;
+}
+
+._checkCenter {
+  display: flex;
+  justify-content: center;
+}
