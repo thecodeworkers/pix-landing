@@ -58,7 +58,7 @@ const Home = (props) => {
       <br />
       <br />
 
-      <AboutUs reference={test} scroll={scrolling} theme={theme} />
+      {/* <AboutUs reference={test} scroll={scrolling} theme={theme} /> */}
 
 
       {/* <div ref={div} className={theme ? '_testing' : '_class'}>
