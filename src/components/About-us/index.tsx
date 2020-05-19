@@ -2,10 +2,13 @@ import React from 'react';
 import './style.scss';
 import { Square } from '../Svg';
 import { ScrollDown } from '../../components';
-const AboutUs = () => {
+const AboutUs = (props) => {
+
+  const { scroll, reference, theme } = props;
+
   return (
-    <div className='_aboutUsParent'>
-      <div className='_titles'>
+    <div className={theme ? '_aboutUsParent' : '_anotherclass'}>
+      <div className={theme ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
           <div>
             <p className='_aboutText'>Fast</p>
@@ -31,17 +34,17 @@ const AboutUs = () => {
       </div>
 
       <div className='_divBlock'>
-        <div className='_textContent'>
+        <div className={theme ? '_textContent' : '_textContentDark'}>
           <Square />
           <h5>We believe inclusion is fuel for the economy</h5>
           <div className='_halfContent'>
             <p className='_pixTitle'>PIX Wallet</p>
 
-            <p className='_paragraph'>
+            <p className={theme ? '_paragraph' : '_paragraphDark'}>
               Digital Wallets that allow users to store and transfer USD within PIX users.
               </p>
 
-            <p className='_paragraph'>
+            <p className={theme ? '_paragraph' : '_paragraphDark'}>
               Hosted Wallets with the highest custody standards that allow users to store, manage and transfer Virtual Assets.
               </p>
           </div>
@@ -50,7 +53,7 @@ const AboutUs = () => {
       </div>
 
       <div className='_parentScroll'>
-        <ScrollDown scrollTo={null} landing='target_div' color='#FF8008' />
+        <ScrollDown scrollTo={scroll}  color='#FF8008' reference={reference}/>
       </div>
 
     </div>
