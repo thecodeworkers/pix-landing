@@ -1,0 +1,12 @@
+export { default as BoxA } from './box-a';
+export { default as BoxB } from './box-b';
+export { default as BoxC } from './box-c';
+export { default as BoxD } from './box-d';
+export { default as BoxE } from './box-e';
+export { default as BoxF } from './box-f';
+export { default as BoxG } from './box-g';
+export { default as BoxH } from './box-h';
+export { default as BoxI } from './box-i';
+export { default as BoxJ } from './box-j';
+export { default as BoxK } from './box-k';
+export { default as BoxL } from './box-l';
