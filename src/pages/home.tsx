@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs} from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, CardCurrency} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
@@ -19,6 +19,7 @@ const Home = (props) => {
     <div>
       <SEO title='Home' />
       <Navbar />
+      <CardCurrency />
     </div>
   )
 }
