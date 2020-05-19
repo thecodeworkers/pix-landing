@@ -1,9 +1,34 @@
 @import '../../assets/styles/index.scss';
 
 
-*, *::before, *::after {
-	box-sizing: border-box;
+// *, *::before, *::after {
+// 	box-sizing: border-box;
+// }
+
+._testing {
+	background-color: #fff;
+	height: 80vh;
+	transition-duration: 1s;
+	
 }
+
+._class {
+	background-color: #212121;
+	height: 80vh;
+	transition-duration:1s;
+}
+
+@keyframes fadein{
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
 
 // @keyframes rotate {
 // 	100% {

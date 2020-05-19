@@ -6,3 +6,8 @@ export { default as Instagram } from './instagram-logo';
 export { default as Apple } from './apple-logo';
 export { default as PixLogo } from './pix-logo';
 export { default as Square } from './square';
+export { default as Separator } from './separator';
+export { default as PixAppOne } from './pix-app1';
+export { default as PixAppTwo } from './pix-app2';
+export { default as Exchange } from './exchange';
+export { default as Check } from './check';

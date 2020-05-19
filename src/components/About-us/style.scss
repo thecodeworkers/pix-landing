@@ -1,18 +1,63 @@
 @import '../../assets/styles/index.scss';
 
-._aboutUsParent {
-  background-image: url('../../assets/img/about-us.svg');
-  width: 100%;
-  background-size: cover;
-  background-position: bottom;
-}
-
-._titles {
+@mixin title{
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 5rem;
   color: $lightBLue;
+  transition: 1s;
+}
+
+@mixin textContent($color) {
+    width: 42%;
+    display: block;
+    text-align: center;
+    transition: 1s;
+   
+    & h5 {
+       margin: 1rem 0;
+       font-family: $muli;
+       font-weight: 800;
+       font-size: 1.1rem;
+       color: $color;
+       transition: 1s;
+    }
+}
+
+@mixin paragraph {
+  margin: 0px 0px 10px;
+  text-align: left;
+  font-family: $muli;
+  font-size: 0.9rem;
+  transition: 1s;
+}
+
+
+@mixin background ($image){
+  background-image: url('../../assets/img/#{$image}.svg');
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  transition: 1s;
+  padding-top: 3rem;
+}
+._aboutUsParent {
+  @include background('about-us');
+}
+
+._anotherclass {
+  @include background('about-black');
+  background-position: center;
+} 
+
+._titles {
+  @include title;
+}
+
+._titlesDark {
+  @include title;
+  color: $appleGreen;
 }
 
 ._titles-child {
@@ -35,17 +80,12 @@
 }
 
 ._textContent {
- width: 42%;
- display: block;
- text-align: center;
-
- & h5 {
-    margin: 1rem 0;
-    font-family: $muli;
-    font-weight: 800;
-    font-size: 1.1rem;
- }
+  @include textContent($black)
 }
+
+._textContentDark {
+  @include textContent($white)
+ }
 
 ._halfContent {
   width: 70%;
@@ -59,15 +99,17 @@
   text-align: left;
   font-family: $muli;
   margin: 0px 0px 0px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 ._paragraph {
-  margin: 0px 0px 10px;
-  text-align: left;
-  font-family: $muli;
-  font-size: 0.9rem;
+  @include paragraph;
+}
+
+._paragraphDark {
+  @include paragraph;
+  color: $white;
 }
 
 ._divBlock {
@@ -85,7 +127,6 @@
   justify-content: center;
   width: 100%;
 }
-
 
 @include responsive(large) {
 

@@ -7,3 +7,4 @@ export { default as Banner } from './Banner';
 export { default as Test } from './Test';
 export { default as ScrollDown } from './ScrollDown';
 export { default as AboutUs } from './About-us';
+export { default as Product } from './Product';
