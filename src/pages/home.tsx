@@ -24,7 +24,6 @@ const Home = (props) => {
   }, [theme])
 
   const scrollPosition = () => {
-
     const position = window.scrollY;
     if (position < 400) setTheme(true);
     if (position > 400 && position <= 700) setTheme(false);
@@ -58,8 +57,10 @@ const Home = (props) => {
       <br />
       <br />
 
-      <AboutUs reference={test} scroll={scrolling} theme={theme} />
-      <CardCurrency />
+      {/* <AboutUs reference={test} scroll={scrolling} theme={theme} />
+      <CardCurrency /> */}
+
+      <Product />
 
 
       {/* <div ref={div} className={theme ? '_testing' : '_class'}>

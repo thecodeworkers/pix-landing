@@ -17,3 +17,6 @@ export { default as PixAppOne } from './pix-app1';
 export { default as PixAppTwo } from './pix-app2';
 export { default as Exchange } from './exchange';
 export { default as Check } from './check';
+export { default as Arrows } from './arrows';
+export { default as Usd } from './usd';
+export { default as Users } from './users';
