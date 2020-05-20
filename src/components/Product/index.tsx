@@ -1,6 +1,6 @@
 import React from 'react';
-import { PixAppOne, Square, PixAppTwo, Exchange, Check, Arrows, Users, Usd, Separator } from '../Svg';
-import { ScrollDown } from '../../components';
+import { PixAppOne, Square, PixAppTwo, Exchange, Check, Arrows, Users, Usd } from '../Svg';
+import { ScrollDown, Separator } from '../../components';
 import './style.scss'
 
 const Product = () => {
@@ -44,7 +44,6 @@ const Product = () => {
               <p className='_wallPix'>PIX Instant</p>
               <p className='_paragraph'>PIX Instant is designed for customers that want to use Virtual Assets but prefer to convert to fiat currency quickly and avoid taking price fluctuation exposure.</p>
               <Exchange />
-
               <div className='_checkCenter'>
                 <Check />
               </div>
@@ -87,9 +86,12 @@ const Product = () => {
            
           </div>
         </div>
-        
       </div>
+
+      <div className='_parentSeparatorLine'>
         <Separator />
+      </div>
+        
     </div>
   )
 }

@@ -1,0 +1,28 @@
+@import '../../assets/styles/index.scss';
+
+@mixin rectangle($gradient, $direction) {
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(to $direction, $gradient);
+}
+
+._separatorMain {
+  display: flex;
+  flex-direction: row;
+}
+
+._rentangleOne {
+   @include rectangle($greenGradient, left);
+}
+
+._rentangleTwo {
+  @include rectangle($blueGradient, left);
+}
+
+._rentangleThree {
+  @include rectangle($darkPurpleGradient, left);
+}
+
+._rentangleFour {
+  @include rectangle($orangeGradient, left);
+}
