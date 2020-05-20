@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { PixAppOne, Square, PixAppTwo, Exchange, Check, Arrows, Users, Usd } from '../Svg';
 import { ScrollDown, Separator } from '../../components';
+import { saveReference } from '../../store/actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import './style.scss'
 
-const Product = () => {
+const Product = ({ action }) => {
+  const { saveReference } = action;
+  const productRef: any = useRef();
+
+  useEffect(() => {
+    saveReference({ productRef });
+  }, []);
+
+
   return (
-    <div>
+    <div ref={productRef}>
       <div className='_productParent'>
         <div className='_productGeneral'>
           <div className='_productLeft'>
@@ -32,7 +43,7 @@ const Product = () => {
 
           <div className='_productLeft'>
             <div className='_pixelCenter'>
-              <ScrollDown scrollTo={null} reference={null} color='#57D6AF' />
+              <ScrollDown color='#57D6AF' />
             </div>
 
             <div className='_phoneContainerTwo'>
@@ -96,4 +107,16 @@ const Product = () => {
   )
 }
 
-export default Product;
+const mapStateToProps = () => ({});
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    saveReference
+  }
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

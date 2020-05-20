@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useRef, useEffect, createRef } from 'react';
 import './style.scss';
 import { Square } from '../Svg';
 import { ScrollDown } from '../../components';
-const AboutUs = (props) => {
+import { saveReference } from '../../store/actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+ 
+const AboutUs = ({ reference, theme, action, scroll }) => {
+  const { saveReference } = action;
+  const { productRef } = scroll;
 
-  const { scroll, reference, theme } = props;
+  const aboutRef: any = useRef();
+
+  useEffect(() => {
+    saveReference({ aboutRef });
+  }, []);
 
   return (
-    <div className={theme ? '_aboutUsParent' : '_anotherclass'}>
+    <div ref={aboutRef} className={theme ? '_aboutUsParent' : '_anotherclass'}>
       <div className={theme ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
           <div>
@@ -53,11 +63,23 @@ const AboutUs = (props) => {
       </div>
 
       <div className='_parentScroll'>
-        <ScrollDown scrollTo={scroll}  color='#FF8008' reference={reference}/>
+        <ScrollDown color='#FF8008' reference={productRef}/>
       </div>
 
     </div>
   )
 }
 
-export default AboutUs;
+const mapStateToProps = ({ scroll }) => ({ scroll });
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    saveReference
+  }
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AboutUs);
