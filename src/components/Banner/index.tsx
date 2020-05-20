@@ -3,9 +3,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { toggleDarkTheme } from '../../store/actions';
 import { Background } from './components';
+import { CardCurrency } from '../../components';
 import './styles.scss';
 
-export const Banner = ({ children = null, theme, action }) => {
+export const Banner = ({ theme }) => {
   const { darkTheme } = theme;
 
   return (
@@ -17,7 +18,7 @@ export const Banner = ({ children = null, theme, action }) => {
             <p className="_childrenTitle">Today's Index Value</p>
           </div>
           <div className="_bannerCards">
-            CARDS
+            <CardCurrency/>
           </div>
           <div className="_bannerButton">
             <p className="_buttonText">Send, receive & exchange cryptocurrency</p>
