@@ -4,8 +4,6 @@ import './style.scss';
 
 const ScrollDown = ({reference = null, color}) => {
   const scrolling = (ref: any): void => {
-    console.log(ref);
-    
     const target = ref.current;
     window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
   }
