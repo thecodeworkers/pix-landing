@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
@@ -58,7 +58,8 @@ const Home = (props) => {
       <br />
       <br />
 
-      {/* <AboutUs reference={test} scroll={scrolling} theme={theme} /> */}
+      <AboutUs reference={test} scroll={scrolling} theme={theme} />
+      <CardCurrency />
 
 
       {/* <div ref={div} className={theme ? '_testing' : '_class'}>
