@@ -34,9 +34,9 @@ export default function Cards() {
 				<div className="row">
 					<div className="_contentCard">
 						{
-							cards.map(res => {
+							cards.map((res, index) => {
 								return (
-									<div>
+									<div key={index}>
 										<div className={res.class}>
 											<div className="_cardChild">{res.icon}</div>
 										</div>
@@ -49,6 +49,5 @@ export default function Cards() {
 				</div>
 			</div>
 		</div>
-
 	)
 }

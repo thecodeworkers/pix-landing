@@ -43,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
 }
 
 ._bannerButton {
@@ -69,11 +68,35 @@
   padding: 10px 50px 10px 50px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(to left, $greenBlueGradient);
+  background: linear-gradient(90deg, $blueGreenGradient);
 }
 
 ._bannerFooter {
-  background-color: blue;
   height: 10vh;
   width: 100%;
+}
+
+._footerElements {
+  height: 50%;
+  display: flex;
+}
+
+._footerScroll {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+._scrollDimension {
+  width: 40px; 
+  height: 40px;
+  z-index: 999;
+  margin-top: 5px;
+}
+
+._footerLang {
+  z-index: 999;
+  width: 22.5%;
+  display: flex;
+  justify-content: center;
 }
