@@ -1,33 +1,78 @@
-._banner {
-  height: 100vh;
+@import '../../assets/styles/index.scss';
+
+._bannerContainer {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-._box {
-  position: absolute;
-  overflow: hidden;
+._bannerDesc {
+  z-index: 999;
+  height: 100%;
+  width: 55%;
 }
 
-._box1 {
-  margin-top: 60px;
+._bannerTexts {
+  height: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
-._box5 {
-  margin-top: 100px;
+._childrenText {
+  font-family: $muli;
+  font-weight: 800;
+  color: #33A3DC;
+  text-align: center;
+  font-size: 1.7rem;
+  width: 90%;
 }
 
-._box7 {
-  margin-left: 32px;
+._childrenTitle {
+  font-family: $muli;
+  font-weight: 800;
+  color: #304352;
+  text-align: center;
+  font-size: 3rem;
 }
 
-._box8 {
-  margin-left: 24px;
+._bannerCards {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-._box12 {
-  margin-top: 83px;
+._bannerButton {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-._diamond {
-  position: absolute;
+._buttonText {
+  color: #33A3DC;
+  font-family: $muli;
+  font-weight: 800;
+  font-size: 1rem;
 }
 
+._buttonGradient {
+  color: #fff;
+  font-family: $muli;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 10px 50px 10px 50px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to left, $greenBlueGradient);
+}
+
+._bannerFooter {
+  background-color: blue;
+  height: 10vh;
+  width: 100%;
+}
