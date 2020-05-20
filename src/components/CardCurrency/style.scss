@@ -23,8 +23,25 @@
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
   background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(to left, $gradient), linear-gradient(to right, $gradient), linear-gradient(to left, $gradient);
-  animation: rotate 2s linear;
+
 }
+
+  &:hover::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(to left, $gradient), linear-gradient(to right, $gradient), linear-gradient(to left, $gradient);
+    // animation: rotate 2s linear;
+    animation: rotate 2s linear infinite;
+  }
+
 
   &::after {
   content: '';
@@ -88,7 +105,7 @@
 
 @keyframes rotate {
 	100% {
-		transform: rotate(1turn);
+		transform: rotate(360deg);
 	}
 }
 
