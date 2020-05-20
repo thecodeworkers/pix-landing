@@ -29,7 +29,7 @@ const cards = [
 
 export default function Cards() {
 	return (
-		<div className="_card">
+		<div className="_cardCurrencyMain">
 			<div className="container">
 				<div className="row">
 					<div className="_contentCard">
