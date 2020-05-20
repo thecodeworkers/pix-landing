@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator} from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
-import i18n from 'i18next';
-import axios from 'axios';
 
 const Home = (props) => {
   const { t, i18n } = useTranslation();
@@ -26,16 +24,27 @@ const Home = (props) => {
   const scrollPosition = () => {
     const position = window.scrollY;
     if (position < 400) setTheme(true);
-    if (position > 400 && position <= 700) setTheme(false);
-    if (position > 700) setTheme(true);
+    if (position > 400 && position <= 900) setTheme(false);
+    if (position > 900) setTheme(true);
   }
 
   return (
     <div>
       <SEO title='Home' />
       <Navbar />
-      <button onClick={() => scrolling(test.current)} >hey </button>
+      <Banner />
+      <AboutUs theme={theme} />
+      <Product />
+      <Footer />
+    </div>
 
+  )
+}
+
+export default withTrans(Home)
+
+
+ {/* <br />
       <br />
       <br />
       <br />
@@ -54,13 +63,10 @@ const Home = (props) => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
+      <br /> */}
 
       {/* <AboutUs reference={test} scroll={scrolling} theme={theme} />
       <CardCurrency /> */}
-
-      <Product />
       {/* <Separator /> */}
 
 
@@ -70,6 +76,7 @@ const Home = (props) => {
       </div> */}
 
 
+      {/* <br />
       <br />
       <br />
       <br />
@@ -82,12 +89,11 @@ const Home = (props) => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-
+      <br /> */}
+{/* 
       <div ref={test}>
         <p>test</p>
-      </div>
+      </div> */}
       
       {/* <Product /> */}
 
@@ -107,12 +113,3 @@ const Home = (props) => {
   </div>
 	Rainbow border
 </div> */}
-
-
-
-    </div>
-
-  )
-}
-
-export default withTrans(Home)
