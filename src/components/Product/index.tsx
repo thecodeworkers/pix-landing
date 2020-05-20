@@ -1,5 +1,5 @@
 import React from 'react';
-import { PixAppOne, Square, PixAppTwo, Exchange, Check} from '../Svg';
+import { PixAppOne, Square, PixAppTwo, Exchange, Check, Arrows, Users, Usd, Separator } from '../Svg';
 import { ScrollDown } from '../../components';
 import './style.scss'
 
@@ -34,7 +34,7 @@ const Product = () => {
             <div className='_pixelCenter'>
               <ScrollDown scrollTo={null} reference={null} color='#57D6AF' />
             </div>
-           
+
             <div className='_phoneContainerTwo'>
               <PixAppTwo />
             </div>
@@ -46,15 +46,50 @@ const Product = () => {
               <Exchange />
 
               <div className='_checkCenter'>
-                  <Check />
+                <Check />
               </div>
-             
+
             </div>
           </div>
-
-
         </div>
       </div>
+
+
+      <div className='_skillsParent'>
+        <div className='_productSkills'>
+
+          <div className='_className'>
+            <div className='_productIcon'>
+              <Arrows />
+            </div>
+
+            <p className='_skillsDescription'>
+              Exchange FIAT to Virtual assets
+            </p>
+          </div>
+          <div className='_className'>
+            <div className='_productIcon'>
+              <Usd />
+            </div>
+
+            <p className='_skillsDescription'>
+            transfer USD within PIX users
+            </p>
+          </div>
+          <div className='_className'>
+            <div className='_productIcon'>
+              <Users />
+            </div>
+
+            <p className='_skillsDescription'>
+            Customized services <br />for our high demand clients
+            </p>
+           
+          </div>
+        </div>
+        
+      </div>
+        <Separator />
     </div>
   )
 }
