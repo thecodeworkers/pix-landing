@@ -7,8 +7,12 @@ import { CardCurrency, ScrollDown, Lang } from '../../components';
 import { PixelLogo } from '../Svg';
 import './styles.scss';
 
-export const Banner = ({ theme }) => {
+export const Banner = ({ theme, scroll }) => {
   const { darkTheme } = theme;
+  const { aboutRef } = scroll;
+
+  console.log(scroll);
+  
 
   return (
     <div style={{ backgroundColor: darkTheme ? '#00001F' : '#fff' }}>
@@ -38,7 +42,7 @@ export const Banner = ({ theme }) => {
               <PixelLogo color="#45B649"/>
             </div> */}
             <div className="_scrollDimension">
-              <ScrollDown color="#45B649"/>
+              <ScrollDown color="#45B649" reference={aboutRef}/>
             </div>
           </div>
           <div className="_footerLang">
@@ -51,7 +55,7 @@ export const Banner = ({ theme }) => {
   );
 }
 
-const mapStateToProps = ({ theme }) => ({ theme });
+const mapStateToProps = ({ theme, scroll }) => ({ theme, scroll });
 
 const mapDispatchToProps = dispatch => {
   const actions = {

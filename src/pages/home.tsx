@@ -12,11 +12,6 @@ const Home = (props) => {
 
   const test = React.useRef();
 
-  const scrolling = (ref: any): void => {
-    const target = ref.current;
-    window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
-  }
-
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
   }, [theme])
@@ -33,7 +28,7 @@ const Home = (props) => {
       <SEO title='Home' />
       <Navbar />
       <Banner />
-      <AboutUs theme={theme} />
+      <AboutUs theme={theme}/>
       <Product />
       <Footer />
     </div>
