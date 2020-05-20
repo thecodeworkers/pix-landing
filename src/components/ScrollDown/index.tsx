@@ -2,11 +2,16 @@ import React from 'react';
 import { PixelLogo } from '../Svg';
 import './style.scss';
 
-const ScrollDown = ({scrollTo, reference, color}) => {
+const ScrollDown = ({reference, color}) => {
+
+  const scrolling = (ref: any): void => {
+    const target = ref.current;
+    window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+  }
   
    return (
      <div>
-       <div className='_scrollDown' onClick={() => scrollTo(reference)}>  
+       <div className='_scrollDown' onClick={() => scrolling(reference)}>  
          <PixelLogo color={color} />
        </div>
 
