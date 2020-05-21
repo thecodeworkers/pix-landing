@@ -3,7 +3,6 @@ import { POST_NEWSLETTER, POST_NEWSLETTER_ASYNC } from './action-types';
 import { fetchService, actionObject } from '../../utils';
 import { language } from '../../utils/path';
 
-
 function* postNewsletterAsync(action) {
 
   try {
@@ -18,7 +17,6 @@ function* postNewsletterAsync(action) {
   
   catch(error) {
     console.log(error);
-    
   }
 }
 

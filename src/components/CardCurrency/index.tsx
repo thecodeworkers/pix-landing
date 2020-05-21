@@ -1,44 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 import { BtcLogo, EthLogo, UsdcLogo, UsdtLogo } from '../Svg';
-import { useTranslation } from 'react-i18next';
-import { withTrans } from '../../i18n/withTrans';
+import { savePrice } from '../../store/actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
+function Cards(props) {
+	const [ btc, setBtc ] = useState(null);
+	const [ eth, setEth ] = useState(null);
+	const [ ltc, setLtc ] = useState(null);
+	const [ dash, setDash ] = useState(null);
 
-export default function Cards() {
+	useEffect(() => {
+		props.action.savePrice();
 
-	const [ btc, setBtc ] = useState('');
+		console.log(props);
+		
+	}, [])
 
-	const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,dash,litecoin')
+		const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,dash,litecoin')
 
-	pricesWs.onmessage = (msg) => {
-		const currencies = msg.data;
-		const newCurrencies = JSON.parse(currencies)
-		// newCurrencies['bitcoin'] ? setBtc(newCurrencies['bitcoin']) : setBtc(btc);
-		console.log('______________________');
-		console.log(btc);
-	}
+		pricesWs.onmessage = (msg) => {
+			const currencies = msg.data;
+			const newCurrencies = JSON.parse(currencies)
+			proccessCurrencies(
+				newCurrencies['bitcoin'], 
+				newCurrencies['ethereum'],
+				newCurrencies['litecoin'],
+				newCurrencies['dash']
+			);
+		}
+
+		const proccessCurrencies = (btc, eth, ltc, dash) => {
+			const numberFormat = (value) => {
+					return Number(value).toFixed(2);
+			}
+
+			if(btc) setBtc(numberFormat(btc));
+			if(eth) setEth(numberFormat(eth));
+			if(ltc) setLtc(numberFormat(ltc));
+			if(dash) setDash(numberFormat(dash));
+		}
 
 	const cards = [
 		{
 			class: '_cardUSDT',
 			icon: <UsdtLogo />,
-			balance: '$1.230.03'
+			balance: dash ? `$ ${dash}` : '$0'
 		},
 		{
 			class: '_cardUSDC',
 			icon: <UsdcLogo />,
-			balance: '$1.230.03'
+			balance: ltc ? `$ ${ltc}` : '$0'
 		},
 		{
 			class: '_cardETH',
 			icon: <EthLogo />,
-			balance: '$1.230.03'
+			balance: eth ? `$ ${eth}` : '$0'
 		},
 		{
 			class: '_cardBTC',
 			icon: <BtcLogo />,
-			balance: btc
+			balance: btc ? `$ ${btc}` : '$0'
 		}
 	]
 	return (
@@ -58,7 +81,6 @@ export default function Cards() {
 								)
 							})
 						}
-						<h1>{ btc}</h1>
 						
 					</div>
 				</div>
@@ -66,3 +88,19 @@ export default function Cards() {
 		</div>
 	)
 }
+
+const mapStateToProps = (currency) => (
+	{currency}
+);
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    savePrice
+  }
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

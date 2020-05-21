@@ -11,7 +11,6 @@ const Home = (props) => {
 
   const test = React.useRef();
 
-
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
   }, [theme])
