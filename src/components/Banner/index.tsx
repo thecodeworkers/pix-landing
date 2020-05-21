@@ -4,23 +4,20 @@ import { connect } from 'react-redux';
 import { toggleDarkTheme } from '../../store/actions';
 import { Background } from './components';
 import { CardCurrency, ScrollDown, Lang } from '../../components';
-import { PixelLogo } from '../Svg';
+import { DownloadAndroid, DownloadIos } from '../Svg';
 import './styles.scss';
 
 export const Banner = ({ theme, scroll }) => {
   const { darkTheme } = theme;
   const { aboutRef } = scroll;
-
-  console.log(scroll);
   
-
   return (
     <div style={{ backgroundColor: darkTheme ? '#00001F' : '#fff' }}>
       <div className="_bannerContainer">
         <div className="_bannerDesc">
           <div className="_bannerTexts">
-            <p className="_childrenText">App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency</p>
-            <p className="_childrenTitle">Today's Index Value</p>
+            <div className="_childrenText">App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency</div>
+            <div className="_childrenTitle">Today's Index Value</div>
           </div>
           <div className="_bannerCards">
             <CardCurrency/>
@@ -34,13 +31,15 @@ export const Banner = ({ theme, scroll }) => {
 
       <div className="_bannerFooter">
         <div className="_footerElements">
-          <div style={{ backgroundColor: 'blue', width: '22.5%' }}>
-            Network
+          <div className="_footerNetwork">
+            <div className="_iosInfo">
+              <DownloadIos/>
+            </div>
+            <div className="_androidInfo">
+              <DownloadAndroid/>
+            </div>
           </div>
           <div className="_footerScroll">
-            {/* <div className="_scrollDimension">
-              <PixelLogo color="#45B649"/>
-            </div> */}
             <div className="_scrollDimension">
               <ScrollDown color="#45B649" reference={aboutRef}/>
             </div>

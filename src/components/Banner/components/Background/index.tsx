@@ -25,7 +25,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 2 */}
-      <div className="_box" style={{ width: 110, height: 160, bottom: 290, left: -41 }}>
+      <div className="_box" style={{ width: 110, height: 160, bottom: '38.425%', left: -41 }}>
         <div>
           <Box
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
@@ -37,7 +37,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 3 */}
-      <div className="_box" style={{ width: 190, height: 240, bottom: 400, left: 92 }}>
+      <div className="_box" style={{ width: 190, height: 240, bottom: '53%', left: 92 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -51,7 +51,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 4 */}
-      <div className="_box" style={{ width: 140, height: 190, bottom: 200, left: 300 }}>
+      <div className="_box" style={{ width: 140, height: 190, bottom: '26.5%', left: 300 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -79,7 +79,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 6 */}
-      <div className="_box" style={{ width: 150, height: 200, bottom: 240, left: 545 }}>
+      <div className="_box" style={{ width: 150, height: 200, bottom: '31.8%', left: 545 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -94,7 +94,7 @@ export const Background = ({ theme }) => {
 
       {/* Right */}
       {/* box 7 */}
-      <div className="_box" style={{ width: 250, height: 300, bottom: 35, right: 0 }}>
+      <div className="_box" style={{ width: 250, height: 300, bottom: '4.6375%', right: 0 }}>
         <div className="_box7">
           <div style={{ width: 250, height: 300 }}>
             <div>
@@ -112,7 +112,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 8 */}
-      <div className="_box" style={{ width: 120, height: 170, bottom: 480, right: 0 }}>
+      <div className="_box" style={{ width: 120, height: 170, bottom: '63.6%', right: 0 }}>
         <div className="_box8">
           <div style={{ width: 120, height: 170 }}>
             <div>
@@ -130,7 +130,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 9 */}
-      <div className="_box" style={{ width: 190, height: 240, bottom: 350, right: 205 }}>
+      <div className="_box" style={{ width: 190, height: 240, bottom: '46.375%', right: 205 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -144,7 +144,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 10 */}
-      <div className="_box" style={{ width: 160, height: 210, bottom: 440, right: 500 }}>
+      <div className="_box" style={{ width: 160, height: 210, bottom: '58.3%', right: 500 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -158,7 +158,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 11 */}
-      <div className="_box" style={{ width: 130, height: 180, bottom: 220, right: 532 }}>
+      <div className="_box" style={{ width: 130, height: 180, bottom: '29.15%', right: 532 }}>
         <div>
           <Box
             viewWidth={383.3}
@@ -187,7 +187,7 @@ export const Background = ({ theme }) => {
 
       {/* diamond */}
       {/* diamond 1 */}
-      <div className="_diamond" style={{ width: 100, height: 150, top: 50, right: 160 }}>
+      <div className="_diamond" style={{ width: 100, height: 150, bottom: '75.525%', right: 160 }}>
         <Diamond 
           animation={{ entryPoint: '0px', middlePoint: '10px' }}
           linearGradients={DiamondA(darkTheme).linearGradient}
@@ -196,7 +196,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* diamond 2 */}
-      <div className="_diamond" style={{ width: 90, height: 140, bottom: 310, right: 70 }}>
+      <div className="_diamond" style={{ width: 90, height: 140, bottom: '41.075%', right: 70 }}>
         <Diamond
           animation={{ entryPoint: '0px', middlePoint: '-10px' }}
           linearGradients={DiamondA(darkTheme).linearGradient}
@@ -205,7 +205,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* diamond 3 */}
-      <div className="_diamond" style={{ width: 70, height: 130, bottom: 140, right: 294 }}>
+      <div className="_diamond" style={{ width: 70, height: 130, bottom: '18.55%', right: 294 }}>
         <Diamond
           animation={{ entryPoint: '0px', middlePoint: '10px' }}
           linearGradients={DiamondA(darkTheme).linearGradient}
