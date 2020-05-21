@@ -45,15 +45,6 @@
   @include phone;
 }
 
-._phoneContainerTwo {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 60%;
-  // background-color: green;
-  margin-top: -240px;
-}
-
 ._centerSquare {
   display: flex;
   justify-content: center;
@@ -96,8 +87,10 @@
 ._pixelCenter {
   // background-color: blue;
   position: absolute;
-  transform: translate(-50%, 200%);
+  transform: translate(-50%, 150%);
   right: 45%;
+  width: 60px;
+  height: 60px;
 }
 
 ._checkCenter {
@@ -133,7 +126,7 @@
   text-align: center;
 }
 
-._className {
+._skillItem {
   width: 25%;
 }
 
@@ -143,6 +136,64 @@
 
 ._parentSeparatorLine {
   margin-top: 3rem;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 5rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  // justify-content: center;
+  width: 30%;
+}
+
+@include responsive(extraLarge) {
+  ._phoneContainerTwo {
+    margin-top: 0px;
+  }
+}
+
+@include responsive(medium) {
+  ._productGeneral {
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  ._productLeft {
+    width: 100%;
+  }
+
+  ._productRight {
+    width: 100%;
+  }
+
+  ._pixelCenter {
+    display: none;
+  }
+
+  ._phoneContainerTwo {
+    margin-top: 0px;
+  }
+
+  ._pixLeftDescription {
+    margin-top: 0px;
+  }
+
+  ._productIcon {
+    justify-content: center;
+    display: flex;
+  }
+
+  ._productSkills {
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+  }
+
+  ._skillItem {
+    margin: 1rem 0;
+    width: 40%;
+  }
+
+  ._parentSeparatorLine {
+    width: 70%;
+  }
 }

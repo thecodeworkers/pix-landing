@@ -1,7 +1,7 @@
 @import '../../assets/styles/index.scss';
 
 @mixin rectangle($gradient, $direction) {
-    width: 100px;
+    width: 25%;
     height: 8px;
     background: linear-gradient(to $direction, $gradient);
 }
@@ -9,6 +9,8 @@
 ._separatorMain {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  background-color: red;
 }
 
 ._rentangleOne {

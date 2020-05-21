@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
 
 const Home = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = props;
 
   const [theme, setTheme] = useState(true);
 
   const test = React.useRef();
+
 
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
@@ -26,17 +26,16 @@ const Home = (props) => {
   return (
     <div>
       <SEO title='Home' />
-      <Navbar />
+      <Navbar />      
       <Banner />
       <AboutUs theme={theme}/>
       <Product />
       <Footer />
     </div>
-
   )
 }
 
-export default withTrans(Home)
+export default withTrans(Home);
 
 
  {/* <br />

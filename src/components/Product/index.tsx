@@ -14,7 +14,6 @@ const Product = ({ action }) => {
     saveReference({ productRef });
   }, []);
 
-
   return (
     <div ref={productRef}>
       <div className='_productParent'>
@@ -58,7 +57,6 @@ const Product = ({ action }) => {
               <div className='_checkCenter'>
                 <Check />
               </div>
-
             </div>
           </div>
         </div>
@@ -68,16 +66,16 @@ const Product = ({ action }) => {
       <div className='_skillsParent'>
         <div className='_productSkills'>
 
-          <div className='_className'>
+          <div className='_skillItem'>
             <div className='_productIcon'>
               <Arrows />
             </div>
 
             <p className='_skillsDescription'>
-              Exchange FIAT to Virtual assets
+              Exchange FIAT to Virtual assets 
             </p>
           </div>
-          <div className='_className'>
+          <div className='_skillItem'>
             <div className='_productIcon'>
               <Usd />
             </div>
@@ -86,7 +84,7 @@ const Product = ({ action }) => {
             transfer USD within PIX users
             </p>
           </div>
-          <div className='_className'>
+          <div className='_skillItem'>
             <div className='_productIcon'>
               <Users />
             </div>
