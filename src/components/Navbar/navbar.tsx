@@ -11,8 +11,12 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { withTrans } from '../../i18n/withTrans';
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+  const {t,i18n} = props
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -30,22 +34,22 @@ const Navigation = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto ml-auto" navbar>
               <NavItem className='_item' >
-                <NavLink href="/components/" className='text-white'>ABOUT</NavLink>
+                <NavLink href="/components/" className='text-white'>{t('about_us').toUpperCase()}</NavLink>
               </NavItem>
               <NavItem className='_item'>
-                <NavLink className='text-white '>PRODUCTS</NavLink>
+                <NavLink className='text-white '>{t('products'.toUpperCase())}</NavLink>
               </NavItem>
               <NavItem className='_item'>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>BENEFITS </NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>{t('benefits'.toUpperCase())}</NavLink>
               </NavItem>
             </Nav>
 
             <NavItem >
-              <button className='_registerBtn'>REGISTER</button>
+              <button className='_registerBtn'>{t('register').toUpperCase()}</button>
             </NavItem>
 
             <NavItem>
-              <button className='_loginBtn'>LOG IN</button>
+              <button className='_loginBtn'>{t('login').toUpperCase()}</button>
             </NavItem>
           </Collapse>
         </div>
@@ -54,4 +58,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation;
+export default withTrans(Navigation);
