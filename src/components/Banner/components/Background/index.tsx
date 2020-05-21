@@ -158,7 +158,7 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 11 */}
-      <div className="_box" style={{ width: 130, height: 180, bottom: '29.15%', right: 532 }}>
+      <div className="_box" style={{ width: 130, height: 180, bottom: '27%', right: 532 }}>
         <div>
           <Box
             viewWidth={383.3}

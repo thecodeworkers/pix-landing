@@ -1,5 +1,23 @@
 @import '../../assets/styles/index.scss';
 
+@mixin background($image) {
+  height: 100vh;
+  background-image: url('../../images/#{$image}.svg');
+  background-size: cover;
+  transition: 1s;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+._imageBackgroundLight {
+  @include background('banner-light');
+}
+
+._imageBackgroundDark {
+  @include background('banner-dark');
+}
+
 ._imageContainer {
   width: 55%;
   height: 100%;
