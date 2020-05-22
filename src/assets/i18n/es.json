@@ -1,3 +1,35 @@
 {
-  "helloWorld": "Hola mundo!"
+  "app_desktop":"Aplicación y billetera de escritorio con el servicio rápido, seguro e intuitivo del mundo sobre criptomonedas",
+  "today_index":"Valor del índice del dia",
+  "crypto_transactions":"Enviar, recibir e intercambiar criptomonedas",
+  "download":"Descargar",
+  "network":"Red", 
+
+  "fast": "Rapido",
+  "intuitive":"Intuitiva",
+  "safe":"Seguro",
+  "we_believe":"Creemos que la inclusión es combustible para la economía.",
+  "digital_wallets":"Carteras digitales que permiten a los usuarios almacenar y transferir USD dentro de los usuarios de PIX.",
+  "hosted_wallets":"Carteras alojadas con los más altos estándares de custodia que permiten a los usuarios almacenar, administrar y transferir activos virtuales.",
+
+  "about_us":"Sobre nosotros",
+  "products":"Productos",
+  "benefits":"Beneficios",
+  "copyright":"Copyright © 2020. Copyright The Pic LLC. Todos los derechos reservados.",
+  "subscribe":"Suscríbase a PIX",
+  "enter_email":"Ingrese su dirección de correo electrónico para ser agregado a nuestra lista de correo para futuras actualizaciones.",
+
+  "register":"Registrarse",
+  "login":"Iniciar sesión",
+
+  "secure_platform":"Plataforma segura",
+  "pix_description":"PIX Wallet es una característica que permite a los usuarios transferir sin problemas entre cuentas PIX.",
+  "pix_instant":"PIX Instant está diseñado para clientes que desean usar activos virtuales pero prefieren convertir a moneda fiduciaria rápidamente y evitar la exposición a la fluctuación de precios.",
+  "exchange_fiat":"Intercambiar FIAT por activos virtuales",
+  "transfer_usd":"Transferir USD dentro de los usuarios de PIX",
+  "cutomized_services":"Servicios personalizados",
+  "high_clients":"Para nuestros clientes de alta demanda",
+
+  "not_found" :"Pagina no encontrada",
+  "oops":"¡Vaya, no pudimos encontrar esta página!"
 }

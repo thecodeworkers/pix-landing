@@ -6,8 +6,9 @@ import { Background } from './components';
 import { CardCurrency, ScrollDown, Lang } from '../../components';
 import { PixelLogo } from '../Svg';
 import './styles.scss';
+import { withTrans } from '../../i18n/withTrans'
 
-export const Banner = ({ theme, scroll }) => {
+export const Banner = ({ theme, scroll, t, i18n }) => {
   const { darkTheme } = theme;
   const { aboutRef } = scroll;
 
@@ -19,15 +20,16 @@ export const Banner = ({ theme, scroll }) => {
       <div className="_bannerContainer">
         <div className="_bannerDesc">
           <div className="_bannerTexts">
-            <p className="_childrenText">App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency</p>
-            <p className="_childrenTitle">Today's Index Value</p>
+            <p className="_childrenText">{t('app_desktop')}</p>
+            <p className="_childrenTitle">{t('today_index')}</p>
+
           </div>
           <div className="_bannerCards">
             <CardCurrency/>
           </div>
           <div className="_bannerButton">
-            <p className="_buttonText">Send, receive & exchange cryptocurrency</p>
-            <button className="_buttonGradient">DOWNLOAD</button>
+            <p className="_buttonText">{t('crypto_transactions')}</p>
+            <button className="_buttonGradient">{t('download')}</button>
           </div>
         </div>
       </div>
@@ -35,7 +37,7 @@ export const Banner = ({ theme, scroll }) => {
       <div className="_bannerFooter">
         <div className="_footerElements">
           <div style={{ backgroundColor: 'blue', width: '22.5%' }}>
-            Network
+          {t('network')}
           </div>
           <div className="_footerScroll">
             {/* <div className="_scrollDimension">
@@ -67,4 +69,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Banner);
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Banner));
