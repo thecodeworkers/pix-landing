@@ -1,18 +1,20 @@
-import { CURRENCY_PRICE } from './action-types';
+import { CURRENCY_PRICE_ASYNC } from './action-types';
 
 const initialState: any = {
-  btc: null,
-  eth: null,
-  ltc: null,
+  bitcoin: null,
+  ethereum: null,
+  litecoin: null,
   dash: null
 }
 
-export default (state = initialState, { type, payload }) => {
+const getCurrenciesPrice =(state = initialState, { type, payload }) => {
   switch (type) {
-    case CURRENCY_PRICE:
-    return { btc: payload }
+    case CURRENCY_PRICE_ASYNC:
+    return { ...state, ...payload.currencies }
 
     default:
     return state;
   }
 }
+
+export default getCurrenciesPrice;

@@ -1,8 +1,8 @@
 import { CURRENCY_PRICE } from './action-types';
 
-export const savePrice = (prices: any) => {
+export const savePrice = (price: any) => {
   return {
     type: CURRENCY_PRICE,
-    payload: prices
+    payload: price
   }
 }
