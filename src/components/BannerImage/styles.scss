@@ -1,0 +1,34 @@
+@import '../../assets/styles/index.scss';
+
+@mixin background($image) {
+  height: 100vh;
+  background-image: url('../../images/#{$image}.svg');
+  background-size: cover;
+  transition: 1s;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+._imageBackgroundLight {
+  @include background('banner-light');
+}
+
+._imageBackgroundDark {
+  @include background('banner-dark');
+}
+
+._imageContainer {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+._imageContainerText {
+  font-size: 1.5rem;
+  font-family: $muli;
+  text-align: center;
+}

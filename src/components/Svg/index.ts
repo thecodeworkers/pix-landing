@@ -19,3 +19,5 @@ export { default as Check } from './check';
 export { default as Arrows } from './arrows';
 export { default as Usd } from './usd';
 export { default as Users } from './users';
+export { default as DownloadAndroid } from './download-android';
+export { default as DownloadIos } from './download-ios';

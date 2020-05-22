@@ -11,3 +11,4 @@ export { default as AboutUs } from './About-us';
 export { default as CardCurrency} from './CardCurrency'
 export { default as Product } from './Product';
 export { default as Separator } from './Separator';
+export { default as BannerImage } from './BannerImage';
