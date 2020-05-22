@@ -2,7 +2,7 @@
 
 @mixin rectangle($gradient, $direction) {
     width: 25%;
-    height: 8px;
+    height: 6px;
     background: linear-gradient(to $direction, $gradient);
 }
 

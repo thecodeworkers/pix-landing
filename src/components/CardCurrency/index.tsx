@@ -20,22 +20,22 @@ const Cards = (props) => {
 		{
 			class: '_cardUSDT',
 			icon: <UsdtLogo />,
-			balance: currency.dash ? `$ ${numberFormat(currency.dash)}` : '$0'
+			balance: `$ ${numberFormat(currency.dash)}`
 		},
 		{
 			class: '_cardUSDC',
 			icon: <UsdcLogo />,
-			balance: currency.litecoin ? `$ ${numberFormat(currency.litecoin)}` : '$0'
+			balance: `$ ${numberFormat(currency.litecoin)}`
 		},
 		{
 			class: '_cardETH',
 			icon: <EthLogo />,
-			balance: currency.ethereum ? `$ ${numberFormat(currency.ethereum)}` : '$0'
+			balance: `$ ${numberFormat(currency.ethereum)}`
 		},
 		{
 			class: '_cardBTC',
 			icon: <BtcLogo />,
-			balance: currency.bitcoin ? `$ ${numberFormat(currency.bitcoin)}` : '$0'
+			balance: `$ ${numberFormat(currency.bitcoin)}`
 		}
 	]
 	return (
@@ -51,7 +51,10 @@ const Cards = (props) => {
 											<div className="_cardChild">{res.icon}</div>
 										</div>
 										<div className="_price"><p>{res.balance}</p></div>
+
+										<h1></h1>
 									</div>
+
 								)
 							})
 						}

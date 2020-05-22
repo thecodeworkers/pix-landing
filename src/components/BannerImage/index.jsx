@@ -6,8 +6,8 @@ import './styles.scss';
 export default ({ children = null, isDark = false }) => (
   <div className={isDark ? '_imageBackgroundDark' : '_imageBackgroundLight'}>
     <div className="_imageContainer">
-      <p style={{ color: isDark ? '#FFF' : '#304352' }} className="_imageContainerText">{children}</p>
-      <div>
+      <p className={ `_imageContainerText  ${isDark ? '_whiteTxt' : '_blackTxt'}` }>{children}</p>
+      <div style={{width:'50%', marginTop: 10, marginBottom:10}}>
         <Separator/>
       </div>
       <div style={{ marginTop: 25 }}>

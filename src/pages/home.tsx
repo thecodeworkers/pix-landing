@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO} from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import './styles/home.scss';
 import { useTranslation } from 'react-i18next';
@@ -17,9 +17,12 @@ const Home = (props) => {
 
   const scrollPosition = () => {
     const position = window.scrollY;
-    if (position < 400) setTheme(true);
-    if (position > 400 && position <= 900) setTheme(false);
-    if (position > 900) setTheme(true);
+
+    console.log(position);
+    
+    if (position < 300) setTheme(true);
+    if (position > 300 && position <= 1900) setTheme(false);
+    if (position > 1900) setTheme(true);
   }
 
   return (
@@ -27,7 +30,9 @@ const Home = (props) => {
       <SEO title='Home' />
       <Navbar />      
       <Banner />
+      <BannerImage isDark={!theme}>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
       <AboutUs theme={theme}/>
+      <BannerImage>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
       <Product />
       <Footer />
     </div>
