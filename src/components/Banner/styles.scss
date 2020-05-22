@@ -1,70 +1,85 @@
 @import '../../assets/styles/index.scss';
 
-._bannerContainer {
-  height: 90vh;
-  width: 100%;
+// MIXINS
+@mixin flex-axis($justify) {
   display: flex;
-  justify-content: center;
+  justify-content: $justify;
 }
 
-._bannerDesc {
-  z-index: 999;
-  height: 100%;
-  width: 55%;
-}
-
-._bannerTexts {
-  height: 35%;
-  display: flex;
-  justify-content: flex-end;
+@mixin flex-align($justify) {
+  @include flex-axis($justify);
   align-items: center;
   flex-direction: column;
 }
 
-._childrenText {
+@mixin overlap {
+  z-index: 999;
+}
+
+@mixin width($size) {
+  width: $size;
+}
+
+@mixin height($size) {
+  height: $size;
+}
+
+@mixin dimensions($width, $height) {
+  @include width($width);
+  @include height($height);
+}
+
+@mixin boldTexts($color, $fontSize) {
   font-family: $muli;
-  font-weight: 800;
-  color: #33A3DC;
+  font-weight: 700;
+  color: $color;
   text-align: center;
-  font-size: 1.7rem;
-  width: 90%;
+  font-size: $fontSize;
+}
+
+// CLASS
+._bannerContainer {
+  @include dimensions(100%, 90vh);
+  @include flex-axis(center);
+}
+
+._bannerDesc {
+  @include overlap;
+  @include dimensions(55%, 100%);
+}
+
+._bannerTexts {
+  @include height(45%);
+  @include flex-align(flex-end);
+}
+
+._childrenText {
+  @include boldTexts($lightBLue, 1.5rem);
+  @include width(90%);
+  margin-bottom: 3rem;
 }
 
 ._childrenTitle {
-  font-family: $muli;
-  font-weight: 800;
-  color: #304352;
-  text-align: center;
-  font-size: 3rem;
+  @include boldTexts($arsenic, 2.5rem);
 }
 
 ._bannerCards {
-  height: 50%;
-  display: flex;
-  justify-content: center;
+  @include height(40%);
+  @include flex-axis(center);
   align-items: center;
 }
 
 ._bannerButton {
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include height(15%);
+  @include flex-align(center);
 }
 
 ._buttonText {
-  color: #33A3DC;
-  font-family: $muli;
-  font-weight: 800;
-  font-size: 1rem;
+  @include boldTexts($lightBLue, 1rem);
 }
 
 ._buttonGradient {
-  color: #fff;
-  font-family: $muli;
-  font-weight: 800;
-  font-size: 12px;
+  @include boldTexts($white, 12px);
   padding: 10px 50px 10px 50px;
   border: none;
   border-radius: 5px;
@@ -72,31 +87,43 @@
 }
 
 ._bannerFooter {
-  height: 10vh;
-  width: 100%;
+  @include dimensions(100%, 10vh);
 }
 
 ._footerElements {
-  height: 50%;
+  @include height(50%);
   display: flex;
+}
+
+._footerNetwork {
+  @include width(22.5%);
+  @include flex-axis(center);
+}
+
+._iosInfo {
+  @include width(100px);
+  @include overlap;
+}
+
+._androidInfo {
+  margin-left: 1rem;
+  @include width(100px);
+  @include overlap;
 }
 
 ._footerScroll {
-  width: 55%;
-  display: flex;
-  justify-content: center;
+  @include width(55%);
+  @include flex-axis(center);
 }
 
 ._scrollDimension {
-  width: 40px; 
-  height: 40px;
-  z-index: 999;
-  margin-top: 5px;
+  @include dimensions(40px, 40px);
+  @include overlap;
+  margin-top: 2rem;
 }
 
 ._footerLang {
-  z-index: 999;
-  width: 22.5%;
-  display: flex;
-  justify-content: center;
+  @include width(22.5%);
+  @include overlap;
+  @include flex-axis(center);
 }

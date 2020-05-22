@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { SEO } from '../';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
@@ -6,6 +8,8 @@ import { Twitter, Instagram, Facebook, Apple, Android, PixLogo } from '../Svg';
 import './style.scss';
 
 const Footer = (props) => {
+
+  const {t,i18n} = props
 
   return (
     <div className='_main'>
@@ -16,9 +20,9 @@ const Footer = (props) => {
 
             <div className='_leftSide'>
               <div className='_links'>
-                <p>About us</p>
-                <p>Products</p>
-                <p>Benefits</p>
+                <p>{t('about_us')}</p>
+                <p>{t('products')}</p>
+                <p>{t('benefits')}</p>
               </div>
 
               <div className='_icons'>
@@ -36,18 +40,22 @@ const Footer = (props) => {
                 <div className='_separator'>
                 </div>
 
-                <p>Copyright © 2020. Copyright The Pic LLC. All rights reserved.</p>
+                <p>{t('copyright')}</p>
               </div>
             </div>
 
           </div>
 
           <div className='col-md-5 _rightSide'>
-            <p className='_suscribe'>Subscribe to PIX</p>
-            <p className='_emailText'> Enter your email address to be added to our mailing list for future updates.</p>
+            <p className='_suscribe'>{t('subscribe')}</p>
+            <p className='_emailText'>{t('enter_email')}</p>
             <input placeholder='e-mail' className='_newsletter'></input>
             <div className='_divIcon'>
               <span className="material-icons _arrow">arrow_forward</span>
+              {/* <div className="_arrow">
+                <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+              </div> */}
+              {/* <span className="material-icons _arrow">done</span> */}
             </div>
 
           </div>
@@ -57,4 +65,16 @@ const Footer = (props) => {
   )
 }
 
-export default withTrans(Footer)
+const mapStateToProps = ({ }) => ({ });
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    
+  };
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Footer));
