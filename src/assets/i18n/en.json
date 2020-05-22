@@ -1,3 +1,35 @@
 {
-  "helloWorld": "Hello world!"
+  "app_desktop":"App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency",
+  "today_index":"Today's Index Value",
+  "crypto_transactions":"Send, receive & exchange cryptocurrency",
+  "donwload":"Download",
+  "network":"Network",
+
+  "fast": "Fast",
+  "intuitive":"Intuitive",
+  "safe":"Safe",
+  "we_believe":"We believe inclusion is fuel for the economy",
+  "digital_wallets":"Digital Wallets that allow users to store and transfer USD within PIX users.",
+  "hosted_wallets":" Hosted Wallets with the highest custody standards that allow users to store, manage and transfer Virtual Assets.",
+
+  "about_us":"About us",
+  "products":"Products",
+  "benefits":"Benefits",
+  "copyright":"Copyright © 2020. Copyright The Pic LLC. All rights reserved.",
+  "subscribe":"Subscribe to PIX",
+  "enter_email":"Enter your email address to be added to our mailing list for future updates.",
+  
+  "register":"Register",
+  "login":"Log In",
+
+  "secure_platform":"Secure Platform",
+  "pix_description":"PIX Wallet is a feature allowing users to transfer seamlessly between PIX accounts.",
+  "pix_instant":"PIX Instant is designed for customers that want to use Virtual Assets but prefer to convert to fiat currency quickly and avoid taking price fluctuation exposure.",
+  "exchange_fiat":"Exchange FIAT to Virtual assets",
+  "transfer_usd":"Transfer USD within PIX users",
+  "cutomized_services":"Cutomized services",
+  "high_clients":"For our high demand clients",
+
+  "not_found" :"Page Not Found",
+  "oops":"Oops, we couldn't find this page!"
 }

@@ -1,10 +1,14 @@
 import React from "react"
+import { withTrans } from '../i18n/withTrans';
 
-export default function NotFound() {
+export default function NotFound(props) {
+
+  const {t,i18n} = props
+
   return (
     <div>
-      <h1>Page Not Found</h1>
-      <p>Oops, we couldn't find this page!</p>
+      <h1>{t('not_found')}</h1>
+      <p>{t('oops')}</p>
     </div>
   )
 }

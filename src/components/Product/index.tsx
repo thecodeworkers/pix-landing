@@ -4,9 +4,12 @@ import { ScrollDown, Separator } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
 
-const Product = ({ action }) => {
+
+const Product = ({ action, t, i18n }) => {
+
   const { saveReference } = action;
   const productRef: any = useRef();
 
@@ -25,9 +28,9 @@ const Product = ({ action }) => {
                 <Square />
               </div>
 
-              <h5>Secure platform</h5>
+              <h5>{t('secure_platform')}</h5>
               <p className='_wallPix'>PIX Wallet</p>
-              <p className='_paragraph'>PIX Wallet is a feature allowing users to transfer seamlessly between PIX accounts.</p>
+              <p className='_paragraph'>{t('pix_description')}</p>
             </div>
           </div>
 
@@ -53,7 +56,7 @@ const Product = ({ action }) => {
           <div className='_productLeft'>
             <div className='_pixLeftDescription'>
               <p className='_wallPix'>PIX Instant</p>
-              <p className='_paragraph'>PIX Instant is designed for customers that want to use Virtual Assets but prefer to convert to fiat currency quickly and avoid taking price fluctuation exposure.</p>
+              <p className='_paragraph'>{t('pix_instant')}</p>
               <Exchange />
               <div className='_checkCenter'>
                 <Check />
@@ -74,7 +77,7 @@ const Product = ({ action }) => {
             </div>
 
             <p className='_skillsDescription'>
-              Exchange FIAT to Virtual assets
+            {t('exchange_fiat')}
             </p>
           </div>
           <div className='_className'>
@@ -83,7 +86,7 @@ const Product = ({ action }) => {
             </div>
 
             <p className='_skillsDescription'>
-            transfer USD within PIX users
+            {t('transfer_usd')}
             </p>
           </div>
           <div className='_className'>
@@ -92,7 +95,7 @@ const Product = ({ action }) => {
             </div>
 
             <p className='_skillsDescription'>
-            Customized services <br />for our high demand clients
+            {t('cutomized_services')} <br />{t('high_clients')}
             </p>
            
           </div>
@@ -119,4 +122,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Product));

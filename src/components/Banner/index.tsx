@@ -4,8 +4,9 @@ import { Background } from './components';
 import { CardCurrency, ScrollDown, Lang } from '../../components';
 import { DownloadAndroid, DownloadIos } from '../Svg';
 import './styles.scss';
+import { withTrans } from '../../i18n/withTrans'
 
-export const Banner = ({ scroll }) => {
+export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
   
   return (
@@ -13,15 +14,15 @@ export const Banner = ({ scroll }) => {
       <div className="_bannerContainer">
         <div className="_bannerDesc">
           <div className="_bannerTexts">
-            <div className="_childrenText">App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency</div>
-            <div className="_childrenTitle">Today's Index Value</div>
+            <p className="_childrenText">{t('app_desktop')}</p>
+            <p className="_childrenTitle">{t('today_index')}</p>
           </div>
           <div className="_bannerCards">
             <CardCurrency/>
           </div>
           <div className="_bannerButton">
-            <p className="_buttonText">Send, receive & exchange cryptocurrency</p>
-            <button className="_buttonGradient">DOWNLOAD</button>
+            <p className="_buttonText">{t('crypto_transactions')}</p>
+            <button className="_buttonGradient">{t('download')}</button>
           </div>
         </div>
       </div>
@@ -53,4 +54,4 @@ export const Banner = ({ scroll }) => {
 
 const mapStateToProps = ({ scroll }) => ({ scroll });
 
-export default connect(mapStateToProps)(Banner);
+export default connect(mapStateToProps)(withTrans(Banner));
