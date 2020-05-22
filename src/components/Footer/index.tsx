@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { SEO } from '../';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
@@ -48,6 +50,10 @@ const Footer = (props) => {
             <input placeholder='e-mail' className='_newsletter'></input>
             <div className='_divIcon'>
               <span className="material-icons _arrow">arrow_forward</span>
+              {/* <div className="_arrow">
+                <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+              </div> */}
+              {/* <span className="material-icons _arrow">done</span> */}
             </div>
 
           </div>
@@ -57,4 +63,16 @@ const Footer = (props) => {
   )
 }
 
-export default withTrans(Footer)
+const mapStateToProps = ({ }) => ({ });
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    
+  };
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Footer));

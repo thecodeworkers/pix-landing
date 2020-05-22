@@ -1,18 +1,15 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { toggleDarkTheme } from '../../store/actions';
 import { Background } from './components';
 import { CardCurrency, ScrollDown, Lang } from '../../components';
 import { DownloadAndroid, DownloadIos } from '../Svg';
 import './styles.scss';
 
-export const Banner = ({ theme, scroll }) => {
-  const { darkTheme } = theme;
+export const Banner = ({ scroll }) => {
   const { aboutRef } = scroll;
   
   return (
-    <div style={{ backgroundColor: darkTheme ? '#00001F' : '#fff' }}>
+    <div>
       <div className="_bannerContainer">
         <div className="_bannerDesc">
           <div className="_bannerTexts">
@@ -54,16 +51,6 @@ export const Banner = ({ theme, scroll }) => {
   );
 }
 
-const mapStateToProps = ({ theme, scroll }) => ({ theme, scroll });
+const mapStateToProps = ({ scroll }) => ({ scroll });
 
-const mapDispatchToProps = dispatch => {
-  const actions = {
-    toggleDarkTheme
-  };
-
-  return {
-    action: bindActionCreators(actions, dispatch)
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Banner);
+export default connect(mapStateToProps)(Banner);
