@@ -9,17 +9,12 @@ const Home = (props) => {
 
   const [theme, setTheme] = useState(true);
 
-  const test = React.useRef();
-
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
   }, [theme])
 
   const scrollPosition = () => {
-    const position = window.scrollY;
-
-    console.log(position);
-    
+    const position = window.scrollY;    
     if (position < 300) setTheme(true);
     if (position > 300 && position <= 1900) setTheme(false);
     if (position > 1900) setTheme(true);
@@ -30,9 +25,9 @@ const Home = (props) => {
       <SEO title='Home' />
       <Navbar />      
       <Banner />
-      <BannerImage isDark={!theme}>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
+      <BannerImage isDark={!theme} about='about'>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
       <AboutUs theme={theme}/>
-      <BannerImage>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
+      <BannerImage product='product'>Our mission is to accelerate the adoption of virtual assets with the smoothest user experience.</BannerImage>
       <Product />
       <Footer />
     </div>

@@ -7,18 +7,17 @@ import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
 
-
 const Product = ({ action, t, i18n }) => {
 
-  const { saveReference } = action;
+  // const { saveReference } = action;
   const productRef: any = useRef();
 
-  useEffect(() => {
-    saveReference({ productRef });
-  }, []);
+  // useEffect(() => {
+  //   saveReference({ productRef });
+  // }, []);
 
   return (
-    <div ref={productRef}>
+    <div>
       <div className='_productParent'>
         <div className='_productGeneral'>
           <div className='_productLeft'>
