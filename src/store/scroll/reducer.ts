@@ -2,7 +2,8 @@ import { SAVE_REFERENCE } from "./action-types";
 
 const initialState = {
   aboutRef: null,
-  productRef: null
+  productRef: null,
+  benefitsRef: null
 }
 
 export default (state = initialState, { type, payload }) => {

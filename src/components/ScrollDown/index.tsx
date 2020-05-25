@@ -1,12 +1,10 @@
 import React from 'react';
 import { PixelLogo } from '../Svg';
+import { scrolling } from '../../utils/common';
 import './style.scss';
 
 const ScrollDown = ({reference = null, color}) => {
-  const scrolling = (ref: any): void => {
-    const target = ref.current;
-    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-  }
+
   
    return (
      <div>
