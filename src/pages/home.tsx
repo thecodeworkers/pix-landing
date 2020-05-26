@@ -9,11 +9,6 @@ import './styles/home.scss';
 const Home = (props) => {
   const { t, i18n, scroll} = props;
 
-
-  // console.log(scroll.scroll.aboutRef.current.offsetTop);
-  // console.log(scroll.scroll.productRef.current.offsetTop);
-  
-
   const [theme, setTheme] = useState(true);
 
   useEffect(() => {
@@ -22,12 +17,6 @@ const Home = (props) => {
 
   const scrollPosition = () => {
     const position = window.scrollY; 
-    // console.log(position);
-
-    // const test = document.getElementById('test').getBoundingClientRect();
-
-      // console.log(test.top);
-      
     if (position < 300) setTheme(true);
     if (position > 300 && position <= 1900) setTheme(false);
     if (position > 1900) setTheme(true);
@@ -35,7 +24,7 @@ const Home = (props) => {
 
   return (
     <div>
-      <SEO title='Home' />
+      <SEO title='Pix' />
       <Navbar />      
       <Banner />
       {/* <div id='test'> adas</div> */}
