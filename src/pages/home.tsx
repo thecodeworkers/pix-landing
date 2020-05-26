@@ -1,42 +1,70 @@
 import React, { useEffect, useState } from 'react'
-import { SEO } from '../components';
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Benefits} from '../components';
 import { withTrans } from '../i18n/withTrans';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import './styles/home.scss';
-import { useTranslation } from 'react-i18next';
+
 
 const Home = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n, scroll} = props;
+
+
+  // console.log(scroll.scroll.aboutRef.current.offsetTop);
+  // console.log(scroll.scroll.productRef.current.offsetTop);
+  
 
   const [theme, setTheme] = useState(true);
-
-  const test = React.useRef();
 
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
   }, [theme])
 
   const scrollPosition = () => {
-    const position = window.scrollY;
-    if (position < 400) setTheme(true);
-    if (position > 400 && position <= 900) setTheme(false);
-    if (position > 900) setTheme(true);
+    const position = window.scrollY; 
+    // console.log(position);
+
+    // const test = document.getElementById('test').getBoundingClientRect();
+
+      // console.log(test.top);
+      
+    if (position < 300) setTheme(true);
+    if (position > 300 && position <= 1900) setTheme(false);
+    if (position > 1900) setTheme(true);
   }
 
   return (
     <div>
       <SEO title='Home' />
-      <Navbar />
+      <Navbar />      
       <Banner />
+      {/* <div id='test'> adas</div> */}
+      <BannerImage isDark={!theme} about='about'>{t('our')} <span className='_boldText'>{t('mission')}</span> {t('accelerate')}</BannerImage>
       <AboutUs theme={theme}/>
+      <BannerImage product='product'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
       <Product />
+      <Benefits />
       <Footer />
     </div>
-
   )
 }
 
-export default withTrans(Home)
+const mapStateToProps = (scroll) => ({
+  scroll
+});
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    
+  }
+
+  return {
+    action: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Home));
+
 
 
  {/* <br />

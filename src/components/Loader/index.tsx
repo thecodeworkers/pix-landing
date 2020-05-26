@@ -5,22 +5,33 @@ import './styles.scss';
 export default ({ children }) => {
   const [color, setColor] = useState('#ff8008');
   const [className, setClassName] = useState('_container');
-
+  
   useEffect(() => {
     let count = 0;
+    let currentCount = 0;
+    let isLoad = false;
 
-    const interval = setInterval(() => {      
-      if(!count) setColor('#2699FB');
-      if(count == 1) setColor('#45B649');
-      if(count == 2) setClassName('_hide');
-
-      if(count == 3) {
-        setClassName('_noneElement');
-        clearInterval(interval);
+    const interval = setInterval(() => {
+      if(isLoad) {
+        setClassName('_hide');
+        if(currentCount + 1 == count) {
+          setClassName('_noneElement');
+          clearInterval(interval);
+        }
       }
 
+      if(!isLoad) {
+        if(!count) setColor('#2699FB');
+        if(count == 1) setColor('#45B649');
+      }
+      
       count++;
     }, 2000);
+
+    window.onload = () => {
+      isLoad = true;
+      currentCount = count;
+    }
   }, []);
 
   return (

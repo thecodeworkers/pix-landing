@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { SEO } from '../';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
 import { Twitter, Instagram, Facebook, Apple, Android, PixLogo } from '../Svg';
+import { scrolling } from '../../utils/common';
 import { postNewsletter } from '../../store/actions';
 import './style.scss';
 
-const Footer = ({ t, i18n, action, newsletter }) => {
+const Footer = ({ t, i18n, scroll, newsletter, action }) => {
   const { loading, success } = newsletter;
-  
+
   return (
     <div className='_main'>
       <div className='container'>
@@ -20,9 +20,9 @@ const Footer = ({ t, i18n, action, newsletter }) => {
 
             <div className='_leftSide'>
               <div className='_links'>
-                <p>{t('about_us')}</p>
-                <p>{t('products')}</p>
-                <p>{t('benefits')}</p>
+                <p onClick={() => scrolling(scroll.aboutRef)}>{t('about_us')}</p>
+                <p onClick={() => scrolling(scroll.productRef)}>{t('products')}</p>
+                <p onClick={() => scrolling(scroll.benefitsRef)}>{t('benefits')}</p>
               </div>
 
               <div className='_icons'>
@@ -71,7 +71,7 @@ const Footer = ({ t, i18n, action, newsletter }) => {
   )
 }
 
-const mapStateToProps = ({ newsletter }) => ({ newsletter });
+const mapStateToProps = ({ newsletter, scroll }) => ({ newsletter, scroll });
 
 const mapDispatchToProps = dispatch => {
   const actions = { postNewsletter };

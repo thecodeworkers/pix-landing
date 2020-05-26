@@ -32,3 +32,13 @@
   font-family: $muli;
   text-align: center;
 }
+
+._whiteTxt {
+  color: $white;
+  transition: 1s;
+}
+
+._blackTxt {
+  color: $black;
+  transition: 1s;
+}

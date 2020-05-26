@@ -31,5 +31,16 @@
   "high_clients":"Para nuestros clientes de alta demanda",
 
   "not_found" :"Pagina no encontrada",
-  "oops":"¡Vaya, no pudimos encontrar esta página!"
+  "oops":"¡Vaya, no pudimos encontrar esta página!",
+
+  "our": "Nuestra",
+  "mission": "misión",
+  "accelerate" : "es acelerar la adopción de activos virtuales con la experiencia de usuario más fluida.",
+
+  "allowing": "Permitir a los clientes",
+  "send": "enviar",
+  "receive": "recibir",
+  "quickly": "rápidamente",
+  "and": "y",
+  "withdraw_funds": "retirar fondos rápidamente en BTC, ETH y USD."
 }

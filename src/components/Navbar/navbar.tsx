@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { SEO } from '../';
 import './style.scss';
 import { PixLogo } from '../../components/Svg';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import {
   Collapse,
   Navbar,
@@ -12,13 +14,16 @@ import {
   NavLink,
 } from 'reactstrap';
 import { withTrans } from '../../i18n/withTrans';
+import { scrolling } from '../../utils/common';
 
 const Navigation = (props) => {
 
-  const {t,i18n} = props
-
+  const {t,i18n, scroll} = props
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  console.log(scroll);
+  
 
   return (
     <div>
@@ -33,14 +38,14 @@ const Navigation = (props) => {
           <NavbarToggler onClick={toggle} className='_toggle border w-3'/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto ml-auto" navbar>
-              <NavItem className='_item' >
-                <NavLink href="/components/" className='text-white'>{t('about_us').toUpperCase()}</NavLink>
+              <NavItem className='_item' onClick={() => scrolling(scroll.aboutRef)}>
+                <NavLink className='text-white'>{t('about_us').toUpperCase()}</NavLink>
               </NavItem>
-              <NavItem className='_item'>
+              <NavItem className='_item' onClick={() => scrolling(scroll.productRef)}>
                 <NavLink className='text-white '>{t('products'.toUpperCase())}</NavLink>
               </NavItem>
-              <NavItem className='_item'>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className='text-white'>{t('benefits'.toUpperCase())}</NavLink>
+              <NavItem className='_item' onClick={() => scrolling(scroll.benefitsRef)}>
+                <NavLink className='text-white'>{t('benefits').toUpperCase()}</NavLink>
               </NavItem>
             </Nav>
 
@@ -58,4 +63,7 @@ const Navigation = (props) => {
   )
 }
 
-export default withTrans(Navigation);
+const mapStateToProps = ({ scroll }) => ({ scroll });
+
+
+export default connect(mapStateToProps)(withTrans(Navigation));

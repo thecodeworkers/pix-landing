@@ -1,33 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 import { BtcLogo, EthLogo, UsdcLogo, UsdtLogo } from '../Svg';
-import { useTranslation } from 'react-i18next';
-import { withTrans } from '../../i18n/withTrans';
+import { savePrice } from '../../store/actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-const cards = [
-	{
-		class: '_cardUSDT',
-		icon: <UsdtLogo />,
-		balance: '$1.230.03'
-	},
-	{
-		class: '_cardUSDC',
-		icon: <UsdcLogo />,
-		balance: '$1.230.03'
-	},
-	{
-		class: '_cardETH',
-		icon: <EthLogo />,
-		balance: '$1.230.03'
-	},
-	{
-		class: '_cardBTC',
-		icon: <BtcLogo />,
-		balance: '$1.230.03'
+const Cards = (props) => {
+	const { currency } = props;
+
+	useEffect(() => {
+		props.action.savePrice();
+	}, [props.currency])
+
+	const numberFormat = (value) => {
+		return Number(value).toFixed(2);
 	}
-]
 
-export default function Cards() {
+	const cards = [
+		{
+			class: '_cardUSDT',
+			icon: <UsdtLogo />,
+			balance: `$ ${numberFormat(currency.dash)}`
+		},
+		{
+			class: '_cardUSDC',
+			icon: <UsdcLogo />,
+			balance: `$ ${numberFormat(currency.litecoin)}`
+		},
+		{
+			class: '_cardETH',
+			icon: <EthLogo />,
+			balance: `$ ${numberFormat(currency.ethereum)}`
+		},
+		{
+			class: '_cardBTC',
+			icon: <BtcLogo />,
+			balance: `$ ${numberFormat(currency.bitcoin)}`
+		}
+	]
 	return (
 		<div className="_cardCurrencyMain">
 			<div className="container">
@@ -41,13 +51,33 @@ export default function Cards() {
 											<div className="_cardChild">{res.icon}</div>
 										</div>
 										<div className="_price"><p>{res.balance}</p></div>
+
+										<h1></h1>
 									</div>
+
 								)
 							})
 						}
+
 					</div>
 				</div>
 			</div>
 		</div>
 	)
 }
+
+const mapStateToProps = (currency) => (
+	currency
+);
+
+const mapDispatchToProps = dispatch => {
+	const actions = {
+		savePrice
+	}
+
+	return {
+		action: bindActionCreators(actions, dispatch)
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

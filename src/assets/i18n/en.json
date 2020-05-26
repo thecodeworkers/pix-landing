@@ -31,5 +31,17 @@
   "high_clients":"For our high demand clients",
 
   "not_found" :"Page Not Found",
-  "oops":"Oops, we couldn't find this page!"
+  "oops":"Oops, we couldn't find this page!",
+
+  "our": "Our",
+  "mission": "mission",
+  "accelerate": "is to accelerate the adoption of virtual assets with the smoothest user experience.",
+  
+
+  "allowing": "Allowing customers to",
+  "send": "send",
+  "receive": "receive",
+  "quickly": "quickly",
+  "and": "and",
+  "withdraw_funds": "withdraw funds in BTC, ETH & USD."
 }

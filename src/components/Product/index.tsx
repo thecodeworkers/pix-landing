@@ -7,19 +7,17 @@ import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
 
-
 const Product = ({ action, t, i18n }) => {
 
-  const { saveReference } = action;
+  // const { saveReference } = action;
   const productRef: any = useRef();
 
-  useEffect(() => {
-    saveReference({ productRef });
-  }, []);
-
+  // useEffect(() => {
+  //   saveReference({ productRef });
+  // }, []);
 
   return (
-    <div ref={productRef}>
+    <div>
       <div className='_productParent'>
         <div className='_productGeneral'>
           <div className='_productLeft'>
@@ -61,51 +59,11 @@ const Product = ({ action, t, i18n }) => {
               <div className='_checkCenter'>
                 <Check />
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
-
-      <div className='_skillsParent'>
-        <div className='_productSkills'>
-
-          <div className='_className'>
-            <div className='_productIcon'>
-              <Arrows />
-            </div>
-
-            <p className='_skillsDescription'>
-            {t('exchange_fiat')}
-            </p>
-          </div>
-          <div className='_className'>
-            <div className='_productIcon'>
-              <Usd />
-            </div>
-
-            <p className='_skillsDescription'>
-            {t('transfer_usd')}
-            </p>
-          </div>
-          <div className='_className'>
-            <div className='_productIcon'>
-              <Users />
-            </div>
-
-            <p className='_skillsDescription'>
-            {t('cutomized_services')} <br />{t('high_clients')}
-            </p>
-           
-          </div>
-        </div>
-      </div>
-
-      <div className='_parentSeparatorLine'>
-        <Separator />
-      </div>
-        
+    
     </div>
   )
 }
