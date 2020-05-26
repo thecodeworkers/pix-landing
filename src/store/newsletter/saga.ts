@@ -3,25 +3,24 @@ import { POST_NEWSLETTER, POST_NEWSLETTER_ASYNC } from './action-types';
 import { fetchService, actionObject } from '../../utils';
 import { language } from '../../utils/path';
 
-
-function* postNewsletterAsync(action) {
-
+function* postNewsletterAsync() {
   try {
-    const data = yield call(fetchService, language, 'GET');
-    const result = data.data;
-    
-    yield put({
-      type: POST_NEWSLETTER_ASYNC,
-      payload: result
-    })
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: true }));
+
+    yield delay(6000);    
+
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: false, success: true }));
+
+    yield delay(3000);
+
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { success: false }));
   }
   
   catch(error) {
     console.log(error);
-    
   }
 }
 
-export function* watchPostNewsletter(){
+export function* watchPostNewsletter() {
   yield takeLatest(POST_NEWSLETTER, postNewsletterAsync);
 }

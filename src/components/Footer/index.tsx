@@ -5,12 +5,12 @@ import { SEO } from '../';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
 import { Twitter, Instagram, Facebook, Apple, Android, PixLogo } from '../Svg';
+import { postNewsletter } from '../../store/actions';
 import './style.scss';
 
-const Footer = (props) => {
-
-  const {t,i18n} = props
-
+const Footer = ({ t, i18n, action, newsletter }) => {
+  const { loading, success } = newsletter;
+  
   return (
     <div className='_main'>
       <div className='container'>
@@ -51,11 +51,17 @@ const Footer = (props) => {
             <p className='_emailText'>{t('enter_email')}</p>
             <input placeholder='e-mail' className='_newsletter'></input>
             <div className='_divIcon'>
-              <span className="material-icons _arrow">arrow_forward</span>
-              {/* <div className="_arrow">
-                <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-              </div> */}
-              {/* <span className="material-icons _arrow">done</span> */}
+              {
+                loading ? (
+                  <div className="_arrow">
+                    <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+                  </div>
+                ) : success ? (
+                  <span className="material-icons _arrow">done</span>
+                ) : (
+                  <span onClick={() => action.postNewsletter('email@email.com')} className="material-icons _arrow">arrow_forward</span>
+                )
+              }
             </div>
 
           </div>
@@ -65,12 +71,10 @@ const Footer = (props) => {
   )
 }
 
-const mapStateToProps = ({ }) => ({ });
+const mapStateToProps = ({ newsletter }) => ({ newsletter });
 
 const mapDispatchToProps = dispatch => {
-  const actions = {
-    
-  };
+  const actions = { postNewsletter };
 
   return {
     action: bindActionCreators(actions, dispatch)

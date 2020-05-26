@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Background } from './components';
 import { CardCurrency, ScrollDown, Lang } from '../../components';
 import { DownloadAndroid, DownloadIos } from '../Svg';
+import { withTrans } from '../../i18n/withTrans';
 import './styles.scss';
-import { withTrans } from '../../i18n/withTrans'
 
 export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
