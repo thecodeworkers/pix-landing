@@ -5,29 +5,34 @@ import './styles.scss';
 export default ({ children }) => {
   const [color, setColor] = useState('#ff8008');
   const [className, setClassName] = useState('_container');
+  
+  useEffect(() => {
+    let count = 0;
+    let currentCount = 0;
+    let isLoad = false;
 
-  // useEffect(() => {
-  //   let count = 0;
+    const interval = setInterval(() => {
+      if(isLoad) {
+        setClassName('_hide');
+        if(currentCount + 1 == count) {
+          setClassName('_noneElement');
+          clearInterval(interval);
+        }
+      }
 
-  //   const interval = setInterval(() => {      
-  //     if(!count) setColor('#2699FB');
-  //     if(count == 1) setColor('#45B649');
-  //     if(count == 2) setClassName('_hide');
+      if(!isLoad) {
+        if(!count) setColor('#2699FB');
+        if(count == 1) setColor('#45B649');
+      }
+      
+      count++;
+    }, 2000);
 
-  //     if(count == 3) {
-  //       setClassName('_noneElement');
-  //       clearInterval(interval);
-  //     }
-
-  //     count++;
-  //   }, 2000);
-  // }, []);
-
-
-  window.onload = () => {
-    setClassName('_noneElement');
-    console.log(className);
-  }
+    window.onload = () => {
+      isLoad = true;
+      currentCount = count;
+    }
+  }, []);
 
   return (
     <>
