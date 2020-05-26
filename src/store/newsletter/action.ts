@@ -1,7 +1,4 @@
 import { POST_NEWSLETTER  } from './action-types';
 import { actionObject } from '../../utils';
 
-export const postNewsletter = (newsletter) => {
-  return actionObject(POST_NEWSLETTER, newsletter);
-}
-
+export const postNewsletter = (email: string) => actionObject(POST_NEWSLETTER, email);

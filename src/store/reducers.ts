@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 import theme from './theme/reducer';
-import postNewsletter from './newsletter/reducer';
+import newsletter from './newsletter/reducer';
 import scroll from './scroll/reducer';
 import getCurrenciesPrice from './currency/reducer';
 
 const reducers = combineReducers({
   theme,
-  newsletter: postNewsletter,
+  newsletter,
   scroll,
   currency: getCurrenciesPrice
 });

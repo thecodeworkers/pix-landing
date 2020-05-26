@@ -4,33 +4,33 @@ const Exchange = () => (
   <svg width="100%" height="100%" viewBox="0 0 385 133">
   <defs>
     <linearGradient id="linear-gradient" x1="0.34" y1="0.544" x2="-0.223" y2="1.034" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#0083b0"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#0083b0"/>
     </linearGradient>
     <filter id="Rectángulo_1515" x="251" y="0" width="134" height="133" filterUnits="userSpaceOnUse">
       <feOffset dy="20" />
       <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feFlood flood-color="#0083b0" flood-opacity="0.161"/>
+      <feFlood floodColor="#0083b0" floodOpacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.74" gradientTransform="matrix(0.986, 0.032, -0.031, 0.996, 0.023, -0.014)" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="1" stopColor="#fff"/>
     </radialGradient>
     <linearGradient id="linear-gradient-2" x1="0.021" y1="0.5" x2="0.964" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#28c293"/>
-      <stop offset="0.515" stop-color="#45b29d"/>
-      <stop offset="1" stop-color="#2c93c8"/>
+      <stop offset="0" stopColor="#28c293"/>
+      <stop offset="0.515" stopColor="#45b29d"/>
+      <stop offset="1" stopColor="#2c93c8"/>
     </linearGradient>
     <linearGradient id="linear-gradient-3" x1="0.34" y1="0.544" x2="-0.223" y2="1.034" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#45b649"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#45b649"/>
     </linearGradient>
     <filter id="Rectángulo_181" x="0" y="0" width="134" height="133" filterUnits="userSpaceOnUse">
       <feOffset dy="20" />
       <feGaussianBlur stdDeviation="10" result="blur-2"/>
-      <feFlood flood-color="#45b649" flood-opacity="0.231"/>
+      <feFlood floodColor="#45b649" floodOpacity="0.231"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -38,7 +38,7 @@ const Exchange = () => (
     <filter id="Elipse_16" x="87" y="40" width="34" height="34" filterUnits="userSpaceOnUse">
       <feOffset dy="7"/>
       <feGaussianBlur stdDeviation="3" result="blur-3"/>
-      <feFlood flood-color="#57d6af" flood-opacity="0.188"/>
+      <feFlood floodColor="#57d6af" floodOpacity="0.188"/>
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>

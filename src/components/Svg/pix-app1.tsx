@@ -6,7 +6,7 @@ const PixAppOne = () => (
     <filter id="Rectángulo_1569" x="18.5" y="0" width="389" height="750" filterUnits="userSpaceOnUse">
       <feOffset dy="3" />
       <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
+      <feFlood floodOpacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -16,7 +16,7 @@ const PixAppOne = () => (
     <filter id="DASHBOARD_1" x="0" y="1.5" width="427" height="796" filterUnits="userSpaceOnUse">
       <feOffset dy="27"/>
       <feGaussianBlur stdDeviation="18.5" result="blur-2"/>
-      <feFlood flood-color="#57d6af" flood-opacity="0.169"/>
+      <feFlood floodColor="#57d6af" floodOpacity="0.169"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -24,7 +24,7 @@ const PixAppOne = () => (
   <g id="Grupo_188" data-name="Grupo 188" transform="translate(-1155.5 -1219)">
     <g id="Grupo_187" data-name="Grupo 187">
       <g transform="matrix(1, 0, 0, 1, 1155.5, 1219)" filter="url(#Rectángulo_1569)">
-        <g id="Rectángulo_1569-2" data-name="Rectángulo 1569" transform="translate(27.5 6)" fill="none" stroke="#57d6af" stroke-width="4" opacity="0.31">
+        <g id="Rectángulo_1569-2" data-name="Rectángulo 1569" transform="translate(27.5 6)" fill="none" stroke="#57d6af" strokeWidth="4" opacity="0.31">
           <rect width="371" height="732" rx="28" stroke="none"/>
           <rect x="2" y="2" width="367" height="728" rx="26" fill="none"/>
         </g>

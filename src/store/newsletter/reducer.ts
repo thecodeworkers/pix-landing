@@ -1,14 +1,15 @@
 import { POST_NEWSLETTER_ASYNC } from './action-types';
 
 const initialState = {
-  result: null
+  loading: false,
+  success: false
 }
 
-const postNewsletter = (state = initialState, action) => {
+const postNewsletter = (state = initialState, { type, payload }) => {
 
-  switch(action.type) {
-    case POST_NEWSLETTER_ASYNC: 
-    return { result: action.payload };
+  switch(type) {
+    case POST_NEWSLETTER_ASYNC:
+    return { ...state, ...payload };
 
     default:
     return state;

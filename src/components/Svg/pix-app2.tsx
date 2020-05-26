@@ -6,7 +6,7 @@ const PixAppTwo = () => (
     <filter id="Rectángulo_1570" x="20.5" y="0.5" width="389" height="750" filterUnits="userSpaceOnUse">
       <feOffset dy="3"/>
       <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
+      <feFlood floodOpacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -16,14 +16,14 @@ const PixAppTwo = () => (
     <filter id="ACTION1__DETALLE_DE_LA_MONEDA_BTC" x="0" y="0" width="430" height="801" filterUnits="userSpaceOnUse">
       <feOffset dy="27" />
       <feGaussianBlur stdDeviation="18.5" result="blur-2"/>
-      <feFlood flood-color="#57d6af" flood-opacity="0.2"/>
+      <feFlood floodColor="#57d6af" floodOpacity="0.2"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
   <g id="Grupo_189" data-name="Grupo 189" transform="translate(-369.5 -1793.5)">
     <g transform="matrix(1, 0, 0, 1, 369.5, 1793.5)" filter="url(#Rectángulo_1570)">
-      <g id="Rectángulo_1570-2" data-name="Rectángulo 1570" transform="translate(29.5 6.5)" fill="none" stroke="#57d6af" stroke-width="4" opacity="0.31">
+      <g id="Rectángulo_1570-2" data-name="Rectángulo 1570" transform="translate(29.5 6.5)" fill="none" stroke="#57d6af" strokeWidth="4" opacity="0.31">
         <rect width="371" height="732" rx="28" stroke="none"/>
         <rect x="2" y="2" width="367" height="728" rx="26" fill="none"/>
       </g>

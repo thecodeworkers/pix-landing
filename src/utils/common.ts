@@ -1,6 +1,4 @@
-export const actionObject = (type, payload = null) => {
-  return { type, payload }
-}
+export const actionObject = (type: string, payload: any = null) => ({ type, payload });
 
 export const scrolling = (ref: any): void => {
   const target = ref.current;
