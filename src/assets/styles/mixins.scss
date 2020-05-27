@@ -22,5 +22,11 @@
       @content;
     }
   }
+
+  @if $size == extrasmall {
+    @media (max-width: 370px) {
+      @content;
+    }
+  }
 }
 
