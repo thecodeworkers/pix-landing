@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './styles/home.scss';
 
-
 const Home = (props) => {
   const { t, i18n, scroll} = props;
 
@@ -24,7 +23,7 @@ const Home = (props) => {
 
   return (
     <div>
-      <SEO title='Pix' />
+      <SEO title='Home' />
       <Navbar />      
       <Banner />
       {/* <div id='test'> adas</div> */}

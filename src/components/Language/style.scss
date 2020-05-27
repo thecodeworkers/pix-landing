@@ -2,7 +2,7 @@
 
 @mixin square($background, $color, $radius, $cursor) {
   height: 50px;
-  width: 50%;
+  width: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,21 +16,64 @@
 
 ._lang {
  @include square(none, $black, none, default);
-
+ 
 }
 
 ._help {
   @include square($black, $white, 3px, pointer);
+  transition: all 0.6s;
 }
 
 ._parent {
   display: flex;
   flex-direction: row;
-  width: 110px;
+  width: 110px;  
+ 
 }
 
 ._langText {
   border-bottom: 1px solid $black;
   font-weight: 600;
+
   cursor: pointer;
+}
+
+._float {
+  background: linear-gradient(90deg, $blueGreenGradient);
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  border-radius: 5px;
+  color: $white;
+  height: 50px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: float linear 0.6s;
+
+  & ._langText {
+    border-bottom: 1px solid $white;
+    font-weight: 600;
+  }
+
+}
+
+@include responsive(medium) {
+
+  ._help {
+    display: none;
+  }
+
+}
+
+@keyframes float {
+
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

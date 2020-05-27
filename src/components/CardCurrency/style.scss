@@ -82,7 +82,8 @@
   margin-top: 20px;
   font-family: $muli;
   font-size: 0.8rem;
-  color: $mediumGray;
+  color: $black;
+  font-weight: bold;
 }
 
 
@@ -164,5 +165,9 @@
   ._cardChild{
     height: 3rem;
     width: 3rem;
+  }
+
+  ._price{
+    margin-top: 5px;
   }
 }

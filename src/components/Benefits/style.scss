@@ -20,6 +20,7 @@
   height: 3rem;
 }
 
+
 ._skillsDescription {
   font-family: $muli;
   font-weight: 800;
@@ -41,16 +42,11 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  // justify-content: center;
   width: 30%;
 }
 
-._parentSeparatorLine {
-  margin-top: 3rem;
-  margin-bottom: 5rem;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  // justify-content: center;
-  width: 30%;
-}
+@include responsive(medium) {
+  ._skillItem {
+    width: 50%;
+  }
+}   

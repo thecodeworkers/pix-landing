@@ -10,8 +10,10 @@ import { Tooltip } from 'reactstrap';
 import './style.scss';
 
 const Footer = ({ t, i18n, scroll, newsletter, action }) => {
+
   const [email, setEmail] = useState('');
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const [isValid, setIsValid] = useState(false);
 
   const { loading, result } = newsletter;
 
@@ -26,6 +28,14 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
       setTooltipOpen(false);
     }
   }, [result]);
+
+  const emailValidation = (value) => {
+    setEmail(value);
+    const regex = new RegExp(/.+@.+\.[A-Za-z]+$/);
+    const valid = regex.test(email);
+    valid ? setIsValid(true) : setIsValid(false);
+  };
+
 
   return (
     <div className='_main'>
@@ -65,7 +75,7 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
           <div className='col-md-5 _rightSide'>
             <p className='_suscribe'>{t('subscribe')}</p>
             <p className='_emailText'>{t('enter_email')}</p>
-            <input placeholder='e-mail' value={email} className='_newsletter' onChange={event => setEmail(event.target.value)}></input>
+            <input placeholder='e-mail' value={email} className='_newsletter' onChange={event => emailValidation(event.target.value)}></input>
             <div className='_divIcon'>
               {
                 loading ? (
@@ -82,7 +92,7 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
                     </Tooltip>
                   </>
                 ) : (
-                  <span onClick={() => action.postNewsletter(email)} className="material-icons _arrow">arrow_forward</span>
+                  <span onClick={() => action.postNewsletter(email)}className={`material-icons ${isValid && email.length ? '_arrow' : '_arrowEnabled'}`} id='hey'>arrow_forward</span>
                 )
               }
             </div>

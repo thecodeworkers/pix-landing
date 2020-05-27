@@ -21,8 +21,6 @@ const Navigation = (props) => {
   const {t,i18n, scroll} = props
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
-  console.log(scroll);
   
 
   return (

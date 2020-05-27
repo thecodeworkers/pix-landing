@@ -1,5 +1,15 @@
  @import '../../assets/styles/index.scss';
 
+
+ @mixin icon($color) {
+    position: absolute;
+    right: 15px;
+    top: -30px;
+    font-size: 1.2rem;
+    color:$color;
+    cursor: pointer;
+ }
+
  ._main {
    background-color: $black;
    padding: 6rem 0;
@@ -90,13 +100,15 @@
  }
 
  ._arrow {
-   position: absolute;
-   right: 15px;
-   top: -30px;
-   font-size: 1.2rem;
-   color:$gray;
-   cursor: pointer;
+   @include icon($gray);
  }
+
+ ._arrowEnabled {
+  @include icon(#999);
+   pointer-events: none;
+ }
+
+
 
  //RESPONSIVE 
 

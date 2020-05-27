@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SEO } from '../';
 import { useTranslation } from 'react-i18next';
 import { withTrans } from '../../i18n/withTrans';
@@ -7,6 +7,22 @@ import './style.scss';
 const Language = (props) => {
   const { t, i18n } = useTranslation()
   const [lang, setLang ] = useState('en');
+  const [ float, setFloat ] = useState(false);
+  useEffect(() => {
+  document.addEventListener('scroll', floatButton);
+   
+  }, [])
+
+  
+  const floatButton = () => {
+
+    const position = window.scrollY; 
+
+    if(position == 0)  setFloat(false);
+    if(position > 0) setFloat(true);
+    
+  }
+
 
   const pickLanguage = (value: any): void => {
     const lang = value.target.id;
@@ -19,9 +35,8 @@ const Language = (props) => {
       <div className='_lang'>
         <a onClick={pickLanguage} id={lang} className='_langText'> {lang.toUpperCase()} </a>
       </div>
-      <div className='_help'>HELP</div>
+      <div className={ !float ?'_help' : '_float'}><span className="material-icons">chat</span></div>
     </div>
-    
   )
 }
 
