@@ -2,7 +2,7 @@ import { POST_NEWSLETTER_ASYNC } from './action-types';
 
 const initialState = {
   loading: false,
-  success: false
+  result: null
 }
 
 const postNewsletter = (state = initialState, { type, payload }) => {

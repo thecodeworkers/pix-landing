@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +9,12 @@ import { postNewsletter } from '../../store/actions';
 import './style.scss';
 
 const Footer = ({ t, i18n, scroll, newsletter, action }) => {
-  const { loading, success } = newsletter;
+  const [email, setEmail] = useState('');
+  const { loading, result } = newsletter;
+
+  useEffect(() => {
+    if(result == 'success') setEmail('');
+  }, [result]);
 
   return (
     <div className='_main'>
@@ -49,21 +54,22 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
           <div className='col-md-5 _rightSide'>
             <p className='_suscribe'>{t('subscribe')}</p>
             <p className='_emailText'>{t('enter_email')}</p>
-            <input placeholder='e-mail' className='_newsletter'></input>
+            <input placeholder='e-mail' value={email} className='_newsletter' onChange={event => setEmail(event.target.value)}></input>
             <div className='_divIcon'>
               {
                 loading ? (
                   <div className="_arrow">
                     <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                   </div>
-                ) : success ? (
+                ) : result == 'success' ? (
                   <span className="material-icons _arrow">done</span>
+                ) : result == 'error' ? (
+                  <span className="material-icons _arrow">close</span>
                 ) : (
-                  <span onClick={() => action.postNewsletter('email@email.com')} className="material-icons _arrow">arrow_forward</span>
+                  <span onClick={() => action.postNewsletter(email)} className="material-icons _arrow">arrow_forward</span>
                 )
               }
             </div>
-
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-export const HOST_URL = 'https://test-binance.afx.trade/api/';
+export const HOST_URL: string = 'http://localhost:8100/api/';
 
 //API
-
-export const language = 'get-all-languages';
+export const save_susbcriber: string = 'subscribers';
