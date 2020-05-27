@@ -42,5 +42,6 @@
   "receive": "recibir",
   "quickly": "rápidamente",
   "and": "y",
-  "withdraw_funds": "retirar fondos rápidamente en BTC, ETH y USD."
+  "withdraw_funds": "retirar fondos rápidamente en BTC, ETH y USD.",
+  "error_occurred": "Ocurrió un error"
 }

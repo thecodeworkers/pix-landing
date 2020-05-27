@@ -6,14 +6,25 @@ import { withTrans } from '../../i18n/withTrans';
 import { Twitter, Instagram, Facebook, Apple, Android, PixLogo } from '../Svg';
 import { scrolling } from '../../utils/common';
 import { postNewsletter } from '../../store/actions';
+import { Tooltip } from 'reactstrap';
 import './style.scss';
 
 const Footer = ({ t, i18n, scroll, newsletter, action }) => {
   const [email, setEmail] = useState('');
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+
   const { loading, result } = newsletter;
+
+  const toggle = () => setTooltipOpen(!tooltipOpen);
 
   useEffect(() => {
     if(result == 'success') setEmail('');
+    if(result == 'error') setTooltipOpen(true);
+
+    return () => {
+      setEmail('');
+      setTooltipOpen(false);
+    }
   }, [result]);
 
   return (
@@ -64,7 +75,12 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
                 ) : result == 'success' ? (
                   <span className="material-icons _arrow">done</span>
                 ) : result == 'error' ? (
-                  <span className="material-icons _arrow">close</span>
+                  <>
+                    <span className="material-icons _arrow" id="TooltipExample">close</span>
+                    <Tooltip placement="left" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+                      {t('error_occurred')}
+                    </Tooltip>
+                  </>
                 ) : (
                   <span onClick={() => action.postNewsletter(email)} className="material-icons _arrow">arrow_forward</span>
                 )
