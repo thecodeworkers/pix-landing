@@ -43,5 +43,6 @@
   "receive": "receive",
   "quickly": "quickly",
   "and": "and",
-  "withdraw_funds": "withdraw funds in BTC, ETH & USD."
+  "withdraw_funds": "withdraw funds in BTC, ETH & USD.",
+  "error_occurred": "An error occurred"
 }

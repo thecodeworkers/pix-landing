@@ -4,7 +4,11 @@ import { Loader } from '../components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = () => (
+
+
      <Home />
+
+
 )
 
 export default IndexPage

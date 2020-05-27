@@ -1,23 +1,25 @@
-import { call, put, takeLatest, select, delay } from 'redux-saga/effects';
+import { put, takeLatest, delay, call } from 'redux-saga/effects';
 import { POST_NEWSLETTER, POST_NEWSLETTER_ASYNC } from './action-types';
 import { fetchService, actionObject } from '../../utils';
-import { language } from '../../utils/path';
+import { save_susbcriber } from '../../utils/path';
 
-function* postNewsletterAsync() {
+function* postNewsletterAsync(action) {
   try {
+    const { payload } = action;
+
     yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: true }));
 
-    yield delay(6000);    
+    yield call(fetchService, `${save_susbcriber}`, 'POST', { email: payload });
 
-    yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: false, success: true }));
-
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: false, result: 'success' }));
     yield delay(3000);
-
-    yield put(actionObject(POST_NEWSLETTER_ASYNC, { success: false }));
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { result: null }));
   }
   
   catch(error) {
-    console.log(error);
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { loading: false, result: 'error' }));
+    yield delay(3000);
+    yield put(actionObject(POST_NEWSLETTER_ASYNC, { result: null }));
   }
 }
 
