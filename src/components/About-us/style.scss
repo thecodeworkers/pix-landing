@@ -39,8 +39,8 @@
   width: 100%;
   background-size: cover;
   background-position: bottom;
-  transition: 1s;
-  -webkit-transition: 1s;
+  transition:all 1s;
+  -webkit-transition:all 1s;
   padding-top: 3rem;
 }
 ._aboutUsParent {

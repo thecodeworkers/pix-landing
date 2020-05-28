@@ -2,10 +2,6 @@ import { call, put, takeLatest, select, delay, take } from 'redux-saga/effects';
 import { CURRENCY_PRICE, CURRENCY_PRICE_ASYNC } from './action-types';
 import { eventChannel } from 'redux-saga';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a5b07170bc2e5f4aa82f65a5c57f384da2402559
 function initWebsocket() {
   return eventChannel(emitter => {
     const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,dash,litecoin');
