@@ -40,10 +40,13 @@
   background-size: cover;
   background-position: bottom;
   transition: 1s;
+  -webkit-transition: 1s;
   padding-top: 3rem;
 }
 ._aboutUsParent {
   @include background('about-us');
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 
 ._anotherclass {

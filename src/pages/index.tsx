@@ -4,9 +4,9 @@ import { Loader } from '../components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = () => (
-     <Loader>
+     // <Loader>
           <Home />
-     </Loader>
+     // </Loader>
 )
 
 export default IndexPage
