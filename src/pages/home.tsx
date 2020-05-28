@@ -13,6 +13,10 @@ const Home = (props) => {
 
   useEffect(() => {
     document.addEventListener('scroll', scrollPosition);
+
+    return () => {
+      document.removeEventListener('scroll', scrollPosition);
+    }
   }, [theme])
 
   const scrollPosition = () => {
