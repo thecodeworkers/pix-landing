@@ -6,23 +6,18 @@ import './style.scss';
 
 const Language = (props) => {
   const { t, i18n } = useTranslation()
-  const [lang, setLang ] = useState('en');
-  const [ float, setFloat ] = useState(false);
+  const [lang, setLang] = useState('en');
+  const [float, setFloat] = useState(false);
   useEffect(() => {
-  document.addEventListener('scroll', floatButton);
-   
+    document.addEventListener('scroll', floatButton);
+
   }, [])
 
-  
   const floatButton = () => {
-
-    const position = window.scrollY; 
-
-    if(position == 0)  setFloat(false);
-    if(position > 0) setFloat(true);
-    
+    const position = window.scrollY;
+    if (position == 0) setFloat(false);
+    if (position > 0) setFloat(true);
   }
-
 
   const pickLanguage = (value: any): void => {
     const lang = value.target.id;
@@ -35,7 +30,14 @@ const Language = (props) => {
       <div className='_lang'>
         <a onClick={pickLanguage} id={lang} className='_langText'> {lang.toUpperCase()} </a>
       </div>
-      <div className={ !float ?'_help' : '_float'}><span className="material-icons">chat</span></div>
+      <a className='_link' href='https://api.whatsapp.com/send?phone=584242012127&text=%20!' target='_blankspace'>
+     
+        <div className={!float ? '_help' : '_float'} >
+          <span className="material-icons">chat</span>
+        </div>
+        </a>
+
+      
     </div>
   )
 }
