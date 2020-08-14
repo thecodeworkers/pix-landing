@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { PixAppOne, Square, PixPhone, Exchange, Check, Arrows, Users, Usd, OrangeCube } from '../Svg';
+import { PixAppOne, Square, OrangeCube } from '../Svg';
 import { ScrollDown, Separator } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -30,8 +30,11 @@ const Product = ({ action, t, i18n }) => {
               <p className='_wallPix'>{t('pix_wallet')}</p>
               <Separator />
               <p className='_paragraph'>{t('pix_description')}</p>
-            </div>
+              <div className='_cubeContainer'>
             <OrangeCube />
+            </div>
+            </div>
+          
           </div>
 
           <div className='_productRight'>

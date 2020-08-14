@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, createRef } from 'react';
 import './style.scss';
-import { Square } from '../Svg';
+import { DiamondBtc, DiamondDash, DiamondUsdt, DiamondUsd  } from '../Svg';
 import { ScrollDown } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -19,9 +19,14 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
   // }, []);
 
   return (
+  
     <div  className={theme ? '_aboutUsParent' : '_anotherclass'}>
       <div className={theme ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
+
+        <div className='_floatingCoin'>
+          <DiamondBtc />
+          </div>
           <div className='_aboutBox'>
           <div className='_aboutContainer'>
           <p className='_aboutText'>100%</p>
@@ -30,7 +35,6 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
           
             </div>
           </div>
-
           <div className='_aboutBox'>
             <div className='_aboutContainer'>
             <p className='_aboutText'>100%</p>
@@ -38,18 +42,25 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
             <p className='_aboutTextDescription'>{t('safe_description')}</p>
             </div>
           </div>
-
+        
           <div className='_aboutBox'>
           <div className='_aboutContainer'>
           <p className='_aboutText'>100%</p>
             <p className='_aboutText'>Digital</p>
             <p className='_aboutTextDescription'>{t('digital_description')}</p>
-           
           </div>
+          </div>
+          <div className='_floatingCoin'>
+          <DiamondUsd />
           </div>
         </div>
+       
       </div>
+          <div className='_floatingCoinTwo'>
+          <DiamondUsdt />
+          <DiamondDash />
 
+          </div>
      {/*  <div className='_divBlock'>
         <div className={theme ? '_textContent' : '_textContentDark'}>
           <Square />

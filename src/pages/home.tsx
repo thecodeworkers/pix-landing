@@ -34,10 +34,10 @@ const Home = (props) => {
       {/* <div id='test'> adas</div> */}
      <Product />
       <Instant />
-      <BannerImage isDark={theme} about='about'><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+      <BannerImage  childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
       <AboutUs theme={!theme}/>
-      <BannerImage product='product'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-      
+     {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
+       */}
       <Benefits />
       <Footer />
     </div>

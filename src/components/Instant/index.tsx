@@ -1,17 +1,15 @@
 import React, { useRef, useEffect } from 'react';
-import {PixPhone, OrangePix} from '../Svg';
+import { PixAppTwo, OrangePix } from '../Svg';
 import { ScrollDown, Separator } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
-import checked from '../../assets/img/phone.png';
-
 const Instant = ({ action, t, i18n }) => {
 
   // const { saveReference } = action;
-  const instantRef: any = useRef();
+  const aboutRef: any = useRef();
 
   // useEffect(() => {
   //   saveReference({ instantRef });
@@ -19,27 +17,34 @@ const Instant = ({ action, t, i18n }) => {
 
   return (
     <div>
-    
+
       <div className='_productParentO'>
         <div className='_productGeneralO'>
           <div className='_productLeftO'>
             <div className='_pixLeftDescriptionO'>
-    
+
               <p className='_wallPix'>PIX Instant</p>
               <Separator />
               <p className='_paragraph'>{t('pix_instant')}</p>
+
+              <div className='_orangePixContainer'>
+                <OrangePix />
+              </div>
             </div>
-            <OrangePix />
           </div>
 
           <div className='_productRightO'>
             <div className='_phoneContainerO'>
-          <PixPhone />
+              <PixAppTwo />
             </div>
           </div>
         </div>
       </div>
-    
+
+      <div className='_parentScroll'>
+        <ScrollDown color='#FF8008' reference={aboutRef} />
+      </div>
+
     </div>
 
 
@@ -58,32 +63,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Instant));
-    
-
-
-      
-{/* <div className='_productParentTwo'>
-<div className='_productGeneral'>
-
-  <div className='_productLeft'>
-    <div className='_pixelCenter'>
-      <ScrollDown color='#57D6AF' />
-    </div>
-    <PixPhone />
-    <div className='_phoneContainerTwo'>
-    
-    </div>
-  </div>
-  <div className='_productLeft'>
-    <div className='_pixLeftDescription'>
-      <p className='_wallPix'>PIX Instant</p>
-      <p className='_paragraph'>{t('pix_instant')}</p>
-      <Exchange />
-      <div className='_checkCenter'>
-        <Check />
-      </div>
-    </div>
-  </div>
-</div>
-</div> */}
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Instant));
