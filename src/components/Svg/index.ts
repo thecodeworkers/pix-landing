@@ -21,3 +21,6 @@ export { default as Usd } from './usd';
 export { default as Users } from './users';
 export { default as DownloadAndroid } from './download-android';
 export { default as DownloadIos } from './download-ios';
+export { default as PixPhone } from './pix-phone';
+export { default as OrangePix } from './orange-pix';
+export { default as OrangeCube } from './orange-cube';

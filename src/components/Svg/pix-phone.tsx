@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PixAppTwo = () => (
+const PixPhone = () => (
   <svg width="100%" height="100%" viewBox="0 0 513 934">
   <defs>
     <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1088 2253">
@@ -25,4 +25,4 @@ const PixAppTwo = () => (
 
 )
 
-export default PixAppTwo;
+export default PixPhone;

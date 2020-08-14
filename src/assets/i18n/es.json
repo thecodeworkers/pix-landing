@@ -23,8 +23,8 @@
   "login":"Iniciar sesión",
 
   "secure_platform":"Plataforma segura",
-  "pix_description":"PIX Wallet es una característica que permite a los usuarios transferir sin problemas entre cuentas PIX.",
-  "pix_instant":"PIX Instant está diseñado para clientes que desean usar activos virtuales pero prefieren convertir a moneda fiduciaria rápidamente y evitar la exposición a la fluctuación de precios.",
+  "pix_description":"Ten el control para almacenar, administrar y transferir USD, BTC, ETH y DASH cuando quieras.",
+  "pix_instant":"Cambie FIAT por activos virtuales y viceversa instantáneamente.",
   "exchange_fiat":"Intercambiar FIAT por activos virtuales",
   "transfer_usd":"Transferir USD dentro de los usuarios de PIX",
   "cutomized_services":"Servicios personalizados",
@@ -43,5 +43,10 @@
   "quickly": "rápidamente",
   "and": "y",
   "withdraw_funds": "retirar fondos rápidamente en BTC, ETH y USD.",
-  "error_occurred": "Ocurrió un error"
+  "error_occurred": "Ocurrió un error",
+  "pix_wallet":"Billetera Wallet",
+  "personal_service":"Servicios personalizados para nuestros clientes de alta demanda. Contáctanos y en menos de 24 horas le estaremos atendiendo.",
+  "fast_description":"En menos de 5 minutos puedes comenzar a comprar, vender e intercambiar.",
+  "safe_description":"Utilizamos los sistemas de seguridad más modernos del mercado.",
+  "digital_description":"Te acompañamos tanto en web como en app."
 }

@@ -1,0 +1,61 @@
+@import '../../assets/styles/index.scss';
+@mixin parentO {
+  // background-color: #212121;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@mixin phoneO {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  // background-color: green;
+}
+
+._productParentO {
+  @include parentO;
+  padding-top: 5rem;
+}
+
+._productGeneralO {
+  // background-color: blue;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+._productLeftO {
+  // background-color: purple;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+._productRightO {
+  // background-color: orange;
+  width: 50%;
+}
+
+._phoneContainerO {
+  @include phoneO();
+}
+
+
+._pixLeftDescriptionO {
+  // background-color:red;
+  width: 55%;
+  margin-top: 5rem;
+
+    & h5 {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      font-family: $muli;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-align: center;
+   }
+}

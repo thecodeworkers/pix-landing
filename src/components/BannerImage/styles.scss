@@ -19,8 +19,8 @@
 }
 
 ._imageContainer {
-  width: 55%;
-  height: 100%;
+  width: 30%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 ._imageContainerText {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: $muli;
   text-align: center;
 }
@@ -41,4 +41,25 @@
 ._blackTxt {
   color: $black;
   transition: 1s;
+}
+
+._whiteHeader{
+  color: $white;
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+._aboutBox{
+  background: $newBlack;
+  width: 25%;
+  height: 250px;
+  border-color: $newBlue;
+  box-shadow: -5px 5px 15px $newBlue;
+}
+
+
+._aboutContainer{
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }

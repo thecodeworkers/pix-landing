@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { PixAppOne, Square, PixAppTwo, Exchange, Check, Arrows, Users, Usd } from '../Svg';
+import { PixAppOne, Square, PixPhone, Exchange, Check, Arrows, Users, Usd, OrangeCube } from '../Svg';
 import { ScrollDown, Separator } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -27,38 +27,16 @@ const Product = ({ action, t, i18n }) => {
               </div>
 
               <h5>{t('secure_platform')}</h5>
-              <p className='_wallPix'>PIX Wallet</p>
+              <p className='_wallPix'>{t('pix_wallet')}</p>
+              <Separator />
               <p className='_paragraph'>{t('pix_description')}</p>
             </div>
+            <OrangeCube />
           </div>
 
           <div className='_productRight'>
             <div className='_phoneContainer'>
               <PixAppOne />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='_productParentTwo'>
-        <div className='_productGeneral'>
-
-          <div className='_productLeft'>
-            <div className='_pixelCenter'>
-              <ScrollDown color='#57D6AF' />
-            </div>
-
-            <div className='_phoneContainerTwo'>
-              <PixAppTwo />
-            </div>
-          </div>
-          <div className='_productLeft'>
-            <div className='_pixLeftDescription'>
-              <p className='_wallPix'>PIX Instant</p>
-              <p className='_paragraph'>{t('pix_instant')}</p>
-              <Exchange />
-              <div className='_checkCenter'>
-                <Check />
-              </div>
             </div>
           </div>
         </div>

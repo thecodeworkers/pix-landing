@@ -22,30 +22,35 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
     <div  className={theme ? '_aboutUsParent' : '_anotherclass'}>
       <div className={theme ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
-          <div>
+          <div className='_aboutBox'>
+          <div className='_aboutContainer'>
+          <p className='_aboutText'>100%</p>
             <p className='_aboutText'>{t('fast')}</p>
-            <div style={{ position: 'relative' }}>
-              <p className='_number'>01</p>
+            <p className='_aboutTextDescription'>{t('fast_description')}</p>
+          
             </div>
           </div>
 
-          <div>
-            <p className='_aboutText'>{t('intuitive')}</p>
-            <div style={{ position: 'relative' }}>
-              <p className='_number'>02</p>
-            </div>
-          </div>
-
-          <div>
+          <div className='_aboutBox'>
+            <div className='_aboutContainer'>
+            <p className='_aboutText'>100%</p>
             <p className='_aboutText'>{t('safe')}</p>
-            <div style={{ position: 'relative' }}>
-              <p className='_number'>03</p>
+            <p className='_aboutTextDescription'>{t('safe_description')}</p>
             </div>
+          </div>
+
+          <div className='_aboutBox'>
+          <div className='_aboutContainer'>
+          <p className='_aboutText'>100%</p>
+            <p className='_aboutText'>Digital</p>
+            <p className='_aboutTextDescription'>{t('digital_description')}</p>
+           
+          </div>
           </div>
         </div>
       </div>
 
-      <div className='_divBlock'>
+     {/*  <div className='_divBlock'>
         <div className={theme ? '_textContent' : '_textContentDark'}>
           <Square />
           <h5>{t('we_believe')}</h5>
@@ -62,7 +67,7 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
       <div className='_parentScroll'>
         <ScrollDown color='#FF8008' reference={productRef}/>

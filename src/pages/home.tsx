@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Benefits} from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Benefits, Instant} from '../components';
 import { withTrans } from '../i18n/withTrans';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -32,10 +32,12 @@ const Home = (props) => {
       <Navbar />      
       <Banner />
       {/* <div id='test'> adas</div> */}
-      <BannerImage isDark={!theme} about='about'>{t('our')} <span className='_boldText'>{t('mission')}</span> {t('accelerate')}</BannerImage>
-      <AboutUs theme={theme}/>
+     <Product />
+      <Instant />
+      <BannerImage isDark={theme} about='about'><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+      <AboutUs theme={!theme}/>
       <BannerImage product='product'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-      <Product />
+      
       <Benefits />
       <Footer />
     </div>
