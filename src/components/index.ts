@@ -14,3 +14,4 @@ export { default as Separator } from './Separator';
 export { default as BannerImage } from './BannerImage';
 export { default as Benefits } from './Benefits';
 export { default as Instant } from './Instant';
+export { default as Login } from './Login';

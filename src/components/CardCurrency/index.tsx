@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.scss';
-import { BtcLogo, EthLogo, UsdcLogo, UsdtLogo } from '../Svg';
+import { BtcLogo, EthLogo, Usd, DashLogo } from '../Svg';
 import { savePrice } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -18,14 +18,9 @@ const Cards = (props) => {
 
 	const cards = [
 		{
-			class: '_cardUSDT',
-			icon: <UsdtLogo />,
-			balance: `$ ${numberFormat(currency.dash)}`
-		},
-		{
-			class: '_cardUSDC',
-			icon: <UsdcLogo />,
-			balance: `$ ${numberFormat(currency.litecoin)}`
+			class: '_cardBTC',
+			icon: <BtcLogo />,
+			balance: `$ ${numberFormat(currency.bitcoin)}`
 		},
 		{
 			class: '_cardETH',
@@ -33,10 +28,16 @@ const Cards = (props) => {
 			balance: `$ ${numberFormat(currency.ethereum)}`
 		},
 		{
-			class: '_cardBTC',
-			icon: <BtcLogo />,
-			balance: `$ ${numberFormat(currency.bitcoin)}`
-		}
+			class: '_cardDASH',
+			icon: <DashLogo />,
+			balance: `$ ${numberFormat(currency.dash)}`
+		},
+		{
+			class: '_cardUSDT',
+			icon: <Usd/>,
+			balance: `$ ${numberFormat(currency.litecoin)}`
+		},
+	
 	]
 	return (
 		<div className="_cardCurrencyMain">

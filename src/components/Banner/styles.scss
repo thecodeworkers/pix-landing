@@ -10,6 +10,7 @@
   @include flex-axis($justify);
   align-items: center;
   flex-direction: column;
+  
 }
 
 @mixin overlap {
@@ -31,7 +32,7 @@
 
 @mixin boldTexts($color, $fontSize) {
   font-family: $muli;
-  font-weight: 700;
+  font-weight: 900;
   color: $color;
   text-align: center;
   font-size: $fontSize;
@@ -39,7 +40,7 @@
 
 // CLASS
 ._bannerContainer {
-  @include dimensions(100%, 90vh);
+  @include dimensions(100%, 85vh);
   @include flex-axis(center);
 }
 
@@ -57,25 +58,33 @@
   @include boldTexts($lightBLue, 1.5rem);
   @include width(90%);
   margin-bottom: 3rem;
+
 }
 
 ._childrenTitle {
   @include boldTexts($arsenic, 2.5rem);
+  z-index: 0;
 }
 
 ._bannerCards {
   @include height(40%);
   @include flex-axis(center);
   align-items: center;
+  z-index: 0;
 }
 
 ._bannerButton {
-  @include height(15%);
+  @include height(5%);
   @include flex-align(center);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
 }
 
 ._buttonText {
   @include boldTexts($lightBLue, 1rem);
+  margin-top: 3%
 }
 
 ._buttonGradient {
@@ -148,7 +157,10 @@
    }
 
   ._bannerContainer {
-    height: 85vh;
+ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   ._bannerFooter {
@@ -190,4 +202,10 @@
   ._bannerCards {
     height: 45%;
   }
+}
+
+._macBox{
+  position: relative;
+    width: 150%;
+    top: 150%;
 }

@@ -118,6 +118,9 @@
   @include animated-box($greenGradient, 8rem);
 }
 
+._cardDASH {
+  @include animated-box($blueGradient, 8rem);
+}
 
 @include responsive(large) {
   ._cardBTC {

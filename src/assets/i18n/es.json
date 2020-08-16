@@ -1,6 +1,6 @@
 {
   "app_desktop":"Aplicación y billetera de escritorio con el servicio rápido, seguro e intuitivo del mundo sobre criptomonedas",
-  "today_index":"Valor del índice del dia",
+  "today_index":"Precios Referenciales del día",
   "crypto_transactions":"Enviar, recibir e intercambiar criptomonedas",
   "download":"Descargar",
   "network":"Red", 
@@ -48,5 +48,8 @@
   "personal_service":"Servicios personalizados para nuestros clientes de alta demanda. Contáctanos y en menos de 24 horas le estaremos atendiendo.",
   "fast_description":"En menos de 5 minutos puedes comenzar a comprar, vender e intercambiar.",
   "safe_description":"Utilizamos los sistemas de seguridad más modernos del mercado.",
-  "digital_description":"Te acompañamos tanto en web como en app."
+  "digital_description":"Te acompañamos tanto en web como en app.",
+  "stay_on_day": "Mantente al día con el mercado de monedas FIAT y digitales que puedes utilizar en PIX",
+  "digital_wallet":"Billetera digital",
+  "have_power":"Ten el poder de tu dinero"
 }
