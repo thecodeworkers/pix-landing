@@ -21,3 +21,8 @@ export { default as Usd } from './usd';
 export { default as Users } from './users';
 export { default as DownloadAndroid } from './download-android';
 export { default as DownloadIos } from './download-ios';
+export { default as MacBook } from './macBook';
+export { default as BtcCard } from './btc-card';
+export { default as EthCard } from './eth-card';
+export { default as DashCard } from './dash-card';
+export { default as UsdCard } from './usd-card';
