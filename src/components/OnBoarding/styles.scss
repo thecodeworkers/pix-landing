@@ -47,184 +47,85 @@
   animation: trans 0.6s forwards;
 }
 
-
 // @keyframes trans {
 //   from {width:100%; height: 100vh}
 //   to {width:0%; height: 100vh}
 // }  
 
-._second {
-  @include offsetTop(orange);
-}
+
 
 ._third {
   @include offsetTop(gray);
 }
 
 
+/* SECON SCREE STYLES */
 
-/* FIRTS SECTION */
-
-._parentSendSection {
-  width: 100%;
-  display: flex;
-  height: 100vh;
+._smartMoneyParent {
+  @include offsetTop($lightBLue);
+  display: inline-flex;
 }
 
-._parentSendSectionBodyLeft {
-  background-color: $whiteSmoke;
-  width: 56%;
-  opacity: 0
-}
-
-._sonofson {
-  display: flex;
-  width: 100%;
+._LeftSideSmartMoney {
+  width: 55%;
+  // background-color: blue;
   height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-._sendContentChild {
-  width: 70%;
-  // background-color: blue;
+._pixDevices {
+  // background-color: red;
+  width: 100%;
+  position: relative;
 }
 
-._exchangeInstantly {
+._rightSideSmartMoney {
+  width: 45%;
+  // background-color: blue;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// ._rightSideSmartContent {
+//   background-color: blue;
+// }
+
+._manageMoneyText {
   & p {
     font-size: 3.4rem;
     margin-bottom: -1.3rem !important;
+    color: $white;
   }
 }
 
-._parentSendSectionBodyRight {
-  background-color:$blackOnboard;
-  width: 47%;
-  opacity: 0;
+
+._downloadStores {
+  margin-top: 2.5rem;
+  display: inline-flex;
 }
 
-._sendRightTitle {
-  margin-top: 4rem;
-  color: $lightBLue;
+._appIosDown {
+  width: 7.5rem;
 }
 
-._emailNewsletterSend {
- 
-  & p {
-    color: $appleGreen;
-    font-size: 0.9rem;
-    margin-top: 2.5rem;
-  }
-} 
-
-._inputNewsletterSend {
-  width: 75%;
-  padding: 1rem 0.7rem;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  -webkit-box-shadow: -15px 13px 25px -14px $appleGreen;
-  -moz-box-shadow: -15px 13px 25px -14px $appleGreen;
-  box-shadow: -15px 13px 25px -14px $appleGreen;
-  
-  &::placeholder {
-    color: $darkGray;
-  }
-  
+._appAndroidDown {
+  width: 7.5rem;
+  margin-left: 1rem;
 }
 
-._sendRightSideItems {
-  width: 80%;
-}
-
-._macBookChangeTheme {
-  margin-left: -35%;
-}
-
-._switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 22px;
-}
-
-._switch ._changeThemeCheckbox {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-._slider {
+._orangePixFloat {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-._slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 4px;
-  bottom: 4px;
-  background-color: black;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-._changeThemeCheckbox:checked + ._slider {
-  background-color: $white;
-}
-
-._changeThemeCheckbox:focus + ._slider {
-  box-shadow: 0 0 1px $white;
-}
-
-._changeThemeCheckbox:checked + ._slider:before {
-  -webkit-transform: translateX(28px);
-  -ms-transform: translateX(28px);
-  transform: translateX(28px);
-}
-
-._slider._round {
-  border-radius: 34px;
-}
-
-._slider._round:before {
-  border-radius: 50%;
-}
-
-._switchThemeParent {
-  display: flex;
+  right: 7%;
   // background-color: red;
-  flex-direction: row;
-  justify-content: flex-end;
-  // align-items: center;
-  align-items: center;
-  width: 100%;
-  margin-left: -10%;
-  // background-color: red;
-  // // width: 200px;
-  // position: absolute;
-  // right: 8%;
-  // top: 18%;
+  bottom: 30%;
+  animation: floating 1.5s alternate infinite;
 }
 
-._OnOffToggle {
-  color: $white;
-  margin-top: -0.4rem;
-  margin-right: 0.7rem;
-}
-
-._currencyCardsRow {
-  // background-color: blue;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@keyframes floating {
+  from {transform: translateY(0px);}
+  to { transform: translateY(-20px);}
 }

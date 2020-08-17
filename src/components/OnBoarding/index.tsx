@@ -1,6 +1,7 @@
 import React, { Component, createRef } from "react";
-import { MacBook, BtcCard, EthCard, DashCard, UsdCard } from '../Svg';
-import { TimelineMax } from "gsap/all";
+import { PixDevices, DownloadIos, DownloadAndroid, PixOrange3d} from '../Svg';
+import { OnBoardingFirst } from '../../components';
+import { TimelineMax, gsap } from "gsap/all";
 import './styles.scss';
 
 interface IProps {
@@ -24,13 +25,13 @@ class OnBoarding extends Component<IProps, IState> {
   private secondscreen = createRef<HTMLDivElement>();
   private thirdscreen = createRef<HTMLDivElement>();
 
-  private timeLine = null;
+  private tl;
 
   constructor(props: IProps) {
 
     super(props);
 
-    this.timeLine = new TimelineMax({paused: true});
+    this.tl = null;
 
     this.state = {
       flag: '',
@@ -50,32 +51,39 @@ class OnBoarding extends Component<IProps, IState> {
     //   this.scrolling();
     // }
 
+
     // let tl = gsap.timeline( {
-    //   scrollTrigger: ".second", // start the animation when ".box" enters the viewport (once)
+    //   scrollTrigger: "._second", // start the animation when ".box" enters the viewport (once)
     //   pin: true,
-    //   scrub: 3,
+    //   scrub: 1,
     //   snap: {
     //     snapTo: "labels", // snap to the closest label in the timeline
-    //     duration: {min: 1, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-    //     delay: 1, // wait 0.2 seconds from the last scroll event before doing the snapping
+    //     // duration: {min: 6, max: 9}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+    //     delay: 2, // wait 0.2 seconds from the last scroll event before doing the snapping
     //     // ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
     //   }
 
     // });
 
     //   tl.addLabel("start")
-    // .from(".second", {backgroundColor: 'blue'})
+    // // .addLabel("background")
+    // .to("._second", {backgroundColor: 'red'})
     // .addLabel("color")
-    // .to(".second", 3, { backgroundColor: "red"})
-    // .addLabel("spin")
-    // .to(".p", {rotation: 360})
+    // .to("._p", 0.6, { color: "red" })
+    // // .addLabel("spin")
+    // // .to(".p", {rotation: 360})
     // .addLabel("end");
 
-    this.timeLine 
-    .play()
-    .to('._parentSendSectionBodyLeft', 0.6, {width: '53%', opacity: 1}, 0.6)
-    .to('._parentSendSectionBodyRight', 0.6,  { opacity: 1}, 0.6)
-   
+    // this.timeLine 
+    // .play()
+    // .to('._parentSendSectionBodyLeft', 0.6, {x: 0, opacity: 1}, 0.3)
+    // .to('._parentSendSectionBodyRight', 0.6,  {x: 0, opacity: 1}, 0.3)
+    // .to('._sendRightTitle', 0.6,  { opacity: 1, y: 0 }, 0.4)
+    // .to('._exchangeInstantly', 0.6,  { opacity: 1, y: 0 }, 0.6)
+    // .to('._emailNewsletterSend', 0.6,  { opacity: 1, y: 0 }, 0.8)
+    // .to('._macBookChangeTheme', 0.6,  { opacity: 1, x: 0 }, 0.4)
+    // .to('._currencyCardsRow', 0.6,  { opacity: 1, y: 0 }, 0.6)
+    // .to('._switchThemeParent', 0.6,  { opacity: 1, x: 0 }, 0.6)
 
     window.onmouseup = () => {
       this.setState({ overTime: new Date().getSeconds() });
@@ -104,7 +112,7 @@ class OnBoarding extends Component<IProps, IState> {
 
   changeTheme(): any {
     const checked = this.state.check;
-    this.setState({check: !checked })
+    this.setState({ check: !checked })
   }
 
   render() {
@@ -113,67 +121,50 @@ class OnBoarding extends Component<IProps, IState> {
         <div className='_cardsParent'>
           <div className='_cardCarrousel' >
 
-            <div className='_parentSendSection'>
-              <div className='_parentSendSectionBodyLeft'>
-                <div className='_sonofson'>
-
-                  <div className='_sendContentChild'>
-                    <h4 className='_sendRightTitle'>Disponible para app and desktop!</h4>
-
-                    <div className='_exchangeInstantly'>
-                      <p> Envía, recibe e</p>
-                      <p> Intercambia dinero </p>
-                      <p> instantáneamente </p>
-                    </div>
-
-                    <div className='_emailNewsletterSend'>
-                      <p>Ingresa tu correo y recibe nuestras noticaciones de la app</p>
-
-                      <input type='text' placeholder='email' className='_inputNewsletterSend'></input>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-              <div className='_parentSendSectionBodyRight'>
-
-                <div className='_sonofson'>
-
-                  <div className='_sendRightSideItems'>
-
-                    <div className='_switchThemeParent'>
-                      <span className='_OnOffToggle'> On / Off</span>
-                      <label className="_switch"> 
-                      {/* On/Off */}
-                        <input type="checkbox" className='_changeThemeCheckbox' checked={this.state.check} onChange={() => this.changeTheme()}/>
-                        <span className="_slider _round"></span>
-                      </label>
-
-                    </div>
-                    <div className='_macBookChangeTheme'>
-                      <MacBook />
-                    </div>
-
-                    <div className='_currencyCardsRow'>
-                      <BtcCard />
-                      <EthCard />
-                      <DashCard />
-                      <UsdCard />
-                    </div>
-                  </div>
-
-                </div>
-
-
-              </div>
-            </div>
+            <OnBoardingFirst />
 
           </div>
           <div className='_cardCarrousel' ref={this.secondscreen} >
 
-            <div className='_second'>
-              <h2>second</h2>
+            <div className='_smartMoneyParent'>
+              <div className='_LeftSideSmartMoney'>
+
+                {/* <p>sdadsdasdasdasdasdasdassa</p> */}
+
+                <div className='_pixDevices'>
+                  <PixDevices />
+
+                  <div className='_orangePixFloat'>
+                      <PixOrange3d />
+                  </div>
+                </div>
+              </div>
+
+              <div className='_rightSideSmartMoney'>
+
+                <div className='_rightSideSmartContent'>
+                  <h4>Disponible para app and desktop</h4>
+
+                  <div className='_manageMoneyText'>
+                    <p>Maneja tu dinero </p>
+                    <p>inteligente en</p>
+                    <p>cualquier lugar</p>
+                  </div>
+
+                  <div className='_downloadStores'>
+
+                    <div className='_appIosDown'>
+                      <DownloadIos />
+                    </div>
+                    
+                    <div className='_appAndroidDown'>
+                      <DownloadAndroid /> 
+                    </div>
+                    
+                  </div>
+                </div>
+
+              </div>
             </div>
 
           </div>

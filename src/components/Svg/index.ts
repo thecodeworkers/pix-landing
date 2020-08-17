@@ -26,3 +26,5 @@ export { default as BtcCard } from './btc-card';
 export { default as EthCard } from './eth-card';
 export { default as DashCard } from './dash-card';
 export { default as UsdCard } from './usd-card';
+export { default as PixDevices } from './pix-devices';
+export { default as PixOrange3d } from './pix-orange-3d';

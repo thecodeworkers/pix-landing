@@ -14,3 +14,4 @@ export { default as Separator } from './Separator';
 export { default as BannerImage } from './BannerImage';
 export { default as Benefits } from './Benefits';
 export { default as OnBoarding } from './OnBoarding';
+export { default as OnBoardingFirst} from './OnBoardingFirst';
