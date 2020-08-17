@@ -81,7 +81,7 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
       </div> */}
 
       <div className='_parentScroll'>
-        <ScrollDown color='#FF8008' reference={productRef}/>
+        <ScrollDown color='#00021C' reference={productRef}/>
       </div>
 
     </div>

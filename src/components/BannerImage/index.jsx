@@ -32,7 +32,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
         <h4 className='_whiteHeader'>{childrenTitle}</h4>
 
         <div style={{ width: '120%', marginTop: 10, marginBottom: 10 }}>
-          <Separator />
+        <Separator height={10} />
         </div>
         <p className={`_imageContainerText  ${isDark ? '_whiteTxt' : '_blackTxt'}`}>{children}</p>
 

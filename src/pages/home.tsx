@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage,Instant, Login} from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login,Store } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -7,7 +7,7 @@ import './styles/home.scss';
 
 
 const Home = (props) => {
-  const { t, i18n, scroll} = props;
+  const { t, i18n, scroll } = props;
 
   const [theme, setTheme] = useState(true);
 
@@ -20,7 +20,7 @@ const Home = (props) => {
   }, [theme])
 
   const scrollPosition = () => {
-    const position = window.scrollY; 
+    const position = window.scrollY;
     if (position < 300) setTheme(true);
     if (position > 300 && position <= 1900) setTheme(false);
     if (position > 1900) setTheme(true);
@@ -29,17 +29,16 @@ const Home = (props) => {
   return (
     <div>
       <SEO title='Pix' />
-      <Navbar />      
-      <Login childrenTitle={'Hola'}  children={'hello'} />
-      {/* <div id='test'> adas</div> */}
-     <Product />
+      <Navbar />
+      <Login childrenTitle={t('digital_wallet')} />
+      <Product />
       <Instant />
-      <BannerImage  childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
-      <AboutUs theme={!theme}/>
+      <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+      <AboutUs theme={!theme} />
       <Banner />
-     {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-       */}
-     {/*  <Benefits /> */}
+      <Store childrenTitle={t('have_power')} children={t('anyone')} />
+      {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
+      {/*  <Benefits /> */}
       <Footer />
     </div>
   )
@@ -51,7 +50,7 @@ const mapStateToProps = (scroll) => ({
 
 const mapDispatchToProps = dispatch => {
   const actions = {
-    
+
   }
 
   return {
@@ -59,11 +58,11 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Home));
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Home));
 
 
 
- {/* <br />
+{/* <br />
       <br />
       <br />
       <br />
@@ -84,18 +83,18 @@ export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Home));
       <br />
       <br /> */}
 
-      {/* <AboutUs reference={test} scroll={scrolling} theme={theme} />
+{/* <AboutUs reference={test} scroll={scrolling} theme={theme} />
       <CardCurrency /> */}
-      {/* <Separator /> */}
+{/* <Separator /> */ }
 
 
-      {/* <div ref={div} className={theme ? '_testing' : '_class'}>
+{/* <div ref={div} className={theme ? '_testing' : '_class'}>
 
         <h1>hello world</h1> 
       </div> */}
 
 
-      {/* <br />
+{/* <br />
       <br />
       <br />
       <br />
@@ -113,19 +112,19 @@ export default connect(mapStateToProps, mapDispatchToProps) (withTrans(Home));
       <div ref={test}>
         <p>test</p>
       </div> */}
-      
-      {/* <Product /> */}
+
+{/* <Product /> */ }
 
 
 
-      {/* 
+{/* 
     <div className=' bb'>
       <div>
         <p>ETH</p>
       </div>
     </div> */}
 
-      {/* 
+{/* 
 <div className="rainbow">
   <div className='square'>
     <p>sadasdas</p>

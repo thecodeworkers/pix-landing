@@ -32,3 +32,5 @@ export { default as DiamondUsd } from './diamond-usd';
 export { default as DiamondBtc } from './diamond-btc';
 export { default as DiamondDash } from './diamond-dash';
 export { default as MacBook } from './mac-book';
+export { default as ArrowDown } from './arrow-down';
+export { default as PixPhone } from './pix-phone';

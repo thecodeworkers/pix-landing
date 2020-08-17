@@ -2,7 +2,6 @@
 
 @mixin rectangle($gradient, $direction) {
     width: 25%;
-    height: 6px;
     background: linear-gradient(to $direction, $gradient);
 }
 
@@ -10,21 +9,22 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: red;
 }
 
 ._rentangleOne {
-   @include rectangle($greenGradient, left);
+   @include rectangle($orangeGradient, left);
+   border-radius: 4px 0px 0px 4px;
 }
 
 ._rentangleTwo {
-  @include rectangle($blueGradient, left);
-}
-
-._rentangleThree {
   @include rectangle($darkPurpleGradient, left);
 }
 
+._rentangleThree {
+  @include rectangle($blueGradient, left);
+}
+
 ._rentangleFour {
-  @include rectangle($orangeGradient, left);
+  @include rectangle($greenGradient, left);
+  border-radius: 0px 4px 4px 0px;
 }

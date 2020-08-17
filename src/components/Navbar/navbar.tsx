@@ -31,7 +31,7 @@ const Navigation = (props) => {
         <div className='container'>
           <NavbarBrand href="/">
             <div className='_logo'>
-              <PixLogo />
+            <PixLogo color='#fff' />
             </div>
 
           </NavbarBrand>
@@ -50,11 +50,11 @@ const Navigation = (props) => {
             </Nav>
 
             <NavItem >
-              <button className='_registerBtn'>{t('register').toUpperCase()}</button>
+              <button className='_navBarBtnBlack'>{t('register').toUpperCase()}</button>
             </NavItem>
 
             <NavItem>
-              <button className='_loginBtn'>{t('login').toUpperCase()}</button>
+              <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button>
             </NavItem>
           </Collapse>
         </div>

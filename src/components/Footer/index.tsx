@@ -51,7 +51,7 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
 
               <div className='_content'>
                 <div className='_divLogo'>
-                  <PixLogo />
+                  <PixLogo color='#fff' />
                 </div>
                 <div className='_separator'>
                 </div>

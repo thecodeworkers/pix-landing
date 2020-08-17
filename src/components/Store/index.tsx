@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import { PixLogo } from '../Svg';
-import { CardCurrency, ScrollDown, Lang, Separator} from '../../components';
+import { DownloadAndroid, DownloadIos, PixPhone } from '../Svg';
+import { ScrollDown, Lang, Separator, } from '../../components';
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 
-const Login = ({ children = null, childrenTitle = null, scroll, action, about, product, t }) => {
+const Store = ({childrenTitle = null, children= null, scroll, action, about, product, t }) => {
 
 
   const { saveReference } = action;
@@ -23,31 +23,36 @@ const Login = ({ children = null, childrenTitle = null, scroll, action, about, p
   return (
 
     <div className='_imageBackgroundLight'>
-      <div className="_loginContainer">
-        <div className='_logoSmall'>
-          <PixLogo color='#00021C' />
-        </div>
-        <div className='_headerContainer'>
+      <div className="_storeContainer">
+        <div style={{  width: '40%' }}>
         <h4 className='_blackHeader'>{childrenTitle}</h4>
         </div>
-        <div style={{ width: '120%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
+        <div style={{ width: '60%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
           <Separator height={10} />
         </div>
-        <div style={{  marginTop: 40, }}>
-        <button className='_loginBtnBlack'>{t('login').toUpperCase()}</button>
-        <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button>
-       
+        <p className='_storeText'>{children}</p>
+        <div style={{  marginTop: 30, }}>
+        <button className='_registerBtnBlue'>{t('download').toUpperCase()}</button>
         </div>
-        <div className="_footerScroll">
+        <p className="_storeText" style={{  marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>
+
+        <div className="_footerNetwork">
+            <div className="_iosInfo">
+              <DownloadIos/>
+            </div>
+            <div className="_androidInfo">
+              <DownloadAndroid/>
+            </div>
+          </div>
             <div className="_scrollDimension">
               <ScrollDown color="#fff" reference={aboutRef}/>
             </div>
+            <div className='_phoneBox' >
+          <PixPhone />
           </div>
-        <div className="_footerLang">
-            <Lang/>
-        </div>
-      </div>
      
+      </div>
+   
     </div>
   )
 };
@@ -64,5 +69,5 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Store));
 

@@ -53,7 +53,7 @@ const Benefits = (props) => {
       </div>
 
       <div className='_parentSeparatorLine'>
-        <Separator />
+      <Separator height={6} />
       </div>
     </div>
   )

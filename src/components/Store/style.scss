@@ -1,0 +1,25 @@
+@import '../../assets/styles/index.scss';
+
+
+._storeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 2%;
+}
+
+._storeText{
+  font-size: 1.1rem;
+    font-family: "Muli", sans-serif;
+    text-align: center;
+    font-weight: 800;
+    color: $lightBLue;
+    width: 60%;
+    margin-top: 1%;
+}
+
+._phoneBox{
+  background:red
+}

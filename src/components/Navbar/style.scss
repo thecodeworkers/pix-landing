@@ -61,7 +61,7 @@
   width: 5em;
 }
 
-._registerBtn { 
+._navBarBtnBlack { 
   @include btn($black, 0.5rem, 'not', $white, $white);
   @include buttonResponsive;
   transition: all 0.6s;
@@ -74,7 +74,7 @@
 
 }
 
-._loginBtn { 
+._navBarBtnBlue { 
   @include btn($blueGreenGradient, 0.6rem, 'gradient', $black, $white);
   @include buttonResponsive;
 
@@ -85,6 +85,7 @@
 
 }
 
+
 ._toggle {
   &:focus {
     outline: none;
@@ -93,7 +94,7 @@
 
 
 @include responsive(medium) {
-  ._registerBtn { 
+  ._navBarBtnBlack { 
     margin-bottom: 0.8rem;
     &:hover {
       @include btn($white, 0.5rem, 'not', $white, $black);
@@ -103,7 +104,7 @@
   
   }
   
-  ._loginBtn { 
+  ._navBarBtnBlue { 
     &:hover {
       @include btn($white, 0.6rem, 'not', $black, $black);
       width: 60%;

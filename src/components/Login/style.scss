@@ -1,9 +1,107 @@
 @import '../../assets/styles/index.scss';
 
+
+._loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
 ._blackHeader{
   color: $newBlack;
-  font-size: 5.5rem;
-  font-weight: 700;
-  margin-top: 20%;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-top: 10%;
   text-align: center;
+  z-index: 1;
+}
+
+._logoSmall{
+  width: 14.375rem;
+}
+
+@mixin btnLogin($background, $padding, $flag, $borderColor, $color) {
+  
+  @if $flag == 'gradient' {
+    background: linear-gradient(90deg, $background);
+  } 
+  @else {
+    background: $background;
+  }
+
+  padding: $padding;
+  width: 10.625rem;
+  height: 2.8rem;
+  border: solid 3px $borderColor;
+  color: $color;
+  border-radius: 5px;
+  font-family: $muli;
+  font-size: 0.8rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin btnRegister($background, $padding, $flag, $color) {
+  
+  @if $flag == 'gradient' {
+    background: linear-gradient(90deg, $background);
+  } 
+  @else {
+    background: $background;
+  }
+
+  padding: $padding;
+  width: 10.625rem;
+  height: 2.8rem;
+  color: $color;
+  border-radius: 5px;
+  border: none;
+  font-family: $muli;
+  font-size: 0.8rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin buttonResponsiveLogin {
+  @include responsive(large) {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+._registerBtnBlue{ 
+  @include btnRegister($blueGreenGradient, 0.6rem, 'gradient', $white);
+  @include buttonResponsiveLogin;
+
+  &:hover {
+    @include btnLogin($white, 0.6rem, 'not', $black, $black);
+    transition: all 0.6s;
+  }
+
+}
+
+._loginBtnBlack { 
+  @include btnLogin($white, 0.5rem, 'not', $lightBLue, $lightBLue);
+  @include buttonResponsiveLogin;
+  transition: all 0.6s;
+  margin-right: 4rem;
+  &:hover {
+    @include btnLogin($white, 0.5rem, 'not', $black, $black);
+    transition: all 0.6s;
+  }
+
+}
+._langFooter{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

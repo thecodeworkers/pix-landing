@@ -15,3 +15,4 @@ export { default as BannerImage } from './BannerImage';
 export { default as Benefits } from './Benefits';
 export { default as Instant } from './Instant';
 export { default as Login } from './Login';
+export { default as Store } from './Store';

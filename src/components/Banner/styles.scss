@@ -123,18 +123,23 @@
 ._footerScroll {
   @include width(55%);
   @include flex-axis(center);
+  position: absolute;
+  bottom: 0;
 }
 
 ._scrollDimension {
-  @include dimensions(40px, 40px);
+  @include dimensions(68px, 71px);
   @include overlap;
   margin-top: 2rem;
 }
 
 ._footerLang {
-  @include width(22.5%);
+  @include width(10%);
   @include overlap;
   @include flex-axis(center);
+  position: absolute;
+  bottom: 15px;
+  right: 0;
 }
 
 @include responsive(large) {
@@ -206,6 +211,6 @@
 
 ._macBox{
   position: relative;
-    width: 150%;
-    top: 150%;
+  width: 185%;
+  top: 190%;
 }

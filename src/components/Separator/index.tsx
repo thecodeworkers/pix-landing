@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.scss';
 
-const Separator = () => {
+const Separator = ({height}) => {
   return(
     <div className='_separatorMain'>
-      <div className="_rentangleOne"></div>
-      <div className="_rentangleTwo"></div>
-      <div className="_rentangleThree"></div>
-      <div className="_rentangleFour"></div>
+      <div className="_rentangleOne" style={{height:height}}></div>
+      <div className="_rentangleTwo" style={{height:height}}></div>
+      <div className="_rentangleThree" style={{height:height}}></div>
+      <div className="_rentangleFour" style={{height:height}}></div>
     </div>
   )
 }

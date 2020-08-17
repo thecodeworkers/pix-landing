@@ -28,7 +28,7 @@ const Product = ({ action, t, i18n }) => {
 
               <h5>{t('secure_platform')}</h5>
               <p className='_wallPix'>{t('pix_wallet')}</p>
-              <Separator />
+              <Separator height={6} />
               <p className='_paragraph'>{t('pix_description')}</p>
               <div className='_cubeContainer'>
             <OrangeCube />
