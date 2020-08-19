@@ -39,7 +39,7 @@ const Phone = ({ scroll, action, about, product, t }) => {
         </div>
         <div className='_bigCube'>
           <div style={{ width: '180px' }}>
-            <Cube />
+          <Cube />
           </div>
         </div>
         <div className='_turquesetinyDiamond'>

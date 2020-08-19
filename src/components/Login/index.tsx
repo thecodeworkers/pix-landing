@@ -7,11 +7,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 
-const Login = ({ children = null, childrenTitle = null, scroll, action, about, product, t }) => {
+const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
 
 
   const { saveReference } = action;
-  const aboutRef = useRef();
   const productRef = useRef();
 
   /* useEffect(() => {
@@ -40,7 +39,7 @@ const Login = ({ children = null, childrenTitle = null, scroll, action, about, p
         </div>
         <div className="_footerScroll">
             <div className="_scrollDimension">
-              <ScrollDown color="#fff" reference={aboutRef}/>
+              <ScrollDown color="#fff" reference={productRef}/>
             </div>
           </div>
         <div className="_footerLang">

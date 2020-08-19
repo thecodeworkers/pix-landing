@@ -31,7 +31,7 @@ const Home = (props) => {
       <SEO title='Pix' />
       <Navbar />
       <Login childrenTitle={t('digital_wallet')} />
-      <Product />
+      <Product product='product' />
       <Instant />
       <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
       <AboutUs theme={!theme} />

@@ -16,6 +16,7 @@ export const Banner = ({ scroll, t }) => {
           <div className="_bannerTexts">
           <div className="_macBox">
           <MacBook />
+     
           </div>
             <p className="_childrenTitle">{t('today_index')}</p>
           </div>
@@ -28,11 +29,16 @@ export const Banner = ({ scroll, t }) => {
             <p className="_buttonText">{t('stay_on_day')}</p>
           
           </div>
+          <div>
+            
+          </div>
+          <Background/>
         </div>
+     
       </div>
 
-      <div className="_bannerFooter">
-        <div className="_footerElements">
+     {/*  <div className="_bannerFooter">
+        <div className="_footerElements"> */}
          {/*  <div className="_footerNetwork">
             <div className="_iosInfo">
               <DownloadIos/>
@@ -49,9 +55,9 @@ export const Banner = ({ scroll, t }) => {
           <div className="_footerLang">
             <Lang/>
           </div> */}
-        </div>
-      </div>
-      <Background/>
+       {/*  </div>
+      </div> */}
+     
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
 
-const Product = ({ action, t, i18n }) => {
+const Product = ({ action, t, i18n, product }) => {
 
   // const { saveReference } = action;
   const productRef: any = useRef();

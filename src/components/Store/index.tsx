@@ -7,18 +7,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 
-const Store = ({childrenTitle = null, children= null, scroll, action, about, product, t }) => {
-
-
-  const { saveReference } = action;
-  const aboutRef = useRef();
-  const productRef = useRef();
-
-  /* useEffect(() => {
-    if (product) saveReference({ productRef });
-    if (about) saveReference({ aboutRef });
-  }, [scroll.productRef]);
- */
+const Store = ({childrenTitle = null, children= null, t }) => {
 
   return (
 
