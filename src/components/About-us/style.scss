@@ -36,7 +36,7 @@
 
 
 @mixin background ($image){
-  background-image: url('../../assets/img/#{$image}.svg');
+  /* background-image: url('../../assets/img/#{$image}.svg'); */
   width: 100%;
   background-size: cover;
   background-position: bottom;
@@ -50,6 +50,7 @@
 ._anotherclass {
   @include background('about-black');
   background-position: center;
+  background-color: $blackRussian;
 } 
 
 ._titles {
@@ -177,6 +178,7 @@
   display: flex;
   transform: translatey(10px);
   animation: MoveUpDownDiamond 1s alternate infinite;
+  width: 180px;
 
 }
 

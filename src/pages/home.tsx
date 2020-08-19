@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login,Store } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login, Store, Phone } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -37,6 +37,7 @@ const Home = (props) => {
       <AboutUs theme={!theme} />
       <Banner />
       <Store childrenTitle={t('have_power')} children={t('anyone')} />
+      <Phone />
       {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
       {/*  <Benefits /> */}
       <Footer />

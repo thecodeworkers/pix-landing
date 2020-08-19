@@ -10,8 +10,8 @@ import { withTrans } from '../../i18n/withTrans'
 const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
 
   // const { saveReference } = action;
-  const { productRef } = scroll;
-
+  /* const { aboutRef } = scroll; */
+  const aboutRef: any = useRef();
   // // const aboutRef: any = useRef();
 
   // useEffect(() => {
@@ -81,7 +81,7 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n}) => {
       </div> */}
 
       <div className='_parentScroll'>
-        <ScrollDown color='#00021C' reference={productRef}/>
+        <ScrollDown color='#00021C' reference={aboutRef}/>
       </div>
 
     </div>

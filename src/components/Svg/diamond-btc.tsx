@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DiamonBtc = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" id="diamondBtc" width="180.283" height="180.283" viewBox="0 0 180.283 180.283">
+  <svg xmlns="http://www.w3.org/2000/svg" id="diamondBtc" width="100%" height="100%" viewBox="0 0 180.283 180.283">
   <defs>
     <linearGradient id="linear-gradientBtc" x1="0.138" y1="0.177" x2="1.107" y2="1.183" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#fbfbfb"/>

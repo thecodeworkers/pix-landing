@@ -2,7 +2,7 @@
 
 @mixin background($image) {
   height: 100vh;
-  background-image: url('../../images/#{$image}.svg');
+/*   background-image: url('../../images/#{$image}.svg'); */
   background-size: cover;
   transition: 1s;
   background-position: center;
@@ -16,6 +16,7 @@
 
 ._imageBackgroundDark {
   @include background('banner-dark');
+  background-color: $blackRussian;
 }
 
 ._imageContainer {

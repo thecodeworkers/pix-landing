@@ -8,6 +8,8 @@ import './styles.scss';
 
 export const Background = ({ theme }) => {
   const { darkTheme } = theme;
+  console.log(darkTheme,"TEMAAAAAAAAAAAAAAAA");
+  
 
   return (      
     <div>

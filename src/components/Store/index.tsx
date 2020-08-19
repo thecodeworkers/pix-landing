@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { DownloadAndroid, DownloadIos, PixPhone } from '../Svg';
-import { ScrollDown, Lang, Separator, } from '../../components';
+import { DownloadAndroid, DownloadIos, PixPhone, DiamondUsd } from '../Svg';
+import { ScrollDown, Lang, Separator } from '../../components';
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -22,12 +22,12 @@ const Store = ({childrenTitle = null, children= null, scroll, action, about, pro
 
   return (
 
-    <div className='_imageBackgroundLight'>
+    
       <div className="_storeContainer">
-        <div style={{  width: '40%' }}>
+        <div style={{  width: '30%' }}>
         <h4 className='_blackHeader'>{childrenTitle}</h4>
         </div>
-        <div style={{ width: '60%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
+        <div style={{ width: '50%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
           <Separator height={10} />
         </div>
         <p className='_storeText'>{children}</p>
@@ -44,16 +44,13 @@ const Store = ({childrenTitle = null, children= null, scroll, action, about, pro
               <DownloadAndroid/>
             </div>
           </div>
-            <div className="_scrollDimension">
+           {/*  <div className="_scrollDimension">
               <ScrollDown color="#fff" reference={aboutRef}/>
-            </div>
-            <div className='_phoneBox' >
-          <PixPhone />
-          </div>
+            </div> */}
+         
      
       </div>
    
-    </div>
   )
 };
 

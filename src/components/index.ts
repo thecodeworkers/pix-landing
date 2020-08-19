@@ -16,3 +16,4 @@ export { default as Benefits } from './Benefits';
 export { default as Instant } from './Instant';
 export { default as Login } from './Login';
 export { default as Store } from './Store';
+export { default as Phone } from './Phone';

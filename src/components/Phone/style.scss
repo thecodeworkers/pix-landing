@@ -1,0 +1,101 @@
+
+@import '../../assets/styles/index.scss';
+
+@mixin floating ($transformY, $time) {
+  transform: translatey($transformY);
+  animation: MoveUpDownCoins $time alternate infinite;
+}
+._phoneBox{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+._phoneDimension{
+  width: 500px;
+  height: 300px;
+}
+
+._usdBox{
+  @include floating (10px, 1s);
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -80px;
+}
+
+
+._btcDiamond{
+  @include floating (10px, 1s);
+  position: absolute;
+  right: -40px;
+  margin-bottom: 200px;
+}
+
+._turqueseDiamond{
+  @include floating (10px, 1s);
+  position: absolute;
+  right: 170px;
+  margin-bottom: 300px;
+}
+
+._turquesetinyDiamond{
+  @include floating (10px, 1s);
+  position: absolute;
+  right: 350px;
+  margin-bottom: 180px;
+}
+
+._blackDiamond{
+  @include floating (10px, 1s);
+  position: absolute;
+  right: 75px;
+  margin-bottom: 100px;
+}
+
+._usdDiamond{
+  @include floating (10px, 1s);
+  position: absolute;
+  right: 280px;
+  margin-bottom: 240px;
+}
+
+._tinyCube{
+  @include floating (5px, 1s);
+  position: absolute;
+  right: 150px;
+  margin-bottom: 150px;
+}
+
+._littleCube{
+  @include floating (5px, 1s);
+  position: absolute;
+  right: 200px;
+  margin-bottom: 190px;
+}
+
+._mediumCube{
+  @include floating (5px, 1s);
+  position: absolute;
+  right: 230px;
+  margin-bottom: 60px;
+}
+
+._bigCube{
+  @include floating (5px, 1s);
+  position: absolute;
+  right: 400px;
+  margin-bottom: 20px;
+}
+
+@keyframes MoveUpDownCoins {
+  from { transform: translateY(0px)}
+  to { transform:translateY(50 px)}
+}
+
+._pixelLogoBox{
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  
+}

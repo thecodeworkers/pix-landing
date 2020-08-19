@@ -34,3 +34,6 @@ export { default as DiamondDash } from './diamond-dash';
 export { default as MacBook } from './mac-book';
 export { default as ArrowDown } from './arrow-down';
 export { default as PixPhone } from './pix-phone';
+export { default as DiamondTurquese } from './diamond-turquese';
+export { default as DiamondBlack } from './diamond-black';
+export { default as Cube } from './cube';

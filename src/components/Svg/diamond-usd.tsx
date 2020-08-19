@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DiamonUsd = () => (
-<svg xmlns="http://www.w3.org/2000/svg" id="diamondUsd"  width="179.466" height="179.466" viewBox="0 0 179.466 179.466">
+<svg xmlns="http://www.w3.org/2000/svg" id="diamondUsd"  width="100%" height="100%" viewBox="0 0 179.466 179.466">
   <defs>
     <linearGradient id="linear-gradientUsd" x1="0.34" y1="0.544" x2="0.957" y2="1.011" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#fbfbfb"/>

@@ -38,10 +38,23 @@
   font-size: $fontSize;
 }
 
+
+@mixin backgroundBanner($image) {
+  height: 100vh;
+  background-image: url('../../images/#{$image}.svg');
+  background-size: cover;
+  transition: 1s;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+
 // CLASS
 ._bannerContainer {
   @include dimensions(100%, 85vh);
   @include flex-axis(center);
+  @include backgroundBanner('banner-light');
 }
 
 ._bannerDesc {
@@ -214,3 +227,5 @@
   width: 185%;
   top: 190%;
 }
+
+
