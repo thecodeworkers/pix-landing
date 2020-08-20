@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 import './styles/home.scss';
 
 const Home = (props) => {
-  const { t, i18n, scroll} = props;
+  const { t, i18n, scroll, onboarding} = props;
+
+  console.log(props);
 
   const [theme, setTheme] = useState(true);
 
@@ -29,21 +31,30 @@ const Home = (props) => {
     <div>
       <SEO title='Home' />
       <Navbar />    
-      <OnBoarding />  
+      <OnBoarding /> 
+
+      <div style={{marginTop: '100vh'}}>
+
+      {/* {
+        onboarding.stepThree ? <Banner/> : null
+      }
+        */}
+      </div>
+      
       {/* <Banner /> */}
       {/* <div id='test'> adas</div> */}
-      {/* <BannerImage isDark={!theme} about='about'>{t('our')} <span className='_boldText'>{t('mission')}</span> {t('accelerate')}</BannerImage>
-      <AboutUs theme={theme}/>
+      {/* {/* <BannerImage isDark={!theme} about='about'>{t('our')} <span className='_boldText'>{t('mission')}</span> {t('accelerate')}</BannerImage> */}
+      {/* <AboutUs theme={theme}/>
       <BannerImage product='product'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
       <Product />
-      <Benefits />
-      <Footer /> */}
+      <Benefits /> */}
+      {/* <Footer />  */}
     </div>
   )
 }
 
-const mapStateToProps = (scroll) => ({
-  scroll
+const mapStateToProps = ({scroll, onboarding }) => ({
+  scroll, onboarding
 });
 
 const mapDispatchToProps = dispatch => {

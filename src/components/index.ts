@@ -15,3 +15,5 @@ export { default as BannerImage } from './BannerImage';
 export { default as Benefits } from './Benefits';
 export { default as OnBoarding } from './OnBoarding';
 export { default as OnBoardingFirst} from './OnBoardingFirst';
+export { default as OnBoardingSecond } from './OnBoardingSecond';
+export { default as OnBoardingThird } from './OnBoardingThird';

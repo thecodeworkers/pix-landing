@@ -1,0 +1,107 @@
+@import '../../assets/styles/index.scss';
+
+@mixin offsetTop() {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+._parenThirdSection {
+  @include offsetTop();
+  display: inline-flex;
+}
+
+
+._thirdSectionLeftSide {
+  width: 50%;
+  background-color: $blackOnboard;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._thirdSectionRightSide {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+}
+
+._chilfOfLeftSide {
+   width: 85%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+._phoneLigthDeviceParent {
+  width: 38%;
+  transform: translateX(300px);
+}
+
+._descriptionSectionDouble {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 2.5rem;
+}
+
+._descriptionSectionDoubleRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 2.5rem;
+}
+
+._btcExchangeToEth {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+._btcExchangeToUsd {
+  width: 60%;
+  display: block;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+
+._descriptionSectionParragraph {
+
+  transform: translateY(60px);
+  opacity: 0;
+  & p {
+    font-size: 2.8rem;
+    margin-bottom: -0.8rem !important;
+    text-align: right;
+    color: $white;
+  }
+}
+
+._descriptionSectionRightParragraph {
+
+  transform: translateY(60px);
+  opacity: 0;
+  & p {
+    font-size: 2.8rem;
+    margin-bottom: -0.8rem !important;
+    text-align: left;
+  }
+}
+
+._chilfOfRightSide {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+  
+  

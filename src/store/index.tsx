@@ -16,6 +16,10 @@ const persistConfig = {
   storage,
   whitelist: [
     'currency',
+  ],
+
+  blacklist: [
+    'onboarding'
   ]
 }
 
