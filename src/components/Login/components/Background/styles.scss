@@ -4,130 +4,142 @@
   display: none;
 }
 
-._box {
+._boxLogin {
   position: absolute;
   overflow: hidden;
 }
 
-._box1 {
-  width: 240px;
-  height: 340px;
-  bottom: 100px;
-  left: 90px;
-  z-index: 1;
+._box1Login {
+  width: 290px;
+  height: 340px; 
+  bottom: 0px; 
+  left: 10px
 }
 
-._box1Children {
+._box1LoginChildren {
   margin-top: 60px;
 }
 
-._box3 {
-  width: 180px;
+._box2Login {
+  width: 110px; 
+  height: 160px; 
+  bottom: 38.425%; 
+  left: -41px
+}
+
+._box3Login {
+  width: 190px; 
   height: 240px;
-  bottom: 45%;
-  left: 120px;
+  bottom: 53%;
+  left: 92px;
 }
 
-._box4 {
-  width: 120px;
-  height: 190px;
-  bottom: 35%;
-  left: 310px;
-
+._box4Login {
+  width: 140px; 
+  height: 190px; 
+  bottom: 26.5%; 
+  left: 300px
 }
 
+._box5Login {
+  width: 210px; 
+  height: 260px; 
+  bottom: 0px; 
+  left: 340px
+}
 
-._box7 {
+._box5LoginChildren {
+  margin-top: 100px;
+}
+
+._box7Login {
   margin-left: 32px;
-
 }
 
-._box8 {
+._box8Login {
   margin-left: 24px;
-
 }
 
-._box12 {
+._box12Login {
   margin-top: 83px;
 }
 
-._diamond {
+._diamondLogin {
   position: absolute;
 }
 
 @include responsive(large) {
-  ._lastSection {
+  ._lastSectionLogin {
     @include noneDisplay;
   }
 }
 
 @include responsive(medium) {
-  ._middleSection {
+  ._middleSectionLogin {
     @include noneDisplay;
   }
 }
 
 @include responsive(small) {
-  ._box1 {
+  ._box1Login {
     width: 200px;
     height: 250px;
   }
 
-  ._box2 {
+  ._box2Login {
     width: 110px; 
     height: 160px; 
     bottom: 26%; 
     left: -41px;
   }
   
-  ._box3 {
+  ._box3Login {
     width: 150px; 
     height: 200px;
     bottom: 50%;
     left: 50px;
   }
   
-  ._box4 {
+  ._box4Login {
     width: 140px; 
     height: 190px; 
     bottom: 23%; 
     left: 200px
   }
   
-  ._box5 {
+  ._box5Login {
     display: none;
   }
 
-  ._box {
+  ._boxLogin {
     overflow: visible;
   }
 }
 
 @include responsive(extrasmall) {
-  ._box1 {
+  ._box1Login {
     width: 180px;
     height: 220px;
   }
 
-  ._box2 {
+  ._box2Login {
     width: 110px; 
     height: 160px; 
     bottom: 26%; 
     left: -41px;
   }
   
-  ._box3 {
+  ._box3Login {
     width: 150px; 
     height: 200px;
     bottom: 45%;
     left: 50px;
   }
   
-  ._box4 {
+  ._box4Login {
     width: 140px; 
     height: 190px; 
     bottom: 20%; 
     left: 160px;
-
   }
 }

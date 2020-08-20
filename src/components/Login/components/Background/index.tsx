@@ -2,42 +2,50 @@ import React, { useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { toggleDarkTheme } from '../../../../store/actions';
-import { Box , PaintedDiamond } from '../../../Svg';
+import { Box, Diamond } from '../../../Svg';
 import { BoxA, BoxB, BoxC, BoxD, BoxE, BoxF, BoxG, BoxH, BoxI, BoxJ, BoxK, BoxL, DiamondA, DiamondPink, DiamondTurquese, DiamondYellow, DiamondPurple } from '../../components';
 import './styles.scss';
 
-
-
-export const Background = ({ theme }) => {
+export const BackgroundLogin = ({ theme }) => {
   const { darkTheme } = theme;
-
+  console.log(darkTheme,"TEMAAAAAAAAAAAAAAAA");
   
 
   return (      
     <div>
       {/* Left */}
       {/* box 1 */}
-      <div className="_box _box1">
-        <div className="_box1Children">
-          
+      <div className="_boxLogin _box1Login">
+        <div className="_box1LoginChildren">
           <Box
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={darkTheme ? null : 1}
+            opacityBox={darkTheme ? null : 0.71}
             linearGradients={BoxA(darkTheme).linearGradient}
             polygons={BoxA(darkTheme).polygon}
           />
         </div>
       </div>
 
+      {/* box 2 */}
+      <div className="_boxLogin _box2Login">
+        <div>
+          <Box
+            animation={{ entryPoint: '0px', middlePoint: '10px' }}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxB(darkTheme).linearGradient}
+            polygons={BoxB(darkTheme).polygon}
+          />
+        </div>
+      </div>
 
       {/* box 3 */}
-      <div className="_box _box3">
+      <div className="_boxLogin _box3Login">
         <div>
           <Box
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={darkTheme ? null : 1}
+            opacityBox={darkTheme ? null : 0.71}
             linearGradients={BoxC(darkTheme).linearGradient}
             polygons={BoxC(darkTheme).polygon}
           />
@@ -45,29 +53,42 @@ export const Background = ({ theme }) => {
       </div>
 
       {/* box 4 */}
-      <div className="_box _box4" >
+      <div className="_boxLogin _box4Login">
         <div>
           <Box
             viewWidth={383.3}
             viewHeight={453.69}
-            animation={{ entryPoint: '0px', middlePoint: '10px'}}
-            opacityBox={darkTheme ? null : 0.3}
+            animation={{ entryPoint: '0px', middlePoint: '10px' }}
+            opacityBox={darkTheme ? null : 0.71}
             linearGradients={BoxD(darkTheme).linearGradient}
             polygons={BoxD(darkTheme).polygon}
           />
         </div>
       </div>
 
+      {/* box 5 */}
+      <div className="_boxLogin _box5Login">
+      <div className="_box5LoginChildren">
+          <Box
+            viewWidth={383.3}
+            viewHeight={453.69}
+            animation={{ entryPoint: '0px', middlePoint: '-10px' }}
+            opacityBox={darkTheme ? null : 0.71}
+            linearGradients={BoxE(darkTheme).linearGradient}
+            polygons={BoxE(darkTheme).polygon}
+          />
+        </div>
+      </div>
 
-      <div className="_middleSection">
+      <div className="_middleSectionLogin">
         {/* box 6 */}
-        <div className="_box" style={{ width: 90, height: 200, bottom: '27%', right: 395  }}>
+        <div className="_boxLogin" style={{ width: 150, height: 200, bottom: '31.8%', left: 545 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '10px' }}
-              opacityBox={darkTheme ? null : 0.3}
+              opacityBox={darkTheme ? null : 0.71}
               linearGradients={BoxF(darkTheme).linearGradient}
               polygons={BoxF(darkTheme).polygon}
             />
@@ -76,51 +97,51 @@ export const Background = ({ theme }) => {
 
         {/* Right */}
         {/* box 7 */}
-        <div className="_box" style={{ width: 200, height: 300, bottom: '10%', right: 60 }}>
-          <div className="_box7">
-          {/*   <div style={{ width: 250, height: 300 }}> */}
+        <div className="_boxLogin" style={{ width: 250, height: 300, bottom: '4.6375%', right: 0 }}>
+          <div className="_box7Login">
+            <div style={{ width: 250, height: 300 }}>
               <div>
                 <Box
                   viewWidth={383.3}
                   viewHeight={453.69}
                   animation={{ entryPoint: '0px', middlePoint: '10px' }}
-                  opacityBox={darkTheme ? null : 1}
+                  opacityBox={darkTheme ? null : 0.71}
                   linearGradients={BoxG(darkTheme).linearGradient}
                   polygons={BoxG(darkTheme).polygon}
                 />
               </div>
-            {/* </div> */}
+            </div>
           </div>
         </div>
 
         {/* box 8 */}
-        <div className="_box" style={{ width: 110, height: 170, bottom: '56%', right: 45   }}>
-          <div >
-          {/*   <div style={{ width: 120, height: 170 }}> */}
+        <div className="_boxLogin" style={{ width: 120, height: 170, bottom: '63.6%', right: 0 }}>
+          <div className="_box8Login">
+            <div style={{ width: 120, height: 170 }}>
               <div>
                 <Box
                   viewWidth={383.3}
                   viewHeight={453.69}
                   animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-                  opacityBox={darkTheme ? null : 0.61}
+                  opacityBox={darkTheme ? null : 0.71}
                   linearGradients={BoxH(darkTheme).linearGradient}
                   polygons={BoxH(darkTheme).polygon}
                 />
               </div>
-          {/*   </div> */}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="_lastSection">
+      <div className="_lastSectionLogin">
         {/* box 9 */}
-        <div className="_box" style={{ width: 140, height: 240, bottom: '40%', right: 220 }}>
+        <div className="_boxLogin" style={{ width: 190, height: 240, bottom: '46.375%', right: 205 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-              opacityBox={darkTheme ? null : 1}
+              opacityBox={darkTheme ? null : 0.71}
               linearGradients={BoxI(darkTheme).linearGradient}
               polygons={BoxI(darkTheme).polygon}
             />
@@ -128,13 +149,13 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* box 10 */}
-        <div className="_box" style={{ width: 80, height: 210, bottom: '43%', right: 395 }}>
+        <div className="_boxLogin" style={{ width: 160, height: 210, bottom: '58.3%', right: 500 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '10px' }}
-              opacityBox={darkTheme ? null : 0.3}
+              opacityBox={darkTheme ? null : 0.71}
               linearGradients={BoxJ(darkTheme).linearGradient}
               polygons={BoxJ(darkTheme).polygon}
             />
@@ -142,7 +163,7 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* box 11 */}
-        <div className="_box" style={{ width: 130, height: 180, bottom: '14%', right: 330,  }}>
+        <div className="_boxLogin" style={{ width: 130, height: 180, bottom: '27%', right: 532 }}>
           <div>
             <Box
               viewWidth={383.3}
@@ -156,13 +177,13 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* box 12 */}
-        <div className="_box _box12" style={{ width: 90, height: 300, bottom: -50, left: 400 }}>
-          <div className="">
+        <div className="_boxLogin" style={{ width: 250, height: 300, bottom: 0, right: 312 }}>
+          <div className="_box12Login">
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-              opacityBox={darkTheme ? null : 0.3}
+              opacityBox={darkTheme ? null : 0.71}
               linearGradients={BoxL(darkTheme).linearGradient}
               polygons={BoxL(darkTheme).polygon}
             />
@@ -171,8 +192,8 @@ export const Background = ({ theme }) => {
 
         {/* diamond */}
         {/* diamond 1 */}
-        <div className="_diamond" style={{ width: 60, height: 150, bottom: '60%', right: 210 }}>
-          <PaintedDiamond 
+        <div className="_diamondLogin" style={{ width: 100, height: 150, bottom: '75.525%', right: 160 }}>
+          <Diamond 
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
             linearGradients={DiamondA(darkTheme).linearGradient}
             linearGradientsColor={darkTheme ? DiamondPink : DiamondPurple}
@@ -180,8 +201,8 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* diamond 2 */}
-        <div className="_diamond" style={{ width: 50, height: 140, bottom: '40%', right: 130 }}>
-          <PaintedDiamond
+        <div className="_diamondLogin" style={{ width: 90, height: 140, bottom: '41.075%', right: 70 }}>
+          <Diamond
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
             linearGradients={DiamondA(darkTheme).linearGradient}
             linearGradientsColor={DiamondTurquese}
@@ -189,8 +210,8 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* diamond 3 */}
-        <div className="_diamond" style={{ width: 50, height: 130, bottom: '28%', right: 260 }}>
-          <PaintedDiamond
+        <div className="_diamondLogin" style={{ width: 70, height: 130, bottom: '18.55%', right: 294 }}>
+          <Diamond
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
             linearGradients={DiamondA(darkTheme).linearGradient}
             linearGradientsColor={darkTheme ? DiamondYellow : DiamondPink}
@@ -203,4 +224,4 @@ export const Background = ({ theme }) => {
 
 const mapStateToProps = ({ theme }) => ({ theme });
 
-export default connect(mapStateToProps)(Background);
+export default connect(mapStateToProps)(BackgroundLogin);

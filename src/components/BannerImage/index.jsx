@@ -27,7 +27,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
 
   return (
 
-    <div ref={about ? aboutRef : productRef} className={isDark ? '_imageBackgroundDark' : '_imageBackgroundLight'}>
+    <div ref={about ? aboutRef : productRef} className={'_imageBackgroundDarkBanner'}>
       <div className="_imageContainer">
         <h4 className='_whiteHeader'>{childrenTitle}</h4>
 

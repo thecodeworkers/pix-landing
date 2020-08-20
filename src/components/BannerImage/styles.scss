@@ -14,7 +14,7 @@
   @include background('banner-light');
 }
 
-._imageBackgroundDark {
+._imageBackgroundDarkBanner {
   @include background('banner-dark');
   background-color: $blackRussian;
 }

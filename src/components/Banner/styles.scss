@@ -41,7 +41,7 @@
 
 @mixin backgroundBanner($image) {
   height: 100vh;
-  background-image: url('../../images/#{$image}.svg');
+/*   background-image: url('../../images/#{$image}.svg');  */
   background-size: cover;
   transition: 1s;
   background-position: center;
@@ -59,7 +59,7 @@
 
 ._bannerDesc {
   @include overlap;
-  @include dimensions(55%, 100%);
+  @include dimensions(55%, 85%);
 }
 
 ._bannerTexts {
@@ -89,7 +89,7 @@
 ._bannerButton {
   @include height(5%);
   @include flex-align(center);
-  width: 50%;
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
@@ -224,8 +224,9 @@
 
 ._macBox{
   position: relative;
-  width: 185%;
+  width: 165%;
   top: 190%;
 }
+
 
 

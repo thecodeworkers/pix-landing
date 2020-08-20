@@ -1,6 +1,25 @@
 @import '../../assets/styles/index.scss';
 
 
+@mixin backgroundLogin($image) {
+  height: 100vh;
+/*   background-image: url('../../images/#{$image}.svg'); */
+  background-size: cover;
+  transition: 1s;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+._imageLoginLight {
+  @include backgroundLogin('banner-light');
+}
+
+/* ._imageBackgroundDark {
+  @include backgroundLogin('banner-dark');
+  background-color: $blackRussian;
+} */
+
 ._loginContainer {
   display: flex;
   justify-content: center;

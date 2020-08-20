@@ -1,23 +1,23 @@
 import { linearCoordinatesValues, polygonValues, polygonStyles, linearStopValues } from "../common";
 
 const stopOneColors: Array<any> = [
-  linearStopValues('0', '#3e3d54'),
-  linearStopValues('0.9508', '#575e88')
+  linearStopValues('0', '#000021'),
+  linearStopValues('0.9508', '#161639')
 ];
 
 const stopTwoColors: Array<any> = [
-  linearStopValues('4.922280e-02', '#575e88'),
-  linearStopValues('1', '#3e3d54')
+  linearStopValues('4.922280e-02', '#161639'),
+  linearStopValues('1', '#000021')
 ];
 
 const stopThreeColors: Array<any> = [
-  linearStopValues('0', '#3e3d54'),
-  linearStopValues('0.9508', '#575e88')
+  linearStopValues('0', '#000021'),
+  linearStopValues('0.9508', '#161639')
 ];
 
 const stopFourColors: Array<any> = [
-  linearStopValues('4.922280e-02', '#575e88'),
-  linearStopValues('1', '#3e3d54')
+  linearStopValues('4.922280e-02', '#161639'),
+  linearStopValues('1', '#000021')
 ];
 
 const linearOneId = 'SVGID_ONE_PURPLE';

@@ -15,26 +15,26 @@ export const Banner = ({ scroll, t }) => {
         <div className="_bannerDesc">
           <div className="_bannerTexts">
           <div className="_macBox">
+          <Background/>
           <MacBook />
-     
+        
           </div>
             <p className="_childrenTitle">{t('today_index')}</p>
           </div>
           <div className="_bannerCards">
             <CardCurrency/>
           </div>
-        
           <div className="_bannerButton">
           <button className="_buttonGradient">{t('download')}</button>
             <p className="_buttonText">{t('stay_on_day')}</p>
           
           </div>
-          <div>
-            
+          <div className={'HOLAS'}>
+       
           </div>
-          <Background/>
+         
         </div>
-     
+        
       </div>
 
      {/*  <div className="_bannerFooter">
@@ -57,7 +57,7 @@ export const Banner = ({ scroll, t }) => {
           </div> */}
        {/*  </div>
       </div> */}
-     
+   
     </div>
   );
 }

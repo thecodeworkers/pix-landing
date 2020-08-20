@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { PixLogo } from '../Svg';
 import { CardCurrency, ScrollDown, Lang, Separator} from '../../components';
+import {BackgroundLogin} from './components'
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
+import { from } from 'core-js/fn/array';
 
 const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
 
@@ -21,7 +23,7 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
 
   return (
 
-    <div className='_imageBackgroundLight'>
+    <div className='_imageLoginLight'>
       <div className="_loginContainer">
         <div className='_logoSmall'>
           <PixLogo color='#00021C' />
@@ -46,7 +48,7 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
             <Lang/>
         </div>
       </div>
-     
+     <BackgroundLogin />
     </div>
   )
 };

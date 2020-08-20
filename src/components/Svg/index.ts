@@ -12,6 +12,7 @@ export { default as UsdcLogo } from './usdc';
 export { default as UsdtLogo } from './usdt';
 export { default as Box } from './Box';
 export { default as Diamond } from './Diamond';
+export { default as PaintedDiamond } from './PaintedDiamond';
 export { default as Square } from './square';
 export { default as PixAppOne } from './pix-app1';
 export { default as PixAppTwo } from './pix-app2';
