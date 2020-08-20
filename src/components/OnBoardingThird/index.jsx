@@ -2,27 +2,36 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 import { PhoneLight, BtcExchangeEth, PhoneDark, BtcExchangeUsd, SendBtcCard } from '../Svg';
 import { bindActionCreators } from 'redux';
+import { saveStep } from '../../store/actions';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import { TimelineMax } from 'gsap/all';
 
 const OnBoardingThird = (props) => {
 
-  const { onboarding } = props;
+  const { onboarding, action } = props;
+
+  console.log(props)
 
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
-    if(onboarding.stepThree) playanimation();
-  }, [onboarding.stepThree]);
+    if(onboarding.stepTwo) playanimation();
+  }, [onboarding.stepTwo]);
 
   const playanimation = () => {
     timeLine.play()
-      .to('._descriptionSectionParragraph', 0.6, { y: '0', opacity: 1 }, 0.6)
-      .to('._phoneLigthDeviceParent', 0.6, { x: '0' }, 0.4)
-      .to('._btcExchangeToEth', 0.6, { y: '0', opacity: 1 }, 0.8)
-      .to('._btcExchangeToUsd', 0.6, { y: '0', opacity: 1 }, 0.9)
-      .to('._descriptionSectionRightParragraph', 0.6, { y: '0', opacity: 1 }, 1)
+      .to('._descriptionSectionParragraph', 0.6, { y: 0, opacity: 1 }, 0.6)
+      .to('._phoneLigthDeviceParent', 0.6, { x: 0 }, 0.4)
+      .to('._btcExchangeToEth', 0.6, { y: 0, opacity: 1 }, 0.8)
+      .to('._btcExchangeToUsd', 0.6, { y: 0, opacity: 1 }, 0.9)
+      .to('._descriptionSectionRightParragraph', 0.6, { y: 0, opacity: 1 }, 1)
+      // .to('._senCard', 0.6, { y: 0, opacity: 1, x: '-50%'}, 1.2)
+      timeLine.eventCallback("onComplete", () => showLanding());
+  }
+
+  const showLanding = () => {
+    action.saveStep({stepThree: true})
   }
 
   return (
@@ -69,6 +78,9 @@ const OnBoardingThird = (props) => {
         </div>
       </div>
 
+      <div className='_senCard'>
+        <SendBtcCard />
+      </div>
     </div>
   )
 }
@@ -77,7 +89,7 @@ const mapStateToProps = ({ onboarding }) => ({ onboarding });
 
 const mapDispatchToProps = dispatch => {
   const actions = {
-    
+    saveStep
   }
 
   return {

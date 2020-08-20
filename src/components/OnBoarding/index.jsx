@@ -26,12 +26,7 @@ class OnBoarding extends Component {
       check: false
     }
   }
-
-  componentDidUpdate() {
-    const scrollHorizontal = window.scrollX;
-    if(scrollHorizontal != 0) console.log('enter');
-  }
-
+  
   render() {
     return (
       <div className="_scrollingWrapper" ref={this.parent}>

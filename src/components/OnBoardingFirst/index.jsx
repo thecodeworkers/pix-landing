@@ -15,7 +15,7 @@ const OnBoardingFirst = (props) => {
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
-    window.addEventListener("wheel", (e) => handleWheel(reference, referenceParent, e), { once: true })
+    window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true })
 
     timeLine
       .play()
@@ -37,8 +37,8 @@ const OnBoardingFirst = (props) => {
 
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
-    action.saveStep({ stepTwo: true })
-    window.removeEventListener("wheel", null);
+    action.saveStep({ stepOne: true })
+    // window.removeEventListener("wheel", null);
   }
 
   return (

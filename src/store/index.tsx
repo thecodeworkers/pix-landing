@@ -17,10 +17,6 @@ const persistConfig = {
   whitelist: [
     'currency',
   ],
-
-  blacklist: [
-    'onboarding'
-  ]
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers);

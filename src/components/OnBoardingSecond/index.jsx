@@ -8,20 +8,17 @@ import { withTrans } from '../../i18n/withTrans';
 import { TimelineMax } from 'gsap/all';
 
 const OnBoardingSecond = (props) => {
-
-
   const { onboarding, reference, referenceParent, action} = props;
 
   const [flag, setFlag ] = useState(true);
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
-    if (onboarding.stepTwo) animation();
-  }, [onboarding.stepTwo]);
+    if (onboarding.stepOne) animation();
+  }, [onboarding.stepOne]);
 
   useEffect(() => {
-    console.log('enter');
-    if(!flag) window.addEventListener("wheel", () => handleWheel(reference, referenceParent), {once: true})
+    if(!flag) window.addEventListener("wheel", handleWheel, {once: true})
   }, [flag]);
 
   const animation = () => {
@@ -35,18 +32,20 @@ const OnBoardingSecond = (props) => {
       .to('._manageMoneyText', 0.6, { x: 0, opacity: 1 }, 0.8)
       .to('._appIosDown', 0.6, { x: 0, opacity: 1 }, 1)
       .to('._appAndroidDown', 0.6, { x: 0, opacity: 1 }, 1.2)
-
-      setTimeout(() => {
-       setFlag(false)
-      }, 1000);
+      .to('._appAndroidDown', 0.6, { y: 0, opacity: 1 }, 1.2)
+      timeLine.eventCallback("onComplete", () => completeAnimation());
   }
 
   const handleWheel = (target, parent) => {
     if(!flag) {
-      parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
-      action.saveStep({ stepThree: true })
+      console.log('enter scroll')
+      referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
+      action.saveStep({ stepTwo: true })
     }
- 
+  }
+
+  const completeAnimation = () => {
+    setFlag(false);
   }
 
   return (

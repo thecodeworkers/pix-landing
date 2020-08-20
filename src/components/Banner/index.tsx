@@ -10,7 +10,7 @@ export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
   
   return (
-    <div>
+    <div >
       <div className="_bannerContainer">
         <div className="_bannerDesc">
           <div className="_bannerTexts">

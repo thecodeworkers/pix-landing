@@ -8,8 +8,6 @@ import './styles/home.scss';
 const Home = (props) => {
   const { t, i18n, scroll, onboarding} = props;
 
-  console.log(props);
-
   const [theme, setTheme] = useState(true);
 
   useEffect(() => {
@@ -35,12 +33,12 @@ const Home = (props) => {
 
       <div style={{marginTop: '100vh'}}>
 
-      {/* {
+      {
         onboarding.stepThree ? <Banner/> : null
       }
-        */}
-      </div>
       
+      </div>
+     
       {/* <Banner /> */}
       {/* <div id='test'> adas</div> */}
       {/* {/* <BannerImage isDark={!theme} about='about'>{t('our')} <span className='_boldText'>{t('mission')}</span> {t('accelerate')}</BannerImage> */}

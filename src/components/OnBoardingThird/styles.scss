@@ -9,9 +9,9 @@
 
 ._parenThirdSection {
   @include offsetTop();
-  display: inline-flex;
+  display: flex;
+  
 }
-
 
 ._thirdSectionLeftSide {
   width: 50%;
@@ -102,6 +102,17 @@
   justify-content: flex-start;
 }
 
-
+._senCard {
+  width: 15rem;
+  z-index: 999;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform: translateY(40px);
+  opacity: 0;
+}
   
-  
+._superParent {
+  position: relative;
+}
