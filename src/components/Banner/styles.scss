@@ -52,19 +52,15 @@
 
 // CLASS
 ._bannerContainer {
-  @include dimensions(100%, 85vh);
   @include flex-axis(center);
-  @include backgroundBanner('banner-light');
+  align-items: center;
+  
 }
 
-._bannerDesc {
-  @include overlap;
-  @include dimensions(55%, 85%);
-}
+
 
 ._bannerTexts {
-  @include height(45%);
-  @include flex-align(flex-end);
+  @include flex-align(flex-start);
 }
 
 ._childrenText {
@@ -174,12 +170,6 @@
     font-size: 1.1rem;
    }
 
-  ._bannerContainer {
- 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 
   ._bannerFooter {
     height: 15vh;
@@ -223,9 +213,29 @@
 }
 
 ._macBox{
+  width: 100%;
   position: relative;
-  width: 165%;
-  top: 190%;
+}
+
+.mac{
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+._otra{
+  position: relative;
+  overflow: hidden;
+}
+._contenedor{
+  position: absolute;
+  background: green;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 

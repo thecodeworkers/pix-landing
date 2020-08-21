@@ -19,13 +19,14 @@ export const Background = ({ theme }) => {
       {/* box 1 */}
       <div className="_box _box1">
         <div className="_box1Children">
-          
+            <div style={{ width: 250, height: 300 }}>
           <Box
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
             opacityBox={darkTheme ? null : 1}
             linearGradients={BoxA(darkTheme).linearGradient}
             polygons={BoxA(darkTheme).polygon}
           />
+        </div>
         </div>
       </div>
 

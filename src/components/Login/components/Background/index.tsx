@@ -59,7 +59,7 @@ export const BackgroundLogin = ({ theme }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
-            opacityBox={darkTheme ? null : 0.71}
+            opacityBox={darkTheme ? null : 0.3}
             linearGradients={BoxD(darkTheme).linearGradient}
             polygons={BoxD(darkTheme).polygon}
           />
@@ -73,7 +73,7 @@ export const BackgroundLogin = ({ theme }) => {
             viewWidth={383.3}
             viewHeight={453.69}
             animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-            opacityBox={darkTheme ? null : 0.71}
+            opacityBox={darkTheme ? null : 0.51}
             linearGradients={BoxE(darkTheme).linearGradient}
             polygons={BoxE(darkTheme).polygon}
           />
@@ -82,13 +82,13 @@ export const BackgroundLogin = ({ theme }) => {
 
       <div className="_middleSectionLogin">
         {/* box 6 */}
-        <div className="_boxLogin" style={{ width: 150, height: 200, bottom: '31.8%', left: 545 }}>
+        <div className="_boxLogin" style={{ width: 150, height: 200, bottom: '31.8%', left: 350 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '10px' }}
-              opacityBox={darkTheme ? null : 0.71}
+              opacityBox={darkTheme ? null : 0.31}
               linearGradients={BoxF(darkTheme).linearGradient}
               polygons={BoxF(darkTheme).polygon}
             />
@@ -149,13 +149,13 @@ export const BackgroundLogin = ({ theme }) => {
         </div>
 
         {/* box 10 */}
-        <div className="_boxLogin" style={{ width: 160, height: 210, bottom: '58.3%', right: 500 }}>
+        <div className="_boxLogin" style={{ width: 160, height: 210, bottom: '58.3%', right: 460 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '10px' }}
-              opacityBox={darkTheme ? null : 0.71}
+              opacityBox={darkTheme ? null : 0.4}
               linearGradients={BoxJ(darkTheme).linearGradient}
               polygons={BoxJ(darkTheme).polygon}
             />
@@ -163,13 +163,13 @@ export const BackgroundLogin = ({ theme }) => {
         </div>
 
         {/* box 11 */}
-        <div className="_boxLogin" style={{ width: 130, height: 180, bottom: '27%', right: 532 }}>
+        <div className="_boxLogin" style={{ width: 130, height: 180, bottom: '32%', right: 350 }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
               animation={{ entryPoint: '0px', middlePoint: '-10px' }}
-              opacityBox={darkTheme ? null : 0.71}
+              opacityBox={darkTheme ? null : 0.31}
               linearGradients={BoxK(darkTheme).linearGradient}
               polygons={BoxK(darkTheme).polygon}
             />

@@ -10,8 +10,8 @@ import { withTrans } from '../../i18n/withTrans';
 import { from } from 'core-js/fn/array';
 
 const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
-
-
+  console.log(scroll);
+  console.log(product);
   const { saveReference } = action;
   const productRef = useRef();
 
@@ -21,6 +21,13 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
   }, [scroll.productRef]);
  */
 
+ const benefits = {
+   fast: 'fast',
+   easy:'easy',
+   secure:'secure',
+   intuitive: 'intuitiva'
+ }
+
   return (
 
     <div className='_imageLoginLight'>
@@ -29,12 +36,12 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
           <PixLogo color='#00021C' />
         </div>
         <div className='_headerContainer'>
-        <h4 className='_blackHeader'>{childrenTitle}</h4>
+        <h4 className='_blackHeader'>{childrenTitle} Rapida</h4>
         </div>
         <div style={{ width: '120%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
           <Separator height={10} />
         </div>
-        <div style={{  marginTop: 40, }}>
+        <div style={{  marginTop: 60, }}>
         <button className='_loginBtnBlack'>{t('login').toUpperCase()}</button>
         <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button>
        
