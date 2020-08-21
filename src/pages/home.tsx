@@ -34,28 +34,20 @@ const Home = (props) => {
       <div style={{marginTop: '100vh'}}>
 
 {
-  onboarding.stepThree ? <Banner/> : null
+  onboarding.stepThree ? <> <Login childrenTitle={t('digital_wallet')} />
+  <Product product='product' />
+  <Instant />
+  <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+  <AboutUs theme={!theme} />
+  <Banner />
+  <Store childrenTitle={t('have_power')} children={t('anyone')} />
+  <Phone />
+  <Footer /> </> : null
 }
 
 </div>
- 
-      <Login childrenTitle={t('digital_wallet')} />
-      <Product product='product' />
-      <Instant />
-      <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
-      <AboutUs theme={!theme} />
-      <Banner />
-      <Store childrenTitle={t('have_power')} children={t('anyone')} />
-      <Phone />
-      {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-      {/*  <Benefits /> */}
-      <Footer />  
-      
-
-    
-
-
-
+  {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
+  {/*  <Benefits /> */}
     
     </div>
   )
