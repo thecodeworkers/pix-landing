@@ -10,48 +10,35 @@ export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
 
   return (
-    <div>
 
+    <div >
       <div className="_bannerContainer">
-         {/*  <div className="_bannerTexts">
- */}  
-            <div className="_macBox">
-            
-              <div className='mac'>
-                <div className='_contenedor'>
-                <p className="_childrenTitle">{t('today_index')}</p>
-                <div className="_bannerCards">
-              <CardCurrency />
-            </div> 
 
-            <div className="_bannerButton">
-              <button className="_buttonGradient">{t('download')}</button>
-              <p className="_buttonText">{t('stay_on_day')}</p>
+        <div className="_macBox">
 
-            </div>
-
-                </div>
-             
-                <MacBook />
-               
-                <div className='cubos'>
-                  <Background />
-               
-                </div>
-
-              
-             {/*   */}
+          <div className='mac'>
+            <div className='_contenedor'>
+              <p className="_childrenTitle">{t('today_index')}</p>
+              <div className="_bannerCards">
+                <CardCurrency />
               </div>
-              
-           
+
+              <div className="_bannerButton">
+                <button className="_buttonGradient">{t('download')}</button>
+                <p className="_buttonText">{t('stay_on_day')}</p>
+
+              </div>
+
             </div>
 
-           
+            <MacBook />
 
-        {/*   </div> */}
+            <div className='cubos'>
+              <Background />
 
-        
-
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

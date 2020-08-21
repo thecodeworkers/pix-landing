@@ -16,7 +16,7 @@ const persistConfig = {
   storage,
   whitelist: [
     'currency',
-  ]
+  ],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers);

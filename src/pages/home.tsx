@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login, Store, Phone } from '../components';
+import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login, Store, Phone, OnBoarding } from '../components';
 import { withTrans } from '../i18n/withTrans';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './styles/home.scss';
 
-
 const Home = (props) => {
-  const { t, i18n, scroll } = props;
+  const { t, i18n, scroll, onboarding} = props;
 
   const [theme, setTheme] = useState(true);
 
@@ -28,8 +27,18 @@ const Home = (props) => {
 
   return (
     <div>
-      <SEO title='Pix' />
+       <SEO title='Pix' />
       <Navbar />
+      <OnBoarding /> 
+
+      <div style={{marginTop: '100vh'}}>
+
+{
+  onboarding.stepThree ? <Banner/> : null
+}
+
+</div>
+ 
       <Login childrenTitle={t('digital_wallet')} />
       <Product product='product' />
       <Instant />
@@ -40,13 +49,20 @@ const Home = (props) => {
       <Phone />
       {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
       {/*  <Benefits /> */}
-      <Footer />
+      <Footer />  
+      
+
+    
+
+
+
+    
     </div>
   )
 }
 
-const mapStateToProps = (scroll) => ({
-  scroll
+const mapStateToProps = ({scroll, onboarding }) => ({
+  scroll, onboarding
 });
 
 const mapDispatchToProps = dispatch => {

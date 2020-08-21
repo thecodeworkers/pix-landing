@@ -11,16 +11,17 @@ function initWebsocket() {
       return emitter({ currencies });
     }
 
-    return () => {  } //hacer stop de websocket cuando abandone la pagina
+    return () => {  pricesWs.close(); } //hacer stop de websocket cuando abandone la pagina
   })
+ 
 }
 
 function* getCurrencyPrice() {
   try {
+    
     const websocket = yield call(initWebsocket);
     while(true) {
       const action = yield take(websocket);
-      // yield put(action);
 
       yield put({
           type: CURRENCY_PRICE_ASYNC,

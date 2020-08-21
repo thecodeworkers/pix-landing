@@ -17,3 +17,5 @@ export const polygonValues = (style: any, className: string, points: string) => 
   className,
   points
 });
+
+ 

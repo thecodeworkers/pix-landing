@@ -5,6 +5,7 @@
 /*   background-image: url('../../images/#{$image}.svg'); */
   background-size: cover;
   transition: 1s;
+  -webkit-transition: 1s;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -38,6 +39,7 @@
 ._whiteTxt {
   color: $white;
   transition: 1s;
+  -webkit-transition: 1s;
 }
 
 ._blackTxt {

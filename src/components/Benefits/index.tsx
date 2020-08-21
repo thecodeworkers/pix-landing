@@ -35,7 +35,7 @@ const Benefits = (props) => {
               <Usd />
             </div>
 
-            <p className='_skillsDescription'>
+            <p className='_skillsDescription '>
             {t('transfer_usd')}
             </p>
           </div>

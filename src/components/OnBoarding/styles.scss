@@ -1,0 +1,53 @@
+@import '../../assets/styles/index.scss';
+
+@mixin offsetTop($background) {
+  position: absolute;
+  top: 0px;
+  background-color: $background;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+._scrollingWrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 0px;
+  width:100%;
+}
+
+._cardCarrousel{
+  display: inline-table;
+  width: 100%;
+}
+
+._scrollingWrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+._scrollingWrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+._transition {
+  animation: trans 0.6s forwards;
+}
+
+// @keyframes trans {
+//   from {width:100%; height: 100vh}
+//   to {width:0%; height: 100vh}
+// }  
+
+
+
+// ._third {
+//   @include offsetTop(gray);
+// }
+
