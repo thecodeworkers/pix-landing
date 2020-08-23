@@ -9,11 +9,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-top: 10%;
 }
 
 ._phoneDimension{
   width: 500px;
   height: 300px;
+  margin-right: 5%;
 }
 
 ._usdBox{
@@ -27,63 +29,64 @@
 ._btcDiamond{
   @include floating (10px, 1s);
   position: absolute;
-  right: -40px;
+  right: 10px;
   margin-bottom: 200px;
+  width: 200px;
 }
 
 ._turqueseDiamond{
   @include floating (10px, 1s);
   position: absolute;
-  right: 170px;
+  right: 220px;
   margin-bottom: 300px;
 }
 
 ._turquesetinyDiamond{
   @include floating (10px, 1s);
   position: absolute;
-  right: 350px;
+  right: 400px;
   margin-bottom: 180px;
 }
 
 ._blackDiamond{
   @include floating (10px, 1s);
   position: absolute;
-  right: 75px;
+  right: 125px;
   margin-bottom: 100px;
 }
 
 ._usdDiamond{
   @include floating (10px, 1s);
   position: absolute;
-  right: 280px;
+  right: 330px;
   margin-bottom: 240px;
 }
 
-._tinyCube{
-  @include floating (5px, 1s);
-  position: absolute;
-  right: 150px;
-  margin-bottom: 150px;
-}
-
-._littleCube{
+._tiny{
   @include floating (5px, 1s);
   position: absolute;
   right: 200px;
+  margin-bottom: 150px;
+}
+
+._little{
+  @include floating (5px, 1s);
+  position: absolute;
+  right: 250px;
   margin-bottom: 190px;
 }
 
-._mediumCube{
+._medium{
   @include floating (5px, 1s);
   position: absolute;
-  right: 230px;
+  right: 280px;
   margin-bottom: 60px;
 }
 
-._bigCube{
+._big{
   @include floating (5px, 1s);
   position: absolute;
-  right: 400px;
+  right: 450px;
   margin-bottom: 20px;
 }
 
@@ -96,6 +99,28 @@
   width: 90px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+@include responsive(extralarge) {
+
+  ._big{
+    display: none;
+  }
+  ._medium{
+    display: none;
+  }
+  
+}
+
+@include responsive(large) {
+  ._big{
+    background: yellow;
+  }
+  ._medium{
+    background: yellow;
+  }
   
 }

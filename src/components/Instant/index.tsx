@@ -24,8 +24,11 @@ const Instant = ({ action, t, i18n }) => {
             <div className='_pixLeftDescriptionO'>
 
               <p className='_wallPix'>PIX Instant</p>
-              <Separator height={6} />
-              <p className='_paragraph'>{t('pix_instant')}</p>
+              <div className='_separatorInstant'>
+              <Separator  height={6} />
+              </div>
+           
+              <p className='_paragraphInstant'>{t('pix_instant')}</p>
 
               <div className='_orangePixContainer'>
                 <OrangePix />

@@ -208,7 +208,7 @@
 }
 
 ._macBox{
-  width: 100%;
+  width: 90%;
   position: relative;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -222,10 +222,6 @@
   margin-right: auto;
 }
 
-._otra{
-  position: relative;
-  overflow: hidden;
-}
 ._contenedor{
   position: absolute;
   top: 50%;
@@ -267,15 +263,15 @@
   }
 
   ._mediumDiamond {
-    display: none;
+    background: red
   }
 
   ._giantCube {
-    display: none;
+    background: red
   }
 
   ._minimunCube {
-    display: none;
+    background: red;
   }
 
 }

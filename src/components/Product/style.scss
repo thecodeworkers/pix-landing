@@ -48,6 +48,8 @@
 ._centerSquare {
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 ._wallPix {
@@ -58,6 +60,11 @@
   font-size: 2.625rem;
   font-weight: 500;
 
+}
+
+._productext{
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 ._pixLeftDescription {
@@ -97,6 +104,18 @@
 ._checkCenter {
   display: flex;
   justify-content: center;
+}
+
+._paragraphProduct {
+  margin: 0px 0px 10px;
+  text-align: left;
+  font-weight: 800;
+  font-family: $muli;
+  font-size: 1rem;
+  transition: 1s;
+  color: $newGray;
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 @include responsive(extraLarge) {
@@ -159,14 +178,17 @@
   left: 70%;
   width: 400px;
   height: 250px;
+  opacity: 0;
+  transform: translateY(30px);
 }
-._separatorLiine{
+
+._separatorProduct{
   width: 100%; 
   margin-top: 10px;
    margin-bottom: 10px;
     z-index: 1;
     opacity: 1;
-    transform: scale(0);
+    width: 0%;
 }
 
 

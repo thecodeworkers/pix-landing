@@ -32,13 +32,13 @@ const Product = ({ action, t, i18n, product, login }) => {
                 <Square />
               </div>
 
-              <h5>{t('secure_platform')}</h5>
+              <h5 className='_productext'>{t('secure_platform')}</h5>
               <p className='_wallPix'>{t('pix_wallet')}</p>
-              <div className='_separatorLiine'>
+              <div className='_separatorProduct'>
               <Separator height={6} />
               </div >
          
-              <p className='_paragraph'>{t('pix_description')}</p>
+              <p className='_paragraphProduct'>{t('pix_description')}</p>
               <div className='_cubeContainer'>
             <OrangeCube />
             </div>

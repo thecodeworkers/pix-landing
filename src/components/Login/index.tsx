@@ -45,7 +45,7 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
         <div style={{zIndex: 1}}>
         <h4 className='_blackHeader'>{childrenTitle} Rapida</h4>
         </div>
-        <div className='_separatorLine'>
+        <div className='_separatorLogin'>
           <Separator height={10} />
         </div>
         <div className='_buttonContainerLogin'>

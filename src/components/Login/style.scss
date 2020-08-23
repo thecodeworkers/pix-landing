@@ -165,11 +165,12 @@ z-index: 1;
   right: 0;
   opacity: 0;
   transform: translateY(30px);
+  
 }
 
 
 
-._separatorLine{
+._separatorLogin{
   width: 60%; 
   margin-top: 10px;
    margin-bottom: 10px;
@@ -180,7 +181,7 @@ z-index: 1;
 
 @include responsive(extralarge) {
 
-  ._separatorLine{
+  ._separatorLogin{
     width: 80%;
   }
 
@@ -201,7 +202,7 @@ z-index: 1;
 
 @include responsive(large) {
 
-  ._separatorLine{
+  ._separatorLogin{
     width: 80%;
   }
 

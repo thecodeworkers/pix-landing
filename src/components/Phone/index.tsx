@@ -22,22 +22,22 @@ const Phone = ({ scroll, action, about, product, t }) => {
   return (
     <div>
       <div className='_phoneBox' >
-        <div className='_tinyCube'>
+        <div className='_tiny'>
           <div style={{ width: '60px' }}>
             <Cube />
           </div>
         </div>
-        <div className='_littleCube'>
+        <div className='_little'>
           <div style={{ width: '90px' }}>
             <Cube />
           </div>
         </div>
-        <div className='_mediumCube'>
+        <div className='_medium'>
           <div style={{ width: '120px' }}>
             <Cube />
           </div>
         </div>
-        <div className='_bigCube'>
+        <div className='_big'>
           <div style={{ width: '180px' }}>
           <Cube />
           </div>
@@ -63,7 +63,7 @@ const Phone = ({ scroll, action, about, product, t }) => {
           </div>
         </div>
         <div className='_btcDiamond'>
-          <div style={{ width: '200px' }}>
+          <div >
             <DiamondBtc />
           </div>
         </div>
