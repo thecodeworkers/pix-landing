@@ -30,10 +30,10 @@ const Language = (props) => {
       <div className='_lang'>
         <a onClick={pickLanguage} id={lang} className='_langText'> {lang.toUpperCase()} </a>
       </div>
-      <a className='_link' href='https://api.whatsapp.com/send?phone=584242012127&text=%20!' target='_blankspace'>
+      <a className='_link'>
      
-        <div className={!float ? '_help' : '_float'} >
-          <span className="material-icons">chat</span>
+        <div className={'_help'} >
+          <span>HELP</span>
         </div>
         </a>
 

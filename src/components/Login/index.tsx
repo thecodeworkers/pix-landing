@@ -3,22 +3,29 @@ import { PixLogo } from '../Svg';
 import { CardCurrency, ScrollDown, Lang, Separator} from '../../components';
 import {BackgroundLogin} from './components'
 import './style.scss';
+ import gsapStart from './gsap'
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
-import { from } from 'core-js/fn/array';
 
 const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
-  console.log(scroll);
-  console.log(product);
+
+ 
   const { saveReference } = action;
   const productRef = useRef();
 
-  /* useEffect(() => {
+  gsapStart();
+
+  console.log(gsapStart,'LOGIN');
+  
+
+/*    useEffect(() => {
     if (product) saveReference({ productRef });
-    if (about) saveReference({ aboutRef });
+     if (about) saveReference({ aboutRef });
   }, [scroll.productRef]);
+  console.log(product , 'PRODUCT');
+
  */
 
  const benefits = {
@@ -31,31 +38,37 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
   return (
 
     <div className='_imageLoginLight'>
-      <div className="_loginContainer">
+    
         <div className='_logoSmall'>
           <PixLogo color='#00021C' />
         </div>
-        <div className='_headerContainer'>
+        <div style={{zIndex: 1}}>
         <h4 className='_blackHeader'>{childrenTitle} Rapida</h4>
         </div>
-        <div style={{ width: '120%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
+        <div className='_separatorLine'>
           <Separator height={10} />
         </div>
-        <div style={{  marginTop: 60, }}>
+        <div className='_buttonContainerLogin'>
         <button className='_loginBtnBlack'>{t('login').toUpperCase()}</button>
         <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button>
        
         </div>
-        <div className="_footerScroll">
-            <div className="_scrollDimension">
-              <ScrollDown color="#fff" reference={productRef}/>
+        
+        <div className="_footerScrollLogin">
+            <div className="_scrollDimensionLogin">
+              <ScrollDown color="#fff" reference={scroll.productRef}/>
             </div>
           </div>
-        <div className="_footerLang">
+
+        <div className="_footerLangLogin">
             <Lang/>
         </div>
-      </div>
-     <BackgroundLogin />
+       
+       
+
+      <div className='_cubito'>
+        <BackgroundLogin />
+        </div>
     </div>
   )
 };

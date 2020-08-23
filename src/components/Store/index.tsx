@@ -13,15 +13,15 @@ const Store = ({childrenTitle = null, children= null, t }) => {
 
     
       <div className="_storeContainer">
-        <div style={{  width: '30%' }}>
+        <div className='_storeTitle'>
         <h4 className='_blackHeader'>{childrenTitle}</h4>
         </div>
-        <div style={{ width: '50%', marginTop: 10, marginBottom: 10, zIndex: 1 }}>
+        <div  className='_storeLine'>
           <Separator height={10} />
         </div>
         <p className='_storeText'>{children}</p>
-        <div style={{  marginTop: 30, }}>
-        <button className='_registerBtnBlue'>{t('download').toUpperCase()}</button>
+        <div className='__storeButtonContainer'>
+        <button className='_storeBtnBlue'>{t('download').toUpperCase()}</button>
         </div>
         <p className="_storeText" style={{  marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>
 

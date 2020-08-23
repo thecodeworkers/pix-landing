@@ -7,13 +7,14 @@
 ._box {
   position: absolute;
   overflow: hidden;
+  z-index: 0;
 }
 
 ._box1 {
   width: 240px;
   height: 340px;
-  bottom: 100px;
-  left: 90px;
+  bottom: -60px;
+  left: -70px;
 }
 
 ._box1Children {
@@ -21,18 +22,17 @@
 }
 
 ._box3 {
-  width: 180px;
+  width: 160px;
   height: 240px;
   bottom: 45%;
-  left: 120px;
+  left: -60px;
 }
 
 ._box4 {
   width: 120px;
   height: 190px;
-  bottom: 35%;
-  left: 310px;
-
+  bottom: 30%;
+  left: 100px;
 }
 
 
@@ -58,10 +58,18 @@
   ._lastSection {
     @include noneDisplay;
   }
+
+  ._box{
+    @include noneDisplay;
+  }
 }
 
 @include responsive(medium) {
   ._middleSection {
+    @include noneDisplay;
+  }
+
+  ._box {
     @include noneDisplay;
   }
 }
@@ -129,4 +137,7 @@
     left: 160px;
 
   }
+  
 }
+
+

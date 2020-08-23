@@ -12,7 +12,12 @@
 }
 
 ._imageLoginLight {
-  @include backgroundLogin('banner-light');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
 }
 
 /* ._imageBackgroundDark {
@@ -21,11 +26,7 @@
 } */
 
 ._loginContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
+position: relative;
 }
 
 ._blackHeader{
@@ -39,6 +40,9 @@
 
 ._logoSmall{
   width: 14.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
 
 @mixin btnLogin($background, $padding, $flag, $borderColor, $color) {
@@ -87,20 +91,26 @@
   }
 }
 
-@mixin buttonResponsiveLogin {
+@mixin buttonResponsive {
   @include responsive(large) {
     display: block;
-    width: 60%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
+._buttonContainerLogin{
+  margin-top: 60px;
+  z-index: 1;
+}
+
 
 ._registerBtnBlue{ 
   @include btnRegister($blueGreenGradient, 0.6rem, 'gradient', $white);
-  @include buttonResponsiveLogin;
-
+  @include buttonResponsive;
+  opacity: 0;
+  transform: translateY(30px);
   &:hover {
     @include btnLogin($white, 0.6rem, 'not', $black, $black);
     transition: all 0.6s;
@@ -110,9 +120,11 @@
 
 ._loginBtnBlack { 
   @include btnLogin($white, 0.5rem, 'not', $lightBLue, $lightBLue);
-  @include buttonResponsiveLogin;
-  transition: all 0.6s;
+  @include buttonResponsive;
+
   margin-right: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
   &:hover {
     @include btnLogin($white, 0.5rem, 'not', $black, $black);
     transition: all 0.6s;
@@ -123,4 +135,87 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+._footerScrollLogin {
+width: '55%';
+opacity: 0;
+transform: translateY(30px);
+position: absolute;
+bottom: 0; 
+z-index: 1;
+}
+
+._scrollDimensionLogin {
+  width:68px;
+  height: 71px;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+._footerLangLogin {
+ width: 10%;
+ z-index: 1;
+ display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
+
+._separatorLine{
+  width: 60%; 
+  margin-top: 10px;
+   margin-bottom: 10px;
+    z-index: 1;
+    opacity: 1;
+    transform: scale(0);
+}
+
+@include responsive(extralarge) {
+
+  ._separatorLine{
+    width: 80%;
+  }
+
+  ._buttonContainerLogin{
+    width: 60%;
+    display: flex;
+  }
+
+  ._footerLangLogin{
+    width: 15%;
+  }
+
+  ._blackHeader{
+    font-size: 3.5rem;
+  }
+  
+}
+
+@include responsive(large) {
+
+  ._separatorLine{
+    width: 80%;
+  }
+
+  ._buttonContainerLogin{
+    width: 60%;
+    display: flex;
+  }
+
+  ._footerLangLogin{
+    width: 15%;
+  }
+
+  ._blackHeader{
+    font-size: 3.5rem;
+  }
+  
 }

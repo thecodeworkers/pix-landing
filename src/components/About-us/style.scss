@@ -80,6 +80,14 @@
  color: $newBlue;
 }
 
+._aboutBox{
+  background: $newBlack;
+  width: 20%;
+  height: 250px;
+  border-color: $newBlue;
+  box-shadow: -5px 5px 15px  $newBlue;
+}
+
 ._aboutTextDescription {
   font-size: 0.8rem;
   font-weight: 600;
@@ -181,7 +189,7 @@
   display: flex;
   transform: translatey(10px);
   animation: MoveUpDownDiamond 1s alternate infinite;
-  width: 180px;
+  width: 15%;
 
 }
 
@@ -192,13 +200,45 @@
   animation: MoveUpDownDiamond 1s alternate infinite;
   justify-content: space-between;
   align-items: center;
-  width: 440px;
+  width: 35%;
   margin-left: auto;
   margin-right: auto;
 
 }
 
+._aboutFather{
+  display: flex;
+    /* background: aqua; */
+    justify-content: space-evenly;
+}
+
 @keyframes MoveUpDownDiamond {
   from { transform: translateY(0px)}
   to { transform:translateY(50 px)}
+}
+
+
+@include responsive(extraLarge) {
+  ._aboutBox{
+    width: 25%;
+  }
+._floatingCoin{
+  width: 30%;
+}
+  
+}
+
+
+@include responsive(large) {
+  ._aboutBox{
+    width: 25%;
+  }
+._floatingCoin{
+ display: none;
+}
+
+._floatingCoinTwo{
+  width: 50%;
+ }
+ 
 }

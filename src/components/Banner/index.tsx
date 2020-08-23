@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Background } from './components';
-import { CardCurrency, ScrollDown, Lang } from '../../components';
-import { DownloadAndroid, DownloadIos, MacBook } from '../Svg';
+import { CardCurrency, } from '../../components';
+import { MacBook, Cube, DiamondTurquese} from '../Svg';
 import { withTrans } from '../../i18n/withTrans';
 import './styles.scss';
 
@@ -28,14 +28,27 @@ export const Banner = ({ scroll, t }) => {
                 <p className="_buttonText">{t('stay_on_day')}</p>
 
               </div>
-
+              <Background />
             </div>
 
             <MacBook />
 
-            <div className='cubos'>
-              <Background />
+            <div className='_minimunCube'>
+            <div style={{ width: '80px' }}>
+              <Cube />
+             </div>
+            </div>
 
+            <div className='_giantCube'>
+            <div style={{ width: '180px' }}>
+              <Cube />
+             </div>
+            </div>
+
+            <div className='_mediumDiamond'>
+            <div style={{ width: '50px' }}>
+              <DiamondTurquese />
+             </div>
             </div>
           </div>
         </div>

@@ -29,12 +29,13 @@ const Home = (props) => {
     <div>
        <SEO title='Pix' />
       <Navbar />
-      <OnBoarding /> 
-
+     {/*  <OnBoarding />  */}
+{/* 
       <div style={{marginTop: '100vh'}}>
 
 {
-  onboarding.stepThree ? <> <Login childrenTitle={t('digital_wallet')} />
+  onboarding.stepThree ? <>  */}
+  <Login childrenTitle={t('digital_wallet')} />
   <Product product='product' />
   <Instant />
   <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
@@ -42,10 +43,10 @@ const Home = (props) => {
   <Banner />
   <Store childrenTitle={t('have_power')} children={t('anyone')} />
   <Phone />
-  <Footer /> </> : null
-}
+  <Footer /> {/* </> : null */}
+{/* }
 
-</div>
+</div> */}
   {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
   {/*  <Benefits /> */}
     

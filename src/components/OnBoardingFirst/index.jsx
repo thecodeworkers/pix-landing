@@ -15,7 +15,7 @@ const OnBoardingFirst = (props) => {
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
-    window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true })
+   /*  window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) */
 
     timeLine
       .play()
@@ -29,7 +29,7 @@ const OnBoardingFirst = (props) => {
       .to('._switchThemeParent', 0.6, { opacity: 1, x: 0 }, 0.6)
 
     return () => {
-      window.removeEventListener("wheel", null);
+  /*     window.removeEventListener("wheel", null); */
     }
   }, [])
 

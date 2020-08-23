@@ -51,7 +51,7 @@
 
   cursor: pointer;
 }
-
+/* 
 ._float {
   background: linear-gradient(90deg, $blueGreenGradient);
   position: fixed;
@@ -73,7 +73,7 @@
   }
 
 }
-
+ */
 @include responsive(medium) {
 
   ._help {

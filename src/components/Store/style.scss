@@ -19,3 +19,70 @@
     width: 40%;
     margin-top: 1%;
 }
+._storeLine{
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10;
+  z-index: 1;
+}
+._storeTitle{
+  width: 30%;
+}
+
+._storeButtonContainer{
+  margin-top: 30;
+  width: 100%;
+}
+
+._storeBtnBlue{
+  padding: 0.6rem;
+  width: 10.625rem;
+  height: 2.8rem;
+  background: linear-gradient(45deg, #33A3DC, #57D6AF);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: $muli;
+  font-size: 0.8rem;
+}
+
+
+
+@include responsive(large) {
+  ._storeText{
+    height: 30%;
+    width: 100%;
+  }
+  ._storeTitle{
+    width: 40%;
+  }
+
+  ._storeLine{
+    width: 60%;
+  }
+
+  ._storeText{
+    width: 80%;
+  }
+}
+
+@include responsive(extraLarge) {
+  ._storeText{
+    height: 30%;
+    width: 100%;
+  }
+  ._storeTitle{
+    width: 40%;
+  }
+
+  ._storeLine{
+    width: 60%;
+  }
+
+  ._storeText{
+    width: 80%;
+  }
+
+
+
+}

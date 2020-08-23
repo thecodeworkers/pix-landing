@@ -2,28 +2,25 @@ import React, { useEffect, useRef } from 'react';
 import Separator from '../Separator';
 import { DiamondUsdc, DiamondEth, DarkCheckBox, OrangePix } from '../Svg';
 import './styles.scss';
+import gsapStartOne from './gsap'
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {TimelineMax} from "gsap";
+
 
 const BannerImage = ({ children = null, childrenTitle = null, isDark = false, scroll, action, about, product }) => {
 
   const { saveReference } = action;
   const aboutRef = useRef();
   const productRef = useRef();
-/*   const tl = new TimelineMax({paused: false});
-
-
-  tl.play()
-  .to('._orange', {y:100, duration: 6} )
-  .from('._orange', {y:0, duration: 6} ) */
+  
+  gsapStartOne();
 
   useEffect(() => {
     if (product) saveReference({ productRef });
     if (about) saveReference({ aboutRef });
   }, [scroll.productRef]);
-
+ 
 
   return (
 
@@ -31,7 +28,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
       <div className="_imageContainer">
         <h4 className='_whiteHeader'>{childrenTitle}</h4>
 
-        <div style={{ width: '120%', marginTop: 10, marginBottom: 10 }}>
+        <div className='_liine'>
         <Separator height={10} />
         </div>
         <p className={`_imageContainerText  ${isDark ? '_whiteTxt' : '_blackTxt'}`}>{children}</p>

@@ -57,6 +57,7 @@
   margin: 0px 0px 1rem;
   font-size: 2.625rem;
   font-weight: 500;
+
 }
 
 ._pixLeftDescription {
@@ -154,8 +155,44 @@
 }
 
 ._cubeContainer{
-  position: absolute;
-  left: 30%;
-  width: 300px;
+  position: relative;
+  left: 70%;
+  width: 400px;
   height: 250px;
 }
+._separatorLiine{
+  width: 100%; 
+  margin-top: 10px;
+   margin-bottom: 10px;
+    z-index: 1;
+    opacity: 1;
+    transform: scale(0);
+}
+
+
+@include responsive(extraLarge) {
+  ._phoneContainer{
+    width: 70%;
+  }
+
+  ._cubeContainer{
+    left: 30%;
+    width: 400px;
+  }
+  
+}
+
+
+
+@include responsive(large) {
+  ._phoneContainer{
+    width: 80%;
+  }
+
+  ._cubeContainer{
+    left: 50%;
+    width: 300px;
+  }
+ 
+}
+

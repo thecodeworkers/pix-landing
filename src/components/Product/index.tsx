@@ -6,19 +6,25 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
+import gsapStartOne from './gsap'
 
-const Product = ({ action, t, i18n, product }) => {
+const Product = ({ action, t, i18n, product, login }) => {
 
-  // const { saveReference } = action;
+   const { saveReference } = action;
   const productRef: any = useRef();
 
-  // useEffect(() => {
-  //   saveReference({ productRef });
-  // }, []);
+  gsapStartOne();
+  console.log(gsapStartOne,"PRODUCT");
+  
+
+/*    useEffect(() => {
+    if (product) saveReference({ productRef });
+    saveReference({ productRef });
+   }, []); */
 
   return (
     <div>
-      <div className='_productParent'>
+      <div ref={productRef}  className='_productParent'>
         <div className='_productGeneral'>
           <div className='_productLeft'>
             <div className='_pixLeftDescription'>
@@ -28,7 +34,10 @@ const Product = ({ action, t, i18n, product }) => {
 
               <h5>{t('secure_platform')}</h5>
               <p className='_wallPix'>{t('pix_wallet')}</p>
+              <div className='_separatorLiine'>
               <Separator height={6} />
+              </div >
+         
               <p className='_paragraph'>{t('pix_description')}</p>
               <div className='_cubeContainer'>
             <OrangeCube />

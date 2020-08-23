@@ -140,6 +140,10 @@
     @include animated-box($greenGradient, 6rem);
   }
 
+  ._cardDASH {
+    @include animated-box($blueGradient, 6rem);
+  }
+
   ._cardChild{
     height: 3rem;
     width: 3rem;
@@ -163,6 +167,10 @@
   
   ._cardUSDT {
     @include animated-box($greenGradient, 5rem);
+  }
+
+  ._cardDASH {
+    @include animated-box($blueGradient, 5rem);
   }
 
   ._cardChild{

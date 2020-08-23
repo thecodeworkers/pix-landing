@@ -55,13 +55,7 @@
   text-align: center;
 }
 
-._aboutBox{
-  background: $newBlack;
-  width: 16%;
-  height: 250px;
-  border-color: $newBlue;
-  box-shadow: -5px 5px 15px  $newBlue;
-}
+
 
 
 ._aboutContainer{
@@ -93,9 +87,47 @@
 ._darkCheck{
   margin-top: 10px;
 }
+._liine{
+  transform: scale(0);
+  width: '120%';
+   margin-top: 10;
+   margin-bottom: 10
+}
 
 @keyframes MoveUpDown {
   from { transform: translateY(0px)}
   to { transform:translateY(50 px)
 }
 }
+
+@include responsive(extraLarge) {
+  ._imageContainer{
+    width: 70%;
+  }
+
+  ._imageContainerText{
+    font-size: 1.5rem;
+  }
+
+  ._orangePix{
+    width: 70%;
+  }
+  
+}
+
+
+@include responsive(large) {
+  ._imageContainer{
+    width: 80%;
+  }
+
+  ._imageContainerText{
+    font-size: 1.2rem;
+  }
+
+  ._orange{
+    width: 40%;
+  }
+ 
+}
+
