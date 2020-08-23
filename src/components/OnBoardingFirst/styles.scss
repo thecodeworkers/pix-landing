@@ -26,11 +26,14 @@
 
 ._sendContentChild {
   width: 70%;
+  word-wrap: break-word;
+  padding: 10px;
+  // overflow-wrap: initial;
+  // overflow-x: hidden
   // background-color: blue;
 }
 
 ._exchangeInstantly {
-
   opacity: 0;
   transform: translateY(15px);
 
@@ -190,6 +193,26 @@
   transition: 3s;
 }
 
+._responsiveArrow {
+  display: none;
+
+}
+
+@keyframes pulse-black {
+  0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
 @mixin background($name) {
   position: absolute;
   top: 4%;
@@ -223,4 +246,94 @@
   font-size: 1.3rem;
   color:$gray;
   cursor: pointer;
+}
+
+._cardBtcRounded {
+  margin-bottom: 10px;
+}
+
+._enter {
+  white-space: pre-wrap;
+}
+
+
+@include responsive(extraLarge) {
+  ._macBookChangeTheme {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+  }
+
+  ._exchangeInstantly {
+    & p {
+      font-size: 2rem;
+      margin-bottom: -1rem !important;
+    }
+  }
+
+  ._currencyCardsRow {
+     justify-content: space-evenly;
+  }
+
+  ._cardBtcRounded {
+    margin-bottom: 10px;
+  }
+}
+
+@include responsive(medium) {
+
+  ._parentSendSectionBodyRight {
+    display: none;
+  }
+  ._parentSendSectionBodyLeft {
+   width: 100%;
+  }
+
+  ._inputNewsletterSend {
+    width: 100%;
+  }
+
+  ._arrowIconSendEmail {
+    right: 2%;
+  }
+
+  ._sendContentChild {
+    white-space: pre-wrap;
+    width: 90%;
+    text-align: left;
+  }
+
+  ._responsiveArrow {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    z-index:999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.95);  
+    animation: pulse-black 2s infinite;
+    color: $white;
+  }
+
+  ._exchangeInstantly {
+
+
+    & p {
+      font-size: 1.8rem;
+      margin-bottom: -1rem !important;
+    }
+  }
+
+  // ._exchangeInstantly {
+  //   & p {
+  //     text-align: center;
+  //     margin-left: 0px;
+  //   }
+  // }
+ 
 }

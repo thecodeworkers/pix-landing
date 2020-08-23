@@ -12,6 +12,8 @@ export const Banner = ({ scroll, t }) => {
   return (
     <div >
       <div className="_bannerContainer">
+      <Background/>
+
         <div className="_bannerDesc">
           <div className="_bannerTexts">
             <p className="_childrenText">{t('app_desktop')}</p>
@@ -87,7 +89,6 @@ export const Banner = ({ scroll, t }) => {
           </div>
         </div>
       </div>
-      <Background/>
     </div>
   );
 }

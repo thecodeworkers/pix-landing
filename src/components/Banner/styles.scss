@@ -39,6 +39,7 @@
 
 // CLASS
 ._bannerContainer {
+  position: relative;
   @include dimensions(100%, 90vh);
   @include flex-axis(center);
 }

@@ -38,15 +38,21 @@ const OnBoardingFirst = (props) => {
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
     action.saveStep({ stepOne: true })
-    // window.removeEventListener("wheel", null);
+    window.removeEventListener("wheel", null);
   }
 
   return (
     <div className='_parentSendSection'>
+
+      <div className='_responsiveArrow' onClick={() => handleWheel(reference, referenceParent)}>
+        <span className='material-icons' >arrow_forward</span>
+      </div>  
       <div className='_parentSendSectionBodyLeft'>
         <div className='_sonofson'>
           <div className='_sendContentChild'>
+          {/* <div className='_enter'> */}
             <h4 className='_sendRightTitle'>Disponible para app and desktop!</h4>
+             {/* </div> */}
 
             <div className='_exchangeInstantly'>
               <p> Envía, recibe e</p>
@@ -55,7 +61,11 @@ const OnBoardingFirst = (props) => {
             </div>
 
             <div className='_emailNewsletterSend'>
+
+            
               <p>Ingresa tu correo y recibe nuestras noticaciones de la app</p>
+             
+              
 
               <input type='text' placeholder='email' className='_inputNewsletterSend'></input>
               <div style={{ position: 'relative' }}>
@@ -90,7 +100,10 @@ const OnBoardingFirst = (props) => {
             </div>
 
             <div className='_currencyCardsRow'>
+              <div className='_cardBtcRounded' >
               <BtcCard />
+              </div>
+             
               <EthCard />
               <DashCard />
               <UsdCard />

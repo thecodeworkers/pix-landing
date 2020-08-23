@@ -130,3 +130,32 @@
   transform: translateX(60px);
   opacity: 0;
 }
+
+@include responsive(medium) {
+  ._LeftSideSmartMoney   {
+    display: none;
+  }
+  ._rightSideSmartMoney {
+    width: 100%;
+    // background-color: red;
+  }
+
+  ._rightSideSmartContent {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  ._manageMoneyText {
+
+    & p {
+      font-size: 1.8rem;
+      margin-bottom: -1rem !important;
+    }
+    
+  }
+
+
+}

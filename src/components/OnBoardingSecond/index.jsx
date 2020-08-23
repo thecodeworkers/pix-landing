@@ -38,18 +38,23 @@ const OnBoardingSecond = (props) => {
 
   const handleWheel = (target, parent) => {
     if(!flag) {
-      console.log('enter scroll')
       referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
-      action.saveStep({ stepTwo: true })
+      action.saveStep({ stepTwo: true });
+      window.removeEventListener("wheel", null);
     }
-  }
 
+  }
+  
   const completeAnimation = () => {
     setFlag(false);
   }
 
   return (
     <div className='_smartMoneyParent'>
+      
+      <div className='_responsiveArrow' onClick={() => handleWheel(reference, referenceParent)}>
+        <span className='material-icons' >arrow_forward</span>
+      </div>  
       <div className='_LeftSideSmartMoney'>
 
         <div className='_pixDevices'>
