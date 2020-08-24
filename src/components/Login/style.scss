@@ -34,8 +34,9 @@ position: relative;
   font-size: 4rem;
   font-weight: 400;
   margin-top: 10%;
-  text-align: center;
+  text-align: right;
   z-index: 1;
+  transform: translateY(50px);
 }
 
 ._logoSmall{
@@ -43,6 +44,7 @@ position: relative;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
+  transform: translateY(50px);
 }
 
 @mixin btnLogin($background, $padding, $flag, $borderColor, $color) {
@@ -105,7 +107,27 @@ position: relative;
   z-index: 1;
 }
 
+._textSlider {
+  width: 200px;
+  margin: auto;
+  overflow: visible;
+  position: relative;
+  margin-left: 0.7rem;
+  padding-bottom: 18px;
+}
 
+._textSlider h4 {
+  position: absolute;
+  list-style: none;
+  font-size: 4rem;
+}
+
+._parentTitlehey {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  // background-color: blue;
+}
 ._registerBtnBlue{ 
   @include btnRegister($blueGreenGradient, 0.6rem, 'gradient', $white);
   @include buttonResponsive;
@@ -168,8 +190,6 @@ z-index: 1;
   
 }
 
-
-
 ._separatorLogin{
   width: 60%; 
   margin-top: 10px;
@@ -221,7 +241,6 @@ z-index: 1;
 }
   @include responsive(medium) {
 
-  
     ._blackHeader{
       font-size: 3rem;
       margin-top: 1%;
@@ -233,6 +252,183 @@ z-index: 1;
     ._footerLangLogin{
       width: 80px;
     }
-    
   }
 
+  ._itemUno {
+    animation: cycle 8s linear infinite;
+    color: $textOrange;
+    transform: translateY(50px);
+  }
+
+  ._itemDos {
+    animation: cycle2 8s linear infinite;
+    color: $lightBLue;
+  }
+
+  ._itemThree {
+    animation: cycle3 8s linear infinite;
+    color: $textPurple;
+  }
+  ._itemFour {
+    animation: cycle4 8s linear infinite;
+    color: $appleGreen;
+  }
+
+  @keyframes cycle {
+    0% {
+      top: 0px;
+    }
+    4% {
+      top: 0px;
+    }
+    16% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    20% {
+      top: -80px;
+      opacity: 0;
+      z-index: 0;
+    }
+    21% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+    50% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+    92% {
+      top: 80px;
+      opacity: 0;
+      z-index: 0;
+    }
+    96% {
+      top: -80px;
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes cycle2 {
+    0% {
+      top: 80px;
+      opacity: 0;
+    }
+    16% {
+      top: 80px;
+      opacity: 0;
+    }
+    20% {
+      top: 0px;
+      opacity: 1;
+    }
+    24% {
+      top: 0px;
+      opacity: 1;
+    }
+    36% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    40% {
+      top: -80px;
+      opacity: 0;
+      z-index: 0;
+    }
+    41% {
+      top: 50;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  @keyframes cycle3 {
+    0% {
+      top: 80px;
+      opacity: 0;
+    }
+    36% {
+      top: 80px;
+      opacity: 0;
+    }
+    40% {
+      top: 0px;
+      opacity: 1;
+    }
+    44% {
+      top: 0px;
+      opacity: 1;
+    }
+    56% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    60% {
+      top: -80px;
+      opacity: 0;
+      z-index: 0;
+    }
+    61% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  @keyframes cycle4 {
+    0% {
+      top: 80px;
+      opacity: 0;
+    }
+    56% {
+      top: 80px;
+      opacity: 0;
+    }
+    60% {
+      top: 0px;
+      opacity: 1;
+    }
+    64% {
+      top: 0px;
+      opacity: 1;
+    }
+    76% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    80% {
+      top: -80px;
+      opacity: 0;
+      z-index: 0;
+    }
+    81% {
+      top: 80px;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: 0px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
