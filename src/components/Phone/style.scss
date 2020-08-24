@@ -106,21 +106,10 @@
 
 @include responsive(extralarge) {
 
-  ._big{
-    display: none;
-  }
-  ._medium{
-    display: none;
-  }
   
 }
 
 @include responsive(large) {
-  ._big{
-    background: yellow;
-  }
-  ._medium{
-    background: yellow;
-  }
+
   
 }

@@ -30,10 +30,12 @@
 }
 
 ._imageContainerText {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
   font-family: $muli;
   text-align: center;
   margin-top: 5%;
+  transform: translateY(40px);
 }
 
 ._whiteTxt {
@@ -81,7 +83,8 @@
 }
 
 ._separatorBanner{
-  transform: scaleX(0);
+  transform: scale(0);
+  width: 120%;
 }
 
 ._coin{
@@ -132,6 +135,17 @@
   ._orange{
     width: 40%;
   }
+ 
+}
+
+@include responsive(medium) {
+  ._whiteHeader{
+    margin-top: 80%;
+  }
+
+  ._coin{
+    display: none;
+   }
  
 }
 

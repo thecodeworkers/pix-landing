@@ -18,20 +18,30 @@
     color: $lightBLue;
     width: 40%;
     margin-top: 1%;
+    opacity: 0;
+    transform: translateY(30px);
 }
 ._storeLine{
   width: 50%;
   margin-top: 10px;
   margin-bottom: 10;
   z-index: 1;
+  transform: scale(0);
 }
 ._storeTitle{
   width: 30%;
+  opacity: 0;
+    transform: translateY(30px);
 }
 
 ._storeButtonContainer{
   margin-top: 30;
   width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 ._storeBtnBlue{
@@ -82,7 +92,16 @@
   ._storeText{
     width: 80%;
   }
+}
 
+@include responsive(medium) {
+ 
+  ._storeTitle{
+    width: 60%;
+  }
 
+  ._footerNetwork{
+    width: 40%;
+  }
 
 }

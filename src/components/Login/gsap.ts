@@ -107,9 +107,9 @@ const gsapStart = () => {
     scrollTrigger: {
       trigger: '._separatorInstant',
     },
-    scaleX:1,  
-    duration: 1,
-    delay: 0.3
+    duration: 2,
+    delay: 0.2,
+    width:'100%'
   }),
 
   gsap.to("._orangePixContainer",{
@@ -125,14 +125,99 @@ const gsapStart = () => {
 
   gsap.to("._separatorBanner",{
     scrollTrigger: {
-      trigger: '._separatorInstant',
+      trigger: '._separatorBanner',
     },
-    scaleX:1,  
+    scale:1,  
     duration: 1,
-    delay: 0.3
+    delay: 0.2
+  }),
+
+  gsap.to("._imageContainerText",{
+    scrollTrigger: {
+      trigger: '._imageContainerText',
+    },
+    y:0,
+    duration: 0.1,
+    delay: 0.2
+  }),
+
+  
+
+ /*  gsap.to(["._orange, ._coins"],{
+    scrollTrigger: {
+      trigger: '._imageContainerText',
+    },
+    y:0,
+    duration: 0.1,
+    delay: 0.2
+  }) */
+
+////ABOUT US
+  gsap.to("._aboutFather",{
+    scrollTrigger: {
+      trigger: '._aboutFather',
+    },
+    y:0,
+    opacity:1,
+    duration: 1,
+    delay: 0.2
+  }),
+
+//////BANNER
+
+  gsap.to("._childrenTitle",{
+    scrollTrigger: {
+      trigger: '._childrenTitle',
+    },
+    opacity:1,
+    duration: 1,
+    delay: 0.2
+  }),
+
+  gsap.to(['._bannerCards','._bannerButton', '._buttonText','._buttonGradient'  ],{
+    scrollTrigger: {
+      trigger: '._bannerCards',
+    },
+    y:0,
+    opacity:1,
+    duration: 1,
+    delay: 0.2
+  }),
+
+
+
+  ////STORE
+
+  gsap.to("._storeTitle",{
+    scrollTrigger: {
+      trigger: '._storeTitle',
+    },
+    y:0, 
+    opacity:1, 
+    duration: 1,
+    delay: 0.4
+  }),
+
+  gsap.to("._storeLine",{
+    scrollTrigger: {
+      trigger: '._storeLine',
+    },
+    scale:1,  
+    duration: 1,
+    delay: 0.2
+  }),
+
+  gsap.to(["._storeText","._storeButtonContainer", "._footerNetwork" ],{
+    scrollTrigger: {
+      trigger: '._storeText',
+    },
+    y:0, 
+    opacity:1, 
+    duration: 1,
+    delay: 0.5
   })
 
- 
+  //////
  
   }
 

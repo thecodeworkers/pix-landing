@@ -20,7 +20,7 @@ const Store = ({childrenTitle = null, children= null, t }) => {
           <Separator height={10} />
         </div>
         <p className='_storeText'>{children}</p>
-        <div className='__storeButtonContainer'>
+        <div className='_storeButtonContainer'>
         <button className='_storeBtnBlue'>{t('download').toUpperCase()}</button>
         </div>
         <p className="_storeText" style={{  marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>

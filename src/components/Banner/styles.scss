@@ -65,6 +65,7 @@
   @include boldTexts($arsenic, 2.5rem);
   z-index: 0;
   margin-bottom: 5%;
+opacity: 0;
 }
 
 ._bannerCards {
@@ -72,6 +73,8 @@
   @include flex-axis(center);
   align-items: center;
   margin-bottom: 5%;
+  opacity:0;
+  transform: translateY(30px);
 }
 
 ._bannerButton {
@@ -81,6 +84,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
+  opacity:0;
+  transform: translateY(30px);
 }
 
 ._buttonText {
@@ -95,6 +100,8 @@
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, $blueGreenGradient);
+  opacity:0;
+  transform: translateY(30px);
 }
 
 ._bannerFooter {
@@ -109,6 +116,8 @@
 ._footerNetwork {
   @include width(22.5%);
   @include flex-axis(center);
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 ._iosInfo {
@@ -263,15 +272,15 @@
   }
 
   ._mediumDiamond {
-    background: red
+   display: none;
   }
 
   ._giantCube {
-    background: red
+    display: none;
   }
 
   ._minimunCube {
-    background: red;
+    display: none;
   }
 
 }
@@ -286,6 +295,7 @@
 }
 
 }
+
 
 
 

@@ -189,7 +189,7 @@
   display: flex;
   transform: translatey(10px);
   animation: MoveUpDownDiamond 1s alternate infinite;
-  width: 15%;
+  width: 10%;
 
 }
 
@@ -208,8 +208,9 @@
 
 ._aboutFather{
   display: flex;
-    /* background: aqua; */
-    justify-content: space-evenly;
+  justify-content: space-evenly;
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 @keyframes MoveUpDownDiamond {
@@ -240,5 +241,13 @@
 ._floatingCoinTwo{
   width: 50%;
  }
+ 
+}
+
+
+@include responsive(medium) {
+  ._floatingCoin{
+    display: none;
+   }
  
 }

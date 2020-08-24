@@ -44,9 +44,9 @@ const Instant = ({ action, t, i18n }) => {
         </div>
       </div>
 
-      <div className='_parentScroll'>
+     {/*  <div className='_parentScroll'>
         <ScrollDown color='#fff' reference={aboutRef} />
-      </div>
+      </div> */}
 
     </div>
 

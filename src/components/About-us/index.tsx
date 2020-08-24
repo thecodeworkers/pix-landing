@@ -64,28 +64,9 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n }) => {
         <DiamondDash />
 
       </div>
-      {/*  <div className='_divBlock'>
-        <div className={theme ? '_textContent' : '_textContentDark'}>
-          <Square />
-          <h5>{t('we_believe')}</h5>
-          <div className='_halfContent'>
-            <p className='_pixTitle'>PIX Wallet</p>
-
-            <p className={theme ? '_paragraph' : '_paragraphDark'}>
-            {t('digital_wallets')}
-              </p>
-
-            <p className={theme ? '_paragraph' : '_paragraphDark'}>
-            {t('hosted_wallets')}
-              </p>
-          </div>
-
-        </div>
-      </div> */}
-
-      <div className='_parentScroll'>
+ {/*      <div className='_parentScroll'>
         <ScrollDown color='#00021C' reference={aboutRef} />
-      </div>
+      </div> */}
 
     </div>
   )

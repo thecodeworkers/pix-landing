@@ -121,10 +121,11 @@
 @include responsive(extraLarge) {
   ._phoneContainerTwo {
     margin-top: 0px;
+    
   }
 }
 
-@include responsive(medium) {
+/* @include responsive(medium) {
   ._productGeneral {
     width: 100%;
     flex-direction: column;
@@ -171,7 +172,7 @@
     width: 70%;
   }
   
-}
+} */
 
 ._cubeContainer{
   position: relative;
@@ -183,11 +184,9 @@
 }
 
 ._separatorProduct{
-  width: 100%; 
   margin-top: 10px;
    margin-bottom: 10px;
     z-index: 1;
-    opacity: 1;
     width: 0%;
 }
 
@@ -217,4 +216,15 @@
   }
  
 }
+
+/* @include responsive(medium) {
+
+  
+  ._cubeContainer{
+    left: 15%;
+  }
+
+
+} */
+
 

@@ -38,6 +38,7 @@ export { default as PixPhone } from './pix-phone';
 export { default as DiamondTurquese } from './diamond-turquese';
 export { default as DiamondBlack } from './diamond-black';
 export { default as Cube } from './cube';
+export { default as CubePhone } from './cube-phone';
 export { default as MacBookDark } from './macBook';
 export { default as BtcCard } from './btc-card';
 export { default as EthCard } from './eth-card';

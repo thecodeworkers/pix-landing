@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { PixPhone, DiamondUsd, DiamondBtc, DiamondTurquese, DiamondBlack, Cube, PixelLogo } from '../Svg';
+import { PixPhone, DiamondUsd, DiamondBtc, DiamondTurquese, DiamondBlack, CubePhone, PixelLogo } from '../Svg';
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -24,22 +24,22 @@ const Phone = ({ scroll, action, about, product, t }) => {
       <div className='_phoneBox' >
         <div className='_tiny'>
           <div style={{ width: '60px' }}>
-            <Cube />
+            <CubePhone />
           </div>
         </div>
         <div className='_little'>
           <div style={{ width: '90px' }}>
-            <Cube />
+            <CubePhone />
           </div>
         </div>
         <div className='_medium'>
           <div style={{ width: '120px' }}>
-            <Cube />
+            <CubePhone />
           </div>
         </div>
         <div className='_big'>
           <div style={{ width: '180px' }}>
-          <Cube />
+          <CubePhone />
           </div>
         </div>
         <div className='_turquesetinyDiamond'>

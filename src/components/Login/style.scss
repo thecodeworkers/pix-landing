@@ -175,7 +175,6 @@ z-index: 1;
   margin-top: 10px;
    margin-bottom: 10px;
     z-index: 1;
-    opacity: 1;
     transform: scale(0);
 }
 
@@ -220,3 +219,20 @@ z-index: 1;
   }
   
 }
+  @include responsive(medium) {
+
+  
+    ._blackHeader{
+      font-size: 3rem;
+      margin-top: 1%;
+    }
+
+    ._buttonContainerLogin{
+      width: 100%;
+    }
+    ._footerLangLogin{
+      width: 80px;
+    }
+    
+  }
+
