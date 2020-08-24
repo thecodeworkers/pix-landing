@@ -58,10 +58,13 @@
   ._lastSection {
     @include noneDisplay;
   }
+ 
 
-  ._box{
-    @include noneDisplay;
+  ._box3{
+    height: 180px;
+    width: 120px;
   }
+ 
 }
 
 @include responsive(medium) {

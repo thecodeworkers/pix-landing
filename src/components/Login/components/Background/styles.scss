@@ -7,7 +7,8 @@
 ._boxLogin {
   position: absolute;
   overflow: hidden;
-  opacity: 1;
+  opacity:0;
+  transform: translateY(60px);
 }
 
 ._box1Login {

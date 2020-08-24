@@ -2,6 +2,37 @@
 
 @import '../../assets/styles/index.scss';
 
+@mixin icon($color) {
+  position: absolute;
+  right: 28%;
+  top: 20px;
+  font-size: 1.2rem;
+  color:$color;
+  cursor: pointer;
+}
+
+@mixin iconResponsive($color) {
+  position: absolute;
+  right: 2%;
+  top: 20px;
+  font-size: 1.2rem;
+  color:$color;
+  cursor: pointer;
+}
+
+@mixin background($name) {
+  position: absolute;
+  top: 4%;
+  left: 7.5%;
+  width: 85%;
+  height: 85%;
+  background-image: url('../../assets/img/dashboard-#{$name}.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
 
 ._parentSendSection {
   width: 100%;
@@ -26,11 +57,11 @@
 
 ._sendContentChild {
   width: 70%;
-  // background-color: blue;
+  word-wrap: break-word;
+  padding: 10px;
 }
 
 ._exchangeInstantly {
-
   opacity: 0;
   transform: translateY(15px);
 
@@ -79,7 +110,6 @@
   &::placeholder {
     color: $darkGray;
   }
-  
 }
 
 ._sendRightSideItems {
@@ -90,6 +120,7 @@
   margin-left: -35%;
   transform: translateX(300px);
   opacity: 0;
+  margin-bottom: 0.4rem;
 }
 
 ._switch {
@@ -170,7 +201,6 @@
 }
 
 ._currencyCardsRow {
-  // background-color: blue;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -190,22 +220,37 @@
   transition: 3s;
 }
 
-@mixin background($name) {
-  position: absolute;
-  top: 4%;
-  left: 7.5%;
-  width: 85%;
-  height: 85%;
-  background-image: url('../../assets/img/dashboard-#{$name}.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.6s;
+._responsiveArrow {
+  display: none;
 }
+
+@keyframes pulse-black {
+  0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
 
 @keyframes switch{
   from {opacity: 0}
   to {opacity: 1}
+}
+
+._newsletterArrow {
+  @include icon($gray);
+}
+
+._arrowDisabled {
+  @include icon(#dfe6e9)
 }
 
 ._darkThemeLaptop {
@@ -223,4 +268,98 @@
   font-size: 1.3rem;
   color:$gray;
   cursor: pointer;
+}
+
+._cardBtcRounded {
+  margin-bottom: 10px;
+}
+
+._enter {
+  white-space: pre-wrap;
+}
+
+
+@include responsive(extraLarge) {
+  ._macBookChangeTheme {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+  }
+
+  ._exchangeInstantly {
+    & p {
+      font-size: 2rem;
+      margin-bottom: -1rem !important;
+    }
+  }
+
+  ._currencyCardsRow {
+     justify-content: space-evenly;
+  }
+
+  ._cardBtcRounded {
+    margin-bottom: 10px;
+  }
+}
+
+._divIcon {
+  position: relative;
+}
+
+@include responsive(medium) {
+
+  ._parentSendSectionBodyRight {
+    display: none;
+  }
+  ._parentSendSectionBodyLeft {
+   width: 100%;
+  }
+
+  ._inputNewsletterSend {
+    width: 100%;
+  }
+
+  ._arrowIconSendEmail {
+    right: 2%;
+  }
+
+  ._sendContentChild {
+    white-space: pre-wrap;
+    width: 90%;
+    text-align: left;
+  }
+
+  ._responsiveArrow {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    z-index:999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.95);  
+    animation: pulse-black 2s infinite;
+    color: $white;
+  }
+
+  ._newsletterArrow {
+    @include iconResponsive($gray);
+  }
+  
+  ._arrowDisabled {
+    @include iconResponsive(#dfe6e9)
+  }
+
+  ._exchangeInstantly {
+
+    & p {
+      font-size: 1.8rem;
+      margin-bottom: -1rem !important;
+    }
+  }
+
 }

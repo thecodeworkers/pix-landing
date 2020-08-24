@@ -37,8 +37,18 @@ const gsapStart = () => {
     y:0,
     opacity: 1,  
     duration: 0.6,
-    delay: 0.6
+    delay: 0.7
   }),
+
+  gsap.to("._boxLogin",{
+    scrollTrigger: {
+      trigger: '._boxLogin',
+    },
+    opacity:1,
+    y:0, 
+   duration: 2,
+   delay: 0.6
+ }),
 
   //PRODUCT
 

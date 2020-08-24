@@ -8,10 +8,10 @@ const hola = () => {
     gsap.registerPlugin(ScrollTrigger) 
   
   
-    gsap.to("._boxLogin",{
+/*     gsap.to("._boxLogin",{
      scrollTrigger: {
        trigger: '._boxLogin',
-      /*  markers: false, */
+     
      },
      bottom:'0%',
      opacity: 1,  
@@ -19,7 +19,7 @@ const hola = () => {
      start: "center center",
      delay: 0.1 
    })
-   
+    */
    
   }
 

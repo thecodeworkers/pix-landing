@@ -1,18 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { DashCard, EthCard, UsdCard, BtcCard, MacBookTheme } from '../Svg';
 import { TimelineMax } from 'gsap/all';
-import { saveStep } from '../../store/actions';
+import { saveStep,postNewsletter } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans'
+import { Tooltip } from 'reactstrap';
 
 import './styles.scss';
 
 const OnBoardingFirst = (props) => {
 
-  const { action, reference, referenceParent } = props;
+  const { action, reference, referenceParent, newsletter, t } = props;
   const [check, setCheck] = useState(false)
   const timeLine = new TimelineMax({ paused: true });
+
+  const [email, setEmail] = useState('');
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+
+  const { loading, result } = newsletter;
+
+  const toggle = () => setTooltipOpen(!tooltipOpen);
+
+  useEffect(() => {
+    if(result == 'success') setEmail('');
+    if(result == 'error') setTooltipOpen(true);
+
+    return () => {
+      setEmail('');
+      setTooltipOpen(false);
+    }
+  }, [result]);
+
+  const emailValidation = (value) => {
+    setEmail(value);
+    const regex = new RegExp(/.+@.+\.[A-Za-z]+$/);
+    const valid = regex.test(email);
+    valid ? setIsValid(true) : setIsValid(false);
+  };
 
   useEffect(() => {
    /*  window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) */
@@ -38,33 +64,53 @@ const OnBoardingFirst = (props) => {
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
     action.saveStep({ stepOne: true })
-    // window.removeEventListener("wheel", null);
+    window.removeEventListener("wheel", null);
   }
 
   return (
     <div className='_parentSendSection'>
+
+      <div className='_responsiveArrow' onClick={() => handleWheel(reference, referenceParent)}>
+        <span className='material-icons' >arrow_forward</span>
+      </div>  
       <div className='_parentSendSectionBodyLeft'>
         <div className='_sonofson'>
           <div className='_sendContentChild'>
+          {/* <div className='_enter'> */}
             <h4 className='_sendRightTitle'>Disponible para app and desktop!</h4>
+             {/* </div> */}
 
             <div className='_exchangeInstantly'>
-              <p> Envía, recibe e</p>
-              <p> Intercambia dinero </p>
-              <p> instantáneamente </p>
+              <p>Envía, recibe e</p>
+              <p>Intercambia dinero </p>
+              <p>instantáneamente </p>
             </div>
 
-            <div className='_emailNewsletterSend'>
+            <div className='_emailNewsletterSend'> 
               <p>Ingresa tu correo y recibe nuestras noticaciones de la app</p>
-
-              <input type='text' placeholder='email' className='_inputNewsletterSend'></input>
-              <div style={{ position: 'relative' }}>
-                <span className={`material-icons _arrowIconSendEmail`}>arrow_forward</span>
-              </div>
-
-              {/* ${isValid && email.length ? '_arrow' : '_arrowEnabled'}` */}
+            
+              <div className='_divIcon'>
+              <input type='text' placeholder='email' className='_inputNewsletterSend' onChange={event => emailValidation(event.target.value)}></input>
+              {
+                loading ? (
+                  <div className="_newsletterArrow">
+                    <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+                  </div>
+                ) : result == 'success' ? (
+                  <span className="material-icons _newsletterArrow">done</span>
+                ) : result == 'error' ? (
+                  <>
+                    <span className="material-icons _newsletterArrow" id="TooltipExample">close</span>
+                    <Tooltip placement="left" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+                      {t('error_occurred')}
+                    </Tooltip>
+                  </>
+                ) : (
+                  <span onClick={() => action.postNewsletter(email)}className={`material-icons ${isValid && email.length ? '_newsletterArrow' : '_arrowDisabled'}`} id='hey'>arrow_forward</span>
+                )
+              }
             </div>
-
+            </div>
           </div>
 
         </div>
@@ -85,12 +131,14 @@ const OnBoardingFirst = (props) => {
             <div className='_macBookChangeTheme'>
               <MacBookTheme />
               <div className={check ? '_darkThemeLaptop' : '_lightThemeLaptop'}>
-
               </div>
             </div>
 
             <div className='_currencyCardsRow'>
+              <div className='_cardBtcRounded' >
               <BtcCard />
+              </div>
+             
               <EthCard />
               <DashCard />
               <UsdCard />
@@ -102,11 +150,12 @@ const OnBoardingFirst = (props) => {
   )
 }
 
-const mapStateToProps = ({ onboarding }) => ({ onboarding });
+const mapStateToProps = ({ onboarding, newsletter }) => ({ onboarding, newsletter});
 
 const mapDispatchToProps = dispatch => {
   const actions = {
-    saveStep
+    saveStep,
+    postNewsletter
   }
 
   return {

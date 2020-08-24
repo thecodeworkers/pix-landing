@@ -130,3 +130,49 @@
   transform: translateX(60px);
   opacity: 0;
 }
+
+@include responsive(large) {
+  ._orangePixFloat {
+    width: 6rem;
+  }
+
+  ._usdtFloat {
+    width: 5rem;
+  }
+
+  ._btcFloat {
+    width: 5.5rem;
+  }
+
+  ._manageMoneyText {
+    & p {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@include responsive(medium) {
+  ._LeftSideSmartMoney   {
+    display: none;
+  }
+  ._rightSideSmartMoney {
+    width: 100%;
+  }
+
+  ._rightSideSmartContent {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  ._manageMoneyText {
+    & p {
+      font-size: 1.8rem;
+      margin-bottom: -1rem !important;
+    }
+  }
+
+
+}
