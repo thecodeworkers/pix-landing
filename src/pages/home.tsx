@@ -46,7 +46,7 @@ const Home = (props) => {
       <BannerImage product='product'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
       <Product />
       <Benefits /> */}
-      {/* <Footer />  */}
+      <Footer /> 
     </div>
   )
 }

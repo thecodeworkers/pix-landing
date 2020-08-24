@@ -36,7 +36,6 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
     valid ? setIsValid(true) : setIsValid(false);
   };
 
-
   return (
     <div className='_main'>
       <div className='container'>

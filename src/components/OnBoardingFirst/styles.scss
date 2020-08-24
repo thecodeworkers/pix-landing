@@ -2,6 +2,37 @@
 
 @import '../../assets/styles/index.scss';
 
+@mixin icon($color) {
+  position: absolute;
+  right: 28%;
+  top: 20px;
+  font-size: 1.2rem;
+  color:$color;
+  cursor: pointer;
+}
+
+@mixin iconResponsive($color) {
+  position: absolute;
+  right: 2%;
+  top: 20px;
+  font-size: 1.2rem;
+  color:$color;
+  cursor: pointer;
+}
+
+@mixin background($name) {
+  position: absolute;
+  top: 4%;
+  left: 7.5%;
+  width: 85%;
+  height: 85%;
+  background-image: url('../../assets/img/dashboard-#{$name}.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
 
 ._parentSendSection {
   width: 100%;
@@ -28,9 +59,6 @@
   width: 70%;
   word-wrap: break-word;
   padding: 10px;
-  // overflow-wrap: initial;
-  // overflow-x: hidden
-  // background-color: blue;
 }
 
 ._exchangeInstantly {
@@ -82,7 +110,6 @@
   &::placeholder {
     color: $darkGray;
   }
-  
 }
 
 ._sendRightSideItems {
@@ -93,6 +120,7 @@
   margin-left: -35%;
   transform: translateX(300px);
   opacity: 0;
+  margin-bottom: 0.4rem;
 }
 
 ._switch {
@@ -173,7 +201,6 @@
 }
 
 ._currencyCardsRow {
-  // background-color: blue;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -195,7 +222,6 @@
 
 ._responsiveArrow {
   display: none;
-
 }
 
 @keyframes pulse-black {
@@ -213,22 +239,18 @@
   }
 }
 
-@mixin background($name) {
-  position: absolute;
-  top: 4%;
-  left: 7.5%;
-  width: 85%;
-  height: 85%;
-  background-image: url('../../assets/img/dashboard-#{$name}.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.6s;
-}
 
 @keyframes switch{
   from {opacity: 0}
   to {opacity: 1}
+}
+
+._newsletterArrow {
+  @include icon($gray);
+}
+
+._arrowDisabled {
+  @include icon(#dfe6e9)
 }
 
 ._darkThemeLaptop {
@@ -280,6 +302,10 @@
   }
 }
 
+._divIcon {
+  position: relative;
+}
+
 @include responsive(medium) {
 
   ._parentSendSectionBodyRight {
@@ -320,8 +346,15 @@
     color: $white;
   }
 
-  ._exchangeInstantly {
+  ._newsletterArrow {
+    @include iconResponsive($gray);
+  }
+  
+  ._arrowDisabled {
+    @include iconResponsive(#dfe6e9)
+  }
 
+  ._exchangeInstantly {
 
     & p {
       font-size: 1.8rem;
@@ -329,11 +362,4 @@
     }
   }
 
-  // ._exchangeInstantly {
-  //   & p {
-  //     text-align: center;
-  //     margin-left: 0px;
-  //   }
-  // }
- 
 }
