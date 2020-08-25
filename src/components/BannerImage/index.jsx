@@ -17,14 +17,14 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
   gsapStartOne();
 
   useEffect(() => {
-    if (product) saveReference({ productRef });
+    // if (product) saveReference({ productRef });
     if (about) saveReference({ aboutRef });
-  }, [scroll.productRef]);
+  }, [scroll.aboutRef]);
  
 
   return (
 
-    <div ref={about ? aboutRef : productRef} className={'_imageBackgroundDarkBanner'}>
+    <div ref={aboutRef} className={'_imageBackgroundDarkBanner'}>
       <div className="_imageContainer">
         <h4 className='_whiteHeader'>{childrenTitle}</h4>
 

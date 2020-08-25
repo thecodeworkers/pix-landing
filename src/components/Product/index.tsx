@@ -14,17 +14,14 @@ const Product = ({ action, t, i18n, product, login }) => {
   const productRef: any = useRef();
 
   gsapStartOne();
-  console.log(gsapStartOne,"PRODUCT");
-  
-
-/*    useEffect(() => {
+   useEffect(() => {
     if (product) saveReference({ productRef });
     saveReference({ productRef });
-   }, []); */
+   }, []); 
 
   return (
-    <div>
-      <div ref={productRef}  className='_productParent'>
+    <div ref={productRef}> 
+      <div className='_productParent'>
         <div className='_productGeneral'>
        
           

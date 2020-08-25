@@ -29,12 +29,11 @@ const Home = (props) => {
     <div>
        <SEO title='Pix' />
       <Navbar />
-     {/*  <OnBoarding />  */}
-{/* 
+      <OnBoarding />  
       <div style={{marginTop: '100vh'}}>
 
 {
-  onboarding.stepThree ? <>  */}
+  onboarding.stepThree ? <> 
   <Login childrenTitle={t('digital_wallet')} />
   <Product product='product' />
   <Instant />
@@ -43,12 +42,12 @@ const Home = (props) => {
   <Banner />
   <Store childrenTitle={t('have_power')} children={t('anyone')} />
   <Phone phone='phone' />
-  <Footer /> {/* </> : null */}
-{/* }
+  <Footer />  </> : null }
+ 
 
-</div> */}
-  {/*  <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-  {/*  <Benefits /> */}
+</div> 
+ {/*   <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
+   <Benefits /> */}  
     
     </div>
   )
