@@ -9,17 +9,16 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 
-const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
+const Login = ({childrenTitle = null, scroll, action, about, product, phone, t }) => {
 
+  console.log(scroll);
+  
  
   const { saveReference } = action;
-  const productRef = useRef();
+  const phoneRef = useRef();
 
   gsapStart();
-
-  console.log(gsapStart,'LOGIN');
   
-
 /*    useEffect(() => {
     if (product) saveReference({ productRef });
      if (about) saveReference({ aboutRef });
@@ -56,7 +55,7 @@ const Login = ({childrenTitle = null, scroll, action, about, product, t }) => {
         
         <div className="_footerScrollLogin">
             <div className="_scrollDimensionLogin">
-              <ScrollDown color="#fff" reference={scroll.productRef}/>
+              <ScrollDown color="#fff" reference={scroll.phoneRef}/>
             </div>
           </div>
 

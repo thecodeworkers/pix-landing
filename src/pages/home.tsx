@@ -42,7 +42,7 @@ const Home = (props) => {
   <AboutUs theme={!theme} />
   <Banner />
   <Store childrenTitle={t('have_power')} children={t('anyone')} />
-  <Phone />
+  <Phone phone='phone' />
   <Footer /> {/* </> : null */}
 {/* }
 

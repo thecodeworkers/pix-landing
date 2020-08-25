@@ -7,7 +7,7 @@
 }
 @mixin phoneO {
   display: block;
- 
+ margin-right: 45px;
   margin-left: auto;
   width: 60%;
   // background-color: green;
@@ -38,6 +38,7 @@
 ._productRightO {
   // background-color: orange;
   width: 50%;
+  position: relative;
 }
 
 ._phoneContainerO {
@@ -87,6 +88,48 @@
   opacity: 0;
 }
 
+._usdtFloatingIcon{
+  position: absolute;
+  width: 15%;
+  right: 55px;
+  top: 0;
+}
+
+._usdrectangle{
+  position: absolute;
+  width: 50%;
+  left: 110px;
+  top: 23.5%;
+}
+
+._ethrectangle{
+  position: absolute;
+  width: 50%;
+  right: -50px;
+  top: 50%;
+}
+
+._usdcFloatingIcon{
+  position: absolute;
+  width: 18%;
+  left: 155px;
+  top: 60%;
+}
+
+._eurFloatingIcon{
+  position: absolute;
+  width: 18%;
+  right: 0px;
+  top: 80%;
+}
+
+._dashFloatingIcon{
+  position: absolute;
+  width: 18%;
+  right: 10px;
+  top: 35%;
+}
+
 @include responsive(extraLarge) {
   ._phoneContainerO{
     width: 70%;
@@ -95,6 +138,35 @@
   ._orangePixContainer{
     left: 60%;
     width: 100%;
+  }
+
+  ._usdtFloatingIcon{
+    right: 65px;
+    top: 10px;
+  }
+
+  ._usdrectangle{
+    left: 50px;
+    top: 20.5%;
+  }
+
+  ._dashFloatingIcon{
+    right: 20px;
+    top: 30%;
+  }
+  ._ethrectangle{
+    right: -20px;
+    top: 43%;
+  }
+
+  ._usdcFloatingIcon{
+    left: 60px;
+    top: 52%;
+  }
+
+  ._eurFloatingIcon{
+    right: 0px;
+    top: 70%;
   }
   
 }

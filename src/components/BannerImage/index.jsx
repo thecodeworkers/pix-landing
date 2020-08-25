@@ -31,7 +31,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
         <div className='_separatorBanner'>
         <Separator height={10} />
         </div>
-        <p className={`_imageContainerText  ${isDark ? '_whiteTxt' : '_blackTxt'}`}>{children}</p>
+        <p className={'_imageContainerText _whiteTxt'}>{children}</p>
 
           <div  className={'_orange'}>
           <OrangePix />

@@ -1,17 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import { PixPhone, DiamondUsd, DiamondBtc, DiamondTurquese, DiamondBlack, CubePhone, PixelLogo } from '../Svg';
+import { PixPhone, DiamondUsdPhone, DiamondBtcPhone, DiamondTurquese, DiamondBlack, CubePhone, PixelLogo } from '../Svg';
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 
-const Phone = ({ scroll, action, about, product, t }) => {
-
+const Phone = ({ scroll, action, about, phone, t }) => {
 
   const { saveReference } = action;
-  const aboutRef = useRef();
-  const productRef = useRef();
+  const phoneRef = useRef();
 
   /* useEffect(() => {
     if (product) saveReference({ productRef });
@@ -21,7 +19,7 @@ const Phone = ({ scroll, action, about, product, t }) => {
 
   return (
     <div>
-      <div className='_phoneBox' >
+      <div ref={phoneRef} className='_phoneBox' >
         <div className='_tiny'>
           <div style={{ width: '60px' }}>
             <CubePhone />
@@ -49,7 +47,7 @@ const Phone = ({ scroll, action, about, product, t }) => {
         </div>
         <div className='_usdDiamond'>
           <div style={{ width: '100px' }}>
-            <DiamondUsd />
+            <DiamondUsdPhone />
           </div>
         </div>
         <div className='_turqueseDiamond'>
@@ -64,14 +62,14 @@ const Phone = ({ scroll, action, about, product, t }) => {
         </div>
         <div className='_btcDiamond'>
           <div >
-            <DiamondBtc />
+            <DiamondBtcPhone />
           </div>
         </div>
         <div className='_phoneDimension'>
           <PixPhone />
         </div>
       </div>
-      <div className={'_pixelLogoBox'}>
+      <div  className={'_pixelLogoBox'}>
       <PixelLogo color={'#57D6AF'} />
       </div>
     </div>

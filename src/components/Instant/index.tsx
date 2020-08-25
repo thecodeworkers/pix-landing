@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { PixAppTwo, OrangePix } from '../Svg';
+import { PixAppTwo, OrangePix, EthRectangle, UsdRectangle, EuroFloating, UsdcFloating, UsdtFloating, DashFloating} from '../Svg';
 import { ScrollDown, Separator } from '../../components';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -39,6 +39,24 @@ const Instant = ({ action, t, i18n }) => {
           <div className='_productRightO'>
             <div className='_phoneContainerO'>
               <PixAppTwo />
+            </div>
+            <div className='_usdtFloatingIcon'>
+              <UsdtFloating />
+            </div>
+            <div className='_usdrectangle'>
+              <UsdRectangle />
+            </div>
+            <div className='_ethrectangle'>
+              <EthRectangle />
+            </div>
+            <div className='_usdcFloatingIcon'>
+              <UsdcFloating />
+            </div>
+             <div className='_eurFloatingIcon'>
+              <EuroFloating />
+            </div>
+            <div className='_dashFloatingIcon'>
+              <DashFloating />
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ const initialState = {
   aboutRef: null,
   benefitsRef: null,
   storeRef: null,
+  phoneRef:null,
 }
 
 export default (state = initialState, { type, payload }) => {
