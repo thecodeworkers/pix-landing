@@ -9,7 +9,7 @@ import { TimelineMax } from 'gsap/all';
 
 const OnBoardingThird = (props) => {
 
-  const { onboarding, action } = props;
+  const { onboarding, action , t } = props;
 
   console.log(props)
 
@@ -45,9 +45,9 @@ const OnBoardingThird = (props) => {
             </div>
 
             <div className='_descriptionSectionParragraph'>
-              <p> Haz tu vida </p>
-              <p> más fácil</p>
-              <p> y rápida </p>
+              <p>{t('do_your_life1')}</p>
+              <p>{t('do_your_life2')}</p>
+              <p>{t('do_your_life3')}</p>
             </div>
           </div>
 
@@ -70,9 +70,9 @@ const OnBoardingThird = (props) => {
             </div>
 
             <div className='_descriptionSectionRightParragraph'>
-              <p> Con tu </p>
-              <p> intiución </p>
-              <p> basta </p>
+              <p>{t('with_you1')}</p>
+              <p>{t('with_you2')}</p>
+              <p>{t('with_you3')}</p>
             </div>
           </div>
         </div>

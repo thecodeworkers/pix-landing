@@ -17,24 +17,6 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
 
   gsapStart();
 
-  console.log(gsapStart, 'LOGIN');
-
-
-  /*    useEffect(() => {
-      if (product) saveReference({ productRef });
-       if (about) saveReference({ aboutRef });
-    }, [scroll.productRef]);
-    console.log(product , 'PRODUCT');
-  
-   */
-
-  const benefits = {
-    fast: 'fast',
-    easy: 'easy',
-    secure: 'secure',
-    intuitive: 'intuitiva'
-  }
-
   return (
 
     <div className='_imageLoginLight'>
@@ -60,8 +42,8 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
         <Separator height={10} />
       </div>
       <div className='_buttonContainerLogin'>
-        <button className='_loginBtnBlack'>{t('login').toUpperCase()}</button>
-        <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button>
+      <a className='_link' href="http://exchange.thepix.io"> <button  className='_loginBtnBlack'>{t('login').toUpperCase()}</button></a>
+      <a className='_link' href="http://exchange.thepix.io/register">  <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button></a>
 
       </div>
 

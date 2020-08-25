@@ -1,7 +1,9 @@
 {
   "app_desktop":"Aplicación y billetera de escritorio con el servicio rápido, seguro e intuitivo del mundo sobre criptomonedas",
   "today_index":"Precios Referenciales del día",
-  "crypto_transactions":"Enviar, recibir e intercambiar criptomonedas",
+  "crypto_transactions1":"Envía, recibe e",
+  "crypto_transactions2":"Intercambia dinero ",
+  "crypto_transactions3":"instantáneamente",
   "download":"Descargar",
   "network":"Red", 
 
@@ -53,5 +55,17 @@
   "digital_wallet":"Billetera digital",
   "have_power":"Ten el poder de tu dinero",
   "anyone":"Cualquier persona que no haya usado un wallet puede intercambiar, transferir, enviar y recibir con PIX.",
-  "be_part":"Forma parte de nuestra comunidad"
+  "be_part":"Forma parte de nuestra comunidad",
+  "download_pix":"Descarga PIX App",
+  "enter_email_app":"Ingresa tu correo y recibe nuestras noticaciones de la app",
+  "available_on":"Disponible para app and desktop!",
+  "manage_your_money1":"Maneja tu dinero",
+  "manage_your_money2":"inteligente en ",
+  "manage_your_money3":"cualquier lugar",
+  "do_your_life1": "Haz tu vida ",
+  "do_your_life2": "más fácil",
+  "do_your_life3": "y rápida",
+  "with_you1": "Con tu",
+  "with_you2": "institutión",
+  "with_you3": "basta"
 }

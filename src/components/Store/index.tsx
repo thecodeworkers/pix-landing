@@ -21,16 +21,22 @@ const Store = ({childrenTitle = null, children= null, t }) => {
         </div>
         <p className='_storeText'>{children}</p>
         <div className='_storeButtonContainer'>
+        <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
         <button className='_storeBtnBlue'>{t('download').toUpperCase()}</button>
+        </a>
         </div>
         <p className="_storeText" style={{  marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>
 
         <div className="_footerNetwork">
             <div className="_iosInfo">
+            <a className='_link' href="https://www.apple.com/la/ios/app-store/"> 
               <DownloadIos/>
+              </a>
             </div>
             <div className="_androidInfo">
+            <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
               <DownloadAndroid/>
+              </a>
             </div>
           </div>
            {/*  <div className="_scrollDimension">

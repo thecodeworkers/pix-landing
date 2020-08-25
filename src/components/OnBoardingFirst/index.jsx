@@ -77,17 +77,17 @@ const OnBoardingFirst = (props) => {
         <div className='_sonofson'>
           <div className='_sendContentChild'>
           {/* <div className='_enter'> */}
-            <h4 className='_sendRightTitle'>Disponible para app and desktop!</h4>
+            <h4 className='_sendRightTitle'>{t('available_on')}</h4>
              {/* </div> */}
 
             <div className='_exchangeInstantly'>
-              <p>Envía, recibe e</p>
-              <p>Intercambia dinero </p>
-              <p>instantáneamente </p>
+              <p>{t('crypto_transactions1')}</p>
+              <p>{t('crypto_transactions2')}</p>
+              <p>{t('crypto_transactions3')}</p>
             </div>
 
             <div className='_emailNewsletterSend'> 
-              <p>Ingresa tu correo y recibe nuestras noticaciones de la app</p>
+              <p>{t('enter_email_app')}</p>
             
               <div className='_divIcon'>
               <input type='text' placeholder='email' className='_inputNewsletterSend' onChange={event => emailValidation(event.target.value)}></input>

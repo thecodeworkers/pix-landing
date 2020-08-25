@@ -46,13 +46,13 @@ const Navigation = (props) => {
                 <NavLink className='text-white'>{t('benefits').toUpperCase()}</NavLink>
               </NavItem>
             </Nav>
-
+      
             <NavItem >
-              <button className='_navBarBtnBlack'>{t('register').toUpperCase()}</button>
+            <a className='_link' href="http://exchange.thepix.io/register">     <button className='_navBarBtnBlack'>{t('register').toUpperCase()}</button></a>
             </NavItem>
 
             <NavItem>
-              <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button>
+            <a className='_link' href="http://exchange.thepix.io">  <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button></a>
             </NavItem>
           </Collapse>
         </div>

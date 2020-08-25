@@ -5,6 +5,7 @@ import './styles.scss';
 export default ({ children }) => {
   const [color, setColor] = useState('#ff8008');
   const [className, setClassName] = useState('_container');
+
   
   useEffect(() => {
     let count = 0;

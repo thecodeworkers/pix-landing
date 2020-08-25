@@ -85,7 +85,8 @@
   width: 20%;
   height: 250px;
   border-color: $newBlue;
-  box-shadow: -5px 5px 15px  $newBlue;
+  box-shadow: -5px 5px 5px $newBlue;
+  border-radius: 10px;
 }
 
 ._aboutTextDescription {

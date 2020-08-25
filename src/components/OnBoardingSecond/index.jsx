@@ -8,7 +8,7 @@ import { withTrans } from '../../i18n/withTrans';
 import { TimelineMax } from 'gsap/all';
 
 const OnBoardingSecond = (props) => {
-  const { onboarding, reference, referenceParent, action} = props;
+  const { onboarding, reference, referenceParent, action, t} = props;
 
   const [flag, setFlag ] = useState(true);
   const timeLine = new TimelineMax({ paused: true });
@@ -85,22 +85,26 @@ const OnBoardingSecond = (props) => {
       <div className='_rightSideSmartMoney'>
 
         <div className='_rightSideSmartContent'>
-          <h4 className='_availableDesktopTitle'>Disponible para app and desktop</h4>
+          <h4 className='_availableDesktopTitle'>{t('available_on')}</h4>
 
           <div className='_manageMoneyText'>
-            <p>Maneja tu dinero </p>
-            <p>inteligente en</p>
-            <p>cualquier lugar</p>
+            <p>{t('manage_your_money1')}</p>
+            <p>{t('manage_your_money2')}</p>
+            <p>{t('manage_your_money3')}</p>
           </div>
 
           <div className='_downloadStores'>
 
             <div className='_appIosDown'>
+            <a className='_link' href="https://www.apple.com/la/ios/app-store/">  
               <DownloadIos />
+              </a>
             </div>
 
             <div className='_appAndroidDown'>
+            <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
               <DownloadAndroid />
+              </a>
             </div>
 
           </div>
