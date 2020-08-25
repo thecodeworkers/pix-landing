@@ -41,7 +41,7 @@ const OnBoardingFirst = (props) => {
   };
 
   useEffect(() => {
-   /*  window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) */
+    window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
 
     timeLine
       .play()

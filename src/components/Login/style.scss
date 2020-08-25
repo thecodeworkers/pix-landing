@@ -36,7 +36,7 @@ position: relative;
   margin-top: 10%;
   text-align: right;
   z-index: 1;
-  transform: translateY(50px);
+  // transform: translateY(50px);
 }
 
 ._logoSmall{
@@ -44,7 +44,7 @@ position: relative;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
-  transform: translateY(50px);
+  // transform: translateY(50px);
 }
 
 @mixin btnLogin($background, $padding, $flag, $borderColor, $color) {
@@ -257,7 +257,7 @@ z-index: 1;
   ._itemUno {
     animation: cycle 8s linear infinite;
     color: $textOrange;
-    transform: translateY(50px);
+    // transform: translateY(50px);
   }
 
   ._itemDos {

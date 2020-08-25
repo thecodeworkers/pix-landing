@@ -7,7 +7,6 @@ import { gsap, ScrollTrigger, TimelineMax } from 'gsap/all'
 const gsapStart = () => {
   gsap.registerPlugin(ScrollTrigger)
 
-
   gsap.to("._separatorLogin", {
     scrollTrigger: {
       trigger: '._separatorLogin',
@@ -49,14 +48,14 @@ const gsapStart = () => {
       delay: 0.8
     }),
 
-    gsap.to(['._blackHeader', '._logoSmall', '._itemUno'], {
-      scrollTrigger: {
-        trigger: '._blackHeader',
-      },
-      y: 0,
-      duration: 0.6,
-      delay: 0.5
-    }),
+    // gsap.to(['._blackHeader', '._logoSmall', '._itemUno'], {
+    //   scrollTrigger: {
+    //     trigger: '._blackHeader',
+    //   },
+    //   y: 0,
+    //   duration: 0.6,
+    //   delay: 0.5
+    // }),
 
     //PRODUCT
 

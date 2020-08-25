@@ -11,19 +11,16 @@ import gsapStartOne from './gsap'
 const Product = ({ action, t, i18n, product, login }) => {
 
    const { saveReference } = action;
-  // const productRef: any = useRef();
+  const productRef: any = useRef();
 
   gsapStartOne();
-  console.log(gsapStartOne,"PRODUCT");
-  
-
-  //  useEffect(() => {
-  //   if (product) saveReference({ productRef });
-  //   saveReference({ productRef });
-  //  }, []); 
+   useEffect(() => {
+    if (product) saveReference({ productRef });
+    saveReference({ productRef });
+   }, []); 
 
   return (
-    <div>
+    <div ref={productRef}> 
       <div className='_productParent'>
         <div className='_productGeneral'>
           <div className='_productLeft'>

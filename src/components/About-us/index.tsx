@@ -9,18 +9,18 @@ import { withTrans } from '../../i18n/withTrans'
 
 const AboutUs = ({ reference, theme, action, scroll, t, i18n }) => {
 
-  // const { saveReference } = action;
+  const { saveReference } = action;
   /* const { aboutRef } = scroll; */
+  // const aboutRef: any = useRef();
   const aboutRef: any = useRef();
-  // // const aboutRef: any = useRef();
 
-  // useEffect(() => {
-  //   // saveReference({ aboutRef });
-  // }, []);
+  useEffect(() => {
+    saveReference({ aboutRef });  
+  }, []);
 
   return (
 
-    <div className={theme ? '_aboutUsParent' : '_anotherclass'}>
+    <div className={theme ? '_aboutUsParent' : '_anotherclass'} ref={aboutRef}>
       <div className={theme ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
 
