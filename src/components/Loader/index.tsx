@@ -8,11 +8,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 const Loader = (props) => {
-  const [color, setColor] = useState('#ff8008');
+
   const [className, setClassName] = useState('_containerLoader');
   const [lottieName, setLottieName] = useState('_lottieContainer');
 
-  const { children, action, loaderResult } = props;
+  const { children, action  } = props;
 
   const animationContainer:any = createRef()
   
@@ -50,7 +50,6 @@ const Loader = (props) => {
     setLottieName('_hiddenLoader');
     setClassName('_hide');
     action.saveLoader({loader: true});
-    // anim.destroy();
   }
 
   return (
