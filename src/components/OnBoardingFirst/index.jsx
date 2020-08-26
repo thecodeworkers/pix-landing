@@ -53,7 +53,6 @@ const OnBoardingFirst = (props) => {
   useEffect(() => {
 
     if(loaderResult.loader) {
-      
       timeLine
       .play()
       .to('._parentSendSectionBodyLeft', 0.6, { x: 0, opacity: 1 }, 0.3)

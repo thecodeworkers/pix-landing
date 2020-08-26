@@ -4,16 +4,16 @@ const BtcExchangeEth = () => (
   <svg width="100%" height="100%" viewBox="0 0 249 59.434">
   <defs>
     <linearGradient id="btceth-gradient" x1="1.052" y1="0.5" x2="-0.083" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#304352"/>
-      <stop offset="1" stop-color="#f7931a"/>
+      <stop offset="0" stopColor="#304352"/>
+      <stop offset="1" stopColor="#f7931a"/>
     </linearGradient>
     <linearGradient id="btceth-gradient-2" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#f7931a"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#f7931a"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <linearGradient id="btceth-gradient-3" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#9d84d5"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#9d84d5"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
   </defs>
   <g id="Grupo_490" data-name="Grupo 490" transform="translate(-293.782 -511)">

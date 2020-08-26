@@ -38,11 +38,12 @@
 
 ._item {
   padding: 0 1rem;
-  transition: all 0.6s;
   font-family: $muli;
   font-size: 0.8rem;
   list-style: none;
   cursor: pointer;
+  opacity: 0;
+  transform: translateX(-60px);
 
   & a {
     border-bottom: 2px solid $black;
@@ -59,6 +60,9 @@
 
 ._logo {
   width: 5em;
+  opacity: 0;
+  transform: translateX(-60px);
+
 }
 
 ._navBarBtnBlack { 

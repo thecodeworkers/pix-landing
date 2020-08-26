@@ -4,13 +4,13 @@ const ArrowDown = ({color}) => (
   <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 104.048 106.135">
   <defs>
     <linearGradient id="linear-arrow-down" x1="0.042" y1="0.969" x2="0.814" y2="0.183" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#28c293"/>
-      <stop offset="1" stop-color="#2c93c8"/>
+      <stop offset="0" stopColor="#28c293"/>
+      <stop offset="1" stopColor="#2c93c8"/>
     </linearGradient>
     <filter id="Trazado_530" x="0" y="0" width="104.048" height="106.135" filterUnits="userSpaceOnUse">
       <feOffset dx="3" dy="6" />
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#28c293" flood-opacity="0.239"/>
+      <feFlood floodColor="#28c293" floodOpacity="0.239"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>

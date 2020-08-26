@@ -5,19 +5,19 @@ const DashFloatingCard = () => (
 <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 144 142">
   <defs>
     <linearGradient id="dash-flaoting" x1="0.923" y1="0.11" x2="-0.223" y2="1.034" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#0083b0"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#0083b0"/>
     </linearGradient>
     <filter id="Rectángulo_1515" x="0" y="0" width="144" height="142" filterUnits="userSpaceOnUse">
       <feOffset dy="20" />
       <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feFlood flood-color="#0083b0" flood-opacity="0.161"/>
+      <feFlood floodColor="#0083b0" floodOpacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.739" gradientTransform="matrix(0.987, 0.032, -0.032, 0.997, 0.022, -0.015)" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="1" stopColor="#fff"/>
     </radialGradient>
   </defs>
   <g id="Grupo_529" data-name="Grupo 529" transform="translate(29.926 10.439)">

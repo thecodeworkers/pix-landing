@@ -4,8 +4,8 @@ const UsdCard = () => (
   <svg width="118" height="34" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="usd-gradient" x1="0.015" y1="0.5" x2="0.9" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#3da740"/>
-      <stop offset="1" stop-color="#c4cb52"/>
+      <stop offset="0" stopColor="#3da740"/>
+      <stop offset="1" stopColor="#c4cb52"/>
     </linearGradient>
   </defs>
   <g id="Grupo_782" data-name="Grupo 782" transform="translate(-1615 -850)">

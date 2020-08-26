@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { SEO } from '../';
 import './style.scss';
 import { PixLogo } from '../../components/Svg';
@@ -15,13 +15,25 @@ import {
 } from 'reactstrap';
 import { withTrans } from '../../i18n/withTrans';
 import { scrolling } from '../../utils/common';
+import { TimelineMax, gsap } from 'gsap/all';
 
 const Navigation = (props) => {
 
-  const {t,i18n, scroll} = props
+  const {t,i18n, scroll, loaderResult} = props
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   
+  const timeLine = new TimelineMax({ paused: true });
+
+  useEffect(() => {
+    if(loaderResult.loader) {
+      timeLine.play()
+      .to('._logo', 0.6, { x: 0, opacity: 1 }, 0.3)
+      .to('._item', 0.6, { x: 0, opacity: 1 }, 0.3)
+
+    }
+  }, [loaderResult.loader]);
+
 
   return (
     <div>
@@ -61,7 +73,7 @@ const Navigation = (props) => {
   )
 }
 
-const mapStateToProps = ({ scroll }) => ({ scroll });
+const mapStateToProps = ({ scroll, loaderResult }) => ({ scroll, loaderResult });
 
 
 export default connect(mapStateToProps)(withTrans(Navigation));

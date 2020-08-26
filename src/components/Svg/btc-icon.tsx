@@ -4,19 +4,19 @@ const BtcIcon = () => (
   <svg width="100%" height="100%" viewBox="0 0 213.417 213.417">
     <defs>
       <linearGradient id="btc-icon-gradient" x1="0.138" y1="0.177" x2="1.107" y2="1.183" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#fbfbfb" />
-        <stop offset="1" stop-color="#ff8008" />
+        <stop offset="0" stopColor="#fbfbfb" />
+        <stop offset="1" stopColor="#ff8008" />
       </linearGradient>
       <filter id="Rectángulo_1577" x="0" y="0" width="213.417" height="213.417" filterUnits="userSpaceOnUse">
         <feOffset dy="20" />
         <feGaussianBlur stdDeviation="15" result="blur" />
-        <feFlood flood-color="#ff8008" flood-opacity="0.188" />
+        <feFlood floodColor="#ff8008" floodOpacity="0.188" />
         <feComposite operator="in" in2="blur" />
         <feComposite in="SourceGraphic" />
       </filter>
       <linearGradient id="btc-icon-gradient-2" x1="0.925" y1="0.965" x2="0.087" y2="0.113" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#ebb831" />
-        <stop offset="1" stop-color="#f17807" />
+        <stop offset="0" stopColor="#ebb831" />
+        <stop offset="1" stopColor="#f17807" />
       </linearGradient>
     </defs>
     <g id="Grupo_774" data-name="Grupo 774" transform="translate(-43.046 -359.578)">

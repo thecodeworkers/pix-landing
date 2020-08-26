@@ -4,8 +4,8 @@ const DashCard = () => (
   <svg width="120" height="34" viewBox="0 0 120 34">
   <defs>
     <linearGradient id="dash-gradient" x1="0.104" y1="0.434" x2="1.046" y2="0.406" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#008de4"/>
-      <stop offset="1" stop-color="#03629b"/>
+      <stop offset="0" stopColor="#008de4"/>
+      <stop offset="1" stopColor="#03629b"/>
     </linearGradient>
   </defs>
   <g id="Grupo_781" data-name="Grupo 781" transform="translate(-1463 -850)">

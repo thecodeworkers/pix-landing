@@ -4,8 +4,8 @@ const BtcCard = () => (
   <svg width="118" height="34" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="btc-gradient" y1="0.421" x2="1.062" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ebb831"/>
-      <stop offset="1" stop-color="#f17807"/>
+      <stop offset="0" stopColor="#ebb831"/>
+      <stop offset="1" stopColor="#f17807"/>
     </linearGradient>
   </defs>
   <g id="Grupo_779" data-name="Grupo 779" transform="translate(-1159 -850)">

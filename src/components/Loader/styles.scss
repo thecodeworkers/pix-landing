@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $blackRussian;
+  background-color: $loaderBackground;
   z-index: 1500;
   position: fixed;
 }
@@ -22,13 +22,7 @@
 
 ._hide {
   @include background-loader;
-  animation: disabledLoader 2.1s forwards;
-}
-
-._pixelHey {
-  width: 90px;
-  transform: scale(1);
-  animation: pulse 2.1s infinite;
+  animation: disabledLoader 1.5s forwards;
 }
 
 ._noneElement {

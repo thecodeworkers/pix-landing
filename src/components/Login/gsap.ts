@@ -48,6 +48,17 @@ const gsapStart = () => {
       delay: 0.8
     }),
 
+    gsap.to(["._itemUno", "._itemDos", "._itemTres", "._itemCuatro" ], {
+      scrollTrigger: {
+        trigger: '._itemUno',
+      },
+      // background: 'red',
+      // duration: 1,
+      delay: 1
+    }),
+
+    
+
     // gsap.to(['._blackHeader', '._logoSmall', '._itemUno'], {
     //   scrollTrigger: {
     //     trigger: '._blackHeader',

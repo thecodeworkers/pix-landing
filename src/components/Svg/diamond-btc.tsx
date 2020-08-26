@@ -4,19 +4,19 @@ const DiamonBtc = () => (
   <svg xmlns="http://www.w3.org/2000/svg" id="diamondBtc" width="100%" height="100%" viewBox="0 0 180.283 180.283">
   <defs>
     <linearGradient id="linear-gradientBtc" x1="0.138" y1="0.177" x2="1.107" y2="1.183" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#ff8008"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#ff8008"/>
     </linearGradient>
     <filter id="RectánguloBTC_1577" x="0" y="0" width="180.283" height="180.283" filterUnits="userSpaceOnUse">
       <feOffset dy="20"/>
       <feGaussianBlur stdDeviation="15" result="blur"/>
-      <feFlood flood-color="#ff8008" flood-opacity="0.188"/>
+      <feFlood floodColor="#ff8008" floodOpacity="0.188"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="linear-gradientBtc-2" x1="0.925" y1="0.965" x2="0.087" y2="0.113" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ebb831"/>
-      <stop offset="1" stop-color="#f17807"/>
+      <stop offset="0" stopColor="#ebb831"/>
+      <stop offset="1" stopColor="#f17807"/>
     </linearGradient>
   </defs>
   <g id="Grupo_480" data-name="Grupo 480" transform="translate(-1526.613 -4915.113)">

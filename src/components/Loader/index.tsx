@@ -46,7 +46,6 @@ const Loader = (props) => {
   }, []);
 
   const showContent = () => {
-    console.log('enter complete')
     setLottieName('_hiddenLoader');
     setClassName('_hide');
     action.saveLoader({loader: true});

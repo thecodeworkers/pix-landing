@@ -4,23 +4,23 @@ const EthRectangle = () => (
 <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 393 120">
   <defs>
     <linearGradient id="eth-rectangle" x1="0.043" y1="0.5" x2="0.954" y2="0.473" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#dedede"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="1" stopColor="#dedede"/>
     </linearGradient>
     <filter id="Rectángulo_1635" x="0" y="0" width="393" height="120" filterUnits="userSpaceOnUse">
       <feOffset dy="3"/>
       <feGaussianBlur stdDeviation="7.5" result="blur"/>
-      <feFlood flood-color="#aeaee6" flood-opacity="0.361"/>
+      <feFlood floodColor="#aeaee6" floodOpacity="0.361"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="eth-rectangle-2" x1="0.956" y1="0.034" x2="-0.223" y2="1.034" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#ac97d5"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#ac97d5"/>
     </linearGradient>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.768" gradientTransform="matrix(0.969, 0.031, -0.029, 0.961, 0.03, 0.004)" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="1" stopColor="#fff"/>
     </radialGradient>
   </defs>
   <g id="Grupo_777" data-name="Grupo 777" transform="translate(22.456 19.382)">
@@ -33,7 +33,7 @@ const EthRectangle = () => (
       <rect id="Rectángulo_181" data-name="Rectángulo 181" width="68" height="66" rx="7" transform="translate(-0.466 0.05)" fill="url(#eth-rectangle-2)"/>
       <rect id="Rectángulo_183" data-name="Rectángulo 183" width="65" height="63" rx="6" transform="translate(2.534 0.05)" fill="url(#radial-gradient)"/>
     </g>
-    <text id="Enviar_BTC" data-name="Enviar BTC" transform="translate(177.269 30.16)" fill="#4b677d" font-size="14" font-family="Muli-SemiBold, Muli" font-weight="600"><tspan x="23.506" y="14">Enviar ETH</tspan></text>
+    <text id="Enviar_BTC" data-name="Enviar BTC" transform="translate(177.269 30.16)" fill="#4b677d" fontSize="14" fontFamily="Muli-SemiBold, Muli" fontWeight="600"><tspan x="23.506" y="14">Enviar ETH</tspan></text>
     <path id="Trazado_540" data-name="Trazado 540" d="M11.241,0,9.2,2.044l7.737,7.737H0V12.7H16.935L9.2,20.438l2.044,2.044L22.482,11.241l-1.96-1.96Z" transform="translate(294.619 27.018)" fill="#304352"/>
     <g id="Grupo_527" data-name="Grupo 527" transform="translate(29.711 20.992)">
       <path id="Trazado_106" data-name="Trazado 106" d="M333.323,315.8l-9.415-5.554,9.415,13.224h0l9.415-13.224Z" transform="translate(-323.908 -292.838)" fill="#444457"/>

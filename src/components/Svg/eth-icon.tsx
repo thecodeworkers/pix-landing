@@ -4,19 +4,19 @@ const EthIcon = () => (
   <svg width="100%" height="100%" viewBox="0 0 146.494 146.494">
   <defs>
     <linearGradient id="ethicon-gradient" x1="0.138" y1="0.177" x2="1.107" y2="1.183" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#aeaee6"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#aeaee6"/>
     </linearGradient>
     <filter id="Rectángulo_1577" x="0" y="0" width="146.494" height="146.494" filterUnits="userSpaceOnUse">
       <feOffset dy="20"/>
       <feGaussianBlur stdDeviation="15" result="blur"/>
-      <feFlood flood-color="#aeaee6" flood-opacity="0.188"/>
+      <feFlood floodColor="#aeaee6" floodOpacity="0.188"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="ethicon-gradient-2" x1="0.925" y1="0.965" x2="0.087" y2="0.113" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#24333e"/>
-      <stop offset="1" stop-color="#64648d"/>
+      <stop offset="0" stopColor="#24333e"/>
+      <stop offset="1" stopColor="#64648d"/>
     </linearGradient>
   </defs>
   <g id="Grupo_556" data-name="Grupo 556" transform="translate(45 25)">
