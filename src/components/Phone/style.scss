@@ -75,6 +75,39 @@
   opacity: 0;
 }
 
+._tinyDimensions{
+  width: 60px;
+}
+
+._littleDimensions{
+  width: 90px;
+}
+
+._mediumDimensions{
+  width: 120px;
+}
+
+._bigDimensions{
+  width: 180px;
+}
+
+._turquesetinyDiamondDimensions{
+  width: 40px;
+}
+
+._usdDiamondDimensions{
+  width: 100px;
+}
+
+._turqueseDiamond{
+  width: 60px;
+}
+
+._blackDiamondDimensions{
+  width: 80px;
+}
+
+
 ._little{
   @include floating (5px, 1s);
   position: absolute;
@@ -114,12 +147,62 @@
 }
 
 
-@include responsive(extralarge) {
+@include responsive(medium) {
 
-  
+  ._phoneDimension{
+    width: 400px;
+  }
+  ._btcDiamond{
+    width: 150px;
+  }
+  ._turqueseDiamond{
+    width: 40px;
+    margin-bottom: 270px !important;
+    right: 170px;
+  }
+  ._turquesetinyDiamondDimensions{
+    width: 30px;
+  }
+  ._turquesetinyDiamond{
+    right: 310px;
+    margin-bottom: 180px !important;
+  }
+  ._tiny{
+    right: 150px;
+    margin-bottom: 150px !important;
+  }
+  ._tinyDimensions{
+    width: 40px;
+  }
+  ._littleDimensions{
+    width: 60px;
+  }
+  ._little{
+    right: 190px;
+    margin-bottom: 180px !important;
+  }
+  ._mediumDimensions{
+    width: 90px;
+  }
+  ._medium{
+    right: 230px;
+    margin-bottom:  70px !important;
+  }
+  ._bigDimensions{
+    width: 150px;
+  }
+  ._big{
+    right:350px;
+    margin-bottom: 60px !important;
+  }
+  .__usdDiamondDimensions{
+    width: 80px;
+  }
+
+  ._usdDiamond{
+    right: 240px;
+    margin-bottom: 220px !important;
+  }
+
 }
 
-@include responsive(large) {
-
-  
-}

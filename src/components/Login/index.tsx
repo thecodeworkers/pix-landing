@@ -3,7 +3,7 @@ import { PixLogo } from '../Svg';
 import { CardCurrency, ScrollDown, Lang, Separator } from '../../components';
 import { BackgroundLogin } from './components'
 import './style.scss';
-import gsapStart from './gsap'
+import gsapStart from '../../assets/animations/gsap'
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -55,7 +55,6 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
       <div className='_buttonContainerLogin'>
       <a className='_link' href="http://exchange.thepix.io"> <button  className='_loginBtnBlack'>{t('login').toUpperCase()}</button></a>
       <a className='_link' href="http://exchange.thepix.io/register">  <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button></a>
-
       </div>
 
       <div className="_footerScrollLogin">

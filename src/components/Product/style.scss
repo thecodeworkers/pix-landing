@@ -231,14 +231,38 @@
  
 }
 
-/* @include responsive(medium) {
+ @include responsive(medium) {
 
-  
-  ._cubeContainer{
-    left: 15%;
+  ._productLeft{
+    width: 100%;
+  }
+  ._productRight{
+    width: 100%;
   }
 
+  ._cubeContainer{
+    display: none;
+  }
+  ._paragraphProduct{
+    text-align: center;
+  }
+  ._wallPix{
+    text-align: center;
+  }
+  ._productBtnBlue{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-} */
+  ._phoneContainer{
+    width: 50%;
+    margin-right: auto;
+  }
+
+  ._productParent{
+    padding-top: 0;
+  }
+
+} 
 
 

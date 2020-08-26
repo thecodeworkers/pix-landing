@@ -187,3 +187,35 @@
  
 }
 
+
+@include responsive(medium) {
+
+  ._productLeftO{
+    width: 100%;
+  }
+  ._productRightO{
+    width: 100%;
+  }
+
+  ._orangePixContainer{
+    display: none;
+  }
+  ._paragraphProductO{
+    text-align: center;
+  }
+  ._paragraphInstant{
+    text-align: center;
+    margin: 10px 20px 10px;
+  }
+
+  ._phoneContainerO{
+    width: 50%;
+    margin-right: auto;
+  }
+
+  ._productParentO{
+    padding-top: 0;
+  }
+
+} 
+
