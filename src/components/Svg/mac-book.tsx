@@ -2,7 +2,7 @@ import React from 'react';
 
 const MacBook = () => (
  
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="100%" height="100%" viewBox="0 0 5058 3078" enable-background="new 0 0 5058 3078" >  <image id="image0" width="100%" height="100%" x="0" y="0"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="100%" height="100%" viewBox="0 0 5058 3078" enableBackground="new 0 0 5058 3078" >  <image id="image0" width="100%" height="100%" x="0" y="0"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAE8IAAAwGCAYAAABhLIktAAABHGlDQ1BpY2MAACiRY2BgMnB0cXJl
 EmBgyM0rKQpyd1KIiIxSYD/PwMbAzAAGicnFBY4BAT4gdl5+XioDBvh2jYERRF/WBZmFKY8XcCUX
 FJUA6T9AbJSSWpzMwMBoAGRnl5cUAMUZ5wDZIknZYPYGELsoJMgZyD4CZPOlQ9hXQOwkCPsJiF0E

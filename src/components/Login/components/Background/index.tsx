@@ -9,8 +9,6 @@ import hola from './gsap'
 
 export const BackgroundLogin = ({ theme }) => {
   const { darkTheme } = theme;
-  console.log(darkTheme,"TEMAAAAAAAAAAAAAAAA");
-  
   hola();
   
   return (      

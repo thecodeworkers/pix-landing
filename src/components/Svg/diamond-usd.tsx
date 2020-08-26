@@ -4,19 +4,19 @@ const DiamonUsd = () => (
 <svg xmlns="http://www.w3.org/2000/svg" id="diamondUsd"  width="100%" height="100%" viewBox="0 0 179.466 179.466">
   <defs>
     <linearGradient id="linear-gradientUsd" x1="0.34" y1="0.544" x2="0.957" y2="1.011" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#24c93f"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#24c93f"/>
     </linearGradient>
     <filter id="Rectángulo_1577" x="0" y="0" width="179.466" height="179.466" filterUnits="userSpaceOnUse">
       <feOffset dy="20" />
       <feGaussianBlur stdDeviation="15" result="blur"/>
-      <feFlood flood-color="#026d07" flood-opacity="0.11"/>
+      <feFlood floodColor="#026d07" floodOpacity="0.11"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="linear-gradientUsd-2" x1="0.083" y1="-0.02" x2="0.971" y2="0.977" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#3da740"/>
-      <stop offset="1" stop-color="#c4cb52"/>
+      <stop offset="0" stopColor="#3da740"/>
+      <stop offset="1" stopColor="#c4cb52"/>
     </linearGradient>
   </defs>
   <g id="Grupo_481" data-name="Grupo 481" transform="translate(2507.387 -1778.114)">

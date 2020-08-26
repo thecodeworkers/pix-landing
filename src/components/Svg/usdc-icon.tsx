@@ -4,19 +4,19 @@ const UsdcIcon = () => (
   <svg  width="100%" height="100%" viewBox="0 0 173.833 173.833">
   <defs>
     <linearGradient id="uscdicon-gradient" x1="0.34" y1="0.544" x2="0.957" y2="1.011" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fbfbfb"/>
-      <stop offset="1" stop-color="#00b4db"/>
+      <stop offset="0" stopColor="#fbfbfb"/>
+      <stop offset="1" stopColor="#00b4db"/>
     </linearGradient>
     <filter id="Rectángulo_1577" x="0" y="0" width="173.833" height="173.833" filterUnits="userSpaceOnUse">
       <feOffset dy="20" />
       <feGaussianBlur stdDeviation="15" result="blur"/>
-      <feFlood flood-color="#026d07" flood-opacity="0.11"/>
+      <feFlood floodColor="#026d07" floodOpacity="0.11"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="uscdicon-gradient-2" x1="0.083" y1="-0.02" x2="0.971" y2="0.977" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#037ba4"/>
-      <stop offset="1" stop-color="#00a0c2"/>
+      <stop offset="0" stopColor="#037ba4"/>
+      <stop offset="1" stopColor="#00a0c2"/>
     </linearGradient>
   </defs>
   <g id="Grupo_776" data-name="Grupo 776" transform="translate(-407.257 -108.927)">

@@ -4,16 +4,16 @@ const PhoneDark = () => (
   <svg width="100%" height="100%" viewBox="0 0 251.943 61.405">
   <defs>
     <linearGradient id="btcusd-gradient" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#24c93f"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#24c93f"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <linearGradient id="btcusd-gradient-2" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#f7931a"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#f7931a"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <linearGradient id="btcusd-gradient-3" x1="1.052" y1="0.5" x2="-0.083" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ff8008"/>
-      <stop offset="1" stop-color="#3da740"/>
+      <stop offset="0" stopColor="#ff8008"/>
+      <stop offset="1" stopColor="#3da740"/>
     </linearGradient>
   </defs>
   <g id="Grupo_772" data-name="Grupo 772" transform="translate(-1386.109 -537.813)">

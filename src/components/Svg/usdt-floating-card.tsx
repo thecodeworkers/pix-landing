@@ -5,13 +5,13 @@ const UsdtFloatingCard = () => (
 <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 129.979 129.98">
   <defs>
     <linearGradient id="usdt-floating" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#57d6af"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#57d6af"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <filter id="Trazado_530" x="0" y="0" width="129.979" height="129.98" filterUnits="userSpaceOnUse">
       <feOffset dx="3" dy="6" />
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#28c293" flood-opacity="0.141"/>
+      <feFlood floodColor="#28c293" floodOpacity="0.141"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>

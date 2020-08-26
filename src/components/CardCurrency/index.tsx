@@ -20,7 +20,6 @@ const Cards = (props) => {
 	}
 
 	const showCurrency = (currency) => {
-		console.log(currency);
 		setCurrencyPrice(currency.balance)
 		setTextClass(currency.textClass)
 	}

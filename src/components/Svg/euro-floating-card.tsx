@@ -5,13 +5,13 @@ const EuroFloatingCard = () => (
 <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 153.108 153.109">
   <defs>
     <linearGradient id="euro-floating" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ffc837"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#ffc837"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <filter id="Trazado_535" x="0" y="0" width="153.108" height="153.109" filterUnits="userSpaceOnUse">
       <feOffset dx="3" dy="6"/>
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#ce9c1a" flood-opacity="0.129"/>
+      <feFlood floodColor="#ce9c1a" floodOpacity="0.129"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>

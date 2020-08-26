@@ -4,24 +4,24 @@ const BtcRectangle = () => (
   <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 488 145">
   <defs>
     <linearGradient id="btc-rectangle" y1="0.315" x2="1" y2="0.378" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#f7931a"/>
-      <stop offset="1" stop-color="#f4cd4d"/>
+      <stop offset="0" stopColor="#f7931a"/>
+      <stop offset="1" stopColor="#f4cd4d"/>
     </linearGradient>
     <filter id="Rectángulo_1628" x="0" y="0" width="488" height="146" filterUnits="userSpaceOnUse">
       <feOffset dy="4" />
       <feGaussianBlur stdDeviation="7.5" result="blur"/>
-      <feFlood flood-color="#62698d" flood-opacity="0.522"/>
+      <feFlood floodColor="#62698d" floodOpacity="0.522"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="btc-rectangle-2" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ffc837"/>
-      <stop offset="1" stop-color="#ff8008"/>
+      <stop offset="0" stopColor="#ffc837"/>
+      <stop offset="1" stopColor="#ff8008"/>
     </linearGradient>
     <filter id="Rectángulo_85" x="0" y="0" width="488" height="145" filterUnits="userSpaceOnUse">
       <feOffset dy="4" />
       <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
-      <feFlood flood-color="#f7931a" flood-opacity="0.439"/>
+      <feFlood floodColor="#f7931a" floodOpacity="0.439"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -31,9 +31,9 @@ const BtcRectangle = () => (
       </g>
     </clipPath>
     <linearGradient id="btc-rectangle-3" x1="0.005" y1="0.5" x2="0.672" y2="0.318" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#f4cd4d"/>
-      <stop offset="0.373" stop-color="#e5891a"/>
-      <stop offset="1" stop-color="#f7931a" stop-opacity="0.129"/>
+      <stop offset="0" stopColor="#f4cd4d"/>
+      <stop offset="0.373" stopColor="#e5891a"/>
+      <stop offset="1" stopColor="#f7931a" stop-opacity="0.129"/>
     </linearGradient>
   </defs>
   <g id="Grupo_528" data-name="Grupo 528" transform="translate(-13.761 -406.5)">
@@ -60,7 +60,7 @@ const BtcRectangle = () => (
       <g id="Down_arrow" data-name="Down arrow" transform="translate(112.195 12.425) rotate(180)">
         <path id="Trazado_10" data-name="Trazado 10" d="M4.5,0,3.682.818l3.1,3.1H0V5.084H6.779l-3.1,3.1L4.5,9,9,4.5l-.785-.785Z" transform="translate(9) rotate(90)" fill="#fff"/>
       </g>
-      <text id="_3_245.04" data-name="+$ 3,245.04" transform="translate(0.087 0.29)" fill="#fff" font-size="12" font-family="Muli-ExtraBold, Muli" font-weight="800"><tspan x="29.728" y="12">+$ 3,245.</tspan><tspan y="12" font-family="Muli-Light, Muli" font-weight="300">04</tspan></text>
+      <text id="_3_245.04" data-name="+$ 3,245.04" transform="translate(0.087 0.29)" fill="#fff" fontSize="12" fontFamily="Muli-ExtraBold, Muli" fontWeight="800"><tspan x="29.728" y="12">+$ 3,245.</tspan><tspan y="12" fontFamily="Muli-Light, Muli" fontWeight="300">04</tspan></text>
     </g>
   </g>
 </svg>

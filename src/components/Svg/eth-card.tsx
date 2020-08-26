@@ -4,8 +4,8 @@ const EthCard = () => (
   <svg width="118" height="34" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="eth-gradient" x1="1.084" y1="0.5" x2="0" y2="0.633" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#304352"/>
-      <stop offset="1" stop-color="#8787b9"/>
+      <stop offset="0" stopColor="#304352"/>
+      <stop offset="1" stopColor="#8787b9"/>
     </linearGradient>
   </defs>
   <g id="Grupo_780" data-name="Grupo 780" transform="translate(-1311 -850)">

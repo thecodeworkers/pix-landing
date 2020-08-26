@@ -8,12 +8,7 @@ import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
 const Instant = ({ action, t, i18n }) => {
 
-  // const { saveReference } = action;
   const aboutRef: any = useRef();
-
-  // useEffect(() => {
-  //   saveReference({ instantRef });
-  // }, []);
 
   return (
     <div>

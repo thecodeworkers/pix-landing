@@ -5,13 +5,13 @@ const UsdcFloating = () => (
 <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 146.891 145.432">
   <defs>
     <linearGradient id="usdc-flaoting" x1="0.042" y1="0.969" x2="0.536" y2="0.461" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#33a3dc"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="0" stopColor="#33a3dc"/>
+      <stop offset="1" stopColor="#fff"/>
     </linearGradient>
     <filter id="Trazado_532" x="0" y="0" width="146.891" height="145.432" filterUnits="userSpaceOnUse">
       <feOffset dx="3" dy="6"/>
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#304352" flood-opacity="0.22"/>
+      <feFlood floodColor="#304352" floodOpacity="0.22"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>

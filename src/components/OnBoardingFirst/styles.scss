@@ -250,7 +250,8 @@
 }
 
 ._arrowDisabled {
-  @include icon(#dfe6e9)
+  @include icon(#dfe6e9);
+  pointer-events: none;
 }
 
 ._darkThemeLaptop {

@@ -9,7 +9,7 @@ const PixAppOne = () => (
     <filter id="CLAY_SAMSUNG_GALAXY" x="0" y="0" width="524" height="956" filterUnits="userSpaceOnUse">
       <feOffset dx="9" dy="9" />
       <feGaussianBlur stdDeviation="20" result="blur"/>
-      <feFlood flood-color="#464646" flood-opacity="0.18"/>
+      <feFlood floodColor="#464646" floodOpacity="0.18"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>

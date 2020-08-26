@@ -3,14 +3,14 @@ import React from 'react';
 const ArrowDown = ({color}) => (
   <svg xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 104.048 106.135">
   <defs>
-    <linearGradient id="arrow-gradient" x1="0.042" y1="0.969" x2="0.814" y2="0.183" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#28c293"/>
-      <stop offset="1" stop-color="#2c93c8"/>
+    <linearGradient id="linear-arrow-down" x1="0.042" y1="0.969" x2="0.814" y2="0.183" gradientUnits="objectBoundingBox">
+      <stop offset="0" stopColor="#28c293"/>
+      <stop offset="1" stopColor="#2c93c8"/>
     </linearGradient>
     <filter id="Trazado_530" x="0" y="0" width="104.048" height="106.135" filterUnits="userSpaceOnUse">
       <feOffset dx="3" dy="6" />
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#28c293" flood-opacity="0.239"/>
+      <feFlood floodColor="#28c293" floodOpacity="0.239"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -20,7 +20,7 @@ const ArrowDown = ({color}) => (
       <g id="Grupo_Arrow_Arrow488" data-name="Grupo_Arrow 488" transform="translate(0 0)">
         <g id="Grupo_Arrow_Arrow228" data-name="Grupo_Arrow 228" transform="translate(0)">
           <g transform="matrix(1, 0, 0, 1, -11.77, -5.8)" filter="url(#Trazado_530)">
-            <path id="Trazado_530-2" data-name="Trazado 530" d="M5.767,0H62.281a5.857,5.857,0,0,1,5.767,5.944V64.191a5.857,5.857,0,0,1-5.767,5.944H5.767A5.857,5.857,0,0,1,0,64.191V5.944A5.857,5.857,0,0,1,5.767,0Z" transform="translate(15 12)" fill="url(#arrow-gradient)"/>
+            <path id="Trazado_530-2" data-name="Trazado 530" d="M5.767,0H62.281a5.857,5.857,0,0,1,5.767,5.944V64.191a5.857,5.857,0,0,1-5.767,5.944H5.767A5.857,5.857,0,0,1,0,64.191V5.944A5.857,5.857,0,0,1,5.767,0Z" transform="translate(15 12)" fill="url(#linear-arrow-down)"/>
           </g>
           <g id="Grupo_Arrow_Arrow774" data-name="Grupo_Arrow 774">
             <rect id="Rectángulo_156833" data-name="Rectángulo 156833" width="64.807" height="68.579" rx="4" transform="translate(6.47 5)" fill="#fff"/>

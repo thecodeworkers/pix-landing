@@ -12,19 +12,16 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
 
   const { saveReference } = action;
   const aboutRef = useRef();
-  const productRef = useRef();
   
 
 
   useEffect(() => {
-    // if (product) saveReference({ productRef });
-    if (about) saveReference({ aboutRef });
-  }, [scroll.aboutRef]);
+    saveReference({ aboutRef });
+  }, []);
  
-
   return (
 
-    <div ref={aboutRef} className={'_imageBackgroundDarkBanner'}>
+    <div ref={aboutRef} className={ !isDark ? '_imageBackgroundDarkBanner' : '_imageBackgroundLight'}>
       <div className="_imageContainer">
         <h4 className='_whiteHeader'>{childrenTitle}</h4>
 

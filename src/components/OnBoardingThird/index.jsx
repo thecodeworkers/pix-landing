@@ -11,8 +11,6 @@ const OnBoardingThird = (props) => {
 
   const { onboarding, action , t } = props;
 
-  console.log(props)
-
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {

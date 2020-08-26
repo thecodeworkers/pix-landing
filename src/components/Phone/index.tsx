@@ -4,22 +4,21 @@ import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { scrolling } from '../../utils/common';
 import { withTrans } from '../../i18n/withTrans';
+import Login from '../Login';
 
 const Phone = ({ scroll, action, about, phone, t }) => {
 
   const { saveReference } = action;
-  const phoneRef = useRef();
 
-  /* useEffect(() => {
-    if (product) saveReference({ productRef });
-    if (about) saveReference({ aboutRef });
-  }, [scroll.productRef]);
- */
+ const scrollToLogin = () => {
+    scrolling(scroll.loginRef);
+ }
 
   return (
     <div>
-      <div ref={phoneRef} className='_phoneBox' >
+      <div className='_phoneBox' >
         <div className='_tiny'>
           <div style={{ width: '60px' }}>
             <CubePhone />
@@ -69,7 +68,7 @@ const Phone = ({ scroll, action, about, phone, t }) => {
           <PixPhone />
         </div>
       </div>
-      <div  className={'_pixelLogoBox'}>
+      <div className='_pixelLogoBox' onClick={() => scrollToLogin()}>
       <PixelLogo color={'#57D6AF'} />
       </div>
     </div>

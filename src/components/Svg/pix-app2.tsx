@@ -9,7 +9,7 @@ const PixAppTwo = () => (
     <filter id="Mockup_clay_landing" x="0" y="0" width="513" height="934" filterUnits="userSpaceOnUse">
       <feOffset dx="17" dy="14" />
       <feGaussianBlur stdDeviation="20" result="blur"/>
-      <feFlood flood-color="#000027" flood-opacity="0.149"/>
+      <feFlood floodColor="#000027" floodOpacity="0.149"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
