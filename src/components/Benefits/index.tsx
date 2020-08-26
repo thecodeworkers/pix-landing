@@ -10,14 +10,9 @@ import { saveReference } from '../../store/actions';
 const Benefits = (props) => {
 
   const { t, scroll, action} = props;
-  const benefitsRef = useRef();
-
-  useEffect(() => {
-    action.saveReference({benefitsRef});
-  }, [scroll.benefitsRef])
 
   return (
-    <div ref={benefitsRef}>
+    <div>
        <div className='_skillsParent'>
         <div className='_productSkills'>
 

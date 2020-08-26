@@ -20,9 +20,11 @@ const Home = (props) => {
 
   const scrollPosition = () => {
     const position = window.scrollY;
-    if (position < 300) setTheme(true);
-    if (position > 300 && position <= 1900) setTheme(false);
-    if (position > 1900) setTheme(true);
+  
+    console.log(position)
+    if (position < 2450) setTheme(true);
+    if (position > 2450 && position <= 4200) setTheme(false);
+    if (position > 4200) setTheme(true);
   }
 
   return (
@@ -30,22 +32,23 @@ const Home = (props) => {
        <SEO title='Pix' />
       <Navbar />
       <OnBoarding />  
-      <div style={{marginTop: '100vh'}}>
+      
 
 {
-  onboarding.stepThree ? <> 
-  <Login childrenTitle={t('digital_wallet')} />
-  <Product product='product' />
-  <Instant />
-  <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
-  <AboutUs theme={!theme} />
-  <Banner />
-  <Store childrenTitle={t('have_power')} children={t('anyone')} />
-  <Phone phone='phone' />
-  <Footer />  </> : null }
- 
+  onboarding.stepThree ?  
+  <div style={{marginTop: '100vh'}}>
+    <Login childrenTitle={t('digital_wallet')} />
+    <Product product='product' />
+    <Instant />
+    <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+    <AboutUs theme={theme} />
+    <Banner />
+    <Store childrenTitle={t('have_power')} children={t('anyone')} />
+    <Phone phone='phone' />
+    <Footer />  
+  </div> 
+  : null }
 
-</div> 
  {/*   <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
    <Benefits /> */}  
     

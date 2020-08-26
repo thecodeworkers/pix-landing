@@ -36,13 +36,13 @@ const Navigation = (props) => {
           <NavbarToggler onClick={toggle} className='_toggle border w-3'/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto ml-auto" navbar>
-              <NavItem className='_item' onClick={() => scrolling(scroll.aboutRef)}>
+              <NavItem className='_item' onClick={ scroll.aboutRef ? () => scrolling(scroll.aboutRef) : null}>
                 <NavLink className='text-white'>{t('about_us').toUpperCase()}</NavLink>
               </NavItem>
-              <NavItem className='_item' onClick={() => scrolling(scroll.productRef)}>
+              <NavItem className='_item' onClick={ scroll.productRef ? () => scrolling(scroll.productRef) : null}>
                 <NavLink className='text-white '>{t('products'.toUpperCase())}</NavLink>
               </NavItem>
-              <NavItem className='_item' onClick={() => scrolling(scroll.benefitsRef)}>
+              <NavItem className='_item' onClick={scroll.benefitsRef ? () => scrolling(scroll.benefitsRef) : null}>
                 <NavLink className='text-white'>{t('benefits').toUpperCase()}</NavLink>
               </NavItem>
             </Nav>

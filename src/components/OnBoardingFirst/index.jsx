@@ -11,17 +11,20 @@ import './styles.scss';
 
 const OnBoardingFirst = (props) => {
 
-  const { action, reference, referenceParent, newsletter, t } = props;
-  const [check, setCheck] = useState(false)
+  const { action, reference, referenceParent, newsletter, t, loaderResult} = props;
+  const { loading, result } = newsletter;
+
+  // const { loader } = loader;
+
   const timeLine = new TimelineMax({ paused: true });
 
   const [email, setEmail] = useState('');
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const [isValid, setIsValid] = useState(false);
-
-  const { loading, result } = newsletter;
+  const [check, setCheck] = useState(false);
 
   const toggle = () => setTooltipOpen(!tooltipOpen);
+  const changeTheme = () => setCheck(!check);
 
   useEffect(() => {
     if(result == 'success') setEmail('');
@@ -42,8 +45,16 @@ const OnBoardingFirst = (props) => {
 
   useEffect(() => {
     window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
+    return () => {
+       window.removeEventListener("wheel", null); 
+    }
+  }, [])
 
-    timeLine
+  useEffect(() => {
+
+    if(loaderResult.loader) {
+      
+      timeLine
       .play()
       .to('._parentSendSectionBodyLeft', 0.6, { x: 0, opacity: 1 }, 0.3)
       .to('._parentSendSectionBodyRight', 0.6, { x: 0, opacity: 1 }, 0.3)
@@ -53,13 +64,9 @@ const OnBoardingFirst = (props) => {
       .to('._macBookChangeTheme', 0.6, { opacity: 1, x: 0 }, 0.4)
       .to('._currencyCardsRow', 0.6, { opacity: 1, y: 0 }, 0.6)
       .to('._switchThemeParent', 0.6, { opacity: 1, x: 0 }, 0.6)
-
-    return () => {
-  /*     window.removeEventListener("wheel", null); */
     }
-  }, [])
-
-  const changeTheme = () => setCheck(!check);
+ 
+  }, [loaderResult.loader])
 
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
@@ -76,9 +83,7 @@ const OnBoardingFirst = (props) => {
       <div className='_parentSendSectionBodyLeft'>
         <div className='_sonofson'>
           <div className='_sendContentChild'>
-          {/* <div className='_enter'> */}
             <h4 className='_sendRightTitle'>Disponible para app and desktop!</h4>
-             {/* </div> */}
 
             <div className='_exchangeInstantly'>
               <p>Envía, recibe e</p>
@@ -150,7 +155,7 @@ const OnBoardingFirst = (props) => {
   )
 }
 
-const mapStateToProps = ({ onboarding, newsletter }) => ({ onboarding, newsletter});
+const mapStateToProps = ({ onboarding, newsletter, loaderResult }) => ({ onboarding, newsletter, loaderResult});
 
 const mapDispatchToProps = dispatch => {
   const actions = {

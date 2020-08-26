@@ -11,22 +11,13 @@ import { withTrans } from '../../i18n/withTrans';
 
 const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
 
-
   const { saveReference } = action;
-  // const productRef = useRef();
-
+  const loginRef = useRef();
   gsapStart();
 
-  console.log(gsapStart, 'LOGIN');
-
-
-  /*    useEffect(() => {
-      if (product) saveReference({ productRef });
-       if (about) saveReference({ aboutRef });
-    }, [scroll.productRef]);
-    console.log(product , 'PRODUCT');
-  
-   */
+  useEffect(() => {
+    saveReference({ loginRef });
+  }, []);
 
   const benefits = {
     fast: 'fast',
@@ -37,7 +28,7 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
 
   return (
 
-    <div className='_imageLoginLight'>
+    <div className='_imageLoginLight' ref={loginRef}>
 
       <div className='_logoSmall'>
         <PixLogo color='#00021C' />

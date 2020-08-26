@@ -23,7 +23,6 @@ const Product = ({ action, t, i18n, product, login }) => {
     <div ref={productRef}> 
       <div className='_productParent'>
         <div className='_productGeneral'>
-       
           
           <div className='_productLeft'>
             <div className='_pixLeftDescription'>

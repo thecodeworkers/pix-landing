@@ -11,8 +11,6 @@ class OnBoarding extends Component {
    secondscreen = createRef();
    thirdscreen = createRef();
 
-  //  timeLine;
-
   constructor(props) {
 
     super(props);

@@ -8,7 +8,7 @@ const Test = (props) => {
   const { name } = props;
 
   useEffect(() => {
-    console.log('useEffect');
+    // console.log('useEffect');
   }, []);
 
   const domChange = () => {
