@@ -24,6 +24,7 @@ export { default as Users } from './users';
 export { default as DownloadAndroid } from './download-android';
 export { default as DownloadIos } from './download-ios';
 export { default as OrangePix } from './orange-pix';
+export { default as OrangePixBanner} from './orange-pix-banner';
 export { default as OrangeCube } from './orange-cube';
 export { default as DiamondEth } from './diamond-eth';
 export { default as DiamondUsdc } from './diamond-usdc';
