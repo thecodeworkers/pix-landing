@@ -9,6 +9,7 @@ import './styles.scss';
 export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
 
+
   return (
 
     <div >

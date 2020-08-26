@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Separator from '../Separator';
 import { DiamondUsdc, DiamondEth, DarkCheckBox, OrangePix } from '../Svg';
 import './styles.scss';
-import gsapStartOne from './gsap'
+
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -14,7 +14,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
   const aboutRef = useRef();
   const productRef = useRef();
   
-  gsapStartOne();
+
 
   useEffect(() => {
     // if (product) saveReference({ productRef });

@@ -6,14 +6,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
-import gsapStartOne from './gsap'
-
 const Product = ({ action, t, i18n, product, login }) => {
 
    const { saveReference } = action;
   const productRef: any = useRef();
 
-  gsapStartOne();
    useEffect(() => {
     if (product) saveReference({ productRef });
     saveReference({ productRef });

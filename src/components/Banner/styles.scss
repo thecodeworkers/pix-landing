@@ -244,26 +244,26 @@ opacity: 0;
 ._giantCube{
   @include floating (5px, 1.1s);
   position: absolute;
-  bottom: 12%;
+  bottom: 10%;
   right: -30px;
-  opacity: 1;
+  opacity: 0;
 }
 
 ._mediumDiamond{
   @include floating (5px, 1s);
   position: absolute;
-  bottom: 55%;
+  bottom: 35%;
   right: 50px;
-  opacity: 1;
+  opacity: 0;
 
 }
 
 ._minimunCube{
-  @include floating (5px, 1s);
   position: absolute;
-  bottom: 70%;
+  bottom: 50%;
+  opacity: 0;
   right: -10px;
-  opacity: 0.5;
+  @include floating (5px, 1s);
 }
 
 

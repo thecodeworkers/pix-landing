@@ -95,6 +95,7 @@ const OnBoardingSecond = (props) => {
 
           <div className='_downloadStores'>
 
+
             <div className='_appIosDown'>
             <a className='_link' href="https://www.apple.com/la/ios/app-store/">  
               <DownloadIos />
