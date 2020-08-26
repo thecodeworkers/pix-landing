@@ -1,7 +1,9 @@
 {
   "app_desktop":"App and Desktop wallet with the world's fast, safe and intuitive service on cryptocurrency",
   "today_index":"Reference Prices of the day",
-  "crypto_transactions":"Send, receive & exchange cryptocurrency",
+  "crypto_transactions1":"Send, receive and",
+  "crypto_transactions2":"Exchange money ",
+  "crypto_transactions3":"instantly",
   "donwload":"Download",
   "network":"Network",
 
@@ -54,5 +56,17 @@
   "digital_wallet":"Digital wallet",
   "have_power":"Have the power of your money",
   "anyone":"Anyone who has not used a wallet can exchange, transfer, send and receive with PIX.",
-  "be_part":"Be part of our community"
+  "be_part":"Be part of our community",
+  "download_pix":"Download PIX App",
+  "enter_email_app":"Enter your email and receive our app notifications",
+  "available_on":"Available for app and desktop!",
+  "manage_your_money1":"Manage your money",
+  "manage_your_money2":"smart in",
+  "manage_your_money3":"any place",
+  "do_your_life1": "Make your",
+  "do_your_life2": "life easier",
+  "do_your_life3": "and faster",
+  "with_you1": "With your",
+  "with_you2": "institution",
+  "with_you3": "enough"
 }

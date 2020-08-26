@@ -30,64 +30,106 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 10px;
-  margin-bottom: 200px;
+  margin-bottom: 170px;
   width: 200px;
+  opacity: 0;
 }
 
 ._turqueseDiamond{
   @include floating (10px, 1s);
   position: absolute;
   right: 220px;
-  margin-bottom: 300px;
+  margin-bottom: 270px;
+  opacity: 0;
 }
 
 ._turquesetinyDiamond{
   @include floating (10px, 1s);
   position: absolute;
   right: 400px;
-  margin-bottom: 180px;
+  margin-bottom: 150px;
+  opacity: 0;
 }
 
 ._blackDiamond{
   @include floating (10px, 1s);
   position: absolute;
   right: 125px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+  opacity: 0;
 }
 
 ._usdDiamond{
   @include floating (10px, 1s);
   position: absolute;
   right: 330px;
-  margin-bottom: 240px;
+  margin-bottom: 210px;
+  opacity: 0;
 }
 
 ._tiny{
   @include floating (5px, 1s);
   position: absolute;
   right: 200px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+  opacity: 0;
 }
+
+._tinyDimensions{
+  width: 60px;
+}
+
+._littleDimensions{
+  width: 90px;
+}
+
+._mediumDimensions{
+  width: 120px;
+}
+
+._bigDimensions{
+  width: 180px;
+}
+
+._turquesetinyDiamondDimensions{
+  width: 40px;
+}
+
+._usdDiamondDimensions{
+  width: 100px;
+}
+
+._turqueseDiamond{
+  width: 60px;
+}
+
+._blackDiamondDimensions{
+  width: 80px;
+}
+
 
 ._little{
   @include floating (5px, 1s);
   position: absolute;
   right: 250px;
-  margin-bottom: 190px;
+  margin-bottom: 160px;
+  opacity: 0;
 }
 
 ._medium{
   @include floating (5px, 1s);
   position: absolute;
   right: 280px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  opacity: 0;
 }
 
 ._big{
   @include floating (5px, 1s);
   position: absolute;
   right: 450px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  opacity: 0;
 }
 
 @keyframes MoveUpDownCoins {
@@ -105,12 +147,62 @@
 }
 
 
-@include responsive(extralarge) {
+@include responsive(medium) {
 
-  
+  ._phoneDimension{
+    width: 400px;
+  }
+  ._btcDiamond{
+    width: 150px;
+  }
+  ._turqueseDiamond{
+    width: 40px;
+    margin-bottom: 270px !important;
+    right: 170px;
+  }
+  ._turquesetinyDiamondDimensions{
+    width: 30px;
+  }
+  ._turquesetinyDiamond{
+    right: 310px;
+    margin-bottom: 180px !important;
+  }
+  ._tiny{
+    right: 150px;
+    margin-bottom: 150px !important;
+  }
+  ._tinyDimensions{
+    width: 40px;
+  }
+  ._littleDimensions{
+    width: 60px;
+  }
+  ._little{
+    right: 190px;
+    margin-bottom: 180px !important;
+  }
+  ._mediumDimensions{
+    width: 90px;
+  }
+  ._medium{
+    right: 230px;
+    margin-bottom:  70px !important;
+  }
+  ._bigDimensions{
+    width: 150px;
+  }
+  ._big{
+    right:350px;
+    margin-bottom: 60px !important;
+  }
+  .__usdDiamondDimensions{
+    width: 80px;
+  }
+
+  ._usdDiamond{
+    right: 240px;
+    margin-bottom: 220px !important;
+  }
+
 }
 
-@include responsive(large) {
-
-  
-}

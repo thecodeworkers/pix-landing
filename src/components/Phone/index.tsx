@@ -20,42 +20,42 @@ const Phone = ({ scroll, action, about, phone, t }) => {
     <div>
       <div className='_phoneBox' >
         <div className='_tiny'>
-          <div style={{ width: '60px' }}>
+          <div className='_tinyDimensions'>
             <CubePhone />
           </div>
         </div>
         <div className='_little'>
-          <div style={{ width: '90px' }}>
+          <div className='_littleDimensions'>
             <CubePhone />
           </div>
         </div>
         <div className='_medium'>
-          <div style={{ width: '120px' }}>
+          <div className='_mediumDimensions'>
             <CubePhone />
           </div>
         </div>
         <div className='_big'>
-          <div style={{ width: '180px' }}>
+          <div className='_bigDimensions'>
           <CubePhone />
           </div>
         </div>
         <div className='_turquesetinyDiamond'>
-          <div style={{ width: '40px' }}>
+          <div className='_turquesetinyDiamondDimensions'>
             <DiamondTurquese />
           </div>
         </div>
         <div className='_usdDiamond'>
-          <div style={{ width: '100px' }}>
+          <div className='_usdDiamondDimensions'>
             <DiamondUsdPhone />
           </div>
         </div>
         <div className='_turqueseDiamond'>
-          <div style={{ width: '60px' }}>
+          <div className='_turqueseDimensions'>
             <DiamondTurquese />
           </div>
         </div>
         <div className='_blackDiamond'>
-          <div style={{ width: '80px' }}>
+          <div className='_blackDimensions'>
             <DiamondBlack />
           </div>
         </div>

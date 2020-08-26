@@ -6,14 +6,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
 import './style.scss'
-import gsapStartOne from './gsap'
-
 const Product = ({ action, t, i18n, product, login }) => {
 
    const { saveReference } = action;
   const productRef: any = useRef();
 
-  gsapStartOne();
    useEffect(() => {
     if (product) saveReference({ productRef });
     saveReference({ productRef });
@@ -37,6 +34,12 @@ const Product = ({ action, t, i18n, product, login }) => {
               </div >
          
               <p className='_paragraphProduct'>{t('pix_description')}</p>
+              <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
+               <button className='_productBtnBlue'>{t('download_pix')} 
+               <span className="material-icons _buttonIcon">arrow_forward</span>
+               </button>
+              </a>
+             
               <div className='_cubeContainer'>
             <OrangeCube />
             </div>

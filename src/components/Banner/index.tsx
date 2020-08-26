@@ -9,6 +9,7 @@ import './styles.scss';
 export const Banner = ({ scroll, t }) => {
   const { aboutRef } = scroll;
 
+
   return (
 
     <div >
@@ -24,7 +25,8 @@ export const Banner = ({ scroll, t }) => {
               </div>
 
               <div className="_bannerButton">
-                <button className="_buttonGradient">{t('download')}</button>
+              <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
+                <button className="_buttonGradient">{t('download')}</button></a>
                 <p className="_buttonText">{t('stay_on_day')}</p>
 
               </div>
