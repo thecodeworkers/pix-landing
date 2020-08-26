@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './style.scss';
 import { BtcLogo, EthLogo, Usd, DashLogo } from '../Svg';
-import { savePrice } from '../../store/actions';
+import { TimelineMax } from 'gsap/all';
+import { savePrice, saveCardFlip} from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 const Cards = (props) => {
-	const { currency } = props;
+	const { currency, flipState, action} = props;
+
+	// console.log(props);
 
 	const [currencyPrice, setCurrencyPrice ] = useState(null);
 	const [ textClass, setTextClass ] = useState(null);
+	const [iconColor, setIconColor ] = useState(null);
+
+	const [flip, setFlip ] = useState(false);
+
+	const timeLine = new TimelineMax({ paused: true });
 
 	useEffect(() => {
 		props.action.savePrice();
@@ -29,30 +37,77 @@ const Cards = (props) => {
 		setTextClass(null)
 	}
 
-	const cards = [
+	const	startAnimation = (param) => {
+		const key = param.flip;
+		const colorIcon = param.iconKey;
+
+		console.log(flipState)
+		if(!flipState[key]) {
+			timeLine.play()
+			.to(`.${param.class}`, 0.5, {rotationY:'+=180'}, 0.3)
+			.to(`.${param.reverseClass}`, 0.2, {backgroundColor: param.color}, 0.3)
+	
+			setTimeout(() => {
+				action.saveCardFlip({[colorIcon]: '#FFFFFF'})
+			}, 300)
+
+			action.saveCardFlip({[key]: true})
+			return;
+		} 
+			timeLine.play()
+			.to(`.${param.class}`, 0.5, {rotationY:'0'}, 0.3)
+			.to(`.${param.reverseClass}`, 0.2, {backgroundColor: 'rgba(0,0,0,0)'}, 0.3)
+	
+			setTimeout(() => {
+				setTimeout(() => {
+					action.saveCardFlip({[colorIcon]: param.color})
+				}, 300)
+			}, 300)
+			
+			action.saveCardFlip({[key]: false})
+	}
+
+	let cards = [
 		{
 			class: '_cardBTC',
 			textClass: '_textBtc',
-			icon: <BtcLogo />,
-			balance: `$ ${numberFormat(currency.bitcoin)}`
+			reverseClass: '_reverseBtc',
+			iconKey: 'btcIcon',
+			color: '#f7931a',
+			icon: <BtcLogo fillIcon={flipState.btcIcon} />,
+			balance: `$ ${numberFormat(currency.bitcoin)}`,
+			flip: 'btcFlip',
+
 		},
 		{
 			class: '_cardETH',
 			textClass: '_textEth',	
-			icon: <EthLogo />,
-			balance: `$ ${numberFormat(currency.ethereum)}`
+			reverseClass: '_reverseEth',
+			icon: <EthLogo fillIcon={flipState.ethIcon} />,
+			balance: `$ ${numberFormat(currency.ethereum)}`,
+			flip: 'ethFlip',
+			iconKey: 'ethIcon',
+			color: '#444457'
 		},
 		{
 			class: '_cardDASH',
 			textClass: '_textDash',
-			icon: <DashLogo />,
-			balance: `$ ${numberFormat(currency.dash)}`
+			reverseClass: '_reverseDash',
+			icon: <DashLogo fillIcon={flipState.dashIcon} />,
+			balance: `$ ${numberFormat(currency.dash)}`,
+			flip: 'dashFlip',
+			color: '#008de4',
+			iconKey: 'dashIcon',
 		},
 		{
 			class: '_cardUSDT',
 			textClass: '_textUsdt',
-			icon: <Usd/>,
-			balance: `$ ${numberFormat(currency.litecoin)}`
+			reverseClass: '_reverseUsdt',
+			icon: <Usd fillIcon={flipState.usdtIcon} />,
+			balance: `$ ${numberFormat(currency.litecoin)}`,
+			color: '#57d6af',
+			flip: 'usdtFlip',
+			iconKey: 'usdtIcon',
 		},
 	
 	]
@@ -67,9 +122,13 @@ const Cards = (props) => {
 						{
 							cards.map((res, index) => {
 								return (
-									<div key={index} onMouseEnter={() => showCurrency(res)} onMouseLeave={() => hideCurrency()}>
+									<div key={index} onMouseEnter={() => showCurrency(res)} onMouseLeave={() => hideCurrency()} onClick={() => startAnimation(res)}>
 										<div className={res.class}>
-											<div className="_cardChild">{res.icon}</div>
+										
+											<div className="_cardChild">{res.icon}
+											<div className={res.reverseClass}></div>
+											
+											</div>
 										</div>
 										{/* <div className="_price"><p>{res.balance}</p></div> */}
 
@@ -87,13 +146,14 @@ const Cards = (props) => {
 	)
 }
 
-const mapStateToProps = (currency) => (
-	currency
+const mapStateToProps = ({currency, flipState }) => (
+	{currency, flipState}
 );
 
 const mapDispatchToProps = dispatch => {
 	const actions = {
-		savePrice
+		savePrice,
+		saveCardFlip
 	}
 
 	return {

@@ -5,6 +5,7 @@ import scroll from './scroll/reducer';
 import getCurrenciesPrice from './currency/reducer';
 import onboarding from './onboarding/reducer';
 import loaderResult from './loader/reducer';
+import flipState from './card-flip/reducer';
 
 const reducers = combineReducers({
   theme,
@@ -12,7 +13,8 @@ const reducers = combineReducers({
   scroll,
   currency: getCurrenciesPrice,
   onboarding,
-  loaderResult
+  loaderResult,
+  flipState
 });
 
 export default reducers;

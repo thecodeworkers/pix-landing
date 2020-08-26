@@ -4,3 +4,4 @@ export * from './newsletter/action';
 export * from './currency/action';
 export * from './onboarding/action';
 export * from './loader/action';
+export * from './card-flip/action';

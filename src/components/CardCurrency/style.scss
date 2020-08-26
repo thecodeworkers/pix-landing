@@ -65,7 +65,6 @@
 }
 
 ._cardChild{
-  // border: 1px solid red;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -75,6 +74,47 @@
   box-shadow: 0px 9px 23px 1px $mediumGray;
   width: 5.2rem;
   position: relative;  
+  z-index: 1;
+  // transform-style: preserve-3d;
+}
+
+// ._reverseCard, ._cardChild{
+//   position: absolute;
+//   width: 80%;
+//   height: 80%;
+//   -webkit-backface-visibility: hidden; /* Safari */
+//   backface-visibility: hidden;
+//   transform-style: preserve-3d;
+// }
+
+._reverseCard{
+  background-color: transparent;
+  width: 8rem;
+  height: 8rem;
+  z-index: -1;
+  position: absolute;
+}
+
+@mixin reverse {
+  background-color: transparent;
+  width: 8rem;
+  height: 8rem;
+  z-index: -1;
+  position: absolute;
+}
+._reverseBtc {
+  @include reverse;
+}
+
+._reverseEth  {
+  @include reverse;
+}
+
+._reverseDash  {
+  @include reverse;
+}
+._reverseUsdt {
+  @include reverse;
 }
 
 ._price{
@@ -112,6 +152,7 @@
 
 ._textBtc {
   @include text($textOrange);
+  transform-style: preserve-3d;
 }
 
 ._textEth {
