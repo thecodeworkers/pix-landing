@@ -54,7 +54,7 @@
   color: $white;
   font-size: 5.5rem;
   font-weight: 700;
-  margin-top: 50%;
+  margin-top: 90%;
   text-align: center;
 }
 
@@ -120,6 +120,11 @@
   ._orangePix{
     width: 70%;
   }
+
+  ._whiteHeader{
+    margin-top: 70%;
+  }
+
   
 }
 
@@ -140,12 +145,16 @@
   ._coins{
   width: 700px;
    }
+
+   ._whiteHeader{
+    margin-top: 60%;
+  }
  
 }
 
 @include responsive(medium) {
   ._whiteHeader{
-    margin-top: 80%;
+    margin-top: 40%;
   }
 
   ._coins{

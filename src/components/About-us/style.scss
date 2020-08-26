@@ -42,7 +42,7 @@
   background-position: bottom;
   transition:all 1s;
   -webkit-transition:all 1s;
-  padding-top: 3rem;
+  padding-top: 0.2rem;
 }
 ._aboutUsParent {
   @include background('about-us');
@@ -226,6 +226,10 @@
   }
 ._floatingCoin{
   width: 20%;
+}
+
+._anotherclass{
+  padding-top: 3rem;
 }
   
 }

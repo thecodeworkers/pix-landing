@@ -95,10 +95,11 @@ position: relative;
 
 @mixin buttonResponsive {
   @include responsive(large) {
-    display: block;
-    width: 30%;
+    display: flex;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
   }
 
   @include responsive(medium) {
@@ -112,6 +113,9 @@ position: relative;
 ._buttonContainerLogin{
   margin-top: 60px;
   z-index: 1;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 ._textSlider {
@@ -212,7 +216,7 @@ z-index: 1;
   }
 
   ._buttonContainerLogin{
-    width: 60%;
+    width: 100%;
     display: flex;
 
   }
@@ -236,7 +240,8 @@ z-index: 1;
   ._buttonContainerLogin{
     width: 60%;
     display: flex;
-  }
+    justify-content: space-evenly;
+}
 
   ._footerLangLogin{
     width: 15%;

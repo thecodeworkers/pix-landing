@@ -134,7 +134,7 @@
   text-align: left;
   font-weight: 800;
   font-family: $muli;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: 1s;
   color: $newGray;
   opacity: 0;
@@ -228,6 +228,10 @@
     left: 50%;
     width: 300px;
   }
+  ._paragraphProduct{
+    font-size: 1.1rem ;
+  }
+
  
 }
 
@@ -238,6 +242,7 @@
   }
   ._productRight{
     width: 100%;
+    margin-top: 5%;
   }
 
   ._cubeContainer{

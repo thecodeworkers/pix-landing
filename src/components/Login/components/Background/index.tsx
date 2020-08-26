@@ -5,11 +5,9 @@ import { toggleDarkTheme } from '../../../../store/actions';
 import { Box, Diamond } from '../../../Svg';
 import { BoxA, BoxB, BoxC, BoxD, BoxE, BoxF, BoxG, BoxH, BoxI, BoxJ, BoxK, BoxL, DiamondA, DiamondPink, DiamondTurquese, DiamondYellow, DiamondPurple } from '../../components';
 import './styles.scss';
-import hola from './gsap'
 
 export const BackgroundLogin = ({ theme }) => {
   const { darkTheme } = theme;
-  hola();
   
   return (      
     <div>
