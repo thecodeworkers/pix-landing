@@ -144,10 +144,10 @@ position: relative;
   @include buttonResponsive;
   opacity: 0;
   transform: translateY(30px);
-  &:hover {
-    @include btnLogin($white, 0.6rem, 'not', $black, $black);
-    transition: all 0.6s;
-  }
+  // &:hover {
+  //   @include btnRegister($black, 0.6rem, 'not', $white);
+  //   transition: all 0.6s;
+  // }
 
 }
 
@@ -158,10 +158,10 @@ position: relative;
   margin-right: 4rem;
   opacity: 0;
   transform: translateY(30px);
-  &:hover {
-    @include btnLogin($white, 0.5rem, 'not', $black, $black);
-    transition: all 0.6s;
-  }
+  // &:hover {
+  //   @include btnLogin($white, 0.5rem, 'not', $black, $black);
+  //   transition: all 0.6s;
+  // }
 
 }
 ._langFooter{
@@ -209,65 +209,7 @@ z-index: 1;
     transform: scale(0);
 }
 
-@include responsive(extralarge) {
 
-  ._separatorLogin{
-    width: 80%;
-  }
-
-  ._buttonContainerLogin{
-    width: 100%;
-    display: flex;
-
-  }
-
-  ._footerLangLogin{
-    width: 15%;
-  }
-
-  ._blackHeader{
-    font-size: 3.5rem;
-  }
-  
-}
-
-@include responsive(large) {
-
-  ._separatorLogin{
-    width: 80%;
-  }
-
-  ._buttonContainerLogin{
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-  ._footerLangLogin{
-    width: 15%;
-  }
-
-  ._blackHeader{
-    font-size: 3.3rem;
-  }
-  
-}
-  @include responsive(medium) {
-
-    ._blackHeader{
-      font-size: 3rem;
-      margin-top: 1%;
-      text-align: center;
-    }
-
-    ._buttonContainerLogin{
-      width: 100%;
-      justify-content: space-around
-    }
-    ._footerLangLogin{
-      width: 80px;
-    }
-  }
 
   ._itemUno {
     animation: cycle 8s linear infinite;
@@ -445,5 +387,82 @@ z-index: 1;
       top: 0px;
       opacity: 0;
       z-index: -1;
+    }
+  }
+
+  @include responsive(extralarge) {
+
+  ._separatorLogin{
+    width: 80%;
+  }
+
+  ._buttonContainerLogin{
+    width: 100%;
+    display: flex;
+
+  }
+
+  ._footerLangLogin{
+    width: 15%;
+  }
+
+  ._blackHeader{
+    font-size: 3.5rem;
+  }
+
+  ._textSlider h4 {
+    font-size: 2rem;
+  }
+  
+}
+
+@include responsive(large) {
+
+  ._separatorLogin{
+    width: 80%;
+  }
+
+  ._buttonContainerLogin{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+  ._footerLangLogin{
+    width: 15%;
+  }
+
+  ._blackHeader{
+    font-size: 3.3rem;
+  }
+
+  ._textSlider {
+    margin-bottom: 54px;
+  }
+  
+  ._textSlider h4 {
+    font-size: 3.3rem;
+  }
+
+}
+
+  @include responsive(medium) {
+
+    ._blackHeader{
+      font-size: 2.4rem;
+      margin-top: 1%;
+      text-align: center;
+    }
+
+    ._textSlider {
+      display: none;
+    }
+
+    ._buttonContainerLogin{
+      width: 100%;
+      justify-content: space-around
+    }
+    ._footerLangLogin{
+      width: 80px;
     }
   }
