@@ -299,6 +299,26 @@ opacity: 0;
 
 }
 
+@include responsive(medium) {
+  ._bannerButton{
+    display: none;
+  }
+  ._bannerTexts{
+    display: none;
+  }
+  ._contenedor{
+    top: 60%;
+  }
+  ._childrenTitle{
+    font-size: 1.6rem;
+  }
+
+  ._bannerCards{
+    margin-top: 8%;
+  }
+  
+  }
+
 
 
 

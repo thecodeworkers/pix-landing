@@ -38,7 +38,7 @@ const gsapStart = () => {
 
   
   gsap.to("._aboutFather", { scrollTrigger: { trigger: '._aboutFather',}, y: 0, opacity: 1, duration: 0.6, delay: 0.4 }),
-  gsap.to(["._floatingCoin", "._floatingCoinTwo"], { scrollTrigger: { trigger: '._floatingCoin',}, marginBottom:0, opacity: 1, duration: 0.6, delay: 0.4 }),
+  gsap.to(["._floatingCoin", "._floatingCoinTwo"], { scrollTrigger: { trigger: '._floatingCoinTwo',}, marginBottom:0, opacity: 1, duration: 0.6, delay: 0.4 }),
 
   ///////////////////BANNER/////////////////////
   

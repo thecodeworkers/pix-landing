@@ -99,14 +99,15 @@ const OnBoardingSecond = (props) => {
 
 
             <div className='_appIosDown'>
-            <a className='_link' href="https://www.apple.com/la/ios/app-store/">  
+            <a className='_link' target='_blank' href="https://www.apple.com/la/ios/app-store/">  
               <DownloadIos />
               </a>
             </div>
 
             <div className='_appAndroidDown'>
-            <a className='_link' href="https://play.google.com/store?hl=es_VE"> 
+            <a className='_link' target='_blank' href="https://play.google.com/store?hl=es_VE"> 
               <DownloadAndroid />
+              
               </a>
             </div>
 

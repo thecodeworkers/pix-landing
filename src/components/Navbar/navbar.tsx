@@ -60,11 +60,11 @@ const Navigation = (props) => {
             </Nav>
       
             <NavItem >
-            <a className='_link' href="http://exchange.thepix.io/register">     <button className='_navBarBtnBlack'>{t('register').toUpperCase()}</button></a>
+            <a className='_link' href="http://exchange.thepix.io/register" target='_blank'>     <button className='_navBarBtnBlack'>{t('register').toUpperCase()}</button></a>
             </NavItem>
 
             <NavItem>
-            <a className='_link' href="http://exchange.thepix.io">  <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button></a>
+            <a className='_link' href="http://exchange.thepix.io" target='_blank'>  <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button></a>
             </NavItem>
           </Collapse>
         </div>
