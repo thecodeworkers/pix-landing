@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Lang, Footer, Test, ScrollDown, AboutUs, Product, CardCurrency, Separator, Banner, SEO, BannerImage, Instant, Login, Store, Phone, OnBoarding } from '../components';
 import { withTrans } from '../i18n/withTrans';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './styles/home.scss';
 
@@ -16,7 +15,7 @@ const Home = (props) => {
     return () => {
       document.removeEventListener('scroll', scrollPosition);
     }
-  }, [theme])
+  }, [theme]);
 
   const scrollPosition = () => {
     const position = window.scrollY;
@@ -28,49 +27,33 @@ const Home = (props) => {
 
   return (
     <div>
-       <SEO title='Pix' />
+      <SEO title='Pix' />
       <Navbar />
       <OnBoarding />  
-      
-
-{
-  onboarding.stepThree ?  
-  <div style={{marginTop: '100vh'}}>
-    <Login childrenTitle={t('digital_wallet')} />
-    <Product product='product' />
-    <Instant />
-    <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
-    <AboutUs theme={theme} />
-    <Banner />
-    <Store childrenTitle={t('have_power')} children={t('anyone')} />
-    <Phone phone='phone' />
-    <Footer />  
-  </div> 
-  : null }
-
- {/*   <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-   <Benefits /> */}  
-    
+      {
+        onboarding.stepThree ? (
+          <div style={{marginTop: '100vh'}}>
+            <Login childrenTitle={t('digital_wallet')} />
+            <Product product='product' />
+            <Instant />
+            <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+            <AboutUs theme={theme} />
+            <Banner />
+            <Store childrenTitle={t('have_power')} children={t('anyone')} />
+            <Phone phone='phone' />
+            <Footer />  
+          </div>
+        ) : null
+      }
     </div>
-  )
+  );
 }
 
 const mapStateToProps = ({scroll, onboarding }) => ({
   scroll, onboarding
 });
 
-const mapDispatchToProps = dispatch => {
-  const actions = {
-
-  }
-
-  return {
-    action: bindActionCreators(actions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(withTrans(Home));
-
+export default connect(mapStateToProps)(withTrans(Home));
 
 
 {/* <br />
