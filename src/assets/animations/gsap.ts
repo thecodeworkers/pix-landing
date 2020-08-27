@@ -15,15 +15,15 @@ const gsapStart = () => {
   gsap.to("._separatorProduct", { scrollTrigger: { trigger: '._separatorProduct', }, duration: 0.6, delay: 0.4, width: '100%' }),
   gsap.to("._centerSquare", { scrollTrigger: { trigger: '._centerSquare', }, y: 0, opacity: 1, rotate: 360, duration: 0.6, delay: 0.8 }),
   gsap.to("._productext", { scrollTrigger: { trigger: '._productext', }, y: 0, opacity: 1, duration: 0.6, delay: 0.6 }),
-  gsap.to(["._paragraphProduct","_productBtnBlue" ] ,{ scrollTrigger: { trigger: '._paragraphProduct', }, y: 0, opacity: 1, duration: 0.8, delay: 0.6 }),
-  gsap.to("._cubeContainer", { scrollTrigger: { trigger: '._cubeContainer', }, y: 0, opacity: 1, duration: 0.6, delay: 0.7 }), 
+  gsap.to(["._paragraphProduct","_productBtnBlue" ] ,{ scrollTrigger: { trigger: '._paragraphProduct', }, y: 0, opacity: 1, duration: 0.6, delay: 0.6}),
+  gsap.to(["._cubeContainer", "._productBtnBlue"], { scrollTrigger: { trigger: '._cubeContainer', }, y: 0, opacity: 1, duration: 0.6, delay: 0.7 }), 
   gsap.to(["._usdtFloatingIcon", "._usdrectangle", "._ethrectangle","._usdcFloatingIcon", "._eurFloatingIcon", "._dashFloatingIcon"], { scrollTrigger: { trigger: '._usdtFloatingIcon',},scale: 1, opacity: 1, duration: 0.6, delay: 0.9 }),
 
    ///////////////////INSTANT/////////////////////
    gsap.to(["._sendIcon", "._btcRecantgle", "._profile"], { scrollTrigger: { trigger: '._sendIcon',},scale: 1, opacity: 1, duration: 0.6, delay: 0.8 }),
    gsap.to("._pixLeftDescriptionO", { scrollTrigger: { trigger: '._pixLeftDescriptionO', }, y: 0, duration: 0.6, delay: 0.4 }),
    gsap.to("._separatorInstant", { scrollTrigger: { trigger: '._separatorInstant', }, duration: 0.6, delay: 0.4, width: '100%' }),
-   gsap.to("._orangePixContainer", { scrollTrigger: { trigger: '._orangePixContainer', }, opacity: 1, duration: 0.6, delay: 0.6 })
+   gsap.to("._orangePixContainer", { scrollTrigger: { trigger: '._orangePixContainer', }, opacity: 1, y: 0, duration: 0.6, delay: 0.6 })
 
 
    ///////////////////BANNER IMAGE/////////////////////

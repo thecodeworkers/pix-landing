@@ -54,11 +54,17 @@ const OnBoarding = ({ action, onboarding }) => {
 
   useEffect(() => {
     if(thirdExec) {
-      parent.current.scrollTo({ left: thirdscreen.current.offsetLeft, behavior: 'smooth' });
-      action.saveStep({ stepTwo: true });
+      navigateThirdScreen();
     }
   }, [thirdExec]);
 
+
+  const navigateThirdScreen = () => {
+    parent.current.scrollTo({ left: thirdscreen.current.offsetLeft, behavior: 'smooth' });
+    action.saveStep({ stepTwo: true });
+  };
+
+  
    return (
     <div className="_scrollingWrapper" ref={parent}>
       <div className='_cardsParent'>
@@ -67,7 +73,7 @@ const OnBoarding = ({ action, onboarding }) => {
         </div>
         <div className='_cardCarrousel' ref={secondscreen} >
 
-          <OnBoardingSecond reference={thirdscreen} referenceParent={parent}/>
+          <OnBoardingSecond reference={thirdscreen} referenceParent={parent} callback={navigateThirdScreen}/>
 
         </div>
         <div className='_cardCarrousel ' ref={thirdscreen} >

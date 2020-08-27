@@ -5,34 +5,34 @@
 	 xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:url(#SVGID_2_);stroke:url(#SVGID_3_);stroke-width:0.2095;stroke-miterlimit:10;}
-	.st2{fill:url(#SVGID_4_);stroke:url(#SVGID_5_);stroke-width:0.2095;stroke-miterlimit:10;}
-	.st3{fill:url(#SVGID_6_);stroke:url(#SVGID_7_);stroke-width:0.2061;stroke-miterlimit:10;}
+	.st1{fill:url(#SVGID_2_);stroke:url(#SVGID_3_);strokeWidth:0.2095;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_4_);stroke:url(#SVGID_5_);strokeWidth:0.2095;stroke-miterlimit:10;}
+	.st3{fill:url(#SVGID_6_);stroke:url(#SVGID_7_);strokeWidth:0.2061;stroke-miterlimit:10;}
 	.st4{fill:url(#SVGID_8_);stroke:url(#SVGID_9_);stroke-miterlimit:10;}
 	.st5{fill:url(#SVGID_10_);stroke:url(#SVGID_11_);stroke-miterlimit:10;}
 	.st6{fill:url(#SVGID_12_);stroke:url(#SVGID_13_);stroke-miterlimit:10;}
-	.st7{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);stroke-width:0.6676;stroke-miterlimit:10;}
-	.st8{fill:url(#SVGID_16_);stroke:url(#SVGID_17_);stroke-width:0.6676;stroke-miterlimit:10;}
-	.st9{fill:url(#SVGID_18_);stroke:url(#SVGID_19_);stroke-width:0.6676;stroke-miterlimit:10;}
-	.st10{fill:url(#SVGID_20_);stroke:url(#SVGID_21_);stroke-width:0.5105;stroke-miterlimit:10;}
-	.st11{fill:url(#SVGID_22_);stroke:url(#SVGID_23_);stroke-width:0.5105;stroke-miterlimit:10;}
-	.st12{fill:url(#SVGID_24_);stroke:url(#SVGID_25_);stroke-width:0.5105;stroke-miterlimit:10;}
+	.st7{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);strokeWidth:0.6676;stroke-miterlimit:10;}
+	.st8{fill:url(#SVGID_16_);stroke:url(#SVGID_17_);strokeWidth:0.6676;stroke-miterlimit:10;}
+	.st9{fill:url(#SVGID_18_);stroke:url(#SVGID_19_);strokeWidth:0.6676;stroke-miterlimit:10;}
+	.st10{fill:url(#SVGID_20_);stroke:url(#SVGID_21_);strokeWidth:0.5105;stroke-miterlimit:10;}
+	.st11{fill:url(#SVGID_22_);stroke:url(#SVGID_23_);strokeWidth:0.5105;stroke-miterlimit:10;}
+	.st12{fill:url(#SVGID_24_);stroke:url(#SVGID_25_);strokeWidth:0.5105;stroke-miterlimit:10;}
 	.st13{opacity:0.85;}
-	.st14{opacity:0.88;fill:url(#SVGID_26_);stroke:url(#SVGID_27_);stroke-width:0.7895;stroke-miterlimit:10;}
-	.st15{opacity:0.88;fill:url(#SVGID_28_);stroke:url(#SVGID_29_);stroke-width:0.7895;stroke-miterlimit:10;}
-	.st16{opacity:0.88;fill:url(#SVGID_30_);stroke:url(#SVGID_31_);stroke-width:0.7895;stroke-miterlimit:10;}
-	.st17{opacity:0.88;fill:url(#SVGID_32_);stroke:url(#SVGID_33_);stroke-width:1.0268;stroke-miterlimit:10;}
-	.st18{opacity:0.88;fill:url(#SVGID_34_);stroke:url(#SVGID_35_);stroke-width:1.0268;stroke-miterlimit:10;}
-	.st19{opacity:0.88;fill:url(#SVGID_36_);stroke:url(#SVGID_37_);stroke-width:1.0268;stroke-miterlimit:10;}
-	.st20{opacity:0.88;fill:url(#SVGID_38_);stroke:url(#SVGID_39_);stroke-width:0.5028;stroke-miterlimit:10;}
-	.st21{opacity:0.88;fill:url(#SVGID_40_);stroke:url(#SVGID_41_);stroke-width:0.5028;stroke-miterlimit:10;}
-	.st22{opacity:0.88;fill:url(#SVGID_42_);stroke:url(#SVGID_43_);stroke-width:0.5028;stroke-miterlimit:10;}
-	.st23{fill:url(#SVGID_44_);stroke:url(#SVGID_45_);stroke-width:0.7555;stroke-miterlimit:10;}
-	.st24{fill:url(#SVGID_46_);stroke:url(#SVGID_47_);stroke-width:0.7835;stroke-miterlimit:10;}
-	.st25{fill:url(#SVGID_48_);stroke:url(#SVGID_49_);stroke-width:0.7555;stroke-miterlimit:10;}
-	.st26{fill:url(#SVGID_50_);stroke:url(#SVGID_51_);stroke-width:0.6266;stroke-miterlimit:10;}
-	.st27{fill:url(#SVGID_52_);stroke:url(#SVGID_53_);stroke-width:0.6498;stroke-miterlimit:10;}
-	.st28{fill:url(#SVGID_54_);stroke:url(#SVGID_55_);stroke-width:0.6266;stroke-miterlimit:10;}
+	.st14{opacity:0.88;fill:url(#SVGID_26_);stroke:url(#SVGID_27_);strokeWidth:0.7895;stroke-miterlimit:10;}
+	.st15{opacity:0.88;fill:url(#SVGID_28_);stroke:url(#SVGID_29_);strokeWidth:0.7895;stroke-miterlimit:10;}
+	.st16{opacity:0.88;fill:url(#SVGID_30_);stroke:url(#SVGID_31_);strokeWidth:0.7895;stroke-miterlimit:10;}
+	.st17{opacity:0.88;fill:url(#SVGID_32_);stroke:url(#SVGID_33_);strokeWidth:1.0268;stroke-miterlimit:10;}
+	.st18{opacity:0.88;fill:url(#SVGID_34_);stroke:url(#SVGID_35_);strokeWidth:1.0268;stroke-miterlimit:10;}
+	.st19{opacity:0.88;fill:url(#SVGID_36_);stroke:url(#SVGID_37_);strokeWidth:1.0268;stroke-miterlimit:10;}
+	.st20{opacity:0.88;fill:url(#SVGID_38_);stroke:url(#SVGID_39_);strokeWidth:0.5028;stroke-miterlimit:10;}
+	.st21{opacity:0.88;fill:url(#SVGID_40_);stroke:url(#SVGID_41_);strokeWidth:0.5028;stroke-miterlimit:10;}
+	.st22{opacity:0.88;fill:url(#SVGID_42_);stroke:url(#SVGID_43_);strokeWidth:0.5028;stroke-miterlimit:10;}
+	.st23{fill:url(#SVGID_44_);stroke:url(#SVGID_45_);strokeWidth:0.7555;stroke-miterlimit:10;}
+	.st24{fill:url(#SVGID_46_);stroke:url(#SVGID_47_);strokeWidth:0.7835;stroke-miterlimit:10;}
+	.st25{fill:url(#SVGID_48_);stroke:url(#SVGID_49_);strokeWidth:0.7555;stroke-miterlimit:10;}
+	.st26{fill:url(#SVGID_50_);stroke:url(#SVGID_51_);strokeWidth:0.6266;stroke-miterlimit:10;}
+	.st27{fill:url(#SVGID_52_);stroke:url(#SVGID_53_);strokeWidth:0.6498;stroke-miterlimit:10;}
+	.st28{fill:url(#SVGID_54_);stroke:url(#SVGID_55_);strokeWidth:0.6266;stroke-miterlimit:10;}
 </style>
 <radialGradient id="SVGID_1_" cx="970.0337" cy="532.6411" r="778.825" gradientTransform="matrix(1.0156 0 0 -1.0541 -22.4162 1091.7571)" gradientUnits="userSpaceOnUse">
 	<stop  offset="0" style="stopColor:#04002B"/>

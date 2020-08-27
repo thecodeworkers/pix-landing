@@ -3,25 +3,25 @@ import React from 'react';
 const DarkCheckBox = () => (
   <svg id="Grupo_520" data-name="Grupo 520" width="81.998" height="103.608" viewBox="0 0 81.998 103.608">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath id="clipPath">
       <path id="Trazado_457" data-name="Trazado 457" d="M9.513,24.449a4.394,4.394,0,0,0,1.528-1.612l32.9,19.12a4.388,4.388,0,0,1-1.528,1.61Z" transform="translate(-9.513 -22.837)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-2">
+    <clipPath id="clipPath-2">
       <path id="Trazado_468" data-name="Trazado 468" d="M8.529,24.029a1.543,1.543,0,0,0,1.531-.156l32.9,19.119a1.539,1.539,0,0,1-1.531.156Z" transform="translate(-8.529 -23.873)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-3">
+    <clipPath id="clipPath-3">
       <path id="Trazado_478" data-name="Trazado 478" d="M19.815,4.459q16.45,9.56,32.9,19.119c.826.5.825,2.059-.011,3.506l-32.9-19.12C20.64,6.518,20.643,4.955,19.815,4.459Z" transform="translate(-19.806 -4.459)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-4">
+    <clipPath id="clipPath-4">
       <path id="Trazado_480" data-name="Trazado 480" d="M19.819,4.463l-.02-.011L52.7,23.571l.02.011q-16.2-9.411-32.392-18.823C20.158,4.661,19.987,4.562,19.819,4.463Z" transform="translate(-19.799 -4.452)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-5">
+    <clipPath id="clipPath-5">
       <path id="Trazado_490" data-name="Trazado 490" d="M51.708,23.781l-32.9-19.12a1.546,1.546,0,0,1,1.533-.156l32.9,19.12A1.542,1.542,0,0,0,51.708,23.781Z" transform="translate(-18.808 -4.364)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-6">
+    <clipPath id="clipPath-6">
       <path id="Trazado_499" data-name="Trazado 499" d="M50.726,25.286,17.826,6.167a4.407,4.407,0,0,1,1.528-1.612l32.9,19.12A4.4,4.4,0,0,0,50.726,25.286Z" transform="translate(-17.826 -4.555)" fill="none"/>
     </clipPath>
-    <clipPath id="clip-path-7">
+    <clipPath id="clipPath-7">
       <path id="Trazado_525" data-name="Trazado 525" d="M37.185,42.494,4.285,23.375c-.837-.5-.822-2.087.03-3.551a4.415,4.415,0,0,1,1.514-1.576,1.574,1.574,0,0,1,1.517-.173l32.9,19.119a1.572,1.572,0,0,0-1.516.173,4.408,4.408,0,0,0-1.514,1.578C36.364,40.407,36.348,41.995,37.185,42.494Z" transform="translate(-3.667 -17.948)" fill="none"/>
     </clipPath>
   </defs>
@@ -32,7 +32,7 @@ const DarkCheckBox = () => (
           <path id="Trazado_449" data-name="Trazado 449" d="M43.4,50.923,10.5,31.8,24.982,6.711l32.9,19.12Z" transform="translate(-10.495 -6.711)" fill="#0a0e13"/>
         </g>
         <g id="Grupo_448" data-name="Grupo 448" transform="translate(21.309 52.848)">
-          <g id="Grupo_447" data-name="Grupo 447" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <g id="Grupo_447" data-name="Grupo 447" transform="translate(0 0)" clipPath="url(#clipPath)">
             <g id="Grupo_446" data-name="Grupo 446" transform="translate(-0.307)">
               <path id="Trazado_450" data-name="Trazado 450" d="M42.216,43.347l-32.9-19.12a2.427,2.427,0,0,0,.307-.151,3.67,3.67,0,0,0,.73-.566l32.9,19.12a3.646,3.646,0,0,1-.73.565,2.55,2.55,0,0,1-.307.152" transform="translate(-9.316 -22.463)" fill="#0a0f14"/>
               <path id="Trazado_451" data-name="Trazado 451" d="M42.882,42.719,9.982,23.6c.079-.078.157-.162.233-.251l32.9,19.12c-.076.087-.154.171-.233.251" transform="translate(-8.946 -22.553)" fill="#0a0f14"/>
@@ -45,7 +45,7 @@ const DarkCheckBox = () => (
           </g>
         </g>
         <g id="Grupo_451" data-name="Grupo 451" transform="translate(19.778 54.46)">
-          <g id="Grupo_450" data-name="Grupo 450" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+          <g id="Grupo_450" data-name="Grupo 450" transform="translate(0 0)" clipPath="url(#clipPath-2)">
             <g id="Grupo_449" data-name="Grupo 449" transform="translate(0 -0.566)">
               <path id="Trazado_458" data-name="Trazado 458" d="M41.429,43.092l-32.9-19.12,0,0,32.9,19.12,0,0" transform="translate(-8.529 -23.251)" fill="#080c10"/>
               <path id="Trazado_459" data-name="Trazado 459" d="M41.431,43.094l-32.9-19.12a.891.891,0,0,0,.109.054l32.9,19.119a1.033,1.033,0,0,1-.11-.053" transform="translate(-8.527 -23.25)" fill="#080c10"/>
@@ -61,7 +61,7 @@ const DarkCheckBox = () => (
           </g>
         </g>
         <g id="Grupo_454" data-name="Grupo 454" transform="translate(37.325 24.251)">
-          <g id="Grupo_453" data-name="Grupo 453" transform="translate(0 0)" clip-path="url(#clip-path-3)">
+          <g id="Grupo_453" data-name="Grupo 453" transform="translate(0 0)" clipPath="url(#clipPath-3)">
             <g id="Grupo_452" data-name="Grupo 452" transform="translate(-0.011 -0.011)">
               <path id="Trazado_469" data-name="Trazado 469" d="M52.7,25.889l-32.9-19.12c.031-.054.061-.107.09-.162L52.8,25.726c-.028.054-.058.109-.09.163" transform="translate(-19.795 -3.254)" fill="#090d11"/>
               <path id="Trazado_470" data-name="Trazado 470" d="M52.763,25.792,19.864,6.673c.031-.062.062-.123.092-.185l32.9,19.12c-.03.061-.061.123-.093.184" transform="translate(-19.763 -3.32)" fill="#090d11"/>
@@ -76,14 +76,14 @@ const DarkCheckBox = () => (
           </g>
         </g>
         <g id="Grupo_457" data-name="Grupo 457" transform="translate(37.314 24.24)">
-          <g id="Grupo_456" data-name="Grupo 456" transform="translate(0 0)" clip-path="url(#clip-path-4)">
+          <g id="Grupo_456" data-name="Grupo 456" transform="translate(0 0)" clipPath="url(#clipPath-4)">
             <g id="Grupo_455" data-name="Grupo 455">
               <path id="Trazado_479" data-name="Trazado 479" d="M53.311,25.384,20.411,6.265A1.733,1.733,0,0,0,19.8,4.452L52.7,23.571a1.733,1.733,0,0,1,.612,1.813" transform="translate(-19.799 -4.452)" fill="#070a0d"/>
             </g>
           </g>
         </g>
         <g id="Grupo_460" data-name="Grupo 460" transform="translate(35.772 24.104)">
-          <g id="Grupo_459" data-name="Grupo 459" transform="translate(0 0)" clip-path="url(#clip-path-5)">
+          <g id="Grupo_459" data-name="Grupo 459" transform="translate(0 0)" clipPath="url(#clipPath-5)">
             <g id="Grupo_458" data-name="Grupo 458" transform="translate(0 0)">
               <path id="Trazado_481" data-name="Trazado 481" d="M51.708,23.729l-32.9-19.12a2.655,2.655,0,0,1,.307-.151l32.9,19.119a2.675,2.675,0,0,0-.307.152" transform="translate(-18.808 -4.312)" fill="#ccc"/>
               <path id="Trazado_482" data-name="Trazado 482" d="M51.905,23.608,19.005,4.49A2.164,2.164,0,0,1,19.26,4.4l32.9,19.12a2.23,2.23,0,0,0-.254.087" transform="translate(-18.698 -4.344)" fill="#c7c7c7"/>
@@ -101,7 +101,7 @@ const DarkCheckBox = () => (
           <path id="Trazado_491" data-name="Trazado 491" d="M42.4,47.144,9.5,28.025,22.455,5.591l32.9,19.12Z" transform="translate(-9.502 -5.591)" fill="#bdbdbd"/>
         </g>
         <g id="Grupo_464" data-name="Grupo 464" transform="translate(34.244 24.401)">
-          <g id="Grupo_463" data-name="Grupo 463" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+          <g id="Grupo_463" data-name="Grupo 463" transform="translate(0 0)" clipPath="url(#clipPath-6)">
             <g id="Grupo_462" data-name="Grupo 462">
               <path id="Trazado_492" data-name="Trazado 492" d="M50.726,24.718,17.826,5.6l.012-.022,32.9,19.12-.012.02" transform="translate(-17.826 -3.987)" fill="#adadad"/>
               <path id="Trazado_493" data-name="Trazado 493" d="M50.734,24.763l-32.9-19.12c.037-.062.075-.124.112-.184l32.9,19.119c-.037.061-.076.121-.112.185" transform="translate(-17.822 -4.052)" fill="#b3b3b3"/>
@@ -120,7 +120,7 @@ const DarkCheckBox = () => (
           <path id="Trazado_501" data-name="Trazado 501" d="M38.931,37.149,6.031,18.03l5.4,3.078,32.9,19.12Z" transform="translate(-6.031 -18.03)" fill="#9e9e9e"/>
         </g>
         <g id="Grupo_469" data-name="Grupo 469" transform="translate(12.212 45.241)">
-          <g id="Grupo_468" data-name="Grupo 468" clip-path="url(#clip-path-7)">
+          <g id="Grupo_468" data-name="Grupo 468" clipPath="url(#clipPath-7)">
             <g id="Grupo_467" data-name="Grupo 467" transform="translate(0 0)">
               <path id="Trazado_502" data-name="Trazado 502" d="M37.185,41.2,4.285,22.082a1.746,1.746,0,0,1-.59-1.807l32.9,19.12a1.747,1.747,0,0,0,.591,1.8" transform="translate(-3.667 -16.655)" fill="#858585"/>
               <path id="Trazado_503" data-name="Trazado 503" d="M36.584,39.5l-32.9-19.12c.012-.1.03-.2.051-.3L36.637,39.2c-.022.1-.039.207-.053.307" transform="translate(-3.657 -16.764)" fill="#8a8a8a"/>

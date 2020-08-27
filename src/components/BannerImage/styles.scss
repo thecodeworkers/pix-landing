@@ -1,7 +1,7 @@
 @import '../../assets/styles/index.scss';
 
 @mixin background($image) {
-  height: 100vh;
+  // height: 100vh;
 /*   background-image: url('../../images/#{$image}.svg'); */
   background-size: cover;
   transition: 1s;
@@ -22,13 +22,7 @@
 }
 
 ._imageContainer {
-  width: 30%;
-  // height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  // background-color: red;
+  width: 100%;
 }
 
 ._imageContainerText {
@@ -56,30 +50,63 @@
   color: $white;
   font-size: 5.5rem;
   font-weight: 700;
-  margin-top: 6rem;
+  margin-top: 90%;
   text-align: center;
+}
+
+._headerAbotUs {
+  margin-top: 6rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 35%;
+
+  & h4 {
+    font-size: 4rem;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    font-family: $muli;
+  }
+}
+._newParentText {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
 }
 
 ._aboutContainer{
   justify-content: center;
   align-items: center;
   margin-top: 30px;
- 
 }
 
 ._orange{
-  margin-top: 20px;
+  margin-top: 3rem;
   transform: translatey(10px);
   animation: MoveUpDown 1s alternate infinite;
+  width: 45%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ._coins{
-  transform: translatey(10px);
+  transform: translateY(10px);
   animation: MoveUpDown 1s alternate infinite;
   display: flex;
-  width: 800px;
+  width: 35%;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 1rem;
+  margin-bottom: -3.125rem;
+}
+
+._superParentCoins {
+  width: 100%;  
+  display: flex;
+  justify-content: center;
 }
 
 ._separatorBanner{
@@ -88,12 +115,15 @@
 }
 
 ._coin{
-  height: 180px;
+  width: 180px;
 }
 
 ._darkCheck{
+  // width: 180px;
   margin-top: 10px;
 }
+
+
 ._liine{
   transform: scale(0);
   width: '120%';
@@ -120,15 +150,25 @@
     width: 70%;
   }
 
-  ._whiteHeader{
-    margin-top: 6rem;
+  ._coins{
+    width: 50%;
+   }
+
+
+  ._headerAbotUs {
+    width: 80%;
   }
+  
 }
 
 
 @include responsive(large) {
   ._imageContainer{
     width: 80%;
+  }
+
+  ._headerAbotUs {
+    width: 90%;
   }
 
   ._imageContainerText{
@@ -140,19 +180,18 @@
   }
 
   ._coins{
-  width: 700px;
+    width: 50%;
    }
 
    ._whiteHeader{
-    //  background-color: red;
-    margin-top: 6rem;
+    margin-top: 60%;
   }
  
 }
 
 @include responsive(medium) {
   ._whiteHeader{
-    margin-top: 6rem;
+    margin-top: 40%;
   }
 
   ._coins{

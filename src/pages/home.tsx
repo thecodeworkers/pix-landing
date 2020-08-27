@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import './styles/home.scss';
 
 const Home = (props) => {
-  const { t, i18n, scroll, onboarding} = props;
+  const { t, i18n, scroll, onboarding } = props;
 
   const [theme, setTheme] = useState(true);
 
@@ -29,27 +29,27 @@ const Home = (props) => {
     <div>
       <SEO title='Pix' />
       <Navbar />
-      <OnBoarding />  
+      <OnBoarding />
 
-{
-  onboarding.stepThree ?  
-  <div style={{marginTop: '100vh'}}>
-    <Login childrenTitle={t('digital_wallet')} />
-    <Product product='product' />
-    <Instant />
-    <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
-    <AboutUs theme={theme} />
-    <Banner />
-    <Store childrenTitle={t('have_power')} children={t('anyone')} />
-    <Phone phone='phone' />
-    <Footer />  
-  </div> 
-  : null }  
+      {
+        onboarding.stepThree ?
+          <div style={{ marginTop: '100vh' }}>
+            <Login childrenTitle={t('digital_wallet')} />
+            <Product product='product' />
+            <Instant />
+            <BannerImage childrenTitle={'PIX OTC'} isDark={theme} product='product' ><span className='_boldText'>{t('personal_service')}</span></BannerImage>
+            <AboutUs theme={theme} />
+            <Banner />
+            <Store childrenTitle={t('have_power')} children={t('anyone')} />
+            <Phone phone='phone' />
+            <Footer />
+          </div>
+          : null}
     </div>
   );
 }
 
-const mapStateToProps = ({scroll, onboarding }) => ({
+const mapStateToProps = ({ scroll, onboarding }) => ({
   scroll, onboarding
 });
 
