@@ -8,11 +8,10 @@
 }
 
 @mixin phone {
-  display: block;
-
   margin-left: auto;
   width: 60%;
-  // background-color: green;
+  position: relative;
+
 }
 
 ._productParent {
@@ -20,7 +19,6 @@
   padding-top: 5rem;
 }
 ._productGeneral {
-  // background-color: blue;
   width: 85%;
   display: flex;
   flex-direction: row;
@@ -29,7 +27,6 @@
 }
 
 ._productLeft {
-  // background-color: purple;
   width: 50%;
   justify-content: center;
   align-items: flex-start;
@@ -43,7 +40,7 @@
 }
 
 ._phoneContainer {
-  @include phone;
+  @include phone();
   margin-right: 55px;
 }
 
@@ -66,23 +63,26 @@
 
 ._sendIcon{
   position: absolute;
-  width: 18%;
-  right: 40px;
+  width: 25%;
+  right: 10px;
   top: 15%;
+  transform: scale(0);
 }
 
 ._btcRecantgle{
   position: absolute;
-    width: 55%;
-    right: 75px;
-    top: 46%;
+  width: 90%;
+  right: 25px;
+  top: 46%;
+  transform: scale(0);
 }
 
 ._profile{
   position: absolute;
-  width: 18%;
-  left: 145px;
-  top: 65%;
+  width: 25%;
+  left: 0;
+  top: 67.5%;
+  transform: scale(0);
 }
 
 ._productext{
@@ -110,10 +110,10 @@
   @include parent;
 }
 
-._phoneContainerTwo {
+/* ._phoneContainerTwo {
   @include phone;
   margin-top: -14rem;
-}
+} */
 
 ._pixelCenter {
   // background-color: blue;
@@ -154,6 +154,7 @@
   font-weight: 800;
   display: flex;
   margin-top: 20px;
+  transform: translateY(10px);
 }
 
 ._buttonIcon{
@@ -165,25 +166,9 @@
 }
 
 @include responsive(extraLarge) {
-  ._phoneContainerTwo {
+ /*  ._phoneContainerTwo {
     margin-top: 0px;
-  }
-
-  ._sendIcon{
-    right: 50px;
-    top: 12%;
-  }
-
-  ._profile{
-    left: 60px;
-    top: 50%;
-  }
-
-  ._btcRecantgle{
-    width: 60%;
-    right: 80px;
-    top: 35%;
-  }
+  } */
 
 }
 

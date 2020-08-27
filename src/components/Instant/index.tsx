@@ -34,7 +34,7 @@ const Instant = ({ action, t, i18n }) => {
           <div className='_productRightO'>
             <div className='_phoneContainerO'>
               <PixAppTwo />
-            </div>
+           
             <div className='_usdtFloatingIcon'>
               <UsdtFloating />
             </div>
@@ -52,6 +52,7 @@ const Instant = ({ action, t, i18n }) => {
             </div>
             <div className='_dashFloatingIcon'>
               <DashFloating />
+            </div>
             </div>
           </div>
         </div>
