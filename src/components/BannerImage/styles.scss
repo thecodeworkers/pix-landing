@@ -121,10 +121,8 @@
   }
 
   ._whiteHeader{
-    margin-top: 70%;
+    margin-top: 6rem;
   }
-
-  
 }
 
 
@@ -146,14 +144,15 @@
    }
 
    ._whiteHeader{
-    margin-top: 60%;
+    //  background-color: red;
+    margin-top: 6rem;
   }
  
 }
 
 @include responsive(medium) {
   ._whiteHeader{
-    margin-top: 40%;
+    margin-top: 6rem;
   }
 
   ._coins{
