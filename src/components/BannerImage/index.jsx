@@ -13,8 +13,6 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
   const { saveReference } = action;
   const aboutRef = useRef();
   
-
-
   useEffect(() => {
     saveReference({ aboutRef });
   }, []);

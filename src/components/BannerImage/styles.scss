@@ -23,11 +23,12 @@
 
 ._imageContainer {
   width: 30%;
-  height: 70%;
+  // height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  // background-color: red;
 }
 
 ._imageContainerText {
@@ -55,12 +56,9 @@
   color: $white;
   font-size: 5.5rem;
   font-weight: 700;
-  margin-top: 90%;
+  margin-top: 6rem;
   text-align: center;
 }
-
-
-
 
 ._aboutContainer{
   justify-content: center;
