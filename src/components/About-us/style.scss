@@ -9,6 +9,12 @@
   transition: 1s;
 }
 
+
+@mixin floating ($transformY, $time) {
+  transform: translatey($transformY);
+  animation: MoveUpDownCoins $time alternate infinite;
+}
+
 @mixin textContent($color) {
     width: 42%;
     display: block;
@@ -42,7 +48,7 @@
   background-position: bottom;
   transition:all 1s;
   -webkit-transition:all 1s;
-  padding-top: 3rem;
+  padding-top: 0.2rem;
 }
 ._aboutUsParent {
   @include background('about-us');
@@ -188,23 +194,24 @@
 
 ._floatingCoin{
   display: flex;
-  transform: translatey(10px);
-  animation: MoveUpDownDiamond 1s alternate infinite;
+ @include floating (10px, 1s);
+  opacity: 0;
+  bottom: -30%;
   width: 10%;
-
 }
 
 ._floatingCoinTwo{
   
   display: flex;
-  transform: translatey(10px);
-  animation: MoveUpDownDiamond 1s alternate infinite;
+  @include floating (10px, 1s); 
+  opacity: 0;
   justify-content: space-between;
   align-items: center;
   width: 35%;
   margin-left: auto;
   margin-right: auto;
-
+  bottom: -30%;
+  margin-bottom: 30px;
 }
 
 ._aboutFather{
@@ -226,6 +233,10 @@
   }
 ._floatingCoin{
   width: 20%;
+}
+
+._anotherclass{
+  padding-top: 3rem;
 }
   
 }
@@ -255,6 +266,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 40px;
     
    }
    ._aboutBox{

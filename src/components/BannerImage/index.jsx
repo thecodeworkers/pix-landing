@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Separator from '../Separator';
-import { DiamondUsdc, DiamondEth, DarkCheckBox, OrangePix } from '../Svg';
+import { DiamondUsdc, DiamondEth, DarkCheckBox, OrangePixBanner } from '../Svg';
 import './styles.scss';
 
 import { saveReference } from '../../store/actions';
@@ -31,7 +31,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
         <p className={'_imageContainerText _whiteTxt'}>{children}</p>
 
           <div  className={'_orange'}>
-          <OrangePix />
+          <OrangePixBanner />
         </div>
 
         <div  className={'_coins'}>

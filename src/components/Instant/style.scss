@@ -6,11 +6,10 @@
   justify-content: center;
 }
 @mixin phoneO {
-  display: block;
- margin-right: 45px;
+/*  margin-right: 45px; */
   margin-left: auto;
   width: 60%;
-  // background-color: green;
+  position: relative;
 }
 
 ._productParentO {
@@ -43,6 +42,7 @@
 
 ._phoneContainerO {
   @include phoneO();
+  margin-right: 55px;
 }
 
 
@@ -50,7 +50,7 @@
   // background-color:red;
   width: 55%;
   margin-top: 5rem;
-  transform: translateY(300px);
+  transform: translateY(30px);
 
     & h5 {
       margin-top: 2rem;
@@ -66,7 +66,7 @@
   margin: 10px 0px 10px;
   text-align: left;
   font-family: $muli;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: 1s;
   color: $newGray;
   width: 85%;
@@ -90,44 +90,50 @@
 
 ._usdtFloatingIcon{
   position: absolute;
-  width: 15%;
-  right: 55px;
-  top: 0;
+  width: 25%;
+  right: 25px;
+  top: 5px;
+  transform: scale(0);
 }
 
 ._usdrectangle{
   position: absolute;
-  width: 50%;
-  left: 110px;
+  width: 80%;
+  left: -50px;
   top: 23.5%;
+  transform: scale(0);
 }
 
 ._ethrectangle{
   position: absolute;
-  width: 50%;
-  right: -50px;
+  width: 80%;
+  right: -100px;
   top: 50%;
+  transform: scale(0);
 }
 
 ._usdcFloatingIcon{
   position: absolute;
-  width: 18%;
-  left: 155px;
+  width: 25%;
   top: 60%;
+  left: -10px;
+  transform: scale(0);
 }
 
 ._eurFloatingIcon{
   position: absolute;
-  width: 18%;
-  right: 0px;
+  width: 30%;
+  right: -70px;
   top: 80%;
+  transform: scale(0);
 }
 
 ._dashFloatingIcon{
   position: absolute;
-  width: 18%;
-  right: 10px;
-  top: 35%;
+  width: 25%;
+  right: -25px;
+  top: 36%;
+  transform: scale(0);
 }
 
 @include responsive(extraLarge) {
@@ -138,35 +144,6 @@
   ._orangePixContainer{
     left: 60%;
     width: 100%;
-  }
-
-  ._usdtFloatingIcon{
-    right: 65px;
-    top: 10px;
-  }
-
-  ._usdrectangle{
-    left: 50px;
-    top: 20.5%;
-  }
-
-  ._dashFloatingIcon{
-    right: 20px;
-    top: 30%;
-  }
-  ._ethrectangle{
-    right: -20px;
-    top: 43%;
-  }
-
-  ._usdcFloatingIcon{
-    left: 60px;
-    top: 52%;
-  }
-
-  ._eurFloatingIcon{
-    right: 0px;
-    top: 70%;
   }
   
 }
@@ -184,6 +161,11 @@
     margin-top: 20px;
 
   }
+
+  
+  ._paragraphInstant{
+    font-size: 1.1rem ;
+  }
  
 }
 
@@ -195,6 +177,7 @@
   }
   ._productRightO{
     width: 100%;
+    margin-top: 5%;
   }
 
   ._orangePixContainer{
