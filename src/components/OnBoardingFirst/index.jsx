@@ -44,10 +44,10 @@ const OnBoardingFirst = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
-    return () => {
-       window.removeEventListener("wheel", null); 
-    }
+    // window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
+    // return () => {
+    //    window.removeEventListener("wheel", null); 
+    // }
   }, [])
 
   useEffect(() => {

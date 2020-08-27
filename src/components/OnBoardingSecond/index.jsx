@@ -37,16 +37,18 @@ const OnBoardingSecond = (props) => {
   }
 
   const handleWheel = (target, parent) => {
-    if(!flag) {
-      referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
-      action.saveStep({ stepTwo: true });
-      window.removeEventListener("wheel", null);
-    }
+    // console.log('second');
+    // if(!flag) {
+    //   referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
+    //   action.saveStep({ stepTwo: true });
+    //   window.removeEventListener("wheel", null);
+    // }
 
   }
   
   const completeAnimation = () => {
     setFlag(false);
+    action.saveStep({ completeSecondAnimation: true });
   }
 
   return (

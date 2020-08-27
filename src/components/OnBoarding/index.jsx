@@ -1,50 +1,95 @@
-import React, { Component, createRef } from "react";
+import React, { Component, createRef, useEffect, useState } from "react";
 import { PixDevices, DownloadIos, DownloadAndroid, PixOrange3d, UsdtIcon, BtcIcon, UsdcIcon, EthIcon } from '../Svg';
 import { OnBoardingFirst, OnBoardingSecond, OnBoardingThird } from '..';
 import { TimelineMax, gsap } from "gsap/all";
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { saveStep, postNewsletter } from '../../store/actions';
 import './styles.scss';
 
+const OnBoarding = ({ action, onboarding }) => {
+  const parent = createRef();
+  const secondscreen = createRef();
+  const thirdscreen = createRef();
 
-class OnBoarding extends Component {
+  const { completeSecondAnimation } = onboarding;
 
-   parent = createRef();
-   secondscreen = createRef();
-   thirdscreen = createRef();
+  const [firstExec, setExec] = useState(false);
+  const [secondExec, setSecondExec] = useState(false);
+  const [thirdExec, setThirdExec] = useState(false);
 
-  constructor(props) {
+  useEffect(() => {
+    window.addEventListener('wheel', (event) => {
+      setExec(true);
+    }, { once: true });
 
-    super(props);
+  }, []);
 
-    this.timeLine = new TimelineMax({paused: true});
-
-    this.state = {
-      flag: '',
-      overTime: null,
-      startTime: null,
-      check: false
+  useEffect(() => {
+    if(firstExec) {
+      parent.current.scrollTo({ left: secondscreen.current.offsetLeft, behavior: 'smooth' });
+      action.saveStep({ stepOne: true });
     }
-  }
-  
-  render() {
-    return (
-      <div className="_scrollingWrapper" ref={this.parent}>
-        <div className='_cardsParent'>
-          <div className='_cardCarrousel' >
-            <OnBoardingFirst reference={this.secondscreen} referenceParent={this.parent} />
-          </div>
-          <div className='_cardCarrousel' ref={this.secondscreen} >
+  }, [firstExec]);
 
-            <OnBoardingSecond reference={this.thirdscreen} referenceParent={this.parent}/>
+  useEffect(() => {
+    if(completeSecondAnimation) {
+      window.addEventListener('wheel', (event) => {
+        setSecondExec(true);
+      }, { once: true });
+    }
+  }, [completeSecondAnimation]);
 
-          </div>
-          <div className='_cardCarrousel ' ref={this.thirdscreen} >
+  useEffect(() => {
+    if(secondExec) {
+      let count = 0
+      window.addEventListener('wheel', () => {
+        if(count++ > 5) {
+          setThirdExec(true);
+          setSecondExec(false); 
+        }
+      });
+    }
+  }, [secondExec]);
 
-            <OnBoardingThird />
-          </div>
+  useEffect(() => {
+    if(thirdExec) {
+      parent.current.scrollTo({ left: thirdscreen.current.offsetLeft, behavior: 'smooth' });
+      action.saveStep({ stepTwo: true });
+    }
+  }, [thirdExec]);
+
+   return (
+    <div className="_scrollingWrapper" ref={parent}>
+      <div className='_cardsParent'>
+        <div className='_cardCarrousel' >
+          <OnBoardingFirst reference={secondscreen} referenceParent={parent} />
+        </div>
+        <div className='_cardCarrousel' ref={secondscreen} >
+
+          <OnBoardingSecond reference={thirdscreen} referenceParent={parent}/>
+
+        </div>
+        <div className='_cardCarrousel ' ref={thirdscreen} >
+
+          <OnBoardingThird />
         </div>
       </div>
-    )
+    </div>
+  );
+}
+
+const mapStateToProps = ({ onboarding, newsletter, loaderResult }) => ({ onboarding, newsletter, loaderResult});
+
+const mapDispatchToProps = dispatch => {
+  const actions = {
+    saveStep,
+    postNewsletter
+  }
+
+  return {
+    action: bindActionCreators(actions, dispatch)
   }
 }
 
-export default OnBoarding;
+export default connect(mapStateToProps, mapDispatchToProps)(OnBoarding);

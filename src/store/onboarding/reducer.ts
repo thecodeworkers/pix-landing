@@ -3,7 +3,8 @@ import { SAVE_STEP } from "./action-types";
 const initialState = {
   stepOne: null,
   stepTwo: null,
-  stepThree: null
+  stepThree: null,
+  completeSecondAnimation: false
 }
 
 export default (state = initialState, { type, payload }) => {
