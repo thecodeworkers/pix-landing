@@ -31,7 +31,6 @@ const Home = (props) => {
        <SEO title='Pix' />
       <Navbar />
       <OnBoarding />  
-      
 
 {
   onboarding.stepThree ?  
