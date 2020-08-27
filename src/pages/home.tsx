@@ -44,11 +44,7 @@ const Home = (props) => {
     <Phone phone='phone' />
     <Footer />  
   </div> 
-  : null }
-
- {/*   <BannerImage  about='about'>{t('allowing')} <span className='_boldText'>{t('send')}</span>, <span className='_boldText'>{t('receive')}</span> {t('and')} <span className='_boldText'>{t('quickly')}</span> {t('withdraw_funds')}</BannerImage>
-   <Benefits /> */}  
-    
+  : null }  
     </div>
   );
 }
@@ -58,74 +54,3 @@ const mapStateToProps = ({scroll, onboarding }) => ({
 });
 
 export default connect(mapStateToProps)(withTrans(Home));
-
-
-{/* <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> */}
-
-{/* <AboutUs reference={test} scroll={scrolling} theme={theme} />
-      <CardCurrency /> */}
-{/* <Separator /> */ }
-
-
-{/* <div ref={div} className={theme ? '_testing' : '_class'}>
-
-        <h1>hello world</h1> 
-      </div> */}
-
-
-{/* <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> */}
-{/* 
-      <div ref={test}>
-        <p>test</p>
-      </div> */}
-
-{/* <Product /> */ }
-
-
-
-{/* 
-    <div className=' bb'>
-      <div>
-        <p>ETH</p>
-      </div>
-    </div> */}
-
-{/* 
-<div className="rainbow">
-  <div className='square'>
-    <p>sadasdas</p>
-  </div>
-	Rainbow border
-</div> */}

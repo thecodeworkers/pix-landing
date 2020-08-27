@@ -12,7 +12,6 @@ export { default as CardCurrency} from './CardCurrency'
 export { default as Product } from './Product';
 export { default as Separator } from './Separator';
 export { default as BannerImage } from './BannerImage';
-export { default as Benefits } from './Benefits';
 export { default as OnBoarding } from './OnBoarding';
 export { default as OnBoardingFirst} from './OnBoardingFirst';
 export { default as OnBoardingSecond } from './OnBoardingSecond';
