@@ -10,6 +10,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: 10%;
+  position: relative;
 }
 
 ._phoneDimension{
@@ -204,5 +205,11 @@
     margin-bottom: 220px !important;
   }
 
+  ._phoneBox {
+    justify-content: center;
+  }
+  ._phoneDimension {
+    width: 80%;
+  }
 }
 

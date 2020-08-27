@@ -17,9 +17,9 @@ const AboutUs = ({ reference, theme, action, scroll, t, i18n }) => {
   }, []);
 
   return (
-
-    <div className={theme ? '_aboutUsParent' : '_anotherclass'} ref={benefitsRef}>
-      <div className={theme ? '_titles' : '_titlesDark'}>
+    // theme
+    <div className={false ? '_aboutUsParent' : '_anotherclass'} ref={benefitsRef}>
+      <div className={false ? '_titles' : '_titlesDark'}>
         <div className='_titles-child'>
 
           <div className='_floatingCoin'>

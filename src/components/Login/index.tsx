@@ -11,7 +11,6 @@ import { withTrans } from '../../i18n/withTrans';
 
 const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
 
-
   const { saveReference } = action;
   const loginRef = useRef();
 
@@ -41,10 +40,10 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
           <h4 className='_blackHeader'>{childrenTitle}
           </h4>
           <div className='_textSlider'>
-            <h4 className='_itemUno'>rápida</h4>
-            <h4 className='_itemDos'>fácil</h4>
-            <h4 className='_itemThree'>segura</h4>
-            <h4 className='_itemFour'>intuitiva</h4>
+            <h4 className='_itemUno'>{t('fast')}</h4>
+            <h4 className='_itemDos'>{t('easy')}</h4>
+            <h4 className='_itemThree'>{t('secure')}</h4>
+            <h4 className='_itemFour'>{t('intuitive')}</h4>
           </div>
         </div>
 

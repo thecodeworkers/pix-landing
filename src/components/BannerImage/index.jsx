@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import Separator from '../Separator';
 import { DiamondUsdc, DiamondEth, DarkCheckBox, OrangePixBanner } from '../Svg';
 import './styles.scss';
-
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -12,35 +11,46 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
 
   const { saveReference } = action;
   const aboutRef = useRef();
-  
+
   useEffect(() => {
     saveReference({ aboutRef });
   }, []);
- 
+
   return (
 
-    <div ref={aboutRef} className={ !isDark ? '_imageBackgroundDarkBanner' : '_imageBackgroundLight'}>
+    // isDark
+    <div ref={aboutRef} className={true ? '_imageBackgroundDarkBanner' : '_imageBackgroundLight'}>
       <div className="_imageContainer">
-        <h4 className='_whiteHeader'>{childrenTitle}</h4>
 
-        <div className='_separatorBanner'>
-        <Separator height={10} />
-        </div>
-        <p className={'_imageContainerText _whiteTxt'}>{children}</p>
+        <div className='_headerAbotUs'>
+          <h4> PIX OTC </h4>
 
-          <div  className={'_orange'}>
-          <OrangePixBanner />
+          <div className='_separatorBanner'>
+
+            <Separator height={6} />
+          </div >
+
+          <div className='_newParentText'>
+            <p className={'_imageContainerText _whiteTxt'}>{children}</p>
+          </div>
+
+          <div className={'_orange'}>
+            <OrangePixBanner />
+          </div>
+
         </div>
 
-        <div  className={'_coins'}>
-        <div  className={'_coin'}>
-          <DiamondUsdc />
-        </div>
-        <div  className={'_darkCheck'}>
-          <DarkCheckBox />
-        </div>
-        <div  className={'_coin'}>
-          <DiamondEth />
+        <div className='_superParentCoins'>
+          <div className={'_coins'}>
+            <div className={'_coin'}>
+              <DiamondUsdc />
+            </div>
+            <div className={'_darkCheck'}>
+              <DarkCheckBox />
+            </div>
+            <div className={'_coin'}>
+              <DiamondEth />
+            </div>
           </div>
         </div>
       </div>

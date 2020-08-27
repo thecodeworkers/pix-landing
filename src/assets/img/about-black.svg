@@ -4,16 +4,16 @@
 	 viewBox="0 0 2303 1297" style="enableBackground:new 0 0 2303 1297;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:url(#SVGID_2_);stroke:url(#SVGID_3_);stroke-width:0.8288;stroke-miterlimit:10;}
-	.st2{fill:url(#SVGID_4_);stroke:url(#SVGID_5_);stroke-width:0.8288;stroke-miterlimit:10;}
-	.st3{fill:url(#SVGID_6_);stroke:url(#SVGID_7_);stroke-width:0.8288;stroke-miterlimit:10;}
+	.st1{fill:url(#SVGID_2_);stroke:url(#SVGID_3_);strokeWidth:0.8288;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_4_);stroke:url(#SVGID_5_);strokeWidth:0.8288;stroke-miterlimit:10;}
+	.st3{fill:url(#SVGID_6_);stroke:url(#SVGID_7_);strokeWidth:0.8288;stroke-miterlimit:10;}
 	.st4{opacity:0.85;}
-	.st5{opacity:0.88;fill:url(#SVGID_8_);stroke:url(#SVGID_9_);stroke-width:1.2748;stroke-miterlimit:10;}
-	.st6{opacity:0.88;fill:url(#SVGID_10_);stroke:url(#SVGID_11_);stroke-width:1.2748;stroke-miterlimit:10;}
-	.st7{opacity:0.88;fill:url(#SVGID_12_);stroke:url(#SVGID_13_);stroke-width:1.2748;stroke-miterlimit:10;}
-	.st8{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);stroke-width:0.938;stroke-miterlimit:10;}
-	.st9{fill:url(#SVGID_16_);stroke:url(#SVGID_17_);stroke-width:0.9727;stroke-miterlimit:10;}
-	.st10{fill:url(#SVGID_18_);stroke:url(#SVGID_19_);stroke-width:0.938;stroke-miterlimit:10;}
+	.st5{opacity:0.88;fill:url(#SVGID_8_);stroke:url(#SVGID_9_);strokeWidth:1.2748;stroke-miterlimit:10;}
+	.st6{opacity:0.88;fill:url(#SVGID_10_);stroke:url(#SVGID_11_);strokeWidth:1.2748;stroke-miterlimit:10;}
+	.st7{opacity:0.88;fill:url(#SVGID_12_);stroke:url(#SVGID_13_);strokeWidth:1.2748;stroke-miterlimit:10;}
+	.st8{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);strokeWidth:0.938;stroke-miterlimit:10;}
+	.st9{fill:url(#SVGID_16_);stroke:url(#SVGID_17_);strokeWidth:0.9727;stroke-miterlimit:10;}
+	.st10{fill:url(#SVGID_18_);stroke:url(#SVGID_19_);strokeWidth:0.938;stroke-miterlimit:10;}
 </style>
 <radialGradient id="SVGID_1_" cx="1011.0278" cy="582.4289" r="778.8453" gradientTransform="matrix(1.1995 0 0 1.2008 -61.207 -50.9469)" gradientUnits="userSpaceOnUse">
 	<stop  offset="0" style="stopColor:#03002A"/>

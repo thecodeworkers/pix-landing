@@ -17,9 +17,9 @@ const OnBoardingSecond = (props) => {
     if (onboarding.stepOne) animation();
   }, [onboarding.stepOne]);
 
-  useEffect(() => {
-    if(!flag) window.addEventListener("wheel", handleWheel, {once: true})
-  }, [flag]);
+  // useEffect(() => {
+  //   if(!flag) window.addEventListener("wheel", handleWheel, {once: true})
+  // }, [flag]);
 
   const animation = () => {
     timeLine.play()
@@ -35,26 +35,22 @@ const OnBoardingSecond = (props) => {
       .to('._appAndroidDown', 0.6, { y: 0, opacity: 1 }, 1.2)
       timeLine.eventCallback("onComplete", () => completeAnimation());
   }
+  // }
 
-  const handleWheel = (target, parent) => {
-    // console.log('second');
-    // if(!flag) {
-    //   referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
-    //   action.saveStep({ stepTwo: true });
-    //   window.removeEventListener("wheel", null);
-    // }
-
-  }
-  
   const completeAnimation = () => {
     setFlag(false);
     action.saveStep({ completeSecondAnimation: true });
   }
 
+  const navigateThird = (target, parent) => {
+    referenceParent.current.scrollTo({ left: reference.current.offsetLeft, behavior: 'smooth' });
+    action.saveStep({ stepTwo: true });
+  }
+
   return (
     <div className='_smartMoneyParent'>
       
-      <div className='_responsiveArrow' onClick={() => handleWheel(reference, referenceParent)}>
+      <div className='_responsiveArrow' onClick={() => navigateThird(reference, referenceParent)}>
         <span className='material-icons' >arrow_forward</span>
       </div>  
       <div className='_LeftSideSmartMoney'>
