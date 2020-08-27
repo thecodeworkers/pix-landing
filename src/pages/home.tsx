@@ -30,7 +30,6 @@ const Home = (props) => {
       <SEO title='Pix' />
       <Navbar />
       <OnBoarding />
-
       {
         onboarding.stepThree ?
           <div style={{ marginTop: '100vh' }}>
