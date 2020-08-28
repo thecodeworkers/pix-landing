@@ -8,14 +8,9 @@ import { connect } from 'react-redux';
 
 const Cards = (props) => {
 	const { currency, flipState, action} = props;
-
-	// console.log(props);
-
+	
 	const [currencyPrice, setCurrencyPrice ] = useState(null);
 	const [ textClass, setTextClass ] = useState(null);
-	const [iconColor, setIconColor ] = useState(null);
-
-	const [flip, setFlip ] = useState(false);
 
 	const timeLine = new TimelineMax({ paused: true });
 
@@ -34,7 +29,7 @@ const Cards = (props) => {
 
 	const hideCurrency = () => {
 		setCurrencyPrice(null);
-		setTextClass(null)
+		setTextClass(null);
 	}
 
 	const	startAnimation = (param) => {
