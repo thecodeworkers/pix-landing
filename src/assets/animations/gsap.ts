@@ -55,15 +55,15 @@ const gsapStart = () => {
 
     ///////////////////PHONE/////////////////////
 
-    gsap.to('._tiny',{ scrollTrigger: { trigger: '._tiny',}, marginBottom: 150, opacity: 1, duration: 0.6, delay: 0.6 }),
-    gsap.to('._little  ',{ scrollTrigger: { trigger: '._little',}, marginBottom: 190, opacity: 1, duration: 0.6, delay: 0.6}),
-    gsap.to('._medium',{ scrollTrigger: { trigger: '._medium',}, marginBottom: 60 , opacity: 1, duration: 0.6, delay: 0.6 })
-    gsap.to('._big',{ scrollTrigger: { trigger: '._big',}, marginBottom: 20, opacity: 1, duration: 0.6, delay: 0.6 }),
-    gsap.to('._turqueseDiamond  ',{ scrollTrigger: { trigger: '._turqueseDiamond',}, marginBottom: 300, opacity: 1, duration: 0.6, delay: 0.6}),
-    gsap.to('._turquesetinyDiamond',{ scrollTrigger: { trigger: '._turquesetinyDiamond',}, marginBottom: 180 , opacity: 1, duration: 0.6, delay: 0.6 })
-    gsap.to('._blackDiamond  ',{ scrollTrigger: { trigger: '._blackDiamond',}, marginBottom: 100, opacity: 1, duration: 0.6, delay: 0.6}),
-    gsap.to('._usdDiamond',{ scrollTrigger: { trigger: '._usdDiamond',}, marginBottom: 240 , opacity: 1, duration: 0.6, delay: 0.6 })
-    gsap.to('._btcDiamond',{ scrollTrigger: { trigger: '._btcDiamond',}, marginBottom: 200 , opacity: 1, duration: 0.6, delay: 0.6 })
+    gsap.to('._tiny',{ scrollTrigger: { trigger: '._tiny',}, bottom: 140, opacity: 1, duration: 0.6, delay: 0.6 }),
+    gsap.to('._little  ',{ scrollTrigger: { trigger: '._little',}, bottom: 190, opacity: 1, duration: 0.6, delay: 0.6}),
+    gsap.to('._medium',{ scrollTrigger: { trigger: '._medium',}, bottom: 60 , opacity: 1, duration: 0.6, delay: 0.6 })
+    gsap.to('._big',{ scrollTrigger: { trigger: '._big',}, bottom: 20, opacity: 1, duration: 0.6, delay: 0.6 }),
+    gsap.to('._turqueseDiamond  ',{ scrollTrigger: { trigger: '._turqueseDiamond',}, bottom: 300, opacity: 1, duration: 0.6, delay: 0.6}),
+    gsap.to('._turquesetinyDiamond',{ scrollTrigger: { trigger: '._turquesetinyDiamond',}, bottom: 180 , opacity: 1, duration: 0.6, delay: 0.6 })
+    gsap.to('._blackDiamond  ',{ scrollTrigger: { trigger: '._blackDiamond',}, bottom: 100, opacity: 1, duration: 0.6, delay: 0.6}),
+    gsap.to('._usdDiamond',{ scrollTrigger: { trigger: '._usdDiamond',}, bottom: 240 , opacity: 1, duration: 0.6, delay: 0.6 })
+    gsap.to('._btcDiamond',{ scrollTrigger: { trigger: '._btcDiamond',}, bottom: 200 , opacity: 1, duration: 0.6, delay: 0.6 })
 
 }
 

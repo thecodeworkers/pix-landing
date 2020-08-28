@@ -320,6 +320,16 @@ opacity: 0;
   
   }
 
+  @include responsive(small) {
+   
+  
+    .mac{
+      display: none;
+    }
+    
+    }
+  
+
 
 
 

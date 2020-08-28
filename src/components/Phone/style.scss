@@ -31,7 +31,7 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 10px;
-  margin-bottom: 170px;
+  bottom: 170px;
   width: 200px;
   opacity: 0;
 }
@@ -40,7 +40,7 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 220px;
-  margin-bottom: 270px;
+  bottom: 270px;
   opacity: 0;
 }
 
@@ -48,7 +48,7 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 400px;
-  margin-bottom: 150px;
+  bottom: 150px;
   opacity: 0;
 }
 
@@ -56,7 +56,7 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 125px;
-  margin-bottom: 70px;
+  bottom: 70px;
   opacity: 0;
 }
 
@@ -64,7 +64,7 @@
   @include floating (10px, 1s);
   position: absolute;
   right: 330px;
-  margin-bottom: 210px;
+  bottom: 210px;
   opacity: 0;
 }
 
@@ -72,7 +72,7 @@
   @include floating (5px, 1s);
   position: absolute;
   right: 200px;
-  margin-bottom: 100px;
+  bottom: 20px;
   opacity: 0;
 }
 
@@ -113,7 +113,7 @@
   @include floating (5px, 1s);
   position: absolute;
   right: 250px;
-  margin-bottom: 160px;
+  bottom: 20px;
   opacity: 0;
 }
 
@@ -121,7 +121,7 @@
   @include floating (5px, 1s);
   position: absolute;
   right: 280px;
-  margin-bottom: 30px;
+  bottom: 30px;
   opacity: 0;
 }
 
@@ -129,7 +129,7 @@
   @include floating (5px, 1s);
   position: absolute;
   right: 450px;
-  margin-bottom: 0px;
+  bottom: 0px;
   opacity: 0;
 }
 
@@ -158,7 +158,7 @@
   }
   ._turqueseDiamond{
     width: 40px;
-    margin-bottom: 270px !important;
+    bottom: 270px !important;
     right: 170px;
   }
   ._turquesetinyDiamondDimensions{
@@ -166,11 +166,11 @@
   }
   ._turquesetinyDiamond{
     right: 310px;
-    margin-bottom: 180px !important;
+    bottom: 180px !important;
   }
   ._tiny{
     right: 150px;
-    margin-bottom: 150px !important;
+    bottom: 150px !important;
   }
   ._tinyDimensions{
     width: 40px;
@@ -180,21 +180,21 @@
   }
   ._little{
     right: 190px;
-    margin-bottom: 180px !important;
+    bottom: 180px !important;
   }
   ._mediumDimensions{
     width: 90px;
   }
   ._medium{
     right: 230px;
-    margin-bottom:  70px !important;
+    bottom:  70px !important;
   }
   ._bigDimensions{
     width: 150px;
   }
   ._big{
     right:350px;
-    margin-bottom: 60px !important;
+    bottom: 60px !important;
   }
   .__usdDiamondDimensions{
     width: 80px;
@@ -202,7 +202,7 @@
 
   ._usdDiamond{
     right: 240px;
-    margin-bottom: 220px !important;
+    bottom: 220px !important;
   }
 
   ._phoneBox {
@@ -212,4 +212,18 @@
     width: 80%;
   }
 }
+
+
+@include responsive(small) {
+   
+  ._medium{
+    display: none;
+  }
+  
+  ._big{
+    display: none;
+  }
+
+
+  }
 
