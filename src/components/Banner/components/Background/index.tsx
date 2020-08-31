@@ -95,14 +95,14 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* box 8 */}
-        <div className="_box" style={{ width: 110, height: 170, bottom: '48%', right: 30   }}>
+        <div className="_box" style={{ width: 110, height: 170, bottom: '48%', right: 30  }}>
           <div >
           {/*   <div style={{ width: 120, height: 170 }}> */}
               <div>
                 <Box
                   viewWidth={383.3}
                   viewHeight={453.69}
-                  animation={{ entryPoint: '0px', middlePoint: '-10px' }}
+                  animation={{ entryPoint: '0px', middlePoint: '10px' }}
                   opacityBox={darkTheme ? null : 0.61}
                   linearGradients={BoxH(darkTheme).linearGradient}
                   polygons={BoxH(darkTheme).polygon}
@@ -115,12 +115,12 @@ export const Background = ({ theme }) => {
 
       <div className="_lastSection">
         {/* box 9 */}
-        <div className="_box" style={{ width: 100, height: 240, bottom: '40%', right: 200 }}>
+        <div className="_box" style={{ width: 100, height: 240, bottom: '40%', right: 200, }}>
           <div>
             <Box
               viewWidth={383.3}
               viewHeight={453.69}
-              animation={{ entryPoint: '0px', middlePoint: '-10px' }}
+              animation={{ entryPoint: '0px', middlePoint: '10px' }}
               opacityBox={darkTheme ? null : 1}
               linearGradients={BoxI(darkTheme).linearGradient}
               polygons={BoxI(darkTheme).polygon}
@@ -129,7 +129,7 @@ export const Background = ({ theme }) => {
         </div>
 
         {/* box 10 */}
-        <div className="_box" style={{ width: 80, height: 210, bottom: '43%', right: 455 }}>
+        <div className="_box" style={{ width: 80, height: 210, bottom: '43%', right: 455,  }}>
           <div>
             <Box
               viewWidth={383.3}
