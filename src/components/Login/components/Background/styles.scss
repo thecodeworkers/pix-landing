@@ -81,9 +81,6 @@
     @include noneDisplay;
   }
 
-  ._boxLogin{
-    display: none;
-  }
 }
 
 @include responsive(small) {

@@ -66,8 +66,6 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
         <Lang />
       </div>
 
-
-
       <div className='_cubito'>
         <BackgroundLogin />
       </div>

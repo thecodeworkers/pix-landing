@@ -48,6 +48,7 @@
   background-position: bottom;
   transition:all 1s;
   -webkit-transition:all 1s;
+  background-color: red;
 }
 ._aboutUsParent {
   @include background('about-us');
@@ -59,6 +60,7 @@
   @include background('about-black');
   background-position: center;
   background-color: $blackRussian;
+  padding-bottom: 4rem;
 } 
 
 ._titles {
@@ -96,6 +98,7 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  
 }
 
 ._aboutTextDescription {

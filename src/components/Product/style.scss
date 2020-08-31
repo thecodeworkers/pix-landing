@@ -11,7 +11,6 @@
   margin-left: auto;
   width: 60%;
   position: relative;
-
 }
 
 ._productParent {
@@ -34,7 +33,6 @@
 }
 
 ._productRight {
-  // background-color: orange;
   width: 50%;
   position: relative;
 }
@@ -130,7 +128,7 @@
 }
 
 ._paragraphProduct {
-  margin: 0px 0px 10px;
+  margin: 1rem 0px 1rem;
   text-align: left;
   font-weight: 800;
   font-family: $muli;

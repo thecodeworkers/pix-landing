@@ -19,7 +19,6 @@ const Home = (props) => {
 
   const scrollPosition = () => {
     const position = window.scrollY;
-
     if (position < 2450) setTheme(true);
     if (position > 2450 && position <= 4200) setTheme(false);
     if (position > 4200) setTheme(true);
