@@ -27,8 +27,8 @@ const OnBoardingFirst = (props) => {
   const changeTheme = () => setCheck(!check);
 
   useEffect(() => {
-    if(result == 'success') setEmail('');
-    if(result == 'error') setTooltipOpen(true);
+    if(result === 'success') setEmail('');
+    if(result === 'error') setTooltipOpen(true);
 
     return () => {
       setEmail('');

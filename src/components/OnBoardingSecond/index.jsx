@@ -9,8 +9,6 @@ import { TimelineMax } from 'gsap/all';
 
 const OnBoardingSecond = (props) => {
   const { onboarding, reference, referenceParent, action, t} = props;
-
-  const [flag, setFlag ] = useState(true);
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
@@ -38,7 +36,6 @@ const OnBoardingSecond = (props) => {
   // }
 
   const completeAnimation = () => {
-    setFlag(false);
     action.saveStep({ completeSecondAnimation: true });
   }
 
