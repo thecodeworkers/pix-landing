@@ -96,13 +96,16 @@ opacity: 0;
 }
 
 ._buttonGradient {
-  @include boldTexts($white, 12px);
+  // @include boldTexts($white, 12px);
   padding: 10px 50px 10px 50px;
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, $blueGreenGradient);
   opacity:0;
   transform: translateY(30px);
+  font-family: $muli;
+  color: $white;
+  font-size: 12px;
 }
 
 ._bannerFooter {

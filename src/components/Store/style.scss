@@ -29,9 +29,10 @@
   transform: scale(0);
 }
 ._storeTitle{
-  width: 25%;
+  width: 35%;
   opacity: 0;
-    transform: translateY(30px);
+  text-align: center;
+  transform: translateY(30px);
 }
 
 ._storeButtonContainer{
@@ -56,6 +57,13 @@
   font-size: 0.8rem;
 }
 
+._blackHeaderTwo {
+  color: $newBlack;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+}
 
 
 @include responsive(large) {

@@ -23,7 +23,7 @@ export const Banner = ({ scroll, t }) => {
 
               <div className="_bannerButton">
               <a className='_link' target='_blank' href="https://play.google.com/store?hl=es_VE"> 
-                <button className="_buttonGradient">{t('download')}</button></a>
+                <button className="_buttonGradient">{t('download').toUpperCase()}</button></a>
                 <p className="_buttonText">{t('stay_on_day')}</p>
 
               </div>

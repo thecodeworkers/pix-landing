@@ -14,7 +14,7 @@ const Store = ({childrenTitle = null, children= null, t }) => {
     
       <div className="_storeContainer">
         <div className='_storeTitle'>
-        <h4 className='_blackHeader'>{childrenTitle}</h4>
+        <h4 className='_blackHeaderTwo'>{childrenTitle}</h4>
         </div>
         <div  className='_storeLine'>
           <Separator height={10} />

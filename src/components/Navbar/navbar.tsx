@@ -52,7 +52,7 @@ const Navigation = (props) => {
                 <NavLink className='text-white'>{t('about_us').toUpperCase()}</NavLink>
               </NavItem>
               <NavItem className='_item' onClick={ scroll.productRef ? () => scrolling(scroll.productRef) : null}>
-                <NavLink className='text-white '>{t('products'.toUpperCase())}</NavLink>
+                <NavLink className='text-white '>{t('products').toUpperCase()}</NavLink>
               </NavItem>
               <NavItem className='_item' onClick={scroll.benefitsRef ? () => scrolling(scroll.benefitsRef) : null}>
                 <NavLink className='text-white'>{t('benefits').toUpperCase()}</NavLink>

@@ -6,7 +6,7 @@ import './style.scss';
 
 const Language = (props) => {
   const { t, i18n } = useTranslation()
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('es');
   const [float, setFloat] = useState(false);
   useEffect(() => {
     document.addEventListener('scroll', floatButton);
