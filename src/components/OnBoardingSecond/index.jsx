@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { PixDevices, PixOrange3d, UsdtIcon, BtcIcon, UsdcIcon, EthIcon, DownloadIos, DownloadAndroid } from '../Svg'
 import './styles.scss';
 import { saveStep } from '../../store/actions';

@@ -60,6 +60,7 @@ const OnBoarding = ({ action, onboarding }) => {
   const navigateThirdScreen = () => {
     parent.current.scrollTo({ left: thirdscreen.current.offsetLeft, behavior: 'smooth' });
     action.saveStep({ stepTwo: true });
+    window.removeEventListener("wheel", null);
   };
 
   
