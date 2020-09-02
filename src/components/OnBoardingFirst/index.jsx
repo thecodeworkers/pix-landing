@@ -74,10 +74,7 @@ const OnBoardingFirst = (props) => {
       <div className='_parentSendSectionBodyLeft'>
         <div className='_sonofson'>
           <div className='_sendContentChild'>
-          {/* <div className='_enter'> */}
             <h4 className='_sendRightTitle'>{t('available_on')}</h4>
-             {/* </div> */}
-
             <div className='_exchangeInstantly'>
               <p>{t('crypto_transactions1')}</p>
               <p>{t('crypto_transactions2')}</p>
