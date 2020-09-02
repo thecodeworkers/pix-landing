@@ -141,12 +141,20 @@ const OnBoardingFirst = (props) => {
 
             <div className='_currencyCardsRow'>
               <div className='_cardBtcRounded' >
-              <BtcCard />
+                <BtcCard />
               </div>
-             
-              <EthCard />
-              <DashCard />
-              <UsdCard />
+
+              <div className='_cardEthRounded' >
+                <EthCard />
+              </div>
+
+              <div className='_cardDashRounded' >
+                <DashCard />
+              </div>
+
+              <div className='_cardUsdRounded' >
+                <UsdCard />
+              </div>
             </div>
           </div>
         </div>

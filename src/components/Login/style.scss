@@ -125,7 +125,7 @@ position: relative;
   overflow: visible;
   position: relative;
   margin-left: 0.7rem;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
 ._textSlider h4 {
@@ -215,7 +215,7 @@ z-index: 1;
   ._itemUno {
     animation: cycle 8s linear infinite;
     color: $textOrange;
-    // transform: translateY(50px);
+    // transform: translateY(-200px);
   }
 
   ._itemDos {
@@ -307,7 +307,7 @@ z-index: 1;
       z-index: -1;
     }
     100% {
-      top: 80px;
+      top: -80px;
       opacity: 0;
       z-index: -1;
     }

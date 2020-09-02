@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UsdCard = () => (
-  <svg width="118" height="34" viewBox="0 0 118 34">
+  <svg width="100%" height="100%" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="usd-gradient" x1="0.015" y1="0.5" x2="0.9" y2="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stopColor="#3da740"/>

@@ -48,7 +48,8 @@
 ._langText {
   border-bottom: 1px solid $black;
   font-weight: 600;
-
+  color: $black !important;
+  text-decoration: none;
   cursor: pointer;
 }
 /* 

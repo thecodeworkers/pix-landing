@@ -52,7 +52,7 @@ const Login = ({ childrenTitle = null, scroll, action, about, product, t }) => {
         <Separator height={10} />
       </div>
       <div className='_buttonContainerLogin'>
-      <a className='_link' target='_blank' href="http://exchange.thepix.io"> <button  className='_loginBtnBlack'>{t('login').toUpperCase()}</button></a>
+      <a className='_link' target='_blank' href="http://exchange.thepix.io"> <button className='_loginBtnBlack'>{t('login').toUpperCase()}</button></a>
       <a className='_link' target='_blank' href="http://exchange.thepix.io/register">  <button className='_registerBtnBlue'>{t('register').toUpperCase()}</button></a>
       </div>
 

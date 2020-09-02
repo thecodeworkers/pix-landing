@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DashCard = () => (
-  <svg width="120" height="34" viewBox="0 0 120 34">
+  <svg width="100%" height="100%" viewBox="0 0 120 34">
   <defs>
     <linearGradient id="dash-gradient" x1="0.104" y1="0.434" x2="1.046" y2="0.406" gradientUnits="objectBoundingBox">
       <stop offset="0" stopColor="#008de4"/>

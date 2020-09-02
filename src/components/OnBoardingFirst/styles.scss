@@ -271,8 +271,9 @@
   cursor: pointer;
 }
 
-._cardBtcRounded {
+._cardBtcRounded, ._cardEthRounded, ._cardDashRounded, ._cardUsdRounded {
   margin-bottom: 10px;
+  width: 6.25rem;
 }
 
 ._enter {
