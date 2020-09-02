@@ -68,6 +68,9 @@
   font-family: $muli;
   font-size: 1.2rem;
   transition: 1s;
+  -webkit-transition:1s;
+  -moz-transition:1s;
+  -o-transition:1s;
   color: $newGray;
   width: 85%;
   font-weight: 800;

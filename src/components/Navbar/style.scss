@@ -48,6 +48,9 @@
   & a {
     border-bottom: 2px solid $black;
     transition: all 0.6s;
+    -webkit-transition:all 0.6s;
+-moz-transition: all 0.6s;
+-o-transition: all 0.6s;
   }
 
   & a:hover { 
@@ -55,6 +58,9 @@
     border-bottom: 2px solid $appleGreen;
     transform: translateY(-1px);
     transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+-moz-transition:all 0.6s;
+-o-transition: all 0.6s;
   }
 }
 
@@ -69,11 +75,17 @@
   @include btn($black, 0.5rem, 'not', $white, $white);
   @include buttonResponsive;
   transition: all 0.6s;
+  -webkit-transition:all 0.6s;
+-moz-transition:all 0.6s;
+-o-transition:all 0.6s;
   margin-right: 1rem;
 
   &:hover {
     @include btn($white, 0.5rem, 'not', $white, $black);
     transition: all 0.6s;
+    -webkit-transition:all 0.6s;
+    -moz-transition:all 0.6s;
+    -o-transition:all 0.6s;
   }
 
 }
@@ -85,6 +97,9 @@
   &:hover {
     @include btn($white, 0.6rem, 'not', $black, $black);
     transition: all 0.6s;
+    -webkit-transition:all 0.6s;
+    -moz-transition:all 0.6s;
+    -o-transition:all 0.6s;
   }
 
 }
@@ -104,6 +119,9 @@
       @include btn($white, 0.5rem, 'not', $white, $black);
       width: 60%;
       transition: all 0.6s;
+      -webkit-transition:all 0.6s;
+      -moz-transition:all 0.6s;
+      -o-transition:all 0.6s;
     }
   
   }
@@ -113,6 +131,9 @@
       @include btn($white, 0.6rem, 'not', $black, $black);
       width: 60%;
       transition: all 0.6s;
+      -webkit-transition:all 0.6s;
+      -moz-transition:all 0.6s;
+      -o-transition:all 0.6s;
     }
   
   }

@@ -28,6 +28,9 @@
 ._noneElement {
   display: none;
   transition: opacity 1s ease-out;
+  -webkit-transition:opacity 1s ease-out;
+  -moz-transition:opacity 1s ease-out;
+  -o-transition:opacity 1s ease-out;
   opacity: 0;
 }
 
