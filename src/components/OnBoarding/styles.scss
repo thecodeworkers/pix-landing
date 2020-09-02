@@ -27,9 +27,9 @@
   width: 100%;
 }
 
-// ._scrollingWrapper {
-//   -webkit-overflow-scrolling: touch;
-// }
+._scrollingWrapper {
+  scrollbar-width: none; 
+}
 
 
 ._scrollingWrapper::-webkit-scrollbar {
