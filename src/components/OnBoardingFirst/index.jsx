@@ -27,8 +27,8 @@ const OnBoardingFirst = (props) => {
   const changeTheme = () => setCheck(!check);
 
   useEffect(() => {
-    if(result == 'success') setEmail('');
-    if(result == 'error') setTooltipOpen(true);
+    if(result === 'success') setEmail('');
+    if(result === 'error') setTooltipOpen(true);
 
     return () => {
       setEmail('');
@@ -43,12 +43,12 @@ const OnBoardingFirst = (props) => {
     valid ? setIsValid(true) : setIsValid(false);
   };
 
-  useEffect(() => {
-    // window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
-    // return () => {
-    //    window.removeEventListener("wheel", null); 
-    // }
-  }, [])
+  // useEffect(() => {
+  //   // window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
+  //   return () => {
+  //      window.removeEventListener("wheel", null); 
+  //   }
+  // }, [])
 
   useEffect(() => {
 
@@ -70,7 +70,6 @@ const OnBoardingFirst = (props) => {
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
     action.saveStep({ stepOne: true })
-    window.removeEventListener("wheel", null);
   }
 
   return (
@@ -102,9 +101,9 @@ const OnBoardingFirst = (props) => {
                   <div className="_newsletterArrow">
                     <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                   </div>
-                ) : result == 'success' ? (
+                ) : result === 'success' ? (
                   <span className="material-icons _newsletterArrow">done</span>
-                ) : result == 'error' ? (
+                ) : result === 'error' ? (
                   <>
                     <span className="material-icons _newsletterArrow" id="TooltipExample">close</span>
                     <Tooltip placement="left" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>

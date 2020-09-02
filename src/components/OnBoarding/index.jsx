@@ -1,7 +1,5 @@
-import React, { Component, createRef, useEffect, useState } from "react";
-import { PixDevices, DownloadIos, DownloadAndroid, PixOrange3d, UsdtIcon, BtcIcon, UsdcIcon, EthIcon } from '../Svg';
+import React, { createRef, useEffect, useState } from "react";
 import { OnBoardingFirst, OnBoardingSecond, OnBoardingThird } from '..';
-import { TimelineMax, gsap } from "gsap/all";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { saveStep, postNewsletter } from '../../store/actions';
@@ -62,6 +60,7 @@ const OnBoarding = ({ action, onboarding }) => {
   const navigateThirdScreen = () => {
     parent.current.scrollTo({ left: thirdscreen.current.offsetLeft, behavior: 'smooth' });
     action.saveStep({ stepTwo: true });
+    window.removeEventListener("wheel", null);
   };
 
   

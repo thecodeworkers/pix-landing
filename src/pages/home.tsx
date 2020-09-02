@@ -39,10 +39,11 @@ const Home = (props) => {
             <AboutUs theme={theme} />
             <Banner />
             <Store childrenTitle={t('have_power')} children={t('anyone')} />
-            <Phone phone='phone' />
+            <Phone phone='phone' /> 
             <Footer />
           </div>
-          : null}
+          : null
+        }
     </div>
   );
 }

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Pix`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `landing`,
+    description: `App and Desktop wallet, fast, safe and intuitive service on cryptocurrency`,
+    author: `The code workers`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#00001F`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/logo-pix.svg`,
          // This path is relative to the root of the site.
       },
       resolve: 'gatsby-plugin-google-fonts',
@@ -40,9 +40,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        tsxPragma: `tsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true, 
+        tsxPragma: `tsx`, 
+        allExtensions: true, 
       },
     },
     // {

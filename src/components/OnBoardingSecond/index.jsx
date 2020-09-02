@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { PixDevices, PixOrange3d, UsdtIcon, BtcIcon, UsdcIcon, EthIcon, DownloadIos, DownloadAndroid } from '../Svg'
 import './styles.scss';
 import { saveStep } from '../../store/actions';
@@ -9,8 +9,6 @@ import { TimelineMax } from 'gsap/all';
 
 const OnBoardingSecond = (props) => {
   const { onboarding, reference, referenceParent, action, t} = props;
-
-  const [flag, setFlag ] = useState(true);
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
@@ -38,7 +36,6 @@ const OnBoardingSecond = (props) => {
   // }
 
   const completeAnimation = () => {
-    setFlag(false);
     action.saveStep({ completeSecondAnimation: true });
   }
 

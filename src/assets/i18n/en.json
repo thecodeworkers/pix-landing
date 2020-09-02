@@ -4,7 +4,7 @@
   "crypto_transactions1":"Send, receive and",
   "crypto_transactions2":"Exchange money ",
   "crypto_transactions3":"instantly",
-  "donwload":"Download",
+  "download":"Download",
   "network":"Network",
 
   "fast": "Fast",
@@ -71,6 +71,7 @@
   "with_you3": "enough",
 
   "easy": "easy",
-  "secure": "segure",
-  "app_intuitive": "intuitive"
+  "secure": "secure",
+  "app_intuitive": "intuitive",
+  "app_fast": "fast"
 }
