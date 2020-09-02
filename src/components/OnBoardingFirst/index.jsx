@@ -43,13 +43,6 @@ const OnBoardingFirst = (props) => {
     valid ? setIsValid(true) : setIsValid(false);
   };
 
-  // useEffect(() => {
-  //   // window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
-  //   return () => {
-  //      window.removeEventListener("wheel", null); 
-  //   }
-  // }, [])
-
   useEffect(() => {
 
     if(loaderResult.loader) {
