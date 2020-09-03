@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/img`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#00001F`,
         display: `minimal-ui`,
-        icon: `src/images/logo-pix.svg`,
+        icon: `src/assets/img/pix.png`,
          // This path is relative to the root of the site.
       },
       resolve: 'gatsby-plugin-google-fonts',

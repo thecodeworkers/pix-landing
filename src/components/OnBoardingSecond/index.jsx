@@ -96,7 +96,10 @@ const OnBoardingSecond = (props) => {
                  <p>{t('manage_your_money3')}</p>
                 </>
                 :
-                <p>{t('manage_your_money1')} <br></br>{t('manage_your_money2')} {t('manage_your_money3')}</p>
+                <>
+                <p>{t('manage_your_money1')}  </p>
+                <p>{t('manage_your_money2')} {t('manage_your_money3')}</p>
+                </>
               } 
              
             </div>
