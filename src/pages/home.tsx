@@ -26,7 +26,7 @@ const Home = (props) => {
 
   return (
     <div>
-      <SEO title='Pix' />
+      <SEO title='PIX' />
       <Navbar />
       <OnBoarding />
       {
