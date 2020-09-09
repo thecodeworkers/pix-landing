@@ -10,7 +10,6 @@ import { TimelineMax } from 'gsap/all';
 const OnBoardingThird = (props) => {
 
   const { onboarding, action , t } = props;
-
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
@@ -63,8 +62,8 @@ const OnBoardingThird = (props) => {
           </div>
 
           <div className='_descriptionSectionDoubleRight'>
-            <div className='_btcExchangeToUsd'>
-              <BtcExchangeUsd />
+            <div className='_btcExchangeToUsd' >
+                <BtcExchangeUsd />
             </div>
 
             <div className='_descriptionSectionRightParragraph'>

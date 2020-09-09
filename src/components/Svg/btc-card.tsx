@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BtcCard = () => (
-  <svg width="118" height="34" viewBox="0 0 118 34">
+  <svg width="100%" height="100%" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="btc-gradient" y1="0.421" x2="1.062" y2="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stopColor="#ebb831"/>

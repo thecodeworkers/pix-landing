@@ -12,12 +12,13 @@
 }
 
 ._lottieContainer {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 
 ._containerLoader{
   @include background-loader;
+  // background-color: white;
 }
 
 ._hide {
@@ -28,6 +29,9 @@
 ._noneElement {
   display: none;
   transition: opacity 1s ease-out;
+  -webkit-transition:opacity 1s ease-out;
+  -moz-transition:opacity 1s ease-out;
+  -o-transition:opacity 1s ease-out;
   opacity: 0;
 }
 

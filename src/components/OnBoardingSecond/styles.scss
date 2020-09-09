@@ -42,11 +42,11 @@
 // }
 
 ._manageMoneyText {
-
   transform: translateX(80px);
   opacity: 0;
   & p {
     font-size: 3.4rem;
+    font-weight: 900;
     margin-bottom: -1.3rem !important;
     color: $white;
   }

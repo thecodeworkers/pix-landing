@@ -6,6 +6,9 @@
 /*   background-image: url('../../images/#{$image}.svg'); */
   background-size: cover;
   transition: 1s;
+  -webkit-transition:1s;
+-moz-transition:1s;
+-o-transition:1s;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -33,7 +36,7 @@ position: relative;
 ._blackHeader{
   color: $newBlack;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 900;
   margin-top: 10%;
   text-align: right;
   z-index: 1;
@@ -125,7 +128,7 @@ position: relative;
   overflow: visible;
   position: relative;
   margin-left: 0.7rem;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
 ._textSlider h4 {
@@ -210,26 +213,27 @@ z-index: 1;
     transform: scale(0);
 }
 
-
-
   ._itemUno {
-    animation: cycle 8s linear infinite;
+    animation: cycle 7s linear infinite;
     color: $textOrange;
-    // transform: translateY(50px);
+    font-weight: 900;
   }
 
   ._itemDos {
-    animation: cycle2 8s linear infinite;
+    animation: cycle2 7s linear infinite;
     color: $lightBLue;
+    font-weight: 900;
   }
 
   ._itemThree {
-    animation: cycle3 8s linear infinite;
+    animation: cycle3 7s linear infinite;
     color: $textPurple;
+    font-weight: 900;
   }
   ._itemFour {
-    animation: cycle4 8s linear infinite;
+    animation: cycle4 7s linear infinite;
     color: $appleGreen;
+    font-weight: 900;
   }
 
   @keyframes cycle {
@@ -265,7 +269,7 @@ z-index: 1;
       z-index: 0;
     }
     96% {
-      top: -80px;
+      top: 80px;
       opacity: 0;
     }
     100% {
@@ -307,7 +311,7 @@ z-index: 1;
       z-index: -1;
     }
     100% {
-      top: 80px;
+      top: -80px;
       opacity: 0;
       z-index: -1;
     }
@@ -357,35 +361,59 @@ z-index: 1;
       top: 80px;
       opacity: 0;
     }
+
     56% {
       top: 80px;
       opacity: 0;
     }
+
     60% {
       top: 0px;
       opacity: 1;
     }
+
     64% {
       top: 0px;
       opacity: 1;
     }
+
     76% {
       top: 0px;
       opacity: 1;
       z-index: 0;
     }
+
     80% {
-      top: -80px;
-      opacity: 0;
+      top: 0px;
+      opacity: 1;
       z-index: 0;
     }
+
     81% {
-      top: 80px;
-      opacity: 0;
-      z-index: -1;
-    }
-    100% {
       top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+
+    // 80% {
+    //   top: -80px;
+    //   opacity: 0;
+    //   z-index: 0;
+    // }
+    // 81% {
+    //   top: 80px;
+    //   opacity: 0;
+    //   z-index: -1;
+    // }
+
+    96% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+
+    100% {
+      top: -80px;
       opacity: 0;
       z-index: -1;
     }
