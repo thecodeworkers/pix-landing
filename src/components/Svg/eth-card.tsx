@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EthCard = () => (
-  <svg width="118" height="34" viewBox="0 0 118 34">
+  <svg width="100%" height="100%" viewBox="0 0 118 34">
   <defs>
     <linearGradient id="eth-gradient" x1="1.084" y1="0.5" x2="0" y2="0.633" gradientUnits="objectBoundingBox">
       <stop offset="0" stopColor="#304352"/>

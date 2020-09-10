@@ -58,18 +58,23 @@
   width: 60%;
   display: block;
   margin-left: auto;
-  margin-bottom: 1.5rem;
-  transform: translateY(-30px);
+  margin-bottom: -5rem;
+  // transform: translateY(-30px);
+  margin-top: 30px;
   opacity: 0;
+  animation: floating 1.5s alternate infinite;
 }
 
 ._btcExchangeToUsd {
   width: 60%;
   display: block;
   margin-right: auto;
-  margin-bottom: 1rem;
-  transform: translateY(-30px);
+  margin-bottom: -5rem;
+  // transform: translateY(-30px);
+  // margin-top: 300px;
+  // background-color: blue;
   opacity: 0;
+  animation: floating 1.5s alternate infinite;
 }
 
 
@@ -79,6 +84,7 @@
   opacity: 0;
   & p {
     font-size: 2.8rem;
+    font-weight: 800;
     margin-bottom: -0.8rem !important;
     text-align: right;
     color: $white;
@@ -91,6 +97,7 @@
   opacity: 0;
   & p {
     font-size: 2.8rem;
+    font-weight: 900;
     margin-bottom: -0.8rem !important;
     text-align: left;
   }
@@ -153,9 +160,16 @@
 
   ._descriptionSectionParragraph {
     & p {
+      font-weight: 900;
+      color: red;
       text-align: center;
       font-size: 2rem;
     }
     
   }
+}
+
+@keyframes floating {
+  from {transform: translateY(-5px);}
+  to { transform: translateY(5px);}
 }

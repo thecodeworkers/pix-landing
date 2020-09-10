@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `landing`,
+    title: `Landing`,
     description: `App and Desktop wallet, fast, safe and intuitive service on cryptocurrency`,
     author: `The code workers`,
   },
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#00001F`,
         display: `minimal-ui`,
-        icon: `src/images/logo-pix.svg`,
+        icon: `src/images/gatsby-icon.png`,
          // This path is relative to the root of the site.
       },
       resolve: 'gatsby-plugin-google-fonts',
@@ -34,7 +34,7 @@ module.exports = {
         fonts: [
           'material icons',
           'roboto:300,400,500,700',
-        ],
+        ], 
       },
     },
     {

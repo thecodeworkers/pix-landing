@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from 'react';
 import { PixelLogo } from '../Svg';
 import './styles.scss';
 import lottie from 'lottie-web';
-import animation from '../../assets/animations/loader.json';
+import animation from '../../assets/animations/pix3d.json';
 import { saveLoader } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';

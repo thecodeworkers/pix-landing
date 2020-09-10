@@ -6,6 +6,8 @@
   background-size: cover;
   transition: 1s;
   -webkit-transition: 1s;
+  -moz-transition:1s;
+  -o-transition:1s;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -39,17 +41,22 @@
   color: $white;
   transition: 1s;
   -webkit-transition: 1s;
+  -moz-transition:1s;
+  -o-transition:1s;
 }
 
 ._blackTxt {
   color: $black;
   transition: 1s;
+  -webkit-transition:1s;
+  -moz-transition:1s;
+  -o-transition:1s;
 }
 
 ._whiteHeader{
   color: $white;
   font-size: 5.5rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-top: 90%;
   text-align: center;
 }
@@ -67,6 +74,7 @@
     text-align: center;
     font-weight: bold;
     font-family: $muli;
+    font-weight: 900;
   }
 }
 ._newParentText {

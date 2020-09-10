@@ -36,12 +36,13 @@ const Cards = (props) => {
 		const key = param.flip;
 		const colorIcon = param.iconKey;
 
-		console.log(flipState)
 		if(!flipState[key]) {
 			timeLine.play()
 			.to(`.${param.class}`, 0.5, {rotationY:'+=180'}, 0.3)
 			.to(`.${param.reverseClass}`, 0.2, {backgroundColor: param.color}, 0.3)
-	
+			.to(`.${param.iconStyle}`, 0.2, {rotationY: '+=180'}, 0.3)
+			
+			
 			setTimeout(() => {
 				action.saveCardFlip({[colorIcon]: '#FFFFFF'})
 			}, 300)
@@ -52,6 +53,8 @@ const Cards = (props) => {
 			timeLine.play()
 			.to(`.${param.class}`, 0.5, {rotationY:'0'}, 0.3)
 			.to(`.${param.reverseClass}`, 0.2, {backgroundColor: 'rgba(0,0,0,0)'}, 0.3)
+			.to(`.${param.iconStyle}`, 0.2, {rotationY:'0'}, 0.3)
+		
 	
 			setTimeout(() => {
 				setTimeout(() => {
@@ -72,7 +75,7 @@ const Cards = (props) => {
 			icon: <BtcLogo fillIcon={flipState.btcIcon} />,
 			balance: `$ ${numberFormat(currency.bitcoin)}`,
 			flip: 'btcFlip',
-
+			iconStyle: '_littleIconBtc'
 		},
 		{
 			class: '_cardETH',
@@ -82,7 +85,8 @@ const Cards = (props) => {
 			balance: `$ ${numberFormat(currency.ethereum)}`,
 			flip: 'ethFlip',
 			iconKey: 'ethIcon',
-			color: '#444457'
+			color: '#444457',
+			iconStyle: '_littleIconEth'
 		},
 		{
 			class: '_cardDASH',
@@ -93,16 +97,18 @@ const Cards = (props) => {
 			flip: 'dashFlip',
 			color: '#008de4',
 			iconKey: 'dashIcon',
+			iconStyle: '_littleIconDash'
 		},
 		{
 			class: '_cardUSDT',
 			textClass: '_textUsdt',
 			reverseClass: '_reverseUsdt',
 			icon: <Usd fillIcon={flipState.usdtIcon} />,
-			balance: `$ ${numberFormat(currency.litecoin)}`,
+			balance: '$1',
 			color: '#57d6af',
 			flip: 'usdtFlip',
 			iconKey: 'usdtIcon',
+			iconStyle: '_littleIconUsdt'
 		},
 	
 	]
@@ -120,7 +126,9 @@ const Cards = (props) => {
 									<div key={index} onMouseEnter={() => showCurrency(res)} onMouseLeave={() => hideCurrency()} onClick={() => startAnimation(res)}>
 										<div className={res.class}>
 										
-											<div className="_cardChild">{res.icon}
+											<div className="_cardChild">
+												
+												<span className={res.iconStyle}> {res.icon}</span>
 											<div className={res.reverseClass}></div>
 											
 											</div>

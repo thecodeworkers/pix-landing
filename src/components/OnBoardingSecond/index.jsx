@@ -8,8 +8,10 @@ import { withTrans } from '../../i18n/withTrans';
 import { TimelineMax } from 'gsap/all';
 
 const OnBoardingSecond = (props) => {
-  const { onboarding, reference, referenceParent, action, t} = props;
+  const { onboarding, reference, referenceParent, action, t, i18n} = props;
   const timeLine = new TimelineMax({ paused: true });
+
+  const lang = i18n.language;
 
   useEffect(() => {
     if (onboarding.stepOne) animation();
@@ -44,7 +46,9 @@ const OnBoardingSecond = (props) => {
     action.saveStep({ stepTwo: true });
   }
 
+
   return (
+
     <div className='_smartMoneyParent'>
       
       <div className='_responsiveArrow' onClick={() => navigateThird(reference, referenceParent)}>
@@ -81,12 +85,22 @@ const OnBoardingSecond = (props) => {
 
         <div className='_rightSideSmartContent'>
           <h4 className='_availableDesktopTitle'>{t('available_on')}</h4>
-
-          <div className='_manageMoneyText'>
-            <p>{t('manage_your_money1')}</p>
-            <p>{t('manage_your_money2')}</p>
-            <p>{t('manage_your_money3')}</p>
-          </div>
+            <div className='_manageMoneyText'>
+              {
+                lang == 'es' ?
+                <>
+                 <p>{t('manage_your_money1')}</p>
+                 <p>{t('manage_your_money2')}</p>
+                 <p>{t('manage_your_money3')}</p>
+                </>
+                :
+                <>
+                <p>{t('manage_your_money1')}  </p>
+                <p>{t('manage_your_money2')} {t('manage_your_money3')}</p>
+                </>
+              } 
+             
+            </div>
 
           <div className='_downloadStores'>
 

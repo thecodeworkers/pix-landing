@@ -43,13 +43,6 @@ const OnBoardingFirst = (props) => {
     valid ? setIsValid(true) : setIsValid(false);
   };
 
-  // useEffect(() => {
-  //   // window.addEventListener("wheel", () => handleWheel(reference, referenceParent), { once: true }) 
-  //   return () => {
-  //      window.removeEventListener("wheel", null); 
-  //   }
-  // }, [])
-
   useEffect(() => {
 
     if(loaderResult.loader) {
@@ -81,10 +74,7 @@ const OnBoardingFirst = (props) => {
       <div className='_parentSendSectionBodyLeft'>
         <div className='_sonofson'>
           <div className='_sendContentChild'>
-          {/* <div className='_enter'> */}
             <h4 className='_sendRightTitle'>{t('available_on')}</h4>
-             {/* </div> */}
-
             <div className='_exchangeInstantly'>
               <p>{t('crypto_transactions1')}</p>
               <p>{t('crypto_transactions2')}</p>
@@ -141,12 +131,20 @@ const OnBoardingFirst = (props) => {
 
             <div className='_currencyCardsRow'>
               <div className='_cardBtcRounded' >
-              <BtcCard />
+                <BtcCard />
               </div>
-             
-              <EthCard />
-              <DashCard />
-              <UsdCard />
+
+              <div className='_cardEthRounded' >
+                <EthCard />
+              </div>
+
+              <div className='_cardDashRounded' >
+                <DashCard />
+              </div>
+
+              <div className='_cardUsdRounded' >
+                <UsdCard />
+              </div>
             </div>
           </div>
         </div>

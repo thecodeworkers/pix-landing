@@ -10,7 +10,6 @@ import { TimelineMax } from 'gsap/all';
 const OnBoardingThird = (props) => {
 
   const { onboarding, action , t } = props;
-
   const timeLine = new TimelineMax({ paused: true });
 
   useEffect(() => {
@@ -21,8 +20,8 @@ const OnBoardingThird = (props) => {
     timeLine.play()
       .to('._descriptionSectionParragraph', 0.6, { y: 0, opacity: 1 }, 0.6)
       .to('._phoneLigthDeviceParent', 0.6, { x: 0 }, 0.4)
-      .to('._btcExchangeToEth', 0.6, { y: 0, opacity: 1 }, 0.8)
-      .to('._btcExchangeToUsd', 0.6, { y: 0, opacity: 1 }, 0.9)
+      .to('._btcExchangeToEth', 0.6, { marginBottom: 1, opacity: 1 }, 0.8)
+      .to('._btcExchangeToUsd', 0.6, { marginBottom: 1, opacity: 1 }, 0.9)
       .to('._descriptionSectionRightParragraph', 0.6, { y: 0, opacity: 1 }, 1)
       .to('._senCard', 0.6, { bottom: '5%', opacity: 1 }, 0.9)
       timeLine.eventCallback("onComplete", () => showLanding());
@@ -63,8 +62,8 @@ const OnBoardingThird = (props) => {
           </div>
 
           <div className='_descriptionSectionDoubleRight'>
-            <div className='_btcExchangeToUsd'>
-              <BtcExchangeUsd />
+            <div className='_btcExchangeToUsd' >
+                <BtcExchangeUsd />
             </div>
 
             <div className='_descriptionSectionRightParragraph'>

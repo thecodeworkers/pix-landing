@@ -60,6 +60,10 @@
   opacity: 0;
 }
 
+._blackDiamond{
+  width:80px
+}
+
 ._usdDiamond{
   @include floating (10px, 1s);
   position: absolute;
