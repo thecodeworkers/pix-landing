@@ -11,8 +11,6 @@ const OnBoardingSecond = (props) => {
   const { onboarding, reference, referenceParent, action, t, i18n} = props;
   const timeLine = new TimelineMax({ paused: true });
 
-  console.log(i18n.language)
-
   const lang = i18n.language;
 
   useEffect(() => {

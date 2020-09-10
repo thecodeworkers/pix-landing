@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MacBookTheme = () => (
-<svg version="1.1" id="Layer_1"  x="0px" y="0px" width="100%" height="100%" viewBox="0 0 2533 1424" enable-background="new 0 0 2533 1424" >  <image id="image0" width="2533" height="1424" x="0" y="0"
+<svg version="1.1" id="Layer_1"  x="0px" y="0px" width="100%" height="100%" viewBox="0 0 2533 1424" enableBackground="new 0 0 2533 1424" >  <image id="image0" width="2533" height="1424" x="0" y="0"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACeUAAAWQCAYAAADeU71GAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 CXBIWXMAAC4jAAAuIwF4pT92AACAAElEQVR42uz9aaxtW3bfh/3HmGvtfZrbvHqsVywyUiSriU01
