@@ -104,7 +104,7 @@ const Cards = (props) => {
 			textClass: '_textUsdt',
 			reverseClass: '_reverseUsdt',
 			icon: <Usd fillIcon={flipState.usdtIcon} />,
-			balance: `$ ${numberFormat(currency.litecoin)}`,
+			balance: '$1',
 			color: '#57d6af',
 			flip: 'usdtFlip',
 			iconKey: 'usdtIcon',
