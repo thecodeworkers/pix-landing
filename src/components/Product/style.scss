@@ -9,8 +9,10 @@
 
 @mixin phone {
   margin-left: auto;
-  width: 60%;
+  width: 50%;
   position: relative;
+  // background-color: red;
+  margin-top: 1rem;
 }
 
 ._productParent {
@@ -56,30 +58,37 @@
   margin: 0px 0px 1rem;
   font-size: 2.625rem;
   font-weight: 900;
+  transition: all 0.6s;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.6s;
+    cursor: pointer;
+  } 
 
 }
 
 ._sendIcon{
   position: absolute;
   width: 25%;
-  right: 10px;
+  right: -5px;
   top: 15%;
   transform: scale(0);
 }
 
 ._btcRecantgle{
   position: absolute;
-  width: 90%;
-  right: 25px;
-  top: 46%;
+  width: 100%;
+  right: 16px;
+  top: 55%;
   transform: scale(0);
 }
 
 ._profile{
   position: absolute;
   width: 25%;
-  left: 0;
-  top: 67.5%;
+  left: -35px;
+  top: 80%;
   transform: scale(0);
 }
 
@@ -91,7 +100,8 @@
 ._pixLeftDescription {
   // background-color:red;
   width: 55%;
-  margin-top: 5rem;
+  margin-top:6rem;
+
 
     & h5 {
       margin-top: 2rem;

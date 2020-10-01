@@ -121,6 +121,23 @@
   opacity: 0;
 }
 
+
+._sendCardSecond {
+  width: 15rem;
+  z-index: 999;
+  position: absolute;
+  bottom: -5%;
+  left: 55.5%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+._scrollNewButtonSecond {
+  width:68px;
+  height: 71px;
+  cursor: pointer;
+}
+
 @keyframes floating {
   from {transform: translateY(0px);}
   to { transform: translateY(-20px);}
@@ -173,6 +190,9 @@
       margin-bottom: -1rem !important;
     }
   }
-
+  
+  ._sendCardSecond {
+    display: none;
+  }
 
 }

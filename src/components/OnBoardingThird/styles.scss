@@ -114,7 +114,7 @@
   z-index: 999;
   position: absolute;
   bottom: -5%;
-  left: 50%;
+  left: 55.5%;
   transform: translate(-50%, 0);
   opacity: 0;
 }
@@ -161,13 +161,20 @@
   ._descriptionSectionParragraph {
     & p {
       font-weight: 900;
-      color: red;
+      color: $white;
       text-align: center;
       font-size: 2rem;
     }
     
   }
 }
+
+._scrollNewButton {
+  width:68px;
+  height: 71px;
+  cursor: pointer;
+}
+
 
 @keyframes floating {
   from {transform: translateY(-5px);}

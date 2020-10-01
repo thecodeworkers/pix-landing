@@ -45,9 +45,11 @@ const Cards = (props) => {
 			
 			setTimeout(() => {
 				action.saveCardFlip({[colorIcon]: '#FFFFFF'})
-			}, 300)
+				showCurrency(param);
+			}, 250)
 
 			action.saveCardFlip({[key]: true})
+			
 			return;
 		} 
 			timeLine.play()
@@ -55,14 +57,14 @@ const Cards = (props) => {
 			.to(`.${param.reverseClass}`, 0.2, {backgroundColor: 'rgba(0,0,0,0)'}, 0.3)
 			.to(`.${param.iconStyle}`, 0.2, {rotationY:'0'}, 0.3)
 		
-	
-			setTimeout(() => {
+
 				setTimeout(() => {
 					action.saveCardFlip({[colorIcon]: param.color})
-				}, 300)
-			}, 300)
+					hideCurrency();
+				}, 250)
 			
 			action.saveCardFlip({[key]: false})
+			
 	}
 
 	let cards = [
@@ -123,7 +125,7 @@ const Cards = (props) => {
 						{
 							cards.map((res, index) => {
 								return (
-									<div key={index} onMouseEnter={() => showCurrency(res)} onMouseLeave={() => hideCurrency()} onClick={() => startAnimation(res)}>
+									<div key={index} onMouseEnter={() => startAnimation(res)} onMouseLeave={() => startAnimation(res)} >
 										<div className={res.class}>
 										
 											<div className="_cardChild">

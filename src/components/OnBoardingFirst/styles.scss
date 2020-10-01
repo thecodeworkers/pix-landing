@@ -168,6 +168,22 @@
   -o-transition:.4s;
 }
 
+._sendCardFirst {
+  width: 15rem;
+  z-index: 999;
+  position: absolute;
+  bottom: -5%;
+  left: 55.5%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+._scrollNewButtonFirst {
+  width:68px;
+  height: 71px;
+  cursor: pointer;
+}
+
 ._changeThemeCheckbox:checked + ._slider {
   background-color: $white;
 }
@@ -349,7 +365,7 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
+    border-radius: 5px;
     z-index:999;
     display: flex;
     justify-content: center;
@@ -375,4 +391,7 @@
     }
   }
 
+  ._sendCardFirst {
+    display: none;
+  }
 }
