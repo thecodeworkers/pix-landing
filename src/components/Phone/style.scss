@@ -11,6 +11,22 @@
   align-items: flex-end;
   margin-top: 10%;
   position: relative;
+  width: 60%;
+}
+
+._storeNewContainer{
+  width: 40%;
+
+}
+
+._phoneText{
+  font-size: 3rem;
+    font-family: "Muli", sans-serif;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    transform: translateY(30px);
 }
 
 ._phoneDimension{
@@ -151,6 +167,10 @@
   cursor: pointer;
 }
 
+._storeFather{
+  display: flex;
+}
+
 
 @include responsive(medium) {
 
@@ -210,12 +230,53 @@
   }
 
   ._phoneBox {
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   ._phoneDimension {
     width: 80%;
   }
+
+  ._storeFather{
+    display: block;
+  }
+  ._storeNewContainer{
+    width: 100%;
+    
+  }
+  ._iosInfo{
+    width: 15%;
+    }
+    
+    ._androidInfo{
+      width: 15%;
+      }
 }
+
+@include responsive(large) {
+   
+ 
+  ._storeFather{
+    display: block;
+  }
+  ._storeNewContainer{
+    width: 100%;
+    
+  }
+  ._phoneBox{
+    width: 100%;
+}
+
+._iosInfo{
+width: 15%;
+}
+
+._androidInfo{
+  width: 15%;
+  }
+
+  }
+
 
 
 @include responsive(small) {
@@ -228,6 +289,24 @@
     display: none;
   }
 
+  ._storeFather{
+    display: block;
+  }
+  ._storeNewContainer{
+    width: 100%;
+    
+  }
+  ._phoneBox{
+      width: 100%;
+  }
+
+  ._iosInfo{
+    width: 20%;
+    }
+    
+    ._androidInfo{
+      width: 20%;
+      }
 
   }
 

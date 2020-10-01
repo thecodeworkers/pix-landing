@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { PixPhone, DiamondUsdPhone, DiamondBtcPhone, DiamondTurquese, DiamondBlack, CubePhone, PixelLogo } from '../Svg';
+import { PixPhone, DiamondUsdPhone, DiamondBtcPhone, DiamondTurquese, DiamondBlack, CubePhone, PixelLogo, DownloadAndroid, DownloadIos } from '../Svg';
 import './style.scss';
 import { saveReference } from '../../store/actions';
 import { bindActionCreators } from 'redux';
@@ -12,13 +12,35 @@ const Phone = ({ scroll, action, about, phone, t }) => {
 
   const { saveReference } = action;
 
- const scrollToLogin = () => {
+  const scrollToLogin = () => {
     scrolling(scroll.loginRef);
- }
+  }
 
   return (
     <div>
+
+  
+    <div className={'_storeFather'} >
+      <div className={'_storeNewContainer'}>
+          <p className="_phoneText" style={{ marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>
+          <div className="_footerNetwork">
+            <div className="_iosInfo">
+              <a className='_link' target='_blank' href="https://www.apple.com/la/ios/app-store/">
+                <DownloadIos />
+              </a>
+            </div>
+            <div className="_androidInfo">
+              <a className='_link' target='_blank' href="https://play.google.com/store?hl=es_VE">
+                <DownloadAndroid />
+              </a>
+            </div>
+          </div>
+        </div>
+
       <div className='_phoneBox' >
+
+        
+
         <div className='_tiny'>
           <div className='_tinyDimensions'>
             <CubePhone />
@@ -36,7 +58,7 @@ const Phone = ({ scroll, action, about, phone, t }) => {
         </div>
         <div className='_big'>
           <div className='_bigDimensions'>
-          <CubePhone />
+            <CubePhone />
           </div>
         </div>
         <div className='_turquesetinyDiamond'>
@@ -68,8 +90,10 @@ const Phone = ({ scroll, action, about, phone, t }) => {
           <PixPhone />
         </div>
       </div>
-      <div className='_pixelLogoBox' onClick={() => scrollToLogin()}>
-      <PixelLogo color={'#57D6AF'} />
+    
+    </div>
+    <div className='_pixelLogoBox' onClick={() => scrollToLogin()}>
+        <PixelLogo color={'#57D6AF'} />
       </div>
     </div>
   )

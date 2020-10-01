@@ -32,7 +32,7 @@
 
 @mixin boldTexts($color, $fontSize) {
   font-family: $muli;
-  font-weight: 900;
+  font-weight: 600;
   color: $color;
   text-align: center;
   font-size: $fontSize;
@@ -118,20 +118,20 @@ opacity: 0;
 }
 
 ._footerNetwork {
-  @include width(22.5%);
+ 
   @include flex-axis(center);
   opacity: 0;
   transform: translateY(30px);
 }
 
 ._iosInfo {
-  @include width(100px);
+  @include width(20%);
   @include overlap;
 }
 
 ._androidInfo {
   margin-left: 1rem;
-  @include width(100px);
+  @include width(20%);
   @include overlap;
 }
 
@@ -183,13 +183,7 @@ opacity: 0;
     height: 15vh;
   }
 
-  ._iosInfo {
-    display: none;
-  }
-
-  ._androidInfo {
-    display: none;
-  }
+ 
 
   ._footerElements {
     height: 100%;
