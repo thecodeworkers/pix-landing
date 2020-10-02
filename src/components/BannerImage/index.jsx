@@ -23,7 +23,7 @@ const BannerImage = ({ children = null, childrenTitle = null, isDark = false, sc
       <div className="_imageContainer">
 
         <div className='_headerAbotUs'>
-          <h4> PIX OTC </h4>
+          <h4 className='_pixOtcTitle'> PIX OTC </h4>
 
           <div className='_separatorBanner'>
 
