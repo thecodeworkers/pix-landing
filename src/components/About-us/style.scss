@@ -96,10 +96,14 @@
 
 ._aboutText {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: $muli;
   text-align: center;
   color: $newBlue;
+
+  &:nth-child(1) {
+    margin-bottom: 0px;
+  }
 }
 
 ._aboutBox{
@@ -109,12 +113,15 @@
   border-color: $newBlue;
   box-shadow: -5px 5px 5px $newBlue;
   border-radius: 10px;
-  padding: 0px 8px;
+  padding: 0px 15px;
   display: flex;
   justify-content: center;
+  padding-top: 10px;
   margin-top: 2rem;
-  
+  box-sizing: border-box;
 }
+
+
 
 ._aboutTextDescription {
   font-size: 0.8rem;
