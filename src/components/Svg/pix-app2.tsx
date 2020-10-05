@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PixAppTwo = () => (
-  <svg version="1.1" id="Layer_1" x="0px" y="0px" width="90%" height="90%" viewBox="0 0 632 1230" enable-background="new 0 0 632 1230">  <image id="image0" width="632" height="1230" x="0" y="0"
+  <svg version="1.1" id="Layer_1" x="0px" y="0px" width="90%" height="90%" viewBox="0 0 632 1230" enableBackground="new 0 0 632 1230">  <image id="image0" width="632" height="1230" x="0" y="0"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAngAAATOEAYAAAAJRIcrAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
   AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0T///////8JWPfcAAAA
   CXBIWXMAAC4jAAAuIwF4pT92AACAAElEQVR42nT9f2zV67fnh73Wxz4e1/H4ejyO5XJd1yIe6hBE
