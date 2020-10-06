@@ -31,9 +31,9 @@
   animation: out 2s;
 }
 
-  &:hover::before {
+  &::before {
     @include before($gradient);
-    animation: rotate 2s linear infinite;
+    animation: rotate 3s linear infinite;
   }
 
 
@@ -54,6 +54,7 @@
 ._cardCurrencyMain {
   display: flex;
   width: 100%;
+  z-index: 2;
 }
 
 ._contentCard{

@@ -1,8 +1,8 @@
 export const actionObject = (type: string, payload: any = null) => ({ type, payload });
 
-export const scrolling = (ref: any): void => {
+export const scrolling = (ref: any, number: number = null): void => {
   if(ref) {
     const target = ref.current;
-    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+    window.scrollTo({ top: !number ? target.offsetTop : target.offsetTop - number, behavior: 'smooth' });
   } 
 }

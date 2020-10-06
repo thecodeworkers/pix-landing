@@ -169,7 +169,7 @@ export const Background = ({ theme }) => {
 
        
         {/* diamond 3 */}
-        <div className="_diamond" style={{ width: 50, height: 130, bottom: '25%', right: 80 }}>
+        <div className="_diamond" style={{ width: 50, height: 130, bottom: '20%', right: 80 }}>
           <PaintedDiamond
             animation={{ entryPoint: '0px', middlePoint: '10px' }}
             linearGradients={DiamondA(darkTheme).linearGradient}

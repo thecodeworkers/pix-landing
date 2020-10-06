@@ -5,15 +5,15 @@ import { bindActionCreators } from 'redux';
 import { saveStep } from '../../store/actions';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
-import { TimelineMax } from 'gsap/all';
-
+import { gsap } from 'gsap/all';
+import { ScrollDown } from '../';
 const OnBoardingThird = (props) => {
 
-  const { onboarding, action , t } = props;
-  const timeLine = new TimelineMax({ paused: true });
+  const { onboarding, action, t, scroll } = props;
+  const timeLine = gsap.timeline();
 
   useEffect(() => {
-    if(onboarding.stepTwo) playanimation();
+    if (onboarding.stepTwo) playanimation();
   }, [onboarding.stepTwo]);
 
   const playanimation = () => {
@@ -24,11 +24,11 @@ const OnBoardingThird = (props) => {
       .to('._btcExchangeToUsd', 0.6, { marginBottom: 1, opacity: 1 }, 0.9)
       .to('._descriptionSectionRightParragraph', 0.6, { y: 0, opacity: 1 }, 1)
       .to('._senCard', 0.6, { bottom: '5%', opacity: 1 }, 0.9)
-      timeLine.eventCallback("onComplete", () => showLanding());
+    timeLine.eventCallback("onComplete", () => showLanding());
   }
 
   const showLanding = () => {
-    action.saveStep({stepThree: true})
+    action.saveStep({ stepThree: true })
   }
 
   return (
@@ -63,7 +63,7 @@ const OnBoardingThird = (props) => {
 
           <div className='_descriptionSectionDoubleRight'>
             <div className='_btcExchangeToUsd' >
-                <BtcExchangeUsd />
+              <BtcExchangeUsd />
             </div>
 
             <div className='_descriptionSectionRightParragraph'>
@@ -76,13 +76,15 @@ const OnBoardingThird = (props) => {
       </div>
 
       <div className='_senCard'>
-        <SendBtcCard />
+        <div className='_scrollNewButton'>
+          <ScrollDown color="#fff" reference={scroll.loginRef} />
+        </div>
       </div>
     </div>
   )
 }
 
-const mapStateToProps = ({ onboarding }) => ({ onboarding });
+const mapStateToProps = ({ onboarding, scroll }) => ({ onboarding, scroll });
 
 const mapDispatchToProps = dispatch => {
   const actions = {

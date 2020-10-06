@@ -72,5 +72,7 @@
   "easy": "fácil",
   "secure": "segura",
   "app_intuitive": "intuitiva",
-  "app_fast": "rápida"
+  "app_fast": "rápida",
+
+  "email_input": "Enter your email"
 }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { DashCard, EthCard, UsdCard, BtcCard, MacBookTheme } from '../Svg';
-import { TimelineMax } from 'gsap/all';
+import { gsap} from 'gsap/all';
 import { saveStep,postNewsletter } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans'
 import { Tooltip } from 'reactstrap';
+import { ScrollDown } from '../'
 
 import './styles.scss';
 
@@ -14,14 +15,12 @@ const OnBoardingFirst = (props) => {
   const { action, reference, referenceParent, newsletter, t, loaderResult} = props;
   const { loading, result } = newsletter;
 
-  // const { loader } = loader;
-
-  const timeLine = new TimelineMax({ paused: true });
+  const timeLine = gsap.timeline();
 
   const [email, setEmail] = useState('');
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const [isValid, setIsValid] = useState(false);
-  const [check, setCheck] = useState(false);
+  const [check, setCheck] = useState(true);
 
   const toggle = () => setTooltipOpen(!tooltipOpen);
   const changeTheme = () => setCheck(!check);
@@ -56,9 +55,15 @@ const OnBoardingFirst = (props) => {
       .to('._macBookChangeTheme', 0.6, { opacity: 1, x: 0 }, 0.4)
       .to('._currencyCardsRow', 0.6, { opacity: 1, y: 0 }, 0.6)
       .to('._switchThemeParent', 0.6, { opacity: 1, x: 0 }, 0.6)
+      .to('._sendCardFirst', 0.6, { bottom: '5%', opacity: 1 }, 0.8)
     }
- 
+  
   }, [loaderResult.loader])
+
+  useEffect(() => {
+    setCheck(false);
+  }, [])
+
 
   const handleWheel = (target, parent) => {
     parent.current.scrollTo({ left: target.current.offsetLeft, behavior: 'smooth' });
@@ -85,7 +90,7 @@ const OnBoardingFirst = (props) => {
               <p>{t('enter_email_app')}</p>
             
               <div className='_divIcon'>
-              <input type='text' placeholder='email' className='_inputNewsletterSend' onChange={event => emailValidation(event.target.value)}></input>
+              <input type='text' placeholder={t('email_input')} className='_inputNewsletterSend' onChange={event => emailValidation(event.target.value)}></input>
               {
                 loading ? (
                   <div className="_newsletterArrow">
@@ -147,6 +152,12 @@ const OnBoardingFirst = (props) => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className='_sendCardFirst'>
+        <div className='_scrollNewButtonFirst' onClick={() => handleWheel(reference, referenceParent)}>
+          <ScrollDown color="#fff" reference={null} />
         </div>
       </div>
     </div>

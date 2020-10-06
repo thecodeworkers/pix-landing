@@ -47,7 +47,7 @@ const Footer = ({ t, i18n, scroll, newsletter, action }) => {
               <div className='_links'>
                 <p onClick={() => scrolling(scroll.aboutRef)}>{t('about_us')}</p>
                 <p onClick={() => scrolling(scroll.productRef)}>{t('products')}</p>
-                <p onClick={() => scrolling(scroll.benefitsRef)}>{t('benefits')}</p>
+                <p onClick={() => scrolling(scroll.benefitsRef, 230)}>{t('benefits')}</p>
               </div>
 
               <div className='_icons'>

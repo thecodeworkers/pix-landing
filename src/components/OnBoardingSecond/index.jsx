@@ -5,11 +5,12 @@ import { saveStep } from '../../store/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withTrans } from '../../i18n/withTrans';
-import { TimelineMax } from 'gsap/all';
+import { gsap } from 'gsap/all';
+import { ScrollDown } from '../'; 
 
 const OnBoardingSecond = (props) => {
   const { onboarding, reference, referenceParent, action, t, i18n} = props;
-  const timeLine = new TimelineMax({ paused: true });
+  const timeLine = gsap.timeline();
 
   const lang = i18n.language;
 
@@ -18,7 +19,7 @@ const OnBoardingSecond = (props) => {
   }, [onboarding.stepOne]);
 
   // useEffect(() => {
-  //   if(!flag) window.addEventListener("wheel", handleWheel, {once: true})
+  //   if(!flag) window.addEventLis tener("wheel", handleWheel, {once: true})
   // }, [flag]);
 
   const animation = () => {
@@ -33,6 +34,7 @@ const OnBoardingSecond = (props) => {
       .to('._appIosDown', 0.6, { x: 0, opacity: 1 }, 1)
       .to('._appAndroidDown', 0.6, { x: 0, opacity: 1 }, 1.2)
       .to('._appAndroidDown', 0.6, { y: 0, opacity: 1 }, 1.2)
+      .to('._sendCardSecond', 0.6, { bottom: '5%', opacity: 1 }, 1.2)
       timeLine.eventCallback("onComplete", () => completeAnimation());
   }
   // }
@@ -46,9 +48,7 @@ const OnBoardingSecond = (props) => {
     action.saveStep({ stepTwo: true });
   }
 
-
   return (
-
     <div className='_smartMoneyParent'>
       
       <div className='_responsiveArrow' onClick={() => navigateThird(reference, referenceParent)}>
@@ -121,6 +121,12 @@ const OnBoardingSecond = (props) => {
           </div>
         </div>
 
+      </div>
+
+      <div className='_sendCardSecond'>
+        <div className='_scrollNewButtonSecond' onClick={() => navigateThird(reference, referenceParent)}>
+          <ScrollDown color="#fff" reference={null} />
+        </div>
       </div>
     </div>
 

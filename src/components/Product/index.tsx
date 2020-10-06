@@ -23,11 +23,11 @@ const Product = ({ action, t, i18n, product, login }) => {
           
           <div className='_productLeft'>
             <div className='_pixLeftDescription'>
-              <div className='_centerSquare'>
+              {/* <div className='_centerSquare'>
                 <Square />
-              </div>
+              </div> */}
 
-              <h5 className='_productext'>{t('secure_platform')}</h5>
+              {/* <h5 className='_productext'>{t('secure_platform')}</h5> */}
               <p className='_wallPix'>{t('pix_wallet')}</p>
               <div className='_separatorProduct'>
               <Separator height={6} />
@@ -35,9 +35,9 @@ const Product = ({ action, t, i18n, product, login }) => {
          
               <p className='_paragraphProduct'>{t('pix_description')}</p>
               <a className='_link' target='_blank' href="https://play.google.com/store?hl=es_VE"> 
-               <button className='_productBtnBlue'>{t('download_pix')} 
+               {/* <button className='_productBtnBlue'>{t('download_pix')} 
                <span className="material-icons _buttonIcon">arrow_forward</span>
-               </button>
+               </button> */}
               </a>
              
               <div className='_cubeContainer'>
