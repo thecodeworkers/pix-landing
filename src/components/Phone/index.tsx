@@ -18,11 +18,9 @@ const Phone = ({ scroll, action, about, phone, t }) => {
 
   return (
     <div>
-
-  
     <div className={'_storeFather'} >
       <div className={'_storeNewContainer'}>
-          <p className="_phoneText" style={{ marginTop: 40, marginBottom: 40, }}>{t('be_part')}</p>
+          <p className="_phoneText" >{t('be_part')}</p>
           <div className="_footerNetwork">
             <div className="_iosInfo">
               <a className='_link' target='_blank' href="https://www.apple.com/la/ios/app-store/">
