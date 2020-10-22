@@ -15,22 +15,6 @@ const Loader = (props) => {
   const { children, action  } = props;
 
   const animationContainer:any = createRef()
-  
-  // useEffect(() => {
-  //   let count = 0;
-
-  //   const interval = setInterval(() => {
-  //     if(!count) setColor('#2699FB');
-  //     if(count == 1) setColor('#45B649'); 
-  //     if(count == 2) setClassName('_hide');
-  //     if(count >= 3) {
-  //       setClassName('_noneElement');
-  //       clearInterval(interval);
-  //     }
-      
-  //     count++;
-  //   }, 2000);
-  // }, []);
 
     useEffect(() => {
       const anim = lottie.loadAnimation({
@@ -54,7 +38,7 @@ const Loader = (props) => {
   return (
     <>
       <div className={className}> 
-        <div className={`'animation-container ${lottieName}`} ref={animationContainer}></div>
+        <div className={`animation-container ${lottieName}`} ref={animationContainer}></div>
       </div>
       { children }
     </>

@@ -3,7 +3,7 @@ import i18next from 'i18next';
 i18next
 .init({
     fallbackLng: 'es',
-    lng: 'en',
+    lng: 'es',
     resources: {
         es: {
             translations: require('../assets/i18n/es.json')
