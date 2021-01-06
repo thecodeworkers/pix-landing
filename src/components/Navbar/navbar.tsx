@@ -18,8 +18,7 @@ import { scrolling } from '../../utils/common';
 import { TimelineMax, gsap } from 'gsap/all';
 
 const Navigation = (props) => {
-
-  const {t,i18n, scroll, loaderResult} = props
+  const { t, i18n, scroll, loaderResult } = props;
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   
@@ -34,6 +33,15 @@ const Navigation = (props) => {
     }
   }, [loaderResult.loader]);
 
+  const changeLang = () => {
+    i18n.changeLanguage(decideLanguage())
+  }
+
+  const decideLanguage = () => {
+    return i18n.language == 'es' 
+                              ? 'en' 
+                              : 'es'
+  }
 
   return (
     <div>
@@ -67,6 +75,9 @@ const Navigation = (props) => {
             <a className='_link' href="http://exchange.thepix.io" target='_blank'>  <button className='_navBarBtnBlue'>{t('login').toUpperCase()}</button></a>
             </NavItem>
           </Collapse>
+        </div>
+        <div className='_item' onClick={changeLang}>
+          <span className='text-white'>{decideLanguage().toUpperCase()}</span>
         </div>
       </Navbar>
     </div>
