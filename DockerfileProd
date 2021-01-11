@@ -1,0 +1,23 @@
+FROM node:12.18 as build-stage
+
+RUN apt-get update
+RUN apt-get install python
+
+
+RUN mkdir -p /app
+
+COPY ./package*.json /app/
+
+WORKDIR /app
+
+RUN yarn global add gatsby-cli
+
+RUN yarn
+
+COPY ./ /app/
+
+RUN gatsby build 
+
+FROM nginx:alpine
+
+COPY --from=build-stage /app/public/ /var/www

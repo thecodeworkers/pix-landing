@@ -2,14 +2,14 @@ import i18next from 'i18next';
 
 i18next
 .init({
-    fallbackLng: 'es',
-    lng: 'es',
+    fallbackLng: 'en',
+    lng: 'en',
     resources: {
-        es: {
-            translations: require('../assets/i18n/es.json')
-        },
         en: {
             translations: require('../assets/i18n/en.json')
+        },
+        es: {
+            translations: require('../assets/i18n/es.json')
         }
     },
     ns: ['translations'],
@@ -24,6 +24,6 @@ i18next
     },
 });
 
-i18next.languages = ['es', 'en'];
+i18next.languages = ['en', 'es'];
 
 export default i18next;
